@@ -46,7 +46,7 @@ button{font:inherit;color:inherit}
 .light{background-color:var(--paper-2)}
 
 /* ---------- 滚动渐显（步进式） ---------- */
-.js [data-r]{opacity:0;transform:translateY(24px);transition:opacity .4s steps(4),transform .4s steps(4)}
+.js [data-r]{opacity:0;transform:translate3d(0,24px,0);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
 .js [data-r].in{opacity:1;transform:none}
 .js [data-r="2"]{transition-delay:.08s}
 .js [data-r="3"]{transition-delay:.16s}
@@ -56,7 +56,7 @@ button{font:inherit;color:inherit}
 .hero{position:relative;padding:56px 0 0;text-align:center}
 .hero .mega{margin-top:12px}
 .hero .lede{margin:16px auto 0;max-width:32em;color:#fff;font-weight:600;text-shadow:2px 2px 0 rgba(31,26,36,.55)}
-.js .hero-intro > *{opacity:0;transform:translateY(16px);transition:opacity .4s steps(4),transform .4s steps(4)}
+.js .hero-intro > *{opacity:0;transform:translate3d(0,16px,0);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
 .js .hero-intro > *:nth-child(2){transition-delay:.1s}
 .js .hero-intro > *:nth-child(3){transition-delay:.2s}
 .ready .hero-intro > *{opacity:1;transform:none}

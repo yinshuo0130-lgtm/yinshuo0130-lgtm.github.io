@@ -91,23 +91,30 @@
   prog.innerHTML = '<i class="bar"></i><i class="man"></i><i class="goal"></i>';
   document.body.appendChild(prog);
   var pBar = prog.querySelector('.bar'), pMan = prog.querySelector('.man'), lastY = scrollY, pDist = 0, pTimer = null;
-  function onScroll(){
-    var max = document.documentElement.scrollHeight - innerHeight;
-    prog.classList.toggle('on', max > innerHeight * 0.8);
-    var k = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
-    pBar.style.width = (k * 100) + '%';
-    pMan.style.left = 'calc(' + (k * 100) + '% - ' + Math.round(k * 24) + 'px)';
+  // 滚动时只改 transform，并合并到每帧一次；页面总高只在尺寸变化时重新量，避免滚动中反复触发重排
+  var pMax = 0, pTick = 0;
+  function measure(){
+    pMax = document.documentElement.scrollHeight - innerHeight;
+    prog.classList.toggle('on', pMax > innerHeight * 0.8);
+    paint();
+  }
+  function paint(){
+    pTick = 0;
+    var k = pMax > 0 ? Math.min(1, Math.max(0, scrollY / pMax)) : 0;
+    pBar.style.transform = 'scaleX(' + k + ')';
     var dy = scrollY - lastY; lastY = scrollY;
     pDist += Math.abs(dy);
-    pMan.style.transform = dy < 0 ? 'scaleX(-1)' : '';
+    pMan.style.transform = 'translateX(' + Math.round(k * (innerWidth - 24)) + 'px)' + (dy < 0 ? ' scaleX(-1)' : '');
     pMan.style.backgroundPosition = (-(Math.floor(pDist / 40) % 6) * 24) + 'px 0';
     clearTimeout(pTimer);
     pTimer = setTimeout(function(){ pMan.style.backgroundPosition = '-168px 0'; }, 180);
   }
+  function onScroll(){ if (!pTick) pTick = requestAnimationFrame(paint); }
   addEventListener('scroll', onScroll, {passive:true});
-  addEventListener('resize', onScroll);
-  addEventListener('load', onScroll);
-  onScroll();
+  addEventListener('resize', measure);
+  addEventListener('load', measure);
+  if ('ResizeObserver' in window) new ResizeObserver(measure).observe(document.body);
+  measure();
 
   /* ---------- 隐藏彩蛋：↑↑↓↓←→←→BA 下一场硬币雨 ---------- */
   var KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','KeyB','KeyA'], kpos = 0, partyTimer = null;
@@ -147,7 +154,7 @@
   /* ---------- 滚动渐显 ---------- */
   var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
     es.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-  }, {rootMargin:'0px 0px -10% 0px'}) : null;
+  }, {rootMargin:'0px 0px -6% 0px'}) : null;
   document.querySelectorAll('[data-r]').forEach(function(el){ io ? io.observe(el) : el.classList.add('in'); });
 
   /* ---------- 读档加载条 ---------- */
