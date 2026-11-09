@@ -63,3 +63,20 @@
 ## 待填
 
 - 黑夜君临 Mod 页：抖音播放数（网页版不登录看不到，要从创作者后台取）。补上后可以把“B 站播放”改成“全平台播放”。其余数据截至 2026.11.09，更新时改 `projects/nightreign-mod.html` 的两组 stats、存档信息和 `js/stage.js` 的介绍。
+
+## 多语言（简体 / 繁體 / English / 日本語）
+
+根目录的简体中文页面是唯一源文件；`zh-hant/`、`en/`、`ja/` 由脚本生成，不要手改。顶栏右上角的语言按钮在同一路径的四个版本之间切换。
+
+改了中文页面后：
+
+```
+python tools/i18n/i18n.py extract   # 重新抽取待翻译文本
+python tools/i18n/i18n.py missing   # 列出 en / ja 缺的译文
+# 把缺的条目补进 tools/i18n/en/*.json、tools/i18n/ja/*.json（键是 missing 列出的 id）
+python tools/i18n/i18n.py build     # 生成三种语言页面和各自的像素字体子集
+```
+
+- 繁体由 OpenCC（s2twp，台湾用语）自动转换，个别用词在 `tools/i18n/zh-hant-fix.json` 修正。需要 `pip install opencc-python-reimplemented beautifulsoup4 fonttools brotli`。
+- 每种语言用 Fusion Pixel 对应的字形变体（zh_tw / ja / latin），字体文件为 `fonts/fusion-pixel-<语言>.woff2`。
+- 简历 PDF、拆解 PDF 和飞书文档只有中文版，外文页面已注明。

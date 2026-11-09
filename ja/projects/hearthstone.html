@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>『ハースストーン』バトルグラウンド 経済と対戦テンポ分析 · 殷碩ポートフォリオ</title>
+<meta content="バトルグラウンドのゴールド曲線、枚数による希少性、独走防止の仕組みを分析し、第一候補の改善案に A/B テストを設計しました。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../img/px/favicon.png" rel="icon"/>
+<link href="../../css/shell.css" rel="stylesheet"/>
+<link href="../../css/site.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../fonts/fusion-pixel-ja.woff2") format("woff2");font-display:swap}:root{--body-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo","Noto Sans JP",system-ui,sans-serif;--px-font:"Fusion Pixel","Hiragino Sans","Yu Gothic","Meiryo",monospace}</style><link href="../../projects/hearthstone.html" hreflang="zh-Hans" rel="alternate"/><link href="../../zh-hant/projects/hearthstone.html" hreflang="zh-Hant" rel="alternate"/><link href="../../en/projects/hearthstone.html" hreflang="en" rel="alternate"/><link href="../../ja/projects/hearthstone.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="タイトルへ戻る" href="../index.html"><img alt="" src="../../img/px/avatar.png"/>殷碩<small>ゲームプランナー</small></a>
+<nav aria-label="メインナビゲーション" class="hud-nav">
+<a aria-current="page" data-slot="セーブを選択" href="../index.html">セーブ</a>
+<a data-slot="プレイヤーデータを開く" href="../about.html">自己紹介</a>
+<a class="hide-s" data-slot="履歴書を開く" href="../resume.html">履歴書</a>
+</nav>
+<div class="hud-coins" title="セーブブロックを叩くとコインが集まります"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>バトルグラウンド · 経済と対戦テンポ</b>
+<nav><a class="hide-s" href="#summary">結論</a> <a class="hide-s" href="#pay">課金と体験</a> <a class="hide-s" href="#fix">改善の方向</a> <a href="#read">全文を読む</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">セーブ 05 · システム分析 · 20 ページ</span>
+<h1 class="mega on-sky">『ハースストーン』バトルグラウンド<br/>経済と対戦テンポ</h1>
+<p class="feature">バトルグラウンドにはカード収集がなく、8 人のプレイヤーが 1 つのミニオンプールを共有し、勝敗はほぼ試合中の資源判断だけで決まります。この分析は 1 試合だけを見ます：<b>ゴールドをどう得てどう使うか、ミニオンプールが選択をどう制限するか、強弱の差がどう開き、どう抑えられるか</b>。シーズン 14、2026 年 10 月時点に基づきます。</p>
+<div class="acts">
+<a class="px-btn" href="#read"><span class="px-ico book"></span>ここで全文を読む</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e"><span class="px-ico ext"></span>Feishu の原文（中国語）</a>
+<button aria-label="セーブブロックを叩く" class="px-block" data-coin="hearthstone-1"></button>
+</div>
+<div class="c-cover" data-r=""><img alt="バトルグラウンドの対戦画面" src="../../img/hs/main.webp" style="object-position:center 42%;max-height:520px"/></div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats">
+<div data-r=""><span>★6 ミニオンの総数</span><b>7 枚</b><span>枚数で希少性を管理</span></div>
+<div data-r="2"><span>1 回のトリプルで消える割合</span><b>43%</b><span>最上位カードの枚数</span></div>
+<div data-r="3"><span>ゴールド上限</span><b>10</b><span>毎ターン +1、8 ターン目で上限</span></div>
+<div data-r="4"><span>プレイ時間</span><b>501h</b><span>6,120 点</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="summary">
+<div class="narrow">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">結論</h2>
+<p class="feature" data-r="">核心の矛盾：8 人がまったく同じ収入で 1 つのミニオンプールを共有しながら、毎試合違う結果にならなければならない。<b>強弱の差は開かなければならないが、早く決着しすぎてもいけない</b>。</p>
+<ul class="rules" data-r="">
+<li><i>結論 1</i><b>収入と価格は固定、差は使い方からしか生まれない</b>ゴールドは毎ターン +1、8 ターン目に 10 で上限、ミニオンはすべて 3 ゴールド。毎ターンの核心は酒場ランクを上げるか戦力を買うかで、HP はその賭け金です。</li>
+<li><i>結論 2</i><b>希少性は確率表ではなく枚数で作る</b>★6 のカードは全体で 7 枚しかなく、1 回のトリプルで 43% が消えます。共有プールは種族のかぶりや相手の読み合いという駆け引きも生みます。</li>
+<li><i>結論 3</i><b>独走は盤面で起き、ブレーキも備える</b>利息や連勝ボーナスはなく、ダメージ上限、枚数制限、1 ランク上だけの発見があります。ヒーローの強弱はアーマーを HP に換算して調整しています。</li>
+<li><i>結論 4</i><b>シーズンの仕組みは 1 つ足したら 1 つ引く</b>毎シーズンの新要素はショップ外の追加の選択肢で、基盤の経済は変えず、同時に存在する追加システムは 1〜2 つに抑えています。</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="pay">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">課金と体験</h2>
+<div class="prose" data-r="">
+<p><strong>課金で買えるのは選択肢だけ。</strong>シーズンパスで開始時のヒーロー選択が 2 択から 4 択になり、ほかは見た目のみ。試合中の数値は売りませんが、ヒーローの選択肢の数はランク戦に影響します。</p>
+<p><strong>体験の中心は挑戦と探索</strong>で、主に達成型と探索型のプレイヤーに向いています。上位 4 位だけがポイントを得るルールのため、5 位がいちばん悔しく、もう 1 試合やりたくなります。社交面はこのモードの弱点です。</p>
+<p>『NARUTO』モバイルとの比較：NARUTO の成長は月単位・年単位で積み上がり、課金で直接進捗を買えます。バトルグラウンドの成長は 1 試合の中に圧縮され、課金は試合中の数値にほぼ触れないため、システム設計の焦点は経済曲線、共有資源の希少性、強弱が分かれるテンポにあります。</p>
+</div>
+</div>
+</section>
+<section class="chapter" id="fix">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">改善の方向</h2>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>優先度</th><th>提案</th></tr>
+<tr><td>①</td><td>ショップで残り枚数を 3 段階で示すヒント、A/B テスト計画付き</td></tr>
+<tr><td>②</td><td>シーズン開始時の新要素チュートリアル戦</td></tr>
+<tr><td>③</td><td>ランク戦のヒーロー選択肢数の統一</td></tr>
+<tr><td>④</td><td>中盤で遅れたプレイヤーへの救済</td></tr>
+</table>
+</div>
+<div class="prose" data-r=""><p class="note">酒場ランクの強化費用を線形にする案も試算し、変更しない方がよいと結論づけました。</p></div>
+</div>
+</section>
+<section class="chapter" id="toc">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">目次</h2>
+<ul class="toc-list" data-r="">
+<li><b>1</b>ゲーム概要と分析範囲</li>
+<li><b>2</b>コアループ：募集と戦闘</li>
+<li><b>3</b>ゴールド経済：収入曲線と価格</li>
+<li><b>4</b>共有ミニオンプール：希少性はどこから来るか</li>
+<li><b>5</b>トリプルと発見：独走とそのブレーキ</li>
+<li><b>6</b>ヒーロー：非対称なスタートと 3 つの調整つまみ</li>
+<li><b>7</b>戦闘の決着とダメージ：脱落のテンポの制御</li>
+<li><b>8</b>変数の投入とシーズンのテンポ</li>
+<li><b>9</b>ランク戦と課金：売るのは選択肢だけ</li>
+<li><b>10</b>エステティクス層：これらの仕組みがプレイヤーに与える感覚</li>
+<li><b>11</b>課題と改善案</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="read">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">全文を読む</h2>
+<p class="feature" data-r="">全文（中国語）は下でそのまま読めます。読み終えたら上部バーか下のボタンでセーブ画面に戻れます。</p>
+</div>
+<div class="wrap">
+<div class="pdf" data-r="">
+<div class="bar"><span>hearthstone-bg.pdf · 20 ページ · 中国語</span><span><a download="" href="../../files/hearthstone-bg.pdf">PDF をダウンロード</a> <a href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e">Feishu の原文 ↗</a></span></div>
+<iframe loading="lazy" src="../../files/hearthstone-bg.pdf#view=FitH" title="バトルグラウンド 経済と対戦テンポ分析の全文"></iframe>
+<div class="pdf-alt">スマートフォンでは PDF を埋め込み表示できません。<a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">PDF を開く</a> <a class="more ext" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e" style="color:var(--gold)">Feishu の原文</a>（新しいタブで開きます）</div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="セーブ 04 をロード" href="naruto.html"><span>前のセーブ · 04</span><b>NARUTO モバイル：成長と経済システム</b></a>
+<a data-slot="セーブを選択" href="../index.html"><span>戻る</span><b>すべてのセーブ</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷 碩</span><span><a href="#top">ページ上部へ</a><a href="../index.html">すべてのセーブ</a><a data-slot="履歴書を開く" href="../resume.html">履歴書</a></span></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

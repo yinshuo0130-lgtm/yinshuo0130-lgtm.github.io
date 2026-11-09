@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html data-root="../../" lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>《宇宙漢堡》 · 殷碩作品集</title>
+<meta content="抖音豎屏增量經營小遊戲《宇宙漢堡》：煎肉餅、升級、搬店、發射轉生。殷碩獨立完成策劃、數值與開發，用跑局模擬器調整節奏。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../../img/px/favicon.png" rel="icon"/>
+<link href="../../../css/shell.css" rel="stylesheet"/>
+<link href="../../../css/site.css" rel="stylesheet"/>
+<link href="../../../css/burger.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../../fonts/fusion-pixel-zh-hant.woff2") format("woff2");font-display:swap}:root{--body-font:"PingFang TC","Microsoft JhengHei","Noto Sans TC","Heiti TC",system-ui,sans-serif;--px-font:"Fusion Pixel","PingFang TC","Microsoft JhengHei",monospace}</style><link href="../../../projects/burger/index.html" hreflang="zh-Hans" rel="alternate"/><link href="../../../zh-hant/projects/burger/index.html" hreflang="zh-Hant" rel="alternate"/><link href="../../../en/projects/burger/index.html" hreflang="en" rel="alternate"/><link href="../../../ja/projects/burger/index.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="回到標題" href="../../index.html"><img alt="" src="../../../img/px/avatar.png"/>殷碩<small>遊戲策劃</small></a>
+<nav aria-label="主導航" class="hud-nav">
+<a aria-current="page" data-slot="選擇存檔" href="../../index.html">存檔</a>
+<a data-slot="開啟玩家檔案" href="../../about.html">關於我</a>
+<a class="hide-s" data-slot="開啟簡歷" href="../../resume.html">簡歷</a>
+</nav>
+<div class="hud-coins" title="頂存檔方塊可以收集硬幣"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>宇宙漢堡</b>
+<nav><a class="hide-s" href="#loop">核心迴圈</a> <a class="hide-s" href="#shots">截圖</a> <a class="hide-s" href="#design">策劃設計</a> <a class="hide-s" href="#iterate">測試迭代</a> <a href="#pacing">數值節奏</a> <a class="hide-s" href="#dev">開發</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">存檔 03 · 可玩作品 · 獨立製作 · 2026.09 – 10</span>
+<h1 class="mega on-sky bg-title">宇宙<span class="burger">漢堡</span></h1>
+<p class="feature">豎屏放置經營小遊戲。玩家用手指拖著鍋鏟煎肉餅賺錢，在培訓中心升級工具和配方，<b>從地球路邊攤一路把漢堡店開到太空</b>。</p>
+<ul class="bg-tags">
+<li>系統策劃</li><li>數值策劃</li><li>Unity 2022.3 · C#</li><li>WebGL · 抖音 TTSDK</li><li>畫素美術管線</li>
+</ul>
+<p class="bg-status">狀態：<b>開發完成</b>，軟著已經提交申請，拿到軟著後在抖音小遊戲備案上線。</p>
+<div class="acts">
+<a class="px-btn red" href="#shots"><span class="px-ico pad"></span>看遊戲截圖</a>
+<button aria-label="頂一下存檔方塊" class="px-block" data-coin="burger-1"></button>
+</div>
+<div aria-hidden="true" class="stall" data-r="">
+<span class="sign">宇宙漢堡 · 營業中</span>
+<div class="awning"></div>
+<div class="win">
+<div class="phone"><img alt="" src="../../../projects/burger/img/02_home.webp"/></div>
+<div class="phone"><img alt="" src="../../../projects/burger/img/12b_run_items.webp"/></div>
+<div class="phone"><img alt="" src="../../../projects/burger/img/21_space_run.webp"/></div>
+</div>
+<div class="counter"></div>
+</div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats five">
+<div data-r=""><span>C# 程式碼</span><b>7300</b><span>行，31 個腳本，策劃和開發一人完成</span></div>
+<div data-r="2"><span>升級項</span><b>63</b><span>個，分地球、星際兩套</span></div>
+<div data-r="3"><span>店面章節</span><b>9</b><span>個，每個都有自己的畫素場景</span></div>
+<div data-r="4"><span>第一次發射</span><b>49′</b><span>模擬器結果，不看廣告</span></div>
+<div data-r="5"><span>成就</span><b>39</b><span>個，另有 11 種每日任務</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="loop">
+<div class="wrap">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">核心迴圈</h2>
+<p class="feature" data-r="">一輪營業 15 秒左右，短到可以在刷影片的間隙玩一把；<b>升級和搬店提供中期目標，“發射”轉生提供長期目標</b>。</p>
+<ol class="lvmap" data-r="">
+<li><span class="node">1</span><div class="card"><div class="k">一輪 · 15 秒以上</div><div class="t">煎肉餅</div><p class="d">拖動鍋鏟蓋住肉餅加熱，熟了自動出餐；翻面、躲火苗、撿道具、趕小貓。</p></div></li>
+<li><span class="node">2</span><div class="card"><div class="k">結算</div><div class="t">過關拿星</div><p class="d">第 N 關 · 1～3 星目標，按星給 10% / 20% / 35% 額外收入。</p></div></li>
+<li><span class="node">3</span><div class="card"><div class="k">花錢</div><div class="t">培訓中心</div><p class="d">火力、範圍、售價、幫廚……按類別排成清單。</p></div></li>
+<li><span class="node">4</span><div class="card"><div class="k">新章節</div><div class="t">搬店</div><p class="d">路邊攤 → 美食街 → 購物中心，換場景，收入翻倍。</p></div></li>
+<li class="boss"><span class="node">★</span><div class="card"><div class="k">轉生</div><div class="t">發射</div><p class="d">清空地球進度換星星（永久加成），解鎖星際地圖：月球、火星、木星環、銀河中心。</p></div></li>
+</ol>
+<p class="loopback" data-r="">發射之後回到路邊攤重新開始，但有星星加成，每一輪會越來越快：第一輪 49 分鐘，第二輪 23 分鐘，第三輪 11 分鐘。</p>
+</div>
+</section>
+<section class="chapter" id="shots">
+<div class="wrap">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">遊戲截圖</h2>
+<div class="rail-wrap" data-r="">
+<div aria-label="遊戲截圖，可以左右滑動" class="rail" id="rail" tabindex="0">
+<figure><div class="phone"><img alt="主頁：關卡卡片、路邊攤場景、開始營業按鈕、培訓中心和成就入口" loading="lazy" src="../../../projects/burger/img/02_home.webp"/></div><figcaption><b>主頁</b>關卡卡片 → 店面場景 → 開始營業 → 培訓中心 → 成就</figcaption></figure>
+<figure><div class="phone"><img alt="營業中：火焰拖尾、幫廚、道具和狂熱時間" loading="lazy" src="../../../projects/burger/img/12b_run_items.webp"/></div><figcaption><b>營業中</b>噴火槍留下的火焰拖尾、幫廚、道具、狂熱時間</figcaption></figure>
+<figure><div class="phone"><img alt="太陽灶的日光爆發" loading="lazy" src="../../../projects/burger/img/12c_run_burst.webp"/></div><figcaption><b>工具特技</b>太陽灶每 6 秒一次日光爆發</figcaption></figure>
+<figure><div class="phone"><img alt="結算介面：第 1 關 差一點，零星" loading="lazy" src="../../../projects/burger/img/06_result.webp"/></div><figcaption><b>結算</b>沒拿到一星時，提示去培訓中心升級再來</figcaption></figure>
+<figure><div class="phone"><img alt="培訓中心升級清單" loading="lazy" src="../../../projects/burger/img/02b_shop.webp"/></div><figcaption><b>培訓中心</b>代替技能樹的目錄式升級清單</figcaption></figure>
+<figure><div class="phone"><img alt="暫停介面" loading="lazy" src="../../../projects/burger/img/04b_pause.webp"/></div><figcaption><b>暫停</b>繼續營業，或提前收工回到店裡</figcaption></figure>
+<figure><div class="phone"><img alt="購物中心店面" loading="lazy" src="../../../projects/burger/img/11_home_late.webp"/></div><figcaption><b>第 3 章 購物中心</b>每搬一次店，場景跟著換</figcaption></figure>
+<figure><div class="phone"><img alt="星際主頁" loading="lazy" src="../../../projects/burger/img/19_space_home.webp"/></div><figcaption><b>星際</b>發射之後的第二張地圖</figcaption></figure>
+<figure><div class="phone"><img alt="星際營業：黑洞和行星肉餅" loading="lazy" src="../../../projects/burger/img/21_space_run.webp"/></div><figcaption><b>星際營業</b>黑洞會把附近的肉餅吸走，還有更值錢的行星肉餅</figcaption></figure>
+<figure><div class="phone"><img alt="星際科技商店" loading="lazy" src="../../../projects/burger/img/16_star_shop.webp"/></div><figcaption><b>星際科技</b>用發射獲得的星星買永久加成</figcaption></figure>
+<figure><div class="phone"><img alt="成就列表" loading="lazy" src="../../../projects/burger/img/27c_achievements.webp"/></div><figcaption><b>成就</b>每個成就讓收入永久 +1%</figcaption></figure>
+<figure><div class="phone"><img alt="開場的旅程地圖" loading="lazy" src="../../../projects/burger/img/01a_intro.webp"/></div><figcaption><b>開場</b>第一次開啟時先展示整條旅程，讓玩家知道終點在哪</figcaption></figure>
+</div>
+<div class="rail-btns">
+<span>截圖來自電腦版自動截圖（手機豎屏比例），共 12 張。</span>
+<div><button aria-label="上一組截圖" class="px-btn sm paper" data-dir="-1" type="button">◀</button><button aria-label="下一組截圖" class="px-btn sm paper" data-dir="1" type="button">▶</button></div>
+</div>
+</div>
+</div>
+</section>
+<section class="chapter" id="design">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">策劃設計</h2>
+<p class="feature" data-r="">經營遊戲最容易出現的兩個問題是<b>“不知道為什麼要繼續玩”和“後期只是數字變大”</b>。下面是針對這兩點做的設計。</p>
+<ul class="rules bg" data-r="">
+<li><i>目標</i><b>三層目標</b>
+<ul>
+<li><strong>短期</strong>：每一輪是一關，1～3 星。目標按玩家最近幾輪賣出的漢堡數 × 現在的售價來算，升級售價目標會漲，升級火力和範圍就更容易拿星。</li>
+<li><strong>中期</strong>：培訓中心按鈕上一直顯示“下一個目標”和進度條；搬店就是進入下一章。</li>
+<li><strong>長期</strong>：發射轉生、星際地圖、39 個成就。</li>
+</ul>
+<p>每 5 關一個<strong>挑戰關</strong>，獎勵翻倍，五種規則輪換：金肉餅大放送、肉餅狂潮、火苗滿地、滑溜大作戰、限時衝刺。</p>
+</li>
+<li><i>成長</i><b>每把工具一個特技</b>
+<p style="margin-top:0">最早的版本里換工具只是範圍變大，測試玩家很快覺得無聊。後來每把新工具都多一個能看見的特技，並保留前面工具的特技：</p>
+<ul>
+<li><strong>雙面鏟</strong>：多一把映象鍋鏟，在鐵板對稱的位置跟著你煎</li>
+<li><strong>噴火槍</strong>：鍋鏟劃過的地方留下一道火焰，繼續煎肉餅</li>
+<li><strong>太陽灶</strong>：每 6 秒一次日光爆發，所有肉餅一下熟 4 成</li>
+</ul>
+</li>
+<li><i>操作</i><b>增加操作性的機制</b>
+<ul>
+<li><strong>翻面</strong>：煎到三到八成熟時快速劃過可以翻面，加錢</li>
+<li><strong>火苗</strong>：先預警再冒出來，碰到會停火 1.2 秒，也能幫忙煎</li>
+<li><strong>道具</strong>：加時、磁鐵、雙倍售價、辣椒爆炒，要湊過去拿</li>
+<li><strong>滑溜肉餅</strong>：會躲鍋鏟，抓到更值錢</li>
+<li><strong>小貓</strong>：6 秒沒人煎的肉餅會被叼走，碰一下小貓就能嚇跑</li>
+<li><strong>狂熱時間</strong>：連擊滿了以後售價和出餅速度翻倍</li>
+</ul>
+</li>
+<li><i>開局與變現</i><b>開局和變現</b>
+<ul>
+<li><strong>開業酬賓</strong>：前 3 輪收入 ×3，第一次升級幾乎馬上就能買</li>
+<li><strong>第 4 輪必出金肉餅</strong>：早點給一次驚喜</li>
+<li><strong>新玩法第一次出現時彈一條提示</strong>，不做長教程</li>
+<li><strong>只用激勵廣告</strong>：看廣告加時、收入翻倍、免費升級，不做內購</li>
+<li><strong>埋點 8 個關鍵事件</strong>：營業結束、搬店、發射、成就等，上線後用來找玩家在哪一步流失</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="iterate">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">根據測試反饋的迭代</h2>
+<p class="feature" data-r="">找朋友在 iPhone 上試玩，<b>每一輪反饋都對應一次改版</b>。下面按時間順序排列。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>測試反饋</th><th>改動</th></tr>
+<tr><td class="q">遊戲畫面在螢幕裡佔比太小，頂部留白多</td><td><span class="tg ui">UI</span>讀取抖音右上角膠囊按鈕的位置來排頂欄；鐵板高度隨螢幕在 720～880 之間變化</td></tr>
+<tr><td class="q">星際主頁背景在 iPhone 上只顯示左下角一小塊</td><td><span class="tg tech">技術</span>iOS WebGL 的平鋪貼圖要求尺寸是 2 的次方，把貼圖改成 128 畫素</td></tr>
+<tr><td class="q">數字太大，看著累</td><td><span class="tg num">數值</span>價格和倍率整體開 0.7 次方，再按模擬器調回原來的節奏；顯示改成“萬 / 億”；老存檔讀檔時自動換算</td></tr>
+<tr><td class="q">玩一會兒就無聊，工具只是範圍在變</td><td><span class="tg play">玩法</span>工具特技，加上翻面、火苗、道具、滑溜肉餅、狂熱時間</td></tr>
+<tr><td class="q">開局不夠吸引人，但整體進度又有點快</td><td><span class="tg num">數值</span>開業酬賓、第 4 輪金肉餅讓開局更快；同時把中後期價格整體調高</td></tr>
+<tr><td class="q">目標不明確，沒有關卡，動力不夠</td><td><span class="tg sys">系統</span>關卡和 1～3 星、挑戰關、主頁的“下一個目標”進度條</td></tr>
+<tr><td class="q">營業中想暫停，想中途退出</td><td><span class="tg ux">UX</span>暫停按鈕；提前收工照拿已經賺的錢，但這一關不算透過；切到後臺自動暫停</td></tr>
+<tr><td class="q">主頁太亂，技能樹看不懂</td><td><span class="tg ui">UI</span>主頁按“開始營業 → 培訓中心 → 成就”重新排；技能樹改成按類別排列的清單；新畫了 9 張店面場景</td></tr>
+<tr><td class="q">鍋鏟滿級太大，快把螢幕佔滿</td><td><span class="tg num">數值</span>原來每級 +10% 疊著乘，滿級半徑約 290（鐵板寬 450）。改成每級固定加 6%，工具加成調小，滿級約 100；給雙面鏟加煎熟速度作補償，模擬器確認節奏只慢了 5 分鐘</td></tr>
+</table>
+</div>
+</div>
+</section>
+<section class="chapter" id="pacing">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">數值節奏：用模擬器調，不靠手感</h2>
+<p class="feature" data-r="">我在 Unity 編輯器裡寫了一個機器人玩家，直接呼叫遊戲本身的邏輯程式碼自動跑局：它會追肉餅、撿道具、躲火苗，並按價效比買升級。<b>每次改價格都先跑一遍</b>，看下面這些時間點有沒有落在目標範圍裡。</p>
+<div class="run" data-r="">
+<h3>第一輪：新玩家，不看廣告</h3>
+<div aria-label="第一輪進度：26 分 55 秒搬到美食街，29 分 48 秒換雙面鏟，42 分 37 秒搬到購物中心，43 分 18 秒換噴火槍，49 分 14 秒第一次發射" class="track" role="img">
+<div class="fill"></div>
+<span class="mk st dn" style="left:0"><i></i><span>0:00<small>路邊攤開張</small></span></span>
+<span class="mk up" style="left:54.7%"><i></i><span>26:55<small>搬到美食街</small></span></span>
+<span class="mk dn" style="left:60.5%"><i></i><span>29:48<small>換雙面鏟</small></span></span>
+<span class="mk up" style="left:86.6%"><i></i><span style="transform:translateX(-85%)">42:37<small>搬到購物中心</small></span></span>
+<span class="mk dn" style="left:87.9%"><i></i><span>43:18<small>換噴火槍</small></span></span>
+<span class="mk end up" style="left:100%"><i></i><span>49:14<small>第一次發射</small></span></span>
+</div>
+<p class="legend">49:14 第一次發射時獲得 14 顆星，此時約第 53 關。</p>
+</div>
+<div class="rounds" data-r="">
+<div class="run" style="margin-top:0">
+<h3>之後的節奏</h3>
+<div class="bars"><span>地球 第 1 輪</span><span class="bar"><i style="--v:100%;--c:var(--red)"></i></span><span>49:14 · 14 ★</span> <span>地球 第 2 輪</span><span class="bar"><i style="--v:46%;--c:var(--gold-d)"></i></span><span>22:40 · 37 ★</span> <span>地球 第 3 輪</span><span class="bar"><i style="--v:23%;--c:var(--grass)"></i></span><span>11:28 · 69 ★</span></div>
+<p class="legend" style="margin-top:16px;font-size:14px;color:var(--mute)">星際通關用時 1:28:22。</p>
+</div>
+<p class="why"><strong>設計意圖</strong>：第一輪慢一點，讓玩家把每家店都看一遍；之後靠星星加成越來越快，轉生的回報能明顯感覺到。</p>
+</div>
+</div>
+</section>
+<section class="chapter" id="dev">
+<div class="narrow">
+<p class="kicker" data-r="">06</p>
+<h2 class="h-sec" data-r="">開發實現</h2>
+<ul class="rules bg" data-r="">
+<li><i>結構</i><b>程式碼結構</b>
+<p style="margin-top:0">玩法邏輯和畫面完全分開，所以同一份邏輯既能在手機上跑，也能被模擬器拿去自動跑局。</p>
+<pre class="term">Scripts/
+  Core/      <span class="c">純邏輯：配置、存檔資料、公式、一輪的模擬</span>
+    GameConfig.cs   <span class="c">所有數值和升級項</span>
+    GameLogic.cs    <span class="c">屬性推導、關卡目標、結算</span>
+    Run.cs          <span class="c">一輪營業：肉餅、火苗、小貓、道具</span>
+  Platform/  <span class="c">抖音 SDK、廣告、存檔、音效、震動</span>
+  UI/        <span class="c">主頁、營業畫面、培訓中心、彈窗</span>
+Editor/
+  PacingSim.cs      <span class="c">節奏模擬器</span>
+  BuildTools.cs     <span class="c">命令列編譯</span></pre>
+</li>
+<li><i>測試</i><b>自動化檢查</b>
+<p style="margin-top:0">每次改完都跑一遍，不用手動點：</p>
+<ul>
+<li><strong>命令列編譯</strong>：抖音 WebGL 包（壓縮後約 0.6MB）和電腦版</li>
+<li><strong>自動截圖</strong>：程式自己走一遍所有介面，輸出 40 張截圖檢查排版</li>
+<li><strong>長時間執行測試</strong>：自動玩 4 分鐘，記錄最慢幀和記憶體</li>
+<li><strong>節奏模擬</strong>：確認改動沒有打亂進度</li>
+</ul>
+</li>
+<li><i>平臺</i><b>抖音平臺接入</b>
+<ul>
+<li>激勵廣告、本地存檔（帶備份）、資料埋點、震動、側邊欄復訪獎勵</li>
+<li>讀取膠囊按鈕位置做安全區適配，電腦上用引數模擬膠囊</li>
+<li>切到後臺時靜音、存檔、自動暫停</li>
+<li>存檔只往末尾加升級項，改數值量級時帶遷移，老玩家進度不丟</li>
+</ul>
+</li>
+<li><i>排查</i><b>排查過的問題</b>
+<ul>
+<li><strong>開局卡一下</strong>：每輪開始時強制重新整理畫布、重畫鐵板貼圖。去掉強制重新整理，鐵板和游標貼圖按大小快取</li>
+<li><strong>火焰拖尾變成一大坨</strong>：拖尾寬度設上限，鍋鏟不動時不再加火焰點</li>
+<li><strong>道具被大鍋鏟自動吸走</strong>：拾取距離單獨設上限，必須湊過去拿</li>
+<li><strong>iOS 貼圖只顯示一角</strong>：平鋪貼圖改成 2 的次方尺寸</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="art">
+<div class="narrow">
+<p class="kicker" data-r="">07</p>
+<h2 class="h-sec" data-r="">美術管線</h2>
+<p class="feature" data-r="">統一的畫素風：<b>一個畫素等於畫布上 3 個單位</b>，字型是 12 畫素的畫素字，只用 12 的整數倍字號，保證清楚。</p>
+<figure class="art-fig" data-r="">
+<img alt="9 張店面畫素場景：地球 4 張，星際 5 張" loading="lazy" src="../../../projects/burger/img/scenes.webp"/>
+<figcaption>9 張店面場景：先用 Scenario 生成，再用 Python 腳本統一降到 256×288、40 色，每張約 40KB。</figcaption>
+</figure>
+<div class="art-row">
+<figure class="art-fig" data-r="">
+<img alt="16×16 畫素小圖示" loading="lazy" src="../../../projects/burger/img/icons.webp"/>
+<figcaption>16×16 小圖示（工具、外星人、道具、小貓）由 Python 腳本逐畫素畫出來。</figcaption>
+</figure>
+<ul class="rules bg" data-r="" style="grid-template-columns:1fr;margin-top:28px">
+<li><i>音訊與字型</i><b>聲音和字型</b>
+<ul>
+<li>29 個音效全部用程式碼合成（煎肉滋滋聲、火苗噼啪、出餐叮一聲），不依賴外部音訊素材</li>
+<li>中文畫素字型按遊戲裡實際用到的字裁剪，只打包用到的字</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="chapter" id="ai">
+<div class="narrow">
+<p class="kicker" data-r="">08</p>
+<h2 class="h-sec" data-r="">關於 AI 工具</h2>
+<div class="prose" data-r="">
+<p class="note">開發中使用了 AI 工具：用 Claude Code 寫程式碼、排查問題，用 Scenario 生成店面場景圖。我負責的部分是：玩法和系統設計、數值目標和調參決策、組織真機測試並把反饋轉成改版需求、每一版的驗收，以及整體美術風格的把控。</p>
+</div>
+</div>
+</section>
+<section class="info light">
+<div class="narrow">
+<h2 class="h-sec" data-r="">存檔資訊</h2>
+<div class="spec" data-r="">
+<div><h3>角色</h3><div class="c">獨立製作：系統、數值、開發</div></div>
+<div><h3>週期</h3><div class="c">2026.09 – 10</div></div>
+<div><h3>引擎</h3><div class="c">Unity 2022.3 · C#</div></div>
+<div><h3>平臺</h3><div class="c">抖音小遊戲（WebGL · TTSDK），豎屏</div></div>
+<div><h3>狀態</h3><div class="c">開發完成，軟著申請中</div></div>
+<div><h3>字型</h3><div class="c">縫合畫素字型 Fusion Pixel Font，© 2022 TakWolf，SIL Open Font License 1.1</div></div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="讀取存檔 02" href="../tidewheel.html"><span>上一存檔 · 02</span><b>《發條人偶》Tidewheel</b></a>
+<a data-slot="讀取存檔 04" href="../naruto.html"><span>下一存檔 · 04</span><b>火影手遊：成長與經濟系統</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷碩</span><span><a href="#top">回到頂部</a><a href="../../index.html">全部存檔</a><a data-slot="開啟簡歷" href="../../resume.html">簡歷</a></span></div></div>
+</footer>
+<script src="../../js/site.js"></script>
+<script>
+// 截图轨道：左右按钮一次翻一屏
+(function(){
+  var rail = document.getElementById('rail');
+  document.querySelectorAll('.rail-btns [data-dir]').forEach(function(b){
+    b.addEventListener('click', function(){
+      rail.scrollBy({left: +b.getAttribute('data-dir') * rail.clientWidth * 0.8, behavior: 'smooth'});
+      window.ysSfx && window.ysSfx('select');
+    });
+  });
+})();
+</script>
+</body>
+</html>

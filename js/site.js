@@ -80,6 +80,36 @@
     hudIn.insertBefore(mb, hudCoins);
   }
 
+  /* ---------- 顶栏右上角：语言切换 ----------
+     简体中文页面在站点根目录，其余语言在 /zh-hant/、/en/、/ja/ 下，目录结构相同。
+     语言名写成 \u 转义，多语言构建脚本不会把它们当成待翻译文字。 */
+  if (hudIn){
+    var LANGS = [['zh-hans', '\u7b80', '\u7b80\u4f53\u4e2d\u6587'], ['zh-hant', '\u7e41', '\u7e41\u9ad4\u4e2d\u6587'],
+                 ['en', 'EN', 'English'], ['ja', '\u65e5', '\u65e5\u672c\u8a9e']];
+    var HREFLANG = {'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', 'en': 'en', 'ja': 'ja'};
+    var segs = location.pathname.split('/'), cur = 'zh-hans';
+    if (['zh-hant', 'en', 'ja'].indexOf(segs[1]) >= 0){ cur = segs[1]; segs.splice(1, 1); }
+    var rest = segs.join('/') || '/';
+    var lw = document.createElement('div'); lw.className = 'hud-lang';
+    var lb = document.createElement('button'); lb.type = 'button';
+    lb.setAttribute('aria-haspopup', 'true'); lb.setAttribute('aria-expanded', 'false'); lb.setAttribute('aria-label', 'Language');
+    var lm = document.createElement('div'); lm.className = 'hud-lang-menu'; lm.hidden = true;
+    LANGS.forEach(function(L){
+      if (L[0] === cur) lb.innerHTML = '<span>' + L[1] + '</span><i></i>';
+      var a = document.createElement('a');
+      a.href = (L[0] === 'zh-hans' ? '' : '/' + L[0]) + rest + location.hash;
+      a.textContent = L[2]; a.lang = HREFLANG[L[0]]; a.hreflang = HREFLANG[L[0]];
+      if (L[0] === cur) a.setAttribute('aria-current', 'true');
+      lm.appendChild(a);
+    });
+    function langOpen(on){ lm.hidden = !on; lb.setAttribute('aria-expanded', on ? 'true' : 'false'); }
+    lb.addEventListener('click', function(e){ e.stopPropagation(); langOpen(lm.hidden); window.ysSfx('select'); });
+    document.addEventListener('click', function(e){ if (!lw.contains(e.target)) langOpen(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') langOpen(false); });
+    lw.appendChild(lb); lw.appendChild(lm);
+    hudIn.appendChild(lw);
+  }
+
   /* ---------- 外部链接一律新标签页打开，作品集这边留着 ---------- */
   document.querySelectorAll('a[href^="http"]').forEach(function(a){
     try { if (new URL(a.href).origin !== location.origin){ a.target = '_blank'; a.rel = 'noopener'; } } catch(e){}

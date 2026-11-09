@@ -48,7 +48,7 @@
 .hud-brand img{width:36px;height:36px;image-rendering:pixelated;flex:none}
 .hud-brand small{font-size:12px;color:var(--gold)}
 .hud-nav{display:flex;align-items:center;gap:4px;margin-left:auto}
-.hud-nav a{position:relative;padding:8px 12px 8px 24px;font-size:24px;line-height:1;color:#cfc4b3}
+.hud-nav a{position:relative;padding:8px 12px 8px 24px;font-size:24px;line-height:1;color:#cfc4b3;white-space:nowrap}
 .hud-nav a::before{content:"";position:absolute;left:8px;top:50%;width:8px;height:12px;margin-top:-6px;background:var(--gold);clip-path:polygon(0 0,100% 50%,0 100%);opacity:0}
 .hud-nav a:hover{color:#fff}
 .hud-nav a:hover::before{opacity:.5}
@@ -140,6 +140,17 @@
 .hud-mute[aria-pressed="true"]{color:var(--gold)}
 .hud-mute:hover{color:#fff}
 
+/* ---------- 语言切换（顶栏最右） ---------- */
+.hud-lang{position:relative;flex:none}
+.hud-lang > button{display:flex;align-items:center;gap:6px;padding:6px 8px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;color:#cfc4b3;background:transparent;border:0;box-shadow:0 0 0 2px var(--ink-2);cursor:pointer}
+.hud-lang > button:hover,.hud-lang > button[aria-expanded="true"]{color:#fff}
+.hud-lang > button i{width:8px;height:5px;background:currentColor;clip-path:polygon(0 0,100% 0,50% 100%)}
+.hud-lang-menu{position:absolute;right:-2px;top:calc(100% + 12px);z-index:50;min-width:132px;padding:6px;background:var(--paper);box-shadow:0 0 0 4px var(--ink),6px 8px 0 4px rgba(31,26,36,.3)}
+.hud-lang-menu[hidden]{display:none}
+.hud-lang-menu a{display:block;padding:9px 10px 9px 22px;position:relative;font-size:12px;line-height:1.2;color:var(--ink)!important;white-space:nowrap}
+.hud-lang-menu a:hover,.hud-lang-menu a:focus-visible{background:var(--gold)}
+.hud-lang-menu a[aria-current]::before{content:"";position:absolute;left:8px;top:50%;width:6px;height:9px;margin-top:-5px;background:var(--red);clip-path:polygon(0 0,100% 50%,0 100%)}
+
 /* ---------- 底部关卡进度条 ---------- */
 .px-prog{position:fixed;left:0;right:0;bottom:0;z-index:35;height:8px;background:rgba(31,26,36,.55);pointer-events:none;opacity:0;transition:opacity .2s steps(2)}
 .px-prog.on{opacity:1}
@@ -163,6 +174,7 @@
   .hud-nav .hide-s{display:none}
   .hud-coins{font-size:12px;padding-left:8px;border-left-width:2px}
   .hud-mute{padding:4px 5px}
+  .hud-lang > button{padding:4px 5px;gap:4px}
   .hud-coins i{width:16px;height:16px;background-size:64px 16px;animation-name:px-coin-s}
   @keyframes px-coin-s{to{background-position:-64px 0}}
   .px-btn{font-size:12px;padding:10px 14px}
@@ -171,3 +183,5 @@
   .px-clouds i,.hud-coins i,.px-loader .runner,.px-loader .coin,.hud-nav a[aria-current="page"]::before{animation:none}
 }
 @media (hover:none) and (pointer:coarse){.px-prog .man,.px-prog .goal{display:none}}
+@media (max-width:380px){.hud-in{gap:6px;padding:0 8px}.hud-nav a{padding:8px 4px 8px 14px}.hud-coins{padding-left:6px}}
+@media (max-width:340px){.hud-brand{font-size:0;gap:0}}

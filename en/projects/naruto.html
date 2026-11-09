@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Naruto Mobile: Progression and Economy Teardown · Yin Shuo Portfolio</title>
+<meta content="An MDA teardown of the progression and economy systems in Naruto Mobile, with an A/B comparison against Yiren Zhi Xia." name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../img/px/favicon.png" rel="icon"/>
+<link href="../../css/shell.css" rel="stylesheet"/>
+<link href="../../css/site.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../fonts/fusion-pixel-en.woff2") format("woff2");font-display:swap}:root{--body-font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;--px-font:"Fusion Pixel",ui-monospace,Consolas,monospace}</style><link href="../../projects/naruto.html" hreflang="zh-Hans" rel="alternate"/><link href="../../zh-hant/projects/naruto.html" hreflang="zh-Hant" rel="alternate"/><link href="../../en/projects/naruto.html" hreflang="en" rel="alternate"/><link href="../../ja/projects/naruto.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="Back to title" href="../index.html"><img alt="" src="../../img/px/avatar.png"/>Yin Shuo<small>Game Designer</small></a>
+<nav aria-label="Main navigation" class="hud-nav">
+<a aria-current="page" data-slot="Select Save" href="../index.html">Saves</a>
+<a data-slot="Open player profile" href="../about.html">About</a>
+<a class="hide-s" data-slot="Open resume" href="../resume.html">Resume</a>
+</nav>
+<div class="hud-coins" title="Hit save blocks to collect coins"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>Naruto Mobile · Progression &amp; Economy</b>
+<nav><a class="hide-s" href="#summary">Summary</a> <a class="hide-s" href="#ab">A/B comparison</a> <a class="hide-s" href="#fix">Issues &amp; proposals</a> <a href="#read">Full text</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">Save 04 · System teardown · 36 pages</span>
+<h1 class="mega on-sky">Naruto Mobile<br/>Progression &amp; Economy Systems</h1>
+<p class="feature">Using the MDA framework, the systems are split into mechanics, dynamics and aesthetics, and every conclusion is written as a chain: <b>which rule → what players do because of it → what they feel</b>. Yiren Zhi Xia, from the same studio group, serves as the A/B comparison. Based on the live version of October 2026 and a V12 account.</p>
+<div class="acts">
+<a class="px-btn" href="#read"><span class="px-ico book"></span>Read the full text here</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd"><span class="px-ico ext"></span>Feishu original (Chinese)</a>
+<button aria-label="Hit the save block" class="px-block" data-coin="naruto-1"></button>
+</div>
+<div class="c-cover" data-r=""><img alt="Naruto Mobile main screen (nickname masked)" src="../../img/naruto/main.webp" style="object-position:30% center;max-height:520px"/></div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats">
+<div data-r=""><span>Premium Recruit vs. direct coupon price</span><b>25×</b><span>converted at top-up rates</span></div>
+<div data-r="2"><span>To max one S-rank ninja</span><b>≈300</b><span>pulls, per player statistics</span></div>
+<div data-r="3"><span>Power-line progression systems</span><b>7</b><span>systems</span></div>
+<div data-r="4"><span>Recruit entry points</span><b>8</b><span>across 3 currency tiers</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="summary">
+<div class="narrow">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">Summary</h2>
+<p class="feature" data-r="">Naruto Mobile <b>makes ninjas its single core product</b> and sells them to skill-focused and progression-focused players at the same time through two opposite PvP rule sets: the Arena normalizes stats, while Ranked Points matches settle by power rating.</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>Layer</th><th>Approach</th><th>Key evidence</th></tr>
+<tr><td>Mechanics</td><td>3 currency tiers, 8 recruit entry points, 7 progression systems; the Arena normalizes power, Ranked Points matches settle by power</td><td>Premium Recruit gives S-rank shards at 11.5%, with one guaranteed per ten-pull; every V12 perk is about extra attempts</td></tr>
+<tr><td>Dynamics</td><td>Arena players spend in bursts around new ninjas, power players spend daily on stamina; level caps gate time, attempt caps gate output, and money can only loosen the attempt caps</td><td>Raid levels 110–160 in 5 tiers; the magic-resist threshold for Secret Realm accessories rises about 10% per tier</td></tr>
+<tr><td>Aesthetics</td><td>The Arena offers challenge and expression, the power line offers achievement and collection; the same release of a strong ninja moves whales and free players in opposite emotional directions</td><td>A strong paid ninja swept the Arena at launch and was later nerfed</td></tr>
+</table>
+</div>
+</div>
+</section>
+<section class="chapter" id="ab">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">A/B with Yiren Zhi Xia</h2>
+<p class="feature" data-r="">Both games come from Tencent's Magic Cube studio group and are anime-IP fighting games, but <b>their monetization goes in opposite directions</b>.</p>
+<ul class="rules" data-r="">
+<li><i>What is sold</i><b>Ownership and quantity</b>Naruto sells ninjas, scrolls, summons and power; Yiren Zhi Xia publicly states that characters are free through log-in rewards and quests, and monetizes mainly through skins.</li>
+<li><i>How fairness works</i><b>Partly shielded / fully shielded</b>Naruto shields stats in some modes and uses ban slots to make a deep ninja roster valuable again; Yiren Zhi Xia shields level and gear across all of PvP.</li>
+<li><i>Risks</i><b>Opposite directions</b>Naruto risks power creep and an ever-deeper power line; Yiren Zhi Xia risks a low ceiling on cosmetic spending, and breaking its fairness promise once progression enters PvP.</li>
+<li><i>Method</i><b>One chain per conclusion</b>To keep MDA from turning into labeling, every conclusion runs from rule to player behavior to emotion, backed by in-game screenshots as evidence.</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="fix">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">Strengths, issues and proposals</h2>
+<ul class="rules three" data-r="">
+<li><i>Three strengths</i><ol><li>Each ninja serves both progression lines, so one release sells to two kinds of players, giving revenue both peaks and a stable base.</li><li>Anti-frustration rules sit in the low and middle ranks: no points lost on a defeat at low rank, and a rank floor in the middle.</li><li>Level gates advance only with time and money can only add attempts, which keeps the rate of content consumption under control.</li></ol></li>
+<li><i>Three issues</i><ol><li>Free players can never get coupon-channel ninjas, and have no chance to practice against them while they are strong.</li><li>Premium Recruit only discloses the guaranteed S-rank shard per ten-pull, not how many pulls it takes to max an S-rank ninja.</li><li>The power line already has 7 progression systems, so the catch-up cost for returning and new players rises every year.</li></ol></li>
+<li><i>Three proposals</i><ol><li>Show pity progress for Premium Recruit, consistent with the luck meter already used in Wish Treasure.</li><li>Four weeks after a paid ninja launches, add it to a “free this week” Arena rotation that grants play access only.</li><li>Borrow Yiren Zhi Xia's separate PvE and PvP skill kits, so a new ninja's Arena strength and Ranked Points strength can be tuned independently.</li></ol></li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="toc">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">Contents</h2>
+<ul class="toc-list" data-r="">
+<li><b>0</b>About this teardown: subject, use of MDA, why Yiren Zhi Xia</li>
+<li><b>1</b>Purpose of the systems</li>
+<li><b>2</b>Mechanics: how the systems are designed</li>
+<li><b>3</b>Dynamics: how the design achieves its purpose</li>
+<li><b>4</b>Aesthetics: what players actually feel</li>
+<li><b>5</b>A/B comparison: Naruto vs. Yiren Zhi Xia</li>
+<li><b>6</b>Strengths and weaknesses</li>
+<li><b>7</b>Proposals</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="read">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">Full text</h2>
+<p class="feature" data-r="">Browse the full text below (in Chinese). When you are done, use the top bar or the buttons at the bottom to return to the saves.</p>
+</div>
+<div class="wrap">
+<div class="pdf" data-r="">
+<div class="bar"><span>naruto-mda.pdf · 36 pages · Chinese</span><span><a download="" href="../../files/naruto-mda.pdf">Download PDF</a> <a href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd">Feishu original ↗</a></span></div>
+<iframe loading="lazy" src="../../files/naruto-mda.pdf#view=FitH" title="Full text of the Naruto Mobile progression and economy teardown"></iframe>
+<div class="pdf-alt">PDFs cannot be embedded on phones. <a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">Open the PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd" style="color:var(--gold)">Feishu original</a> (opens in a new tab)</div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="Load save 03" href="burger/index.html"><span>Previous save · 03</span><b>Cosmic Burger</b></a>
+<a data-slot="Load save 05" href="hearthstone.html"><span>Next save · 05</span><b>Battlegrounds: Economy &amp; Match Pacing</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 Yin Shuo</span><span><a href="#top">Back to top</a><a href="../index.html">All saves</a><a data-slot="Open resume" href="../resume.html">Resume</a></span></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

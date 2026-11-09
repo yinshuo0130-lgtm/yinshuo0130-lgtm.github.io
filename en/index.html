@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Yin Shuo · Game Design Portfolio</title>
+<meta content="Game design portfolio of Yin Shuo: a large Nightreign mod, the game jam entry Tidewheel, the Douyin mini-game Cosmic Burger, and system teardowns of Naruto Mobile and Hearthstone Battlegrounds." name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../img/px/favicon.png" rel="icon"/>
+<link href="../css/shell.css" rel="stylesheet"/>
+<link href="../css/site.css" rel="stylesheet"/>
+<link href="../css/home.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<link as="image" fetchpriority="high" href="../img/mod/cover-cards.webp" rel="preload"/>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../fonts/fusion-pixel-en.woff2") format("woff2");font-display:swap}:root{--body-font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;--px-font:"Fusion Pixel",ui-monospace,Consolas,monospace}</style><link href="../index.html" hreflang="zh-Hans" rel="alternate"/><link href="../zh-hant/index.html" hreflang="zh-Hant" rel="alternate"/><link href="../en/index.html" hreflang="en" rel="alternate"/><link href="../ja/index.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="Back to title" href="index.html"><img alt="" src="../img/px/avatar.png"/>Yin Shuo<small>Game Designer</small></a>
+<nav aria-label="Main navigation" class="hud-nav">
+<a aria-current="page" href="index.html">Saves</a>
+<a data-slot="Open player profile" data-tip="Games, film and music, background and skills." href="about.html">About</a>
+<a class="hide-s" data-slot="Open resume" href="resume.html">Resume</a>
+</nav>
+<div class="hud-coins" title="Hit save blocks to collect coins"><i></i><b>×00</b></div>
+</div>
+</header>
+<main>
+<!-- ============ 选关舞台：可以操作的小关卡 ============ -->
+<section aria-label="Select Save" class="stg" id="stg">
+<div aria-label="Controls" class="stg-help">
+<div class="bd">
+<p class="hd">Controls<small>HOW TO PLAY</small></p>
+<span aria-hidden="true" class="bang">!</span>
+<div class="row"><span class="keys"><kbd class="k-l">←</kbd><kbd class="k-r">→</kbd></span>Move</div>
+<div class="row"><span class="keys"><kbd class="k-sp">Space</kbd></span>Jump, hit a block</div>
+<div class="row"><span class="keys"><kbd>↓</kbd></span>Enter a door</div>
+<div class="row or"><span class="keys"><span class="mouse"></span></span>Or click a block</div>
+</div>
+</div>
+<div class="stg-top">
+<p class="eyebrow on-sky-s">Yin Shuo · Game Designer</p>
+<h1 class="mega on-sky">Select Save</h1>
+</div>
+<div aria-live="polite" class="board">
+<div class="board-scr"><span class="badge"></span><div class="scan"></div></div>
+<div class="board-cap">
+<span class="kicker"></span>
+<h2></h2>
+<p></p>
+<div class="board-act"><button class="px-btn sm go" type="button">Load Save</button><small>or jump and hit its block</small></div>
+</div>
+</div>
+<div class="sblocks"></div>
+<div class="px-hills"></div>
+<button aria-label="Door: About" class="door" type="button"><span class="lbl"><i>↓</i> About</span></button>
+<div aria-hidden="true" class="hero-p"><span class="say">↓ Enter</span></div>
+<div class="px-ground"></div>
+<div aria-hidden="true" class="touch">
+<div><button data-k="l" type="button">◀</button><button data-k="r" type="button">▶</button></div>
+<div><button class="a" data-k="j" type="button">A</button></div>
+</div>
+<noscript>
+<p style="position:absolute;left:24px;bottom:120px;z-index:9;background:#fff;padding:12px"><a href="projects/nightreign-mod.html">Nightreign Mod</a> · <a href="projects/tidewheel.html">Tidewheel</a> · <a href="projects/burger/index.html">Cosmic Burger</a> · <a href="projects/naruto.html">Naruto teardown</a> · <a href="projects/hearthstone.html">Battlegrounds teardown</a> · <a href="about.html">About</a></p>
+</noscript>
+</section>
+<!-- ============ 下半场景：从黄昏走到夜里 ============ -->
+<div class="world">
+<div aria-hidden="true" class="sun"></div>
+<div aria-hidden="true" class="moon"></div>
+<!-- 玩家状态 -->
+<section class="wsec" id="status">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">STATUS</span><h2 class="h-sec">Player Status</h2></div>
+<div class="win status" data-r="">
+<div class="who">
+<img alt="Pixel avatar of Yin Shuo" src="../img/px/avatar.png"/>
+<b>Yin Shuo</b>
+<small>Class: Game Designer</small>
+<small>Fudan University · M.Sc. candidate</small>
+</div>
+<div>
+<div class="dlg" id="dlg">Quantify first, then build. I <b>independently made</b> a large content mod for Nightreign and the Douyin mini-game Cosmic Burger, served as <b>lead designer</b> at a game jam, and wrote <b>system teardowns</b> of Naruto Mobile and Hearthstone Battlegrounds. The pacing of Cosmic Burger and the timing windows of Tidewheel were both <b>simulated with scripts first, then tuned against the data</b>.<i class="more-ind"></i></div>
+<div class="attrs">
+<div class="attr"><span>Playtime</span><span class="lead"></span><span class="num" data-n="4600" data-suf="h+">4600h+</span></div>
+<div class="attr"><span>Platinums</span><span class="lead"></span><span class="num" data-n="16" data-suf="">16</span></div>
+<div class="attr"><span>Mod playtest rounds</span><span class="lead"></span><span class="num" data-n="80" data-suf="+">80+</span></div>
+<div class="attr"><span>System teardowns</span><span class="lead"></span><span class="num" data-n="56" data-suf=" pp">56 pp</span></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="island"></div>
+</div>
+</section>
+<!-- 读取存档 -->
+<section class="wsec" id="saves">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">LOAD</span><h2 class="h-sec">Load Save</h2></div>
+<div class="win saves" data-r="">
+<div class="saves-head"><span>Choose a save to continue</span><span>Slots used 5 / 6</span></div>
+<a class="slot" data-slot="Load save 01" data-tip="Two fights against the same Nightlord can bring different enemies on the first two days." href="projects/nightreign-mod.html">
+<span class="no">01</span>
+<span class="th"><img alt="" loading="lazy" src="../img/mod/cover-cards.webp"/></span>
+<div><h4>Nightreign Content Expansion Mod</h4><div class="meta"><i>Playable</i>Solo project: systems, levels, presentation · 2026.08 – now · Beta released, ~6,000 views on Bilibili</div></div>
+<span class="key"><b>7</b>new Nightlords, each with 2 early-night encounter sets</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="Load save 02" data-tip="The recall-bounce window was widened from about 0.5 s to about 1.6 s." href="projects/tidewheel.html">
+<span class="no">02</span>
+<span class="th"><img alt="" loading="lazy" src="../img/tidewheel/beach.webp"/></span>
+<div><h4>Tidewheel</h4><div class="meta"><i>Playable</i>Designer (and part-time programmer) · team of 4 · thatgamejam #02 · playable on itch.io</div></div>
+<span class="key"><b>1.6 s</b>recall-bounce window, widened from about 0.5 s</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="Load save 03" data-tip="First prestige at about 49 minutes; with the star bonus, the second run drops to 23 minutes." href="projects/burger/index.html">
+<span class="no">03</span>
+<span class="th phones"><img alt="" loading="lazy" src="../img/burger/02_home.webp"/><img alt="" loading="lazy" src="../img/burger/12c_run_burst.webp"/><img alt="" loading="lazy" src="../img/burger/19_space_home.webp"/></span>
+<div><h4>Cosmic Burger</h4><div class="meta"><i>Playable</i>Solo project: systems, balancing, development · 2026.09 – 10 · software copyright pending</div></div>
+<span class="key"><b>49′</b>to the first prestige (simulator result)</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="Load save 04" data-tip="Maxing one S-rank ninja through Premium Recruit takes about 300 pulls, 25 times the direct coupon price." href="projects/naruto.html">
+<span class="no">04</span>
+<span class="th"><img alt="" loading="lazy" src="../img/naruto/main.webp" style="object-position:30% center"/></span>
+<div><h4>Naruto Mobile: Progression and Economy</h4><div class="meta"><i>Teardown</i>MDA · numeric analysis · product comparison · 36 pp</div></div>
+<span class="key"><b>25×</b>price gap between Premium Recruit and direct coupon purchase</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="Load save 05" data-tip="A Tier 6 minion has only 7 copies; a single triple takes 43% of them." href="projects/hearthstone.html">
+<span class="no">05</span>
+<span class="th"><img alt="" loading="lazy" src="../img/hs/main.webp"/></span>
+<div><h4>Battlegrounds: Economy and Match Pacing</h4><div class="meta"><i>Teardown</i>numeric analysis · A/B test design · 20 pp · 501 hours played</div></div>
+<span class="key"><b>43%</b>of a Tier 6 minion's copies taken by one triple</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" href="#goal" style="opacity:.7">
+<span class="no">06</span>
+<span class="th" style="display:grid;place-items:center;font-family:var(--px-font);font-size:12px;color:var(--gold)">NEW GAME</span>
+<div><h4>Empty Slot</h4><div class="meta">This slot is saved for the next project.</div></div>
+<span class="key"></span>
+<span class="go px-btn sm paper">Contact</span>
+</a>
+<div class="saves-foot"><span>↑↓ Select · Enter Load</span><a data-slot="Open resume" href="resume.html">View resume ▶</a></div>
+</div>
+<div aria-hidden="true" class="island"></div>
+</div>
+</section>
+<!-- 玩家档案：三扇门 -->
+<section class="wsec" id="profile">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">PLAYER</span><h2 class="h-sec">Player Profile</h2></div>
+<div class="doors">
+<a class="wdoor" data-r="" data-slot="Open player profile" data-tip="4,600+ hours played, 35 games, 16 platinums." href="about.html#games"><span class="d"></span> <span class="sign"><b><span class="px-ico pad"></span> Games</b><small>35 games · cover wall · filter by platform</small></span></a>
+<a class="wdoor" data-r="2" data-slot="Open player profile" data-tip="30+ anime, tokusatsu, films and series, plus a BGM playlist." href="about.html#films"><span class="d"></span> <span class="sign"><b><span class="px-ico film"></span> Film &amp; Music</b><small>Anime · tokusatsu · film · music</small></span></a>
+<a class="wdoor" data-r="3" data-slot="Open player profile" data-tip="M.Sc. candidate at Fudan University, three years of GIS and remote-sensing data analysis." href="about.html#cv"><span class="d"></span> <span class="sign"><b><span class="px-ico map"></span> Background &amp; Skills</b><small>Education, internship, skills</small></span></a>
+</div>
+<div aria-hidden="true" class="island doors-ground"></div>
+</div>
+</section>
+<!-- 终点 -->
+<section class="wsec" id="goal">
+<div class="wrap goal">
+<div class="win clear" data-r="">
+<div aria-label="STAGE CLEAR!" class="big"></div>
+<p>Thanks for visiting. I am looking for internships and full-time roles in game design.</p>
+<div class="score"><span>Coins<b id="goal-coins">0</b></span> <span>Saves<b>5</b></span> <span>Time<b id="goal-time">00:00</b></span></div>
+<div class="row">
+<a class="px-btn" href="mailto:13283750773@163.com"><span class="px-ico mail"></span>Send email</a>
+<a class="px-btn paper" data-slot="Open resume" href="resume.html"><span class="px-ico pdf"></span>Resume</a>
+<a class="px-btn blue" href="#top" id="again">Play again</a>
+</div>
+</div>
+<div aria-hidden="true" class="tower"></div>
+</div>
+</section>
+</div>
+</main>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 Yin Shuo · try ↑↑↓↓←→←→BA</span><span><a href="#top">Back to top</a><a href="about.html">About</a><a data-slot="Open resume" href="resume.html">Resume</a></span></div></div>
+</footer>
+<script src="js/site.js"></script>
+<script src="js/stage.js"></script>
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sfx = window.ysSfx || function(){};
+
+  // 对话框逐字出现，点一下直接显示全文
+  var dlg = document.getElementById('dlg');
+  var full = dlg.innerHTML, tokens = full.match(/<[^>]+>|[^<]/g) || [];
+  var typed = reduce, n = 0, timer = null;
+  function paint(){ dlg.innerHTML = tokens.slice(0, n).join('') + '<span class="ghost">' + tokens.slice(n).join('').replace(/<i class="more-ind"><\/i>/, '') + '</span>'; }
+  function finish(){ clearInterval(timer); n = tokens.length; dlg.innerHTML = full; typed = true; }
+  function type(){
+    if (typed) return; typed = true;
+    timer = setInterval(function(){
+      n++; while (n < tokens.length && tokens[n - 1].charAt(0) === '<') n++;
+      if (n >= tokens.length) finish(); else paint();
+    }, 28);
+  }
+  if (!reduce){ n = 0; paint(); typed = false; }
+  dlg.addEventListener('click', finish);
+
+  // 数字从 0 滚上去
+  function count(el){
+    var to = +el.dataset.n, suf = el.dataset.suf || '', t0 = performance.now();
+    (function f(t){ var k = Math.min(1, (t - t0) / 900); el.textContent = Math.round(to * k) + suf; if (k < 1) requestAnimationFrame(f); })(t0);
+  }
+
+  // STAGE CLEAR 逐字跳
+  var big = document.querySelector('.clear .big');
+  'STAGE CLEAR!'.split('').forEach(function(ch, i){ var s = document.createElement('span'); s.style.setProperty('--i', i); s.textContent = ch === ' ' ? ' ' : ch; big.appendChild(s); });
+
+  var t0 = Date.now();
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var el = en.target;
+      if (el.classList.contains('status')){ type(); if (!reduce) el.querySelectorAll('.num').forEach(count); }
+      if (el.classList.contains('clear')){
+        var coins = 0; try { coins = Object.keys(JSON.parse(localStorage.getItem('ys-coins')) || {}).length; } catch(e){}
+        document.getElementById('goal-coins').textContent = coins;
+        var s = Math.round((Date.now() - t0) / 1000);
+        document.getElementById('goal-time').textContent = ('0' + Math.floor(s / 60)).slice(-2) + ':' + ('0' + s % 60).slice(-2);
+        sfx('clear');
+      }
+      io.unobserve(el);
+    });
+  }, {threshold:.35});
+  io.observe(document.querySelector('.win.status'));
+  io.observe(document.querySelector('.win.clear'));
+
+  // 存档菜单：悬停有选择音，↑↓ 在存档之间移动
+  var slots = [].slice.call(document.querySelectorAll('.slot'));
+  slots.forEach(function(a, i){
+    a.addEventListener('mouseenter', function(){ sfx('select'); });
+    a.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+        e.preventDefault(); e.stopPropagation();
+        var j = (i + (e.key === 'ArrowDown' ? 1 : -1) + slots.length) % slots.length;
+        slots[j].focus(); sfx('select');
+      }
+    });
+  });
+  document.querySelectorAll('.wdoor').forEach(function(d){ d.addEventListener('mouseenter', function(){ sfx('door'); }); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>《火影忍者》手遊 成長與經濟系統拆解 · 殷碩作品集</title>
+<meta content="按 MDA 框架拆解《火影忍者》手遊的成長與經濟系統，並與《異人之下》做 A/B 對比。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../img/px/favicon.png" rel="icon"/>
+<link href="../../css/shell.css" rel="stylesheet"/>
+<link href="../../css/site.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../fonts/fusion-pixel-zh-hant.woff2") format("woff2");font-display:swap}:root{--body-font:"PingFang TC","Microsoft JhengHei","Noto Sans TC","Heiti TC",system-ui,sans-serif;--px-font:"Fusion Pixel","PingFang TC","Microsoft JhengHei",monospace}</style><link href="../../projects/naruto.html" hreflang="zh-Hans" rel="alternate"/><link href="../../zh-hant/projects/naruto.html" hreflang="zh-Hant" rel="alternate"/><link href="../../en/projects/naruto.html" hreflang="en" rel="alternate"/><link href="../../ja/projects/naruto.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="回到標題" href="../index.html"><img alt="" src="../../img/px/avatar.png"/>殷碩<small>遊戲策劃</small></a>
+<nav aria-label="主導航" class="hud-nav">
+<a aria-current="page" data-slot="選擇存檔" href="../index.html">存檔</a>
+<a data-slot="開啟玩家檔案" href="../about.html">關於我</a>
+<a class="hide-s" data-slot="開啟簡歷" href="../resume.html">簡歷</a>
+</nav>
+<div class="hud-coins" title="頂方塊可以收集硬幣"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>火影手遊 · 成長與經濟系統</b>
+<nav><a class="hide-s" href="#summary">一頁結論</a> <a class="hide-s" href="#ab">A/B 對比</a> <a class="hide-s" href="#fix">問題與建議</a> <a href="#read">閱讀全文</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">存檔 04 · 系統拆解 · 36 頁</span>
+<h1 class="mega on-sky">《火影忍者》手遊<br/>成長與經濟系統</h1>
+<p class="feature">按 MDA 框架把系統拆成機制、動態、體驗三層，每條結論都寫成一條鏈：<b>哪條規則 → 玩家因此怎麼做 → 產生什麼情緒</b>。再拿同一工作室的《異人之下》做 A/B 對比。口徑為 2026 年 10 月實機版本，賬號 V12。</p>
+<div class="acts">
+<a class="px-btn" href="#read"><span class="px-ico book"></span>在這裡閱讀全文</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd"><span class="px-ico ext"></span>飛書原文</a>
+<button aria-label="頂一下存檔方塊" class="px-block" data-coin="naruto-1"></button>
+</div>
+<div class="c-cover" data-r=""><img alt="火影忍者手遊主介面（暱稱已打碼）" src="../../img/naruto/main.webp" style="object-position:30% center;max-height:520px"/></div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats">
+<div data-r=""><span>高階招募與點券直售價差</span><b>25×</b><span>按充值折算</span></div>
+<div data-r="2"><span>拿滿一名 S 忍</span><b>≈300</b><span>抽，玩家統計口徑</span></div>
+<div data-r="3"><span>戰力線養成系統</span><b>7</b><span>套</span></div>
+<div data-r="4"><span>招募入口</span><b>8</b><span>個，3 層貨幣</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="summary">
+<div class="narrow">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">一頁結論</h2>
+<p class="feature" data-r="">《火影忍者》手遊把<b>忍者作為唯一核心商品</b>，用兩套相反的 PVP 規則同時賣給操作型和養成型玩家：決鬥場統一數值，積分賽按戰力結算。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>層</th><th>做法</th><th>關鍵證據</th></tr>
+<tr><td>機制</td><td>3 層貨幣、8 個招募入口、7 套養成系統；決鬥場統一戰力，積分賽按戰力結算</td><td>高招 S 碎片 11.5%，十連必送 S 碎片；V12 特權全是次數類</td></tr>
+<tr><td>動態</td><td>決鬥場玩家跟著新忍者脈衝式付費，戰力玩家每天買體力持續付費；等級鎖時間，次數鎖產出，付費只能放寬次數</td><td>團本 110–160 級分 5 檔；秘境飾品魔抗門檻每檔漲約 10%</td></tr>
+<tr><td>體驗</td><td>決鬥場提供挑戰和表達，戰力線提供成就和收集；同一次強勢忍者投放，大 R 和零氪的情緒方向相反</td><td>強勢付費忍者上線橫掃決鬥場後被削弱</td></tr>
+</table>
+</div>
+</div>
+</section>
+<section class="chapter" id="ab">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">和《異人之下》的 A/B</h2>
+<p class="feature" data-r="">兩款都出自騰訊魔方工作室群，都是動漫 IP 改編的格鬥遊戲，但<b>商業化走了相反的路</b>。</p>
+<ul class="rules" data-r="">
+<li><i>賣什麼</i><b>“有沒有”和“有多少”</b>火影賣忍者、秘卷、通靈，以及戰力；《異人之下》公開口徑是角色可以透過簽到和任務免費獲得，付費主要是皮膚。</li>
+<li><i>公平靠什麼</i><b>遮蔽一部分 / 全部遮蔽</b>火影在部分模式裡遮蔽數值，再用 BAN 位讓忍者儲備重新有價值；《異人之下》在 PVP 全面遮蔽等級和裝備。</li>
+<li><i>風險</i><b>方向相反</b>火影的風險是強度膨脹、戰力線越疊越深；《異人之下》的風險是外觀付費天花板低，以及養成一旦進入 PVP 會破壞公平承諾。</li>
+<li><i>方法</i><b>每條結論一條鏈</b>為了不讓 MDA 變成貼標籤，每條結論都從規則推到玩家行為，再推到情緒，並給出實機截圖作證據。</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="fix">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">優點、問題與建議</h2>
+<ul class="rules three" data-r="">
+<li><i>三條優點</i><ol><li>忍者同時服務兩條成長線，一次投放賣給兩類玩家，收入有峰值也有基本盤。</li><li>防挫敗規則集中在低中段：低段輸了不扣分，中段有段位地板。</li><li>等級門檻只能靠時間推進，付費只能放寬次數，內容消耗速度可控。</li></ol></li>
+<li><i>三個問題</i><ol><li>點券渠道的忍者零氪永遠拿不到，強勢期內也沒有練習機會。</li><li>高階招募只公示十連必送 S 碎片，拿滿一名 S 忍要多少抽沒有說明。</li><li>戰力線已有 7 套養成系統，迴流和新玩家的追趕成本逐年上漲。</li></ol></li>
+<li><i>三條建議</i><ol><li>高階招募明示保底進度，和祈願奪寶的幸運值做法一致。</li><li>付費忍者上線滿 4 周後，進入決鬥場“本週免費”輪換，只給體驗權。</li><li>借鑑《異人之下》PVE 與 PVP 兩套技能模組，把新忍者的決鬥場強度和積分賽強度分開調。</li></ol></li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="toc">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">目錄</h2>
+<ul class="toc-list" data-r="">
+<li><b>零</b>拆解說明：物件、MDA 用法、為什麼選《異人之下》</li>
+<li><b>一</b>系統目的</li>
+<li><b>二</b>機制層：系統怎麼設計</li>
+<li><b>三</b>動態層：設計如何達成目的</li>
+<li><b>四</b>體驗層：玩家實際感受到什麼</li>
+<li><b>五</b>A/B 對比：火影 vs 異人之下</li>
+<li><b>六</b>優缺點分析</li>
+<li><b>七</b>改進建議</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="read">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">閱讀全文</h2>
+<p class="feature" data-r="">全文在下面直接翻閱，看完點頂欄或底部按鈕回到存檔。</p>
+</div>
+<div class="wrap">
+<div class="pdf" data-r="">
+<div class="bar"><span>naruto-mda.pdf · 36 頁</span><span><a download="" href="../../files/naruto-mda.pdf">下載 PDF</a> <a href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd">飛書原文 ↗</a></span></div>
+<iframe loading="lazy" src="../../files/naruto-mda.pdf#view=FitH" title="《火影忍者》手遊成長與經濟系統拆解全文"></iframe>
+<div class="pdf-alt">手機上無法內嵌 PDF。<a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">開啟 PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd" style="color:var(--gold)">飛書原文</a>（新標籤頁開啟）</div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="讀取存檔 03" href="burger/index.html"><span>上一存檔 · 03</span><b>《宇宙漢堡》</b></a>
+<a data-slot="讀取存檔 05" href="hearthstone.html"><span>下一存檔 · 05</span><b>酒館戰棋：經濟與對局節奏</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷碩</span><span><a href="#top">回到頂部</a><a href="../index.html">全部存檔</a><a data-slot="開啟簡歷" href="../resume.html">簡歷</a></span></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

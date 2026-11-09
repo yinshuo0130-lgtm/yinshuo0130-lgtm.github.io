@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>『NARUTO』モバイル 成長と経済システム分析 · 殷碩ポートフォリオ</title>
+<meta content="MDA フレームワークで『NARUTO』モバイルの成長と経済システムを分析し、『異人之下』と A/B 比較しました。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../img/px/favicon.png" rel="icon"/>
+<link href="../../css/shell.css" rel="stylesheet"/>
+<link href="../../css/site.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../fonts/fusion-pixel-ja.woff2") format("woff2");font-display:swap}:root{--body-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo","Noto Sans JP",system-ui,sans-serif;--px-font:"Fusion Pixel","Hiragino Sans","Yu Gothic","Meiryo",monospace}</style><link href="../../projects/naruto.html" hreflang="zh-Hans" rel="alternate"/><link href="../../zh-hant/projects/naruto.html" hreflang="zh-Hant" rel="alternate"/><link href="../../en/projects/naruto.html" hreflang="en" rel="alternate"/><link href="../../ja/projects/naruto.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="タイトルへ戻る" href="../index.html"><img alt="" src="../../img/px/avatar.png"/>殷碩<small>ゲームプランナー</small></a>
+<nav aria-label="メインナビゲーション" class="hud-nav">
+<a aria-current="page" data-slot="セーブを選択" href="../index.html">セーブ</a>
+<a data-slot="プレイヤーデータを開く" href="../about.html">自己紹介</a>
+<a class="hide-s" data-slot="履歴書を開く" href="../resume.html">履歴書</a>
+</nav>
+<div class="hud-coins" title="セーブブロックを叩くとコインが集まります"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>NARUTO モバイル · 成長と経済システム</b>
+<nav><a class="hide-s" href="#summary">結論</a> <a class="hide-s" href="#ab">A/B 比較</a> <a class="hide-s" href="#fix">課題と提案</a> <a href="#read">全文を読む</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">セーブ 04 · システム分析 · 36 ページ</span>
+<h1 class="mega on-sky">『NARUTO』モバイル<br/>成長と経済システム</h1>
+<p class="feature">MDA フレームワークでシステムをメカニクス、ダイナミクス、エステティクスの 3 層に分け、すべての結論を一本の鎖として書きました：<b>どのルールか → それによってプレイヤーがどう動くか → どんな感情が生まれるか</b>。比較対象には同じスタジオ群の『異人之下』を用いています。2026 年 10 月時点の実機バージョン、V12 アカウントに基づきます。</p>
+<div class="acts">
+<a class="px-btn" href="#read"><span class="px-ico book"></span>ここで全文を読む</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd"><span class="px-ico ext"></span>Feishu の原文（中国語）</a>
+<button aria-label="セーブブロックを叩く" class="px-block" data-coin="naruto-1"></button>
+</div>
+<div class="c-cover" data-r=""><img alt="NARUTO モバイルのメイン画面（ニックネームは伏せています）" src="../../img/naruto/main.webp" style="object-position:30% center;max-height:520px"/></div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats">
+<div data-r=""><span>高級招募とクーポン直販の価格差</span><b>25 倍</b><span>課金額で換算</span></div>
+<div data-r="2"><span>S 忍 1 体を完成させるには</span><b>約 300</b><span>回、プレイヤー統計ベース</span></div>
+<div data-r="3"><span>戦力ラインの育成システム</span><b>7</b><span>種</span></div>
+<div data-r="4"><span>招募の入り口</span><b>8</b><span>か所、通貨は 3 層</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="summary">
+<div class="narrow">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">結論</h2>
+<p class="feature" data-r="">『NARUTO』モバイルは<b>忍者を唯一の主力商品</b>とし、正反対の 2 つの PvP ルールで、操作重視のプレイヤーと育成重視のプレイヤーの両方に売っています。決闘場では数値を統一し、ポイント戦は戦力で決着します。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>層</th><th>やり方</th><th>主な根拠</th></tr>
+<tr><td>メカニクス</td><td>通貨 3 層、招募の入り口 8 か所、育成システム 7 種。決闘場は戦力を統一、ポイント戦は戦力で決着</td><td>高級招募の S 欠片は 11.5%、10 連で S 欠片確定。V12 特典はすべて回数系</td></tr>
+<tr><td>ダイナミクス</td><td>決闘場のプレイヤーは新忍者に合わせて波のように課金し、戦力重視のプレイヤーは毎日スタミナを買って継続的に課金。レベルで時間を、回数で産出量を制限し、課金で緩められるのは回数だけ</td><td>レイドはレベル 110〜160 の 5 段階。秘境装飾の魔法耐性の基準は 1 段階ごとに約 10% 上昇</td></tr>
+<tr><td>エステティクス</td><td>決闘場は挑戦と自己表現、戦力ラインは達成感と収集を提供。同じ強力な忍者の投入でも、重課金と無課金では感情の向きが正反対</td><td>強力な有料忍者が登場して決闘場を席巻し、その後弱体化</td></tr>
+</table>
+</div>
+</div>
+</section>
+<section class="chapter" id="ab">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">『異人之下』との A/B</h2>
+<p class="feature" data-r="">どちらもテンセントの魔方工作室群の作品で、アニメ IP 原作の対戦格闘ゲームですが、<b>マネタイズは正反対の道を進んでいます</b>。</p>
+<ul class="rules" data-r="">
+<li><i>何を売るか</i><b>「持っているか」と「どれだけあるか」</b>NARUTO は忍者、秘巻、口寄せ、そして戦力を売ります。『異人之下』はキャラクターをログインやクエストで無料入手できると公表しており、課金は主にスキンです。</li>
+<li><i>公平性の担保</i><b>一部を遮断 / すべて遮断</b>NARUTO は一部のモードで数値を遮断し、BAN 枠で忍者の層の厚さに再び価値を持たせています。『異人之下』は PvP 全体でレベルと装備を遮断しています。</li>
+<li><i>リスク</i><b>方向が逆</b>NARUTO のリスクはインフレと戦力ラインの際限ない積み重ね。『異人之下』のリスクは見た目課金の上限の低さと、育成が PvP に入り込んだ途端に公平性の約束が崩れることです。</li>
+<li><i>方法</i><b>結論ごとに一本の鎖</b>MDA がラベル貼りで終わらないよう、どの結論もルールからプレイヤーの行動、さらに感情へとつなげ、実機スクリーンショットを根拠として示しました。</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="fix">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">長所、課題、提案</h2>
+<ul class="rules three" data-r="">
+<li><i>3 つの長所</i><ol><li>忍者が 2 つの成長ラインを同時に支え、1 回の投入で 2 種類のプレイヤーに売れるため、売上にピークと底堅さの両方がある。</li><li>挫折を防ぐルールが低〜中位に集中：低位では負けてもポイントが減らず、中位には段位の下限がある。</li><li>レベルの壁は時間でしか進まず、課金で増やせるのは回数だけなので、コンテンツの消化速度を制御できる。</li></ol></li>
+<li><i>3 つの課題</i><ol><li>クーポン経路の忍者は無課金では永遠に手に入らず、強い時期に練習する機会もない。</li><li>高級招募は 10 連の S 欠片確定しか公示しておらず、S 忍 1 体の完成に何回必要かは示していない。</li><li>戦力ラインにはすでに 7 種の育成システムがあり、復帰・新規プレイヤーが追いつくコストは年々上がっている。</li></ol></li>
+<li><i>3 つの提案</i><ol><li>高級招募の天井までの進捗を表示し、祈願奪宝の幸運値と同じ方式にそろえる。</li><li>有料忍者の登場から 4 週間後、決闘場の「今週の無料」ローテーションに入れ、使用権だけを与える。</li><li>『異人之下』の PvE と PvP で別々のスキル構成を参考に、新忍者の決闘場とポイント戦での強さを分けて調整する。</li></ol></li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="toc">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">目次</h2>
+<ul class="toc-list" data-r="">
+<li><b>0</b>分析について：対象、MDA の使い方、『異人之下』を選んだ理由</li>
+<li><b>1</b>システムの目的</li>
+<li><b>2</b>メカニクス層：システムの設計</li>
+<li><b>3</b>ダイナミクス層：設計はどう目的を達成するか</li>
+<li><b>4</b>エステティクス層：プレイヤーが実際に感じること</li>
+<li><b>5</b>A/B 比較：NARUTO と異人之下</li>
+<li><b>6</b>長所と短所</li>
+<li><b>7</b>改善提案</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="read">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">全文を読む</h2>
+<p class="feature" data-r="">全文（中国語）は下でそのまま読めます。読み終えたら上部バーか下のボタンでセーブ画面に戻れます。</p>
+</div>
+<div class="wrap">
+<div class="pdf" data-r="">
+<div class="bar"><span>naruto-mda.pdf · 36 ページ · 中国語</span><span><a download="" href="../../files/naruto-mda.pdf">PDF をダウンロード</a> <a href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd">Feishu の原文 ↗</a></span></div>
+<iframe loading="lazy" src="../../files/naruto-mda.pdf#view=FitH" title="『NARUTO』モバイル 成長と経済システム分析の全文"></iframe>
+<div class="pdf-alt">スマートフォンでは PDF を埋め込み表示できません。<a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">PDF を開く</a> <a class="more ext" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd" style="color:var(--gold)">Feishu の原文</a>（新しいタブで開きます）</div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="セーブ 03 をロード" href="burger/index.html"><span>前のセーブ · 03</span><b>『宇宙バーガー』</b></a>
+<a data-slot="セーブ 05 をロード" href="hearthstone.html"><span>次のセーブ · 05</span><b>バトルグラウンド：経済と対戦テンポ</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷 碩</span><span><a href="#top">ページ上部へ</a><a href="../index.html">すべてのセーブ</a><a data-slot="履歴書を開く" href="../resume.html">履歴書</a></span></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

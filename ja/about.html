@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>自己紹介 · 殷碩ポートフォリオ</title>
+<meta content="殷碩のプレイヤーデータ：ゲーム歴、映像・音楽、学歴とインターン経験、企画とツールのスキル。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../img/px/favicon.png" rel="icon"/>
+<link href="../css/shell.css" rel="stylesheet"/>
+<link href="../css/site.css" rel="stylesheet"/>
+<link href="../css/about.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../fonts/fusion-pixel-ja.woff2") format("woff2");font-display:swap}:root{--body-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo","Noto Sans JP",system-ui,sans-serif;--px-font:"Fusion Pixel","Hiragino Sans","Yu Gothic","Meiryo",monospace}</style><link href="../about.html" hreflang="zh-Hans" rel="alternate"/><link href="../zh-hant/about.html" hreflang="zh-Hant" rel="alternate"/><link href="../en/about.html" hreflang="en" rel="alternate"/><link href="../ja/about.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="タイトルへ戻る" href="index.html"><img alt="" src="../img/px/avatar.png"/>殷碩<small>ゲームプランナー</small></a>
+<nav aria-label="メインナビゲーション" class="hud-nav">
+<a data-slot="セーブを選択" href="index.html">セーブ</a>
+<a aria-current="page" href="about.html">自己紹介</a>
+<a class="hide-s" data-slot="履歴書を開く" href="resume.html">履歴書</a>
+</nav>
+<div class="hud-coins" title="セーブブロックを叩くとコインが集まります"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>プレイヤーデータ</b>
+<nav><a href="#cv">経歴とスキル</a> <a href="#games">ゲーム歴</a> <a href="#films">映像・音楽</a></nav>
+</div>
+</div>
+<main>
+<!-- ============ 玩家卡 ============ -->
+<section class="about-hero">
+<div class="wrap">
+<div class="panel" data-r="">
+<div class="pcard">
+<img alt="殷碩のドット絵アバター" class="ava" src="../img/px/avatar.png"/>
+<div>
+<h1>殷 碩</h1>
+<p class="cls">職業：ゲームプランナー · システム / 数値 / レベル</p>
+<p class="bio">復旦大学 修士課程在学中。『ナイトレイン』の大型 Mod と Douyin 向けミニゲーム『宇宙バーガー』を個人で制作し、game jam ではメインプランナーを担当。『NARUTO』モバイルと『バトルグラウンド』のシステム分析を書きました。まずスクリプトでシミュレーションし、データを見て調整するのが習慣です。</p>
+<div class="traits"><span>プレイ時間 4600h+</span> <span>プラチナ 16 本</span> <span>GIS・リモートセンシング分析 3 年</span> <span>AI ツール：Claude Code · Codex</span> <span>相棒：猫のミミ</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="hero-floor">
+<div class="px-hills"></div>
+<button aria-label="セーブブロックを叩く" class="px-block" data-coin="about-1"></button>
+<div aria-hidden="true" class="idle"></div>
+<div aria-hidden="true" class="idle-cat px-cat wag"></div>
+<div class="px-ground"></div>
+</div>
+</section>
+<div class="zone">
+<!-- ============ 履历与技能：角色介绍页 ============ -->
+<section class="sec" id="cv">
+<div class="wrap">
+<div class="sec-head" data-r="">
+<span class="px-ico map" style="width:48px;height:48px;background-size:576px 48px;background-position:-528px 0"></span>
+<h2 class="h-sec">経歴とスキル</h2>
+<button aria-label="セーブブロックを叩く" class="px-block" data-coin="about-cv"></button>
+</div>
+<div class="chara" data-r="">
+<!-- 左：角色立绘，点一下会跳 -->
+<div class="chara-l">
+<p class="chara-tag">CHARACTER</p>
+<button aria-label="キャラクターをクリック" class="chara-fig" type="button"><span class="spr"></span><span class="ped"></span><span aria-hidden="true" class="chara-cat px-cat wag" title="ミミ"><i aria-hidden="true" class="cat-heart px-ico heart"></i></span></button>
+<div class="chara-name">
+<h3>殷 碩</h3>
+<p>職業 · ゲームプランナー</p>
+<p>タイプ · システム / 数値 / レベル</p>
+</div>
+<ul aria-label="称号" class="titles">
+<li>プラチナコレクター ×16</li>
+<li>Mod 作者</li>
+<li>Game Jam メインプランナー</li>
+</ul>
+</div>
+<!-- 右：分页 -->
+<div class="chara-r">
+<div aria-label="キャラクター情報" class="ctabs" role="tablist">
+<button aria-controls="ct-stat" aria-selected="true" id="t-stat" role="tab" type="button">ステータス</button>
+<button aria-controls="ct-quest" aria-selected="false" id="t-quest" role="tab" type="button">経歴</button>
+<button aria-controls="ct-skill" aria-selected="false" id="t-skill" role="tab" type="button">スキル</button>
+<button aria-controls="ct-gear" aria-selected="false" id="t-gear" role="tab" type="button">装備</button>
+</div>
+<div aria-labelledby="t-stat" class="cpanel" id="ct-stat" role="tabpanel">
+<p class="cp-lede">復旦大学 修士課程在学中、GIS とリモートセンシングのデータ分析経験 3 年。ゲーム作りでは、まずスクリプトでシミュレーションし、データを見て調整します。</p>
+<div class="cstats">
+<div><span>プレイ時間</span><b data-n="4600" data-suf="h+">4600h+</b></div>
+<div><span>プラチナ</span><b data-n="16" data-suf=" 本">16 本</b></div>
+<div><span>プレイ可能な作品</span><b data-n="3" data-suf=" 本">3 本</b></div>
+<div><span>システム分析</span><b data-n="56" data-suf=" ページ">56 ページ</b></div>
+<div><span>Mod 実機テスト</span><b data-n="80" data-suf="+ 回">80+ 回</b></div>
+<div><span>Mod bilibili 再生数</span><b data-n="5965" data-suf="">5965</b></div>
+<div><span>修士 GPA</span><b>3.67</b></div>
+<div><span>学科順位</span><b>上位 10%</b></div>
+</div>
+</div>
+<div aria-labelledby="t-quest" class="cpanel" id="ct-quest" role="tabpanel">
+<ol class="quests">
+<li class="main"><span class="qk">メインクエスト</span><div><b>復旦大学 · 資源環境 修士</b><small>2025 – 現在 · GPA 3.67 / 4.0、学科上位 10%</small></div><span class="st on">進行中</span></li>
+<li class="main"><span class="qk">メインクエスト</span><div><b>上海師範大学 · 園芸学 学士</b><small>2021 – 2025 · 学科上位 10%</small></div><span class="st">クリア</span></li>
+<li><span class="qk">サブクエスト</span><div><b>上海市環境科学研究院 · データ分析インターン</b><small>2023 – 2026 · 長期時系列画像の分類、土地利用と景観構造の分析</small></div></li>
+<li class="work"><span class="qk">作品</span><div><b><a data-slot="セーブ 01 をロード" href="projects/nightreign-mod.html">『ナイトレイン』大型コンテンツ拡張 Mod</a> · 個人制作</b><small>2026.08 – 現在 · テスト版公開済み、bilibili 再生数 約 6,000</small></div><span class="st on">進行中</span></li>
+<li class="work"><span class="qk">作品</span><div><b><a data-slot="セーブ 03 をロード" href="projects/burger/index.html">『宇宙バーガー』</a> · 個人制作</b><small>2026.09 – 10 · Douyin 向け縦画面放置系経営ミニゲーム、開発完了</small></div><span class="st">クリア</span></li>
+<li class="work"><span class="qk">作品</span><div><b><a data-slot="セーブ 02 をロード" href="projects/tidewheel.html">『ゼンマイ人形』Tidewheel</a> · プランナー（一部プログラム兼任）</b><small>2026.10 – 11 · thatgamejam #02、4 人チーム、Unity 2D</small></div><span class="st">クリア</span></li>
+</ol>
+</div>
+<div aria-labelledby="t-skill" class="cpanel" id="ct-skill" role="tabpanel">
+<div class="sk-tree">
+<div class="sk-br"><h4>企画</h4>
+<button class="sk" data-use="ナイトレイン Mod の夜の掟とタリスマン成長、宇宙バーガーの 3 段階の目標" type="button">システム設計</button>
+<button class="sk" data-use="宇宙バーガー：プレイシミュレーターで価格とテンポを調整" type="button">数値設計</button>
+<button class="sk" data-use="ナイトレイン Mod の腐れ湖（地上・地下の二層地形）、Tidewheel の 4 章のステージ" type="button">レベルデザイン</button>
+<button class="sk" data-use="NARUTO モバイル 36 ページの MDA 分析、バトルグラウンド 20 ページの経済分析" type="button">システム分析</button>
+<button class="sk" data-use="Tidewheel の標準 GDD。削る順番を事前に決定" type="button">GDD 作成</button>
+</div>
+<div class="sk-br"><h4>開発</h4>
+<button class="sk" data-use="宇宙バーガー C# 7,300 行、スクリプト 31 本" type="button">Unity / C# 開発</button>
+<button class="sk" data-use="Tidewheel のプレイ可能な Web プロトタイプ 6 版" type="button">Web プロトタイプ</button>
+<button class="sk" data-use="Tidewheel はスクリプトで各区間の操作猶予を計測、宇宙バーガーは自動スクリーンショットと長時間稼働テスト" type="button">自動テストスクリプト</button>
+</div>
+<div class="sk-br"><h4>地理情報とデータ</h4>
+<button class="sk" data-use="インターン：長期時系列画像の分類" type="button">衛星画像の分類</button>
+<button class="sk" data-use="標高とラスター処理、地形生成に応用可能" type="button">DEM とラスター処理</button>
+<button class="sk" data-use="景観の連結性分析、レベル動線の分析に応用可能" type="button">景観構造の分析</button>
+</div>
+</div>
+<p aria-live="polite" class="sk-info">スキルにカーソルを合わせると、使った場面が表示されます。</p>
+</div>
+<div aria-labelledby="t-gear" class="cpanel" id="ct-gear" role="tabpanel">
+<div class="gear">
+<div class="slotg"><i>武器</i><b>Unity</b><small>宇宙バーガー、Tidewheel</small></div>
+<div class="slotg"><i>武器</i><b>Excel</b><small>数値モデリング</small></div>
+<div class="slotg"><i>防具</i><b>Feishu</b><small>チームの GDD</small></div>
+<div class="slotg"><i>防具</i><b>Axure</b><small>UI プロトタイプ</small></div>
+<div class="slotg"><i>装飾品</i><b>Claude Code</b><small>コーディング、デバッグ</small></div>
+<div class="slotg"><i>装飾品</i><b>Codex</b><small>ドット絵素材、コード</small></div>
+<div class="slotg"><i>装飾品</i><b>Scenario</b><small>宇宙バーガーの店舗シーン</small></div>
+<div class="slotg"><i>道具</i><b>ArcGIS</b><small>空間分析</small></div>
+<div class="slotg"><i>道具</i><b>GEE</b><small>衛星画像処理</small></div>
+</div>
+</div>
+<div class="party" id="contact">
+<div><b>パーティー招待</b><span>13283750773@163.com</span></div>
+<div class="party-btns">
+<a class="px-btn paper sm" data-slot="履歴書を開く" href="resume.html"><span class="px-ico pdf"></span>履歴書</a>
+<a class="px-btn sm" href="mailto:13283750773@163.com"><span class="px-ico mail"></span>メールを送る</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ 游戏经历 ============ -->
+<section class="sec" id="games">
+<div class="wrap">
+<div class="sec-head" data-r="">
+<span class="px-ico pad" style="width:48px;height:48px;background-size:576px 48px"></span>
+<h2 class="h-sec">ゲーム歴</h2>
+<button aria-label="セーブブロックを叩く" class="px-block" data-coin="about-games"></button>
+</div>
+<p class="sec-lede" data-r="">4 つのプラットフォームで記録のある 35 本、合計 4,600 時間以上。最も長く遊んだのは 2 本の長期運営モバイルゲームで、NARUTO とハースストーンがそれぞれ 1,000 時間。2 本のシステム分析はここから生まれました。家庭用ではソウルライクのアクションが中心で、PS5 で遊んだ 11 本のうち 10 本がプラチナです。</p>
+<h3 class="sub" data-r="">プラットフォーム別<small>下のライブラリから集計、合計 4,618 時間</small></h3>
+<div class="panel tight" data-r="" style="max-width:760px">
+<div class="bars"><span>モバイル / オンライン</span><span class="bar"><i style="--v:50%;--c:var(--grass-d)"></i></span><span>2300h · 4 本</span> <span>Steam</span><span class="bar"><i style="--v:37%;--c:var(--blue-d)"></i></span><span>1716h · 18 本</span> <span>PS5</span><span class="bar"><i style="--v:11%;--c:var(--blue)"></i></span><span>502h · 11 本</span> <span>Switch</span><span class="bar"><i style="--v:2%;--c:var(--red)"></i></span><span>100h · 2 本</span></div>
+</div>
+<h3 class="sub" data-r="">いちばん遊んだ作品</h3>
+<div class="favs">
+<div class="fav" data-r=""><span class="rank">No.1</span><img alt="" class="fcover" loading="lazy" src="../img/games/naruto.webp"/><h4>NARUTO モバイル</h4><p>V12 アカウント。システム分析の研究対象でもあります。</p><span class="hrs">1000h+</span></div>
+<div class="fav" data-r="2"><span class="rank">No.2</span><img alt="" class="fcover" loading="lazy" src="../img/games/hearthstone.webp"/><h4>ハースストーン</h4><p>バトルグラウンド 6,120 点。システム分析の研究対象でもあります。</p><span class="hrs">1000h+</span></div>
+<div class="fav" data-r="3"><span class="rank">No.3</span><img alt="" class="fcover" loading="lazy" src="../img/games/nightreign.webp"/><h4>ナイトレイン</h4><p>プラチナ、深き夜 9,999 点。この作品の大型 Mod を制作。</p><span class="hrs">600h+</span></div>
+<div class="fav" data-r="4"><span class="rank">No.4</span><img alt="" class="fcover" loading="lazy" src="../img/games/eldenring.webp"/><h4>エルデンリング</h4><p>プラチナ。ソウルライクにのめり込んだきっかけで、Mod 制作の原点です。</p><span class="hrs">200h+</span></div>
+</div>
+<h3 class="sub" data-r="">ライブラリ<small id="g-count"></small></h3>
+<div class="lib-bar" data-r="">
+<div class="filters" id="g-filters"></div>
+<div aria-label="並べ替え" class="sorter" id="g-sort" role="group"><span>並べ替え</span><button aria-pressed="true" class="chip" data-sort="def" type="button">機種</button><button aria-pressed="false" class="chip" data-sort="hrs" type="button">時間</button><button aria-pressed="false" class="chip" data-sort="plat" type="button">プラチナ優先</button></div>
+</div>
+<div class="arcade">
+<div class="console-col">
+<div aria-label="ゲーム機。カセットをクリックして差し込み、左右キーでゲームを切り替え" class="console" id="console" tabindex="0">
+<div class="c-slot"><span class="c-cart"></span></div>
+<div class="c-bezel">
+<span aria-hidden="true" class="c-led"></span>
+<div aria-live="polite" class="c-screen">
+<div class="scr-off"><b>INSERT CARTRIDGE</b><span>好きなカセットをクリックして差し込もう</span></div>
+<div class="scr-on">
+<img alt="" class="sc-cover"/>
+<div class="sc-info">
+<p class="sc-plat"></p>
+<h4 class="sc-title"></h4>
+<p class="sc-stat"></p>
+<div class="sc-h"><span>PLAY TIME</span><b>0h</b></div>
+<div class="sc-bar"><i></i></div>
+<p class="sc-note"></p>
+</div>
+</div>
+<span aria-hidden="true" class="scan"></span>
+</div>
+</div>
+<div class="c-ctrl">
+<div aria-label="ゲーム切り替え" class="dpad">
+<button aria-label="前へ" class="d-l" type="button">◀</button>
+<span aria-hidden="true" class="d-c"></span>
+<button aria-label="次へ" class="d-r" type="button">▶</button>
+</div>
+<p class="c-brand">YS·16<small>SAVE STATION</small></p>
+<div class="ab">
+<button aria-label="カセットを取り出す" class="b-b" type="button">B</button>
+<button aria-label="ランダムに差し込む" class="b-a" type="button">A</button>
+</div>
+</div>
+<p class="c-help"><span>◀ ▶ 切り替え</span><span>A ランダム</span><span>B 取り出す</span></p>
+<div aria-hidden="true" class="c-grill"></div>
+</div>
+</div>
+<div class="rack">
+<div class="lib" id="g-lib">
+<article class="cart" data-tags="Steam プラチナ" style="--c:var(--blue-d)"><div class="lbl"><img alt="『エルデンリング ナイトレイン』のパッケージ" class="cover" loading="lazy" src="../img/games/nightreign.webp"/><h4>エルデンリング ナイトレイン</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><p class="note-l">深き夜 深度 5・9,999 点 · Mod 制作</p><div class="meta"><span></span><span class="hrs">600h+</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="『コール オブ デューティ モダン・ウォーフェア II』のパッケージ" class="cover" loading="lazy" src="../img/games/mw2.webp"/><h4>コール オブ デューティ モダン・ウォーフェア II</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">200h</span></div></div></article>
+<article class="cart" data-tags="Steam プラチナ" style="--c:var(--blue-d)"><div class="lbl"><img alt="『エルデンリング』のパッケージ" class="cover" loading="lazy" src="../img/games/eldenring.webp"/><h4>エルデンリング</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">200h+</span></div></div></article>
+<article class="cart" data-tags="Steam プラチナ" style="--c:var(--blue-d)"><div class="lbl"><img alt="『Stardew Valley』のパッケージ" class="cover" loading="lazy" src="../img/games/stardew.webp"/><h4>Stardew Valley</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">150h+</span></div></div></article>
+<article class="cart" data-tags="Steam プラチナ" style="--c:var(--blue-d)"><div class="lbl"><img alt="『モンスターハンターワイルズ』のパッケージ" class="cover" loading="lazy" src="../img/games/mhwilds.webp"/><h4>モンスターハンターワイルズ</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">80h+</span></div></div></article>
+<article class="cart" data-tags="Steam クリア" style="--c:var(--blue-d)"><div class="lbl"><img alt="『アサシン クリード オデッセイ』のパッケージ" class="cover" loading="lazy" src="../img/games/acodyssey.webp"/><h4>アサシン クリード オデッセイ</h4><p class="tags">Steam · メインストーリー クリア</p><div class="meta"><span></span><span class="hrs">70h</span></div></div></article>
+<article class="cart" data-tags="Steam クリア" style="--c:var(--blue-d)"><div class="lbl"><img alt="『ダイイングライト』のパッケージ" class="cover" loading="lazy" src="../img/games/dyinglight.webp"/><h4>ダイイングライト</h4><p class="tags">Steam · メインストーリー クリア</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="『Raft』のパッケージ" class="cover" loading="lazy" src="../img/games/raft.webp"/><h4>Raft</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="Steam クリア" style="--c:var(--blue-d)"><div class="lbl"><img alt="『My Time at Sandrock』のパッケージ" class="cover" loading="lazy" src="../img/games/sandrock.webp"/><h4>My Time at Sandrock</h4><p class="tags">Steam · メインストーリー クリア</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="『CS2』のパッケージ" class="cover" loading="lazy" src="../img/games/cs2.webp"/><h4>CS2</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">50h+</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="『テラリア』のパッケージ" class="cover" loading="lazy" src="../img/games/terraria.webp"/><h4>テラリア</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">40h+</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="『モンスターハンター：ワールド』のパッケージ" class="cover" loading="lazy" src="../img/games/mhworld.webp"/><h4>モンスターハンター：ワールド</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">40h</span></div></div></article>
+<article class="cart" data-tags="Steam プラチナ" style="--c:var(--blue-d)"><div class="lbl"><img alt="『ASTRONEER』のパッケージ" class="cover" loading="lazy" src="../img/games/astroneer.webp"/><h4>ASTRONEER</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">33h+</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="『Unheard』のパッケージ" class="cover" loading="lazy" src="../img/games/unheard.webp"/><h4>Unheard</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">30h</span></div></div></article>
+<article class="cart" data-tags="Steam プラチナ" style="--c:var(--blue-d)"><div class="lbl"><img alt="『スプリット・フィクション』のパッケージ" class="cover" loading="lazy" src="../img/games/splitfiction.webp"/><h4>スプリット・フィクション</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">23h</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="『Grounded』のパッケージ" class="cover" loading="lazy" src="../img/games/grounded.webp"/><h4>Grounded</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">20h</span></div></div></article>
+<article class="cart" data-tags="Steam クリア" style="--c:var(--blue-d)"><div class="lbl"><img alt="『Detroit: Become Human』のパッケージ" class="cover" loading="lazy" src="../img/games/detroit.webp"/><h4>Detroit: Become Human</h4><p class="tags">Steam · メインストーリー クリア</p><div class="meta"><span></span><span class="hrs">15h</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="『Valheim』のパッケージ" class="cover" loading="lazy" src="../img/games/valheim.webp"/><h4>Valheim</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">15h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『DARK SOULS III』のパッケージ" class="cover" loading="lazy" src="../img/games/darksouls3.webp"/><h4>DARK SOULS III</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">100h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『黒神話：悟空』のパッケージ" class="cover" loading="lazy" src="../img/games/wukong.webp"/><h4>黒神話：悟空</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">80h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『Bloodborne』のパッケージ" class="cover" loading="lazy" src="../img/games/bloodborne.webp"/><h4>Bloodborne</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">60h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『Overcooked』のパッケージ" class="cover" loading="lazy" src="../img/games/overcooked2.webp"/><h4>Overcooked</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">40h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『ゴッド・オブ・ウォー』のパッケージ" class="cover" loading="lazy" src="../img/games/godofwar.webp"/><h4>ゴッド・オブ・ウォー（2018）</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">40h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『DARK SOULS REMASTERED』のパッケージ" class="cover" loading="lazy" src="../img/games/darksouls1.webp"/><h4>DARK SOULS REMASTERED</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">40h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『アストロボット』のパッケージ" class="cover" loading="lazy" src="../img/games/astrobot.webp"/><h4>アストロボット</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">37h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『Marvel's Spider-Man 2』のパッケージ" class="cover" loading="lazy" src="../img/games/spiderman2.webp"/><h4>Marvel's Spider-Man 2</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">35h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『The Last of Us Part I』のパッケージ" class="cover" loading="lazy" src="../img/games/tlou1.webp"/><h4>The Last of Us Part I</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">30h</span></div></div></article>
+<article class="cart" data-tags="PS5" style="--c:var(--blue)"><div class="lbl"><img alt="『リビッツ！ビッグ・アドベンチャー』のパッケージ" class="cover" loading="lazy" src="../img/games/sackboy.webp"/><h4>リビッツ！ビッグ・アドベンチャー</h4><p class="tags">PS5</p><div class="meta"><span></span><span class="hrs">20h</span></div></div></article>
+<article class="cart" data-tags="PS5 プラチナ" style="--c:var(--blue)"><div class="lbl"><img alt="『It Takes Two』のパッケージ" class="cover" loading="lazy" src="../img/games/ittakestwo.webp"/><h4>It Takes Two</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>プラチナ</span></p><div class="meta"><span></span><span class="hrs">20h</span></div></div></article>
+<article class="cart" data-tags="Switch" style="--c:var(--red)"><div class="lbl"><img alt="『Pokopia』のパッケージ" class="cover" loading="lazy" src="../img/games/pokopia.webp"/><h4>Pokopia</h4><p class="tags">Switch</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="Switch" style="--c:var(--red)"><div class="lbl"><img alt="『スーパーマリオ オデッセイ』のパッケージ" class="cover" loading="lazy" src="../img/games/odyssey.webp"/><h4>スーパーマリオ オデッセイ</h4><p class="tags">Switch</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="スマホ" style="--c:var(--grass-d)"><div class="lbl"><img alt="『NARUTO モバイル』のアイコン" class="cover" loading="lazy" src="../img/games/naruto.webp"/><h4>NARUTO モバイル</h4><p class="tags">スマホ</p><p class="note-l">V12 · 36 ページの分析</p><div class="meta"><span></span><span class="hrs">1000h+</span></div></div></article>
+<article class="cart" data-tags="スマホ" style="--c:var(--grass-d)"><div class="lbl"><img alt="『ハースストーン』のアイコン" class="cover" loading="lazy" src="../img/games/hearthstone.webp"/><h4>ハースストーン</h4><p class="tags">スマホ</p><p class="note-l">バトルグラウンド · 20 ページの分析</p><div class="meta"><span></span><span class="hrs">1000h+</span></div></div></article>
+<article class="cart" data-tags="スマホ" style="--c:var(--grass-d)"><div class="lbl"><img alt="『保衛向日葵』のアイコン" class="cover" loading="lazy" src="../img/games/sunflower.webp"/><h4>保衛向日葵</h4><p class="tags">スマホ</p><div class="meta"><span></span><span class="hrs">200h+</span></div></div></article>
+<article class="cart" data-tags="スマホ" style="--c:var(--grass-d)"><div class="lbl"><img alt="『原神』のアイコン" class="cover" loading="lazy" src="../img/games/genshin.webp"/><h4>原神</h4><p class="tags">スマホ</p><div class="meta"><span></span><span class="hrs">100h+</span></div></div></article>
+<article class="cart more-cart" data-tags="Steam PS5 Switch スマホ"><div class="lbl"><div class="q">…</div><h4>まだまだあります</h4><p class="tags">どの機種にも、ここに載せていない作品があります</p><div class="meta"><span></span><span class="hrs">？？</span></div></div></article>
+</div>
+<div class="rack-nav">
+<button aria-label="前のページ" class="px-btn sm paper pg-prev" type="button">◀</button>
+<div aria-label="カセット棚のページ" class="pg-dots" role="tablist"></div>
+<span class="pg-n"></span>
+<button aria-label="次のページ" class="px-btn sm paper pg-next" type="button">▶</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ 影视经历 ============ -->
+<section class="sec" id="films">
+<div class="wrap">
+<div class="sec-head" data-r="">
+<span class="px-ico film" style="width:48px;height:48px;background-size:576px 48px;background-position:-48px 0"></span>
+<h2 class="h-sec">映像・音楽</h2>
+<button aria-label="セーブブロックを叩く" class="px-block" data-coin="about-films"></button>
+</div>
+<p class="sec-lede" data-r="">いちばん多く観ているのは日本のアニメと特撮で、仮面ライダーは平成から令和まで全作品を視聴。映画・ドラマは SF とミステリーが中心で、ノーラン作品はひと通り観ました。岩井俊二のような静かな日本映画も好きです。</p>
+<h3 class="sub" data-r="">棚<small>全 32 作 · ドラッグ、左右のカードをクリック、または ← → で切り替え</small></h3>
+<div class="filters" data-for="f-deck" data-r=""></div>
+<div aria-label="棚。左右キーで切り替え" class="deck film" data-r="" id="f-deck" tabindex="0">
+<div class="deck-stage">
+<figure class="dcard" data-meta="" data-sub="TV アニメ · 2002" data-tags="アニメ" data-title="NARUTO -ナルト-"><img alt="『NARUTO -ナルト-』のビジュアル" draggable="false" src="../img/films/naruto.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV アニメ · 2023" data-tags="アニメ" data-title="葬送のフリーレン"><img alt="『葬送のフリーレン』のビジュアル" draggable="false" src="../img/films/frieren.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV アニメ · 1986" data-tags="アニメ" data-title="ドラゴンボール"><img alt="『ドラゴンボール』のビジュアル" draggable="false" src="../img/films/dragonball.webp"/></figure>
+<figure class="dcard" data-meta="カード：劇場版『黒鉄の魚影』" data-sub="TV アニメ · 1996" data-tags="アニメ" data-title="名探偵コナン"><img alt="『名探偵コナン』のビジュアル" draggable="false" src="../img/films/conan.webp"/></figure>
+<figure class="dcard" data-meta="カード：劇場版『Air/まごころを、君に』" data-sub="TV アニメ · 1995" data-tags="アニメ" data-title="新世紀エヴァンゲリオン"><img alt="『新世紀エヴァンゲリオン』のビジュアル" draggable="false" src="../img/films/eva.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="Web アニメ · 2022" data-tags="アニメ" data-title="サイバーパンク エッジランナーズ"><img alt="『サイバーパンク エッジランナーズ』のビジュアル" draggable="false" src="../img/films/edgerunners.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="アニメ映画 · 2004" data-tags="アニメ" data-title="ハウルの動く城"><img alt="『ハウルの動く城』のビジュアル" draggable="false" loading="lazy" src="../img/films/howl.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="アニメ映画 · 2016" data-tags="アニメ" data-title="君の名は。"><img alt="『君の名は。』のビジュアル" draggable="false" loading="lazy" src="../img/films/yourname.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="アニメ映画 · 2019" data-tags="アニメ" data-title="天気の子"><img alt="『天気の子』のビジュアル" draggable="false" loading="lazy" src="../img/films/weathering.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="アニメ映画 · 2022" data-tags="アニメ" data-title="すずめの戸締まり"><img alt="『すずめの戸締まり』のビジュアル" draggable="false" loading="lazy" src="../img/films/suzume.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="アニメ映画 · 2018" data-tags="アニメ" data-title="スパイダーマン：スパイダーバース"><img alt="『スパイダーマン：スパイダーバース』のビジュアル" draggable="false" loading="lazy" src="../img/films/spiderverse1.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="アニメ映画 · 2023" data-tags="アニメ" data-title="スパイダーマン：アクロス・ザ・スパイダーバース"><img alt="『スパイダーマン：アクロス・ザ・スパイダーバース』のビジュアル" draggable="false" loading="lazy" src="../img/films/spiderverse2.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV アニメ · 2014" data-tags="アニメ" data-title="四月は君の嘘"><img alt="『四月は君の嘘』のビジュアル" draggable="false" loading="lazy" src="../img/films/aprillie.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="アニメ映画 · 2018" data-tags="アニメ" data-title="君の膵臓をたべたい"><img alt="『君の膵臓をたべたい』のビジュアル" draggable="false" loading="lazy" src="../img/films/pancreas.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV アニメ · 2016" data-tags="アニメ" data-title="Re:ゼロから始める異世界生活"><img alt="『Re:ゼロから始める異世界生活』のビジュアル" draggable="false" loading="lazy" src="../img/films/rezero.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV アニメ · 2013" data-tags="アニメ" data-title="進撃の巨人"><img alt="『進撃の巨人』のビジュアル" draggable="false" loading="lazy" src="../img/films/aot.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV アニメ · 2019" data-tags="アニメ" data-title="鬼滅の刃"><img alt="『鬼滅の刃』のビジュアル" draggable="false" loading="lazy" src="../img/films/demonslayer.webp"/></figure>
+<figure class="dcard" data-list="平成 · 2000–2019 · 20 作|クウガ 2000=../img/films/kr/kuuga.webp,アギト 2001=../img/films/kr/agito.webp,龍騎 2002=../img/films/kr/ryuki.webp,555 Faiz 2003=../img/films/kr/555.webp,剣（ブレイド） 2004=../img/films/kr/blade.webp,響鬼 2005=../img/films/kr/hibiki.webp,カブト 2006=../img/films/kr/kabuto.webp,電王 2007=../img/films/kr/deno.webp,キバ 2008=../img/films/kr/kiva.webp,ディケイド 2009=../img/films/kr/decade.webp,W 2009=../img/films/kr/w.webp,OOO 2010=../img/films/kr/ooo.webp,Fourze 2011=../img/films/kr/fourze.webp,Wizard 2012=../img/films/kr/wizard.webp,鎧武 2013=../img/films/kr/gaim.webp,Drive 2014=../img/films/kr/drive.webp,Ghost 2015=../img/films/kr/ghost.webp,Ex-Aid 2016=../img/films/kr/exaid.webp,Build 2017=../img/films/kr/build.webp,ジオウ 2018=../img/films/kr/zio.webp;令和 · 2019 – 現在 · 7 作|ゼロワン 2019=../img/films/kr/zeroone.webp,セイバー 2020=../img/films/kr/saber.webp,リバイス 2021=../img/films/kr/revice.webp,ギーツ 2022=../img/films/kr/geats.webp,Gotchard 2023=../img/films/kr/gotchard.webp,Gavv 2024=../img/films/kr/gavv.webp,Zeztz 2025=../img/films/kr/zeztz.webp" data-meta="平成から令和まで全作品を視聴" data-sub="TV シリーズ · 2000 – 現在" data-tags="特撮" data-title="仮面ライダーシリーズ"><img alt="『仮面ライダーシリーズ』のビジュアル" draggable="false" loading="lazy" src="../img/films/kamenrider.webp"/></figure>
+<figure class="dcard" data-meta="カード：『シン・ウルトラマン』" data-sub="1966 – 現在" data-tags="特撮" data-title="ウルトラマンシリーズ"><img alt="『ウルトラマンシリーズ』のビジュアル" draggable="false" loading="lazy" src="../img/films/ultraman.webp"/></figure>
+<figure class="dcard" data-meta="カード：『ハリー・ポッターと賢者の石』" data-sub="映画 · 2001–2011" data-tags="映画・ドラマ" data-title="ハリー・ポッター シリーズ"><img alt="『ハリー・ポッター』シリーズのビジュアル" draggable="false" loading="lazy" src="../img/films/harrypotter.webp"/></figure>
+<figure class="dcard" data-meta="カード：『アベンジャーズ／エンドゲーム』" data-sub="映画 · 2008 – 現在" data-tags="映画・ドラマ" data-title="マーベル・シネマティック・ユニバース"><img alt="マーベル・シネマティック・ユニバースのビジュアル" draggable="false" loading="lazy" src="../img/films/marvel.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="ドラマ · 2010–2017" data-tags="映画・ドラマ" data-title="SHERLOCK（シャーロック）"><img alt="『SHERLOCK』のビジュアル" draggable="false" loading="lazy" src="../img/films/sherlock.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="ドラマ · 2022" data-tags="映画・ドラマ" data-title="カササギ殺人事件"><img alt="『カササギ殺人事件』のビジュアル" draggable="false" loading="lazy" src="../img/films/magpie.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="映画 · 2021" data-tags="映画・ドラマ" data-title="DUNE／デューン 砂の惑星"><img alt="『DUNE／デューン 砂の惑星』のビジュアル" draggable="false" loading="lazy" src="../img/films/dune.webp"/></figure>
+<figure class="dcard" data-meta="ノーラン作品はひと通り観ました" data-sub="映画 · 2010" data-tags="映画・ドラマ" data-title="インセプション"><img alt="『インセプション』のビジュアル" draggable="false" loading="lazy" src="../img/films/inception.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="映画 · 1982" data-tags="映画・ドラマ" data-title="ブレードランナー"><img alt="『ブレードランナー』のビジュアル" draggable="false" loading="lazy" src="../img/films/bladerunner.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="映画 · 1968" data-tags="映画・ドラマ" data-title="2001年宇宙の旅"><img alt="『2001年宇宙の旅』のビジュアル" draggable="false" loading="lazy" src="../img/films/2001.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="映画 · 1999" data-tags="映画・ドラマ" data-title="マトリックス"><img alt="『マトリックス』のビジュアル" draggable="false" loading="lazy" src="../img/films/matrix.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="映画 · 1995" data-tags="映画・ドラマ" data-title="Love Letter"><img alt="『Love Letter』のビジュアル" draggable="false" src="../img/films/loveletter.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="映画 · 2004" data-tags="映画・ドラマ" data-title="花とアリス"><img alt="『花とアリス』のビジュアル" draggable="false" src="../img/films/hanaalice.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="映画 · 2022" data-tags="映画・ドラマ" data-title="余命10年"><img alt="『余命10年』のビジュアル" draggable="false" src="../img/films/last10.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="映画 · 2014" data-tags="映画・ドラマ" data-title="グランド・ブダペスト・ホテル"><img alt="『グランド・ブダペスト・ホテル』のビジュアル" draggable="false" src="../img/films/budapest.webp"/></figure>
+</div>
+<div class="deck-ui">
+<button aria-label="前へ" class="px-btn sm paper prev" type="button">◀</button>
+<div class="deck-info"><b class="t"></b><span class="s"></span><span class="m"></span></div>
+<span class="n"></span>
+<button aria-label="次へ" class="px-btn sm paper next" type="button">▶</button>
+</div>
+<div aria-hidden="true" class="deck-scrub"><i></i></div>
+<div class="deck-list" hidden=""></div>
+</div>
+<p class="deck-more" data-r="">……ほかにもたくさんあります。</p>
+<h3 class="sub" data-r="">BGM プレイリスト<small>好きなアーティスト · カードは代表的なアルバム</small></h3>
+<div class="filters" data-for="m-deck" data-r=""></div>
+<div aria-label="好きなアーティスト。左右キーで切り替え" class="deck music" data-r="" id="m-deck" tabindex="0">
+<div class="deck-stage">
+<figure class="dcard" data-meta="代表作『潜潜話』2019" data-sub="ずとまよ · 日本" data-tags="日本" data-title="ずっと真夜中でいいのに。"><span class="vinyl"><i style="background-image:url(../img/music/ztmy.webp)"></i></span><img alt="ずっと真夜中でいいのに。のアルバムジャケット" draggable="false" src="../img/music/ztmy.webp"/></figure>
+<figure class="dcard" data-meta="代表作『だから僕は音楽を辞めた』2019" data-sub="ヨルシカ · 日本" data-tags="日本" data-title="ヨルシカ"><span class="vinyl"><i style="background-image:url(../img/music/yorushika.webp)"></i></span><img alt="ヨルシカのアルバムジャケット" draggable="false" src="../img/music/yorushika.webp"/></figure>
+<figure class="dcard" data-meta="代表作『THE BOOK』2021" data-sub="YOASOBI · 日本" data-tags="日本" data-title="YOASOBI"><span class="vinyl"><i style="background-image:url(../img/music/yoasobi.webp)"></i></span><img alt="YOASOBI のアルバムジャケット" draggable="false" src="../img/music/yoasobi.webp"/></figure>
+<figure class="dcard" data-meta="代表作『瞬間的シックスセンス』2019" data-sub="あいみょん · 日本" data-tags="日本" data-title="あいみょん"><span class="vinyl"><i style="background-image:url(../img/music/aimyon.webp)"></i></span><img alt="あいみょんのアルバムジャケット" draggable="false" src="../img/music/aimyon.webp"/></figure>
+<figure class="dcard" data-meta="代表作『eyes』2020" data-sub="日本" data-tags="日本" data-title="milet"><span class="vinyl"><i style="background-image:url(../img/music/milet.webp)"></i></span><img alt="milet のアルバムジャケット" draggable="false" src="../img/music/milet.webp"/></figure>
+<figure class="dcard" data-meta="代表作『First Love』1999" data-sub="宇多田ヒカル · 日本" data-tags="日本" data-title="宇多田ヒカル"><span class="vinyl"><i style="background-image:url(../img/music/utada.webp)"></i></span><img alt="宇多田ヒカルのアルバムジャケット" draggable="false" src="../img/music/utada.webp"/></figure>
+<figure class="dcard" data-meta="代表作『SINGALONG』2020" data-sub="緑黄色社会 · 日本" data-tags="日本" data-title="緑黄色社会"><span class="vinyl"><i style="background-image:url(../img/music/ryokuoushoku.webp)"></i></span><img alt="緑黄色社会のアルバムジャケット" draggable="false" src="../img/music/ryokuoushoku.webp"/></figure>
+<figure class="dcard" data-meta="代表作『daydream』2016" data-sub="日本" data-tags="日本" data-title="Aimer"><span class="vinyl"><i style="background-image:url(../img/music/aimer.webp)"></i></span><img alt="Aimer のアルバムジャケット" draggable="false" src="../img/music/aimer.webp"/></figure>
+<figure class="dcard" data-meta="代表作『華麗的冒險』2005" data-sub="中国語" data-tags="中国語" data-title="陳綺貞（チアー・チェン）"><span class="vinyl"><i style="background-image:url(../img/music/cheer.webp)"></i></span><img alt="陳綺貞のアルバムジャケット" draggable="false" src="../img/music/cheer.webp"/></figure>
+<figure class="dcard" data-meta="代表作『親愛的…我還不知道』2007" data-sub="中国語" data-tags="中国語" data-title="張懸（デザーツ・チャン）"><span class="vinyl"><i style="background-image:url(../img/music/deserts.webp)"></i></span><img alt="張懸のアルバムジャケット" draggable="false" src="../img/music/deserts.webp"/></figure>
+<figure class="dcard" data-meta="代表作『唱遊』1998" data-sub="中国語" data-tags="中国語" data-title="フェイ・ウォン（王菲）"><span class="vinyl"><i style="background-image:url(../img/music/faye.webp)"></i></span><img alt="フェイ・ウォンのアルバムジャケット" draggable="false" src="../img/music/faye.webp"/></figure>
+<figure class="dcard" data-meta="代表作『LaLa 首張創作專輯』2009" data-sub="中国語" data-tags="中国語" data-title="ララ・スー（徐佳瑩）"><span class="vinyl"><i style="background-image:url(../img/music/lala.webp)"></i></span><img alt="ララ・スーのアルバムジャケット" draggable="false" src="../img/music/lala.webp"/></figure>
+</div>
+<div class="deck-ui">
+<button aria-label="前へ" class="px-btn sm paper prev" type="button">◀</button>
+<div class="deck-info"><b class="t"></b><span class="s"></span><span class="m"></span></div>
+<span class="n"></span>
+<button aria-label="次へ" class="px-btn sm paper next" type="button">▶</button>
+</div>
+<div aria-hidden="true" class="deck-scrub"><i></i></div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷 碩</span><span><a href="#top">ページ上部へ</a><a href="index.html">すべてのセーブ</a><a data-slot="履歴書を開く" href="resume.html">履歴書</a></span></div></div>
+</footer>
+<script src="js/site.js"></script>
+<script src="js/deck.js"></script>
+<script src="js/about.js"></script>
+<script>
+// 游戏库：按平台 / 完成度筛选，按平台、时长、白金排序
+(function(){
+  var lib = document.getElementById('g-lib'), fil = document.getElementById('g-filters'), cnt = document.getElementById('g-count');
+  var items = [].slice.call(lib.querySelectorAll('.cart'));
+  var more = lib.querySelector('.more-cart');
+  var real = items.filter(function(it){ return it !== more; });
+  real.forEach(function(it, i){
+    it._i = i;
+    it._h = parseInt(it.querySelector('.hrs').textContent, 10) || 0;
+    var t = it.dataset.tags.split(' ');
+    it._p = t.indexOf('プラチナ') >= 0 ? 2 : t.indexOf('クリア') >= 0 ? 1 : 0;
+  });
+  var tally = {};
+  real.forEach(function(it){ it.dataset.tags.split(' ').forEach(function(t){ tally[t] = (tally[t] || 0) + 1; }); });
+  var order = ['Steam', 'PS5', 'Switch', 'スマホ', 'プラチナ', 'クリア'];
+  ['すべて'].concat(order.filter(function(t){ return tally[t]; })).forEach(function(t, i){
+    var b = document.createElement('button');
+    b.className = 'chip'; b.type = 'button'; b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.innerHTML = t + '<b>' + (i === 0 ? real.length : tally[t]) + '</b>';
+    b.addEventListener('click', function(){
+      fil.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      items.forEach(function(it){ it.hidden = !(t === 'すべて' || it.dataset.tags.split(' ').indexOf(t) >= 0); });
+      window.ysRack && window.ysRack.refresh(0);
+      window.ysSfx && window.ysSfx('select');
+    });
+    fil.appendChild(b);
+  });
+  cnt.textContent = '全 ' + real.length + ' 本';
+
+  var SORT = {
+    def: function(a, b){ return a._i - b._i; },
+    hrs: function(a, b){ return b._h - a._h || a._i - b._i; },
+    plat: function(a, b){ return b._p - a._p || b._h - a._h || a._i - b._i; }
+  };
+  var sorter = document.getElementById('g-sort');
+  sorter.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click', function(){
+      sorter.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      real.slice().sort(SORT[b.dataset.sort]).forEach(function(it){ lib.insertBefore(it, more); });
+      window.ysRack && window.ysRack.refresh(0);
+      window.ysSfx && window.ysSfx('select');
+    });
+  });
+})();
+</script>
+</body>
+</html>

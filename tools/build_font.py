@@ -17,7 +17,7 @@ OUT = ROOT / "fonts" / "fusion-pixel-site.woff2"
 chars = set(chr(c) for c in range(0x20, 0x7f))
 chars.update("　，。、：；！？「」『』（）《》〈〉【】“”‘’…—·×÷←→↑↓▶◀▲▼↗★☆●○■□％")
 for p in ROOT.rglob("*"):
-    if p.suffix.lower() in (".html", ".js", ".css") and not {'node_modules', 'output', '.git'} & set(p.relative_to(ROOT).parts):
+    if p.suffix.lower() in (".html", ".js", ".css") and not {'node_modules', 'output', '.git', 'zh-hant', 'en', 'ja'} & set(p.relative_to(ROOT).parts):
         chars.update(p.read_text(encoding="utf-8", errors="ignore"))
 chars = {c for c in chars if c.isprintable() or c == "\u3000"}
 

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>《爐石傳說》酒館戰棋 經濟與對局節奏拆解 · 殷碩作品集</title>
+<meta content="拆解酒館戰棋的鑄幣曲線、份數稀缺與防滾雪球機制，併為首選改進方案設計 AB 測試。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../img/px/favicon.png" rel="icon"/>
+<link href="../../css/shell.css" rel="stylesheet"/>
+<link href="../../css/site.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../fonts/fusion-pixel-zh-hant.woff2") format("woff2");font-display:swap}:root{--body-font:"PingFang TC","Microsoft JhengHei","Noto Sans TC","Heiti TC",system-ui,sans-serif;--px-font:"Fusion Pixel","PingFang TC","Microsoft JhengHei",monospace}</style><link href="../../projects/hearthstone.html" hreflang="zh-Hans" rel="alternate"/><link href="../../zh-hant/projects/hearthstone.html" hreflang="zh-Hant" rel="alternate"/><link href="../../en/projects/hearthstone.html" hreflang="en" rel="alternate"/><link href="../../ja/projects/hearthstone.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="回到標題" href="../index.html"><img alt="" src="../../img/px/avatar.png"/>殷碩<small>遊戲策劃</small></a>
+<nav aria-label="主導航" class="hud-nav">
+<a aria-current="page" data-slot="選擇存檔" href="../index.html">存檔</a>
+<a data-slot="開啟玩家檔案" href="../about.html">關於我</a>
+<a class="hide-s" data-slot="開啟簡歷" href="../resume.html">簡歷</a>
+</nav>
+<div class="hud-coins" title="頂方塊可以收集硬幣"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>酒館戰棋 · 經濟與對局節奏</b>
+<nav><a class="hide-s" href="#summary">一頁結論</a> <a class="hide-s" href="#pay">付費與體驗</a> <a class="hide-s" href="#fix">改進方向</a> <a href="#read">閱讀全文</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">存檔 05 · 系統拆解 · 20 頁</span>
+<h1 class="mega on-sky">《爐石傳說》酒館戰棋<br/>經濟與對局節奏</h1>
+<p class="feature">酒館戰棋沒有卡牌收集，8 名玩家共用一個隨從池，勝負幾乎全部取決於單局內的資源決策。這份拆解只看單局：<b>鑄幣怎麼來、怎麼花，隨從池怎麼限制選擇，強弱差距怎麼拉開又怎麼被收住</b>。口徑為第 14 賽季，2026 年 10 月。</p>
+<div class="acts">
+<a class="px-btn" href="#read"><span class="px-ico book"></span>在這裡閱讀全文</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e"><span class="px-ico ext"></span>飛書原文</a>
+<button aria-label="頂一下存檔方塊" class="px-block" data-coin="hearthstone-1"></button>
+</div>
+<div class="c-cover" data-r=""><img alt="酒館戰棋對局介面" src="../../img/hs/main.webp" style="object-position:center 42%;max-height:520px"/></div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats">
+<div data-r=""><span>6 星隨從全場</span><b>7 份</b><span>份數控制稀缺</span></div>
+<div data-r="2"><span>一次三連拿走</span><b>43%</b><span>頂端強度的份數</span></div>
+<div data-r="3"><span>鑄幣封頂</span><b>10</b><span>每回合 +1，第 8 回合封頂</span></div>
+<div data-r="4"><span>遊玩時長</span><b>501h</b><span>6120 分</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="summary">
+<div class="narrow">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">一頁結論</h2>
+<p class="feature" data-r="">核心矛盾：8 名玩家用完全相同的收入、共用一個隨從池，卻要打出每局都不一樣的結果；<b>強弱差距要拉得開，又不能太早定局</b>。</p>
+<ul class="rules" data-r="">
+<li><i>結論 1</i><b>收入和價格固定，差異只來自花法</b>鑄幣每回合 +1，第 8 回合封頂 10，隨從一律 3 枚。每回合的核心問題是升本還是買強度，血量是這筆賬的押金。</li>
+<li><i>結論 2</i><b>稀缺性由份數製造，不靠機率表</b>6 星單卡全場 7 份，一次三連就拿走 43%。共享池還帶來了撞種族和讀對手的博弈。</li>
+<li><i>結論 3</i><b>滾雪球靠陣容，並配了剎車</b>沒有利息和連勝獎勵，另有傷害上限、份數限制、發現只高一本；英雄強弱用護甲換算成血量來平衡。</li>
+<li><i>結論 4</i><b>賽季機制加一個就減一個</b>每季的新機制都是商店之外的額外選擇，底層經濟不動，同時在場的額外系統控制在一到兩個。</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="pay">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">付費與體驗</h2>
+<div class="prose" data-r="">
+<p><strong>付費只賣選擇權。</strong>賽季通行證把開局英雄從 2 選 1 變成 4 選 1，再加上外觀，不賣局內數值，但英雄選項數仍然會影響排位。</p>
+<p><strong>體驗以挑戰和探索為主</strong>，主要服務成就型和探索型玩家。前 4 名加分的規則讓第 5 名最難受，也最想再來一局。社交是這個模式的短板。</p>
+<p>和火影手遊對比：火影的成長按月、按年累計，付費可以直接買進度；酒館戰棋的成長壓縮在一局之內，付費幾乎碰不到局內數值，系統設計落在經濟曲線、共享資源的稀缺和強弱分化的節奏上。</p>
+</div>
+</div>
+</section>
+<section class="chapter" id="fix">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">改進方向</h2>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>優先順序</th><th>方案</th></tr>
+<tr><td>①</td><td>商店顯示剩餘份數的三檔提示，附 AB 測試方案</td></tr>
+<tr><td>②</td><td>賽季初的新機制教學局</td></tr>
+<tr><td>③</td><td>排位統一英雄選項數</td></tr>
+<tr><td>④</td><td>中期落後補償</td></tr>
+</table>
+</div>
+<div class="prose" data-r=""><p class="note">另外推演了把升本費用改成線性，結論是不建議改。</p></div>
+</div>
+</section>
+<section class="chapter" id="toc">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">目錄</h2>
+<ul class="toc-list" data-r="">
+<li><b>一</b>遊戲概況與拆解範圍</li>
+<li><b>二</b>核心迴圈：招募與戰鬥</li>
+<li><b>三</b>鑄幣經濟：收入曲線與定價</li>
+<li><b>四</b>共享隨從池：稀缺性從哪裡來</li>
+<li><b>五</b>三連與發現：滾雪球和剎車</li>
+<li><b>六</b>英雄：起點不對稱和三個平衡旋鈕</li>
+<li><b>七</b>戰鬥結算與傷害：淘汰節奏怎麼控制</li>
+<li><b>八</b>變數注入與賽季節奏</li>
+<li><b>九</b>排位與付費：只賣選擇權</li>
+<li><b>十</b>體驗層：這些機制讓玩家感受到什麼</li>
+<li><b>十一</b>問題與改進方案</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="read">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">閱讀全文</h2>
+<p class="feature" data-r="">全文在下面直接翻閱，看完點頂欄或底部按鈕回到存檔。</p>
+</div>
+<div class="wrap">
+<div class="pdf" data-r="">
+<div class="bar"><span>hearthstone-bg.pdf · 20 頁</span><span><a download="" href="../../files/hearthstone-bg.pdf">下載 PDF</a> <a href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e">飛書原文 ↗</a></span></div>
+<iframe loading="lazy" src="../../files/hearthstone-bg.pdf#view=FitH" title="酒館戰棋經濟與對局節奏拆解全文"></iframe>
+<div class="pdf-alt">手機上無法內嵌 PDF。<a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">開啟 PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e" style="color:var(--gold)">飛書原文</a>（新標籤頁開啟）</div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="讀取存檔 04" href="naruto.html"><span>上一存檔 · 04</span><b>火影手遊：成長與經濟系統</b></a>
+<a data-slot="選擇存檔" href="../index.html"><span>回到</span><b>全部存檔</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷碩</span><span><a href="#top">回到頂部</a><a href="../index.html">全部存檔</a><a data-slot="開啟簡歷" href="../resume.html">簡歷</a></span></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

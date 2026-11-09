@@ -1,0 +1,7159 @@
+{
+ "4591ddb372": {
+  "src": "殷硕 · 游戏策划作品集",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "js/site.js"
+  ]
+ },
+ "1158cc6e22": {
+  "src": "<img alt=\"\" src=\"img/px/avatar.png\"/>殷硕<small>游戏策划</small>",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html",
+   "resume.html"
+  ]
+ },
+ "40e191bd7b": {
+  "src": "存档",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "6afff62d73": {
+  "src": "关于我",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "8f5d5d9afe": {
+  "src": "简历",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "504b815fd3": {
+  "src": "怎么玩<small>HOW TO PLAY</small>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "b04b1f6a7c": {
+  "src": "<span class=\"keys\"><kbd class=\"k-l\">←</kbd><kbd class=\"k-r\">→</kbd></span>移动",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "fd38be1806": {
+  "src": "<span class=\"keys\"><kbd class=\"k-sp\">空格</kbd></span>跳起顶方块",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7e013f4a1c": {
+  "src": "<span class=\"keys\"><kbd>↓</kbd></span>在门前进门",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "411dc1ee95": {
+  "src": "<span class=\"keys\"><span class=\"mouse\"></span></span>点方块直接进",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "a2a6a80fcb": {
+  "src": "殷硕 · 游戏策划",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "resume.html"
+  ]
+ },
+ "71bd6c6f9c": {
+  "src": "选择存档",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "c05c55b810": {
+  "src": "读取存档",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "js/site.js"
+  ]
+ },
+ "c6fff934e8": {
+  "src": "跳起来顶方块也能进入",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "8582f81105": {
+  "src": "<span class=\"lbl\"><i>↓</i> 关于我</span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "e320bccf3e": {
+  "src": "<span class=\"say\">↓ 进门</span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "a69eea8677": {
+  "src": "<a href=\"projects/nightreign-mod.html\">黑夜君临 Mod</a> · <a href=\"projects/tidewheel.html\">Tidewheel</a> · <a href=\"projects/burger/index.html\">宇宙汉堡</a> · <a href=\"projects/naruto.html\">火影拆解</a> · <a href=\"projects/hearthstone.html\">酒馆战棋拆解</a> · <a href=\"about.html\">关于我</a>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "1b376da5ff": {
+  "src": "玩家状态",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "a3ef97e26c": {
+  "src": "殷硕",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html"
+  ]
+ },
+ "37171e7db3": {
+  "src": "职业：游戏策划",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "c3620014ce": {
+  "src": "复旦大学 · 硕士在读",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "5175301b47": {
+  "src": "先量化，后实现。<b>独立制作</b>了《黑夜君临》大型 Mod 和抖音小游戏《宇宙汉堡》，在 game jam 担任<b>主策划</b>，写过火影手游、酒馆战棋两份<b>系统拆解</b>。《宇宙汉堡》的节奏和《Tidewheel》的操作窗口，都是<b>先用脚本模拟，再按数据调参</b>。<i class=\"more-ind\"></i>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "bf7a5a75f4": {
+  "src": "<span>游戏时长</span><span class=\"lead\"></span><span class=\"num\" data-n=\"4600\" data-suf=\"h+\">4600h+</span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7ee4934abb": {
+  "src": "<span>白金</span><span class=\"lead\"></span><span class=\"num\" data-n=\"16\" data-suf=\" 款\">16 款</span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "9a5561097e": {
+  "src": "<span>Mod 实机迭代</span><span class=\"lead\"></span><span class=\"num\" data-n=\"80\" data-suf=\"+ 轮\">80+ 轮</span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "a321d82df5": {
+  "src": "<span>系统拆解</span><span class=\"lead\"></span><span class=\"num\" data-n=\"56\" data-suf=\" 页\">56 页</span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "5e09134b17": {
+  "src": "<span>选择一个存档继续</span><span>已用存档位 5 / 6</span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "9bb328df72": {
+  "src": "黑夜君临 大型内容扩展 Mod",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "95f482308d": {
+  "src": "<i>可玩作品</i>独立制作：系统、关卡、演出 · 2026.08 至今 · 测试版已发布，B 站播放近 6000",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "6766861933": {
+  "src": "<b>7</b>新增夜王，每位 2 套前两夜组合",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "6be86adf6f": {
+  "src": "发条人偶 Tidewheel",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "projects/tidewheel.html"
+  ]
+ },
+ "c3bc816c6c": {
+  "src": "<i>可玩作品</i>策划（兼部分程序）· 4 人团队 · thatgamejam #02 · itch.io 可试玩",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7b8d4fdec9": {
+  "src": "<b>1.6 s</b>召回弹射窗口，由约 0.5 秒放宽",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "743786bd9b": {
+  "src": "宇宙汉堡",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "projects/burger/index.html",
+   "js/stage.js"
+  ]
+ },
+ "1365b0c3ea": {
+  "src": "<i>可玩作品</i>独立制作：系统、数值、开发 · 2026.09 – 10 · 软著申请中",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "a7cdfde91b": {
+  "src": "<b>49′</b>首次转生用时（模拟器结果）",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "d6203a14d0": {
+  "src": "火影忍者手游 成长与经济系统",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7872a9051c": {
+  "src": "<i>系统拆解</i>MDA · 数值推算 · 产品对比 · 36 页",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "73511c2f11": {
+  "src": "<b>25×</b>高级招募与点券直售的价差",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "234f249cde": {
+  "src": "酒馆战棋 经济与对局节奏",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "c13ed09413": {
+  "src": "<i>系统拆解</i>数值推算 · AB 测试设计 · 20 页 · 501 小时",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "9dc3cc8e7d": {
+  "src": "<b>43%</b>6 星随从一次三连拿走的份数",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "683579564b": {
+  "src": "空存档",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "3ee3f7b83f": {
+  "src": "此存档位留给下一个项目。",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "4dd6926e26": {
+  "src": "联系",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "e9b0f072f5": {
+  "src": "↑↓ 选择 · Enter 读取",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "799c1b410e": {
+  "src": "查看简历 ▶",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "4062e0d37f": {
+  "src": "玩家档案",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html"
+  ]
+ },
+ "731c9151c4": {
+  "src": "<span class=\"d\"></span> <span class=\"sign\"><b><span class=\"px-ico pad\"></span> 游戏经历</b><small>35 款游戏 · 封面墙 · 按平台筛选</small></span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "9031f349f9": {
+  "src": "<span class=\"d\"></span> <span class=\"sign\"><b><span class=\"px-ico film\"></span> 影视经历</b><small>动画 · 特摄 · 电影 · 音乐</small></span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "fee11a8221": {
+  "src": "<span class=\"d\"></span> <span class=\"sign\"><b><span class=\"px-ico map\"></span> 履历与技能</b><small>教育、实习、技能</small></span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "ae62b9988a": {
+  "src": "感谢浏览。正在寻找游戏策划方向的实习与工作机会。",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "05eba2e4bc": {
+  "src": "<span>收集硬币<b id=\"goal-coins\">0</b></span> <span>存档数<b>5</b></span> <span>本次用时<b id=\"goal-time\">00:00</b></span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "b0d4631c08": {
+  "src": "<span class=\"px-ico mail\"></span>发送邮件",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html"
+  ]
+ },
+ "3c6c75cc5f": {
+  "src": "<span class=\"px-ico pdf\"></span>简历",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html"
+  ]
+ },
+ "0e56069391": {
+  "src": "再玩一次",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "87b47b7998": {
+  "src": "© 2026 殷硕 · 试试 ↑↑↓↓←→←→BA",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "e03cc0f221": {
+  "src": "回到顶部",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "about.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "1ba936df85": {
+  "src": "殷硕的游戏策划作品集：黑夜君临大型 Mod、game jam 作品《Tidewheel》、抖音小游戏《宇宙汉堡》，以及火影手游、酒馆战棋两份系统拆解。",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7e0dacf82a": {
+  "src": "回到标题",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "about.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "fb1c7dc70a": {
+  "src": "主导航",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "about.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "412f1d708b": {
+  "src": "游戏经历、影视经历、履历与技能。",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "js/stage.js"
+  ]
+ },
+ "f085a17685": {
+  "src": "打开玩家档案",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html",
+   "js/stage.js"
+  ]
+ },
+ "062b1aff2a": {
+  "src": "打开简历",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "about.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "2d6ac2d48e": {
+  "src": "顶方块可以收集硬币",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "resume.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "1ce80e2056": {
+  "src": "操作说明",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "4919329c61": {
+  "src": "进门：关于我",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "e15f03736f": {
+  "src": "殷硕的像素头像",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "about.html"
+  ]
+ },
+ "af67d0e391": {
+  "src": "同一位夜王的两次挑战，前两天遭遇的敌人可以不同。",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "js/stage.js"
+  ]
+ },
+ "b255506ea8": {
+  "src": "读取存档 01",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "about.html",
+   "projects/tidewheel.html"
+  ]
+ },
+ "a402eecb83": {
+  "src": "召回弹射的有效窗口由约 0.5 秒放宽至约 1.6 秒。",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "cb114b831b": {
+  "src": "读取存档 02",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "about.html",
+   "projects/nightreign-mod.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "fc716f2a2b": {
+  "src": "首次转生约 49 分钟；获得星星加成后，第二轮缩短至 23 分钟。",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "c17296fd49": {
+  "src": "读取存档 03",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "about.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html"
+  ]
+ },
+ "c40d8f9c1f": {
+  "src": "高级招募拿满一名 S 忍约需 300 抽，是点券直售的 25 倍。",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "a3d40fd963": {
+  "src": "读取存档 04",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "d1111c479e": {
+  "src": "6 星随从只有 7 份，一次三连即拿走 43%。",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "5b22e4382e": {
+  "src": "读取存档 05",
+  "kind": "text",
+  "pages": [
+   "index.html",
+   "projects/naruto.html"
+  ]
+ },
+ "391321be3a": {
+  "src": "4600 小时以上的游戏时长，35 款游戏，16 款白金。",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "baa2fd2059": {
+  "src": "动画、特摄、电影与剧集 30 多部，外加一张 BGM 播放列表。",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "138f3bdd2a": {
+  "src": "复旦大学硕士在读，三年 GIS 与遥感数据分析经历。",
+  "kind": "text",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "8e69ca61de": {
+  "src": "关于我 · 殷硕作品集",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "be69b449ad": {
+  "src": "<a href=\"#cv\">履历与技能</a> <a href=\"#games\">游戏经历</a> <a href=\"#films\">影视经历</a>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "fcafc0c84d": {
+  "src": "职业：游戏策划 · 系统 / 数值 / 关卡",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9fafff15a0": {
+  "src": "复旦大学硕士在读。独立制作《黑夜君临》大型 Mod 与抖音小游戏《宇宙汉堡》，在 game jam 担任主策划，写过火影手游、酒馆战棋两份系统拆解。习惯先用脚本模拟，再按数据调参。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "07ec4d6eef": {
+  "src": "<span>游戏时长 4600h+</span> <span>白金 16 款</span> <span>三年 GIS 与遥感数据分析</span> <span>AI 工具：Claude Code · Codex</span> <span>同伴：小猫 · 小咪</span>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "35086cf849": {
+  "src": "履历与技能",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4de59b5798": {
+  "src": "职业 · 游戏策划",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e4e6c3439d": {
+  "src": "流派 · 系统 / 数值 / 关卡",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9e4b22574f": {
+  "src": "白金收集者 ×16",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "21cf74255b": {
+  "src": "Mod 作者",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d43accffe9": {
+  "src": "Game Jam 主策划",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7d3c35c29b": {
+  "src": "属性",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4e72850256": {
+  "src": "经历",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "53da139b6a": {
+  "src": "技能",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1faf3321a8": {
+  "src": "装备",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0149eb27a9": {
+  "src": "复旦大学硕士在读，三年 GIS 与遥感数据分析经历。做游戏的习惯是先用脚本模拟，再按数据调参。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "82889d8d53": {
+  "src": "<span>游戏时长</span><b data-n=\"4600\" data-suf=\"h+\">4600h+</b>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d705676419": {
+  "src": "<span>白金</span><b data-n=\"16\" data-suf=\" 款\">16 款</b>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a523394e58": {
+  "src": "<span>可玩作品</span><b data-n=\"3\" data-suf=\" 个\">3 个</b>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ca764bec6f": {
+  "src": "<span>系统拆解</span><b data-n=\"56\" data-suf=\" 页\">56 页</b>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2ed0d3e527": {
+  "src": "<span>Mod 实机迭代</span><b data-n=\"80\" data-suf=\"+ 轮\">80+ 轮</b>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0d51e9ffa4": {
+  "src": "<span>Mod B 站播放</span><b data-n=\"5965\" data-suf=\"\">5965</b>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "521cb1a18e": {
+  "src": "<span>硕士 GPA</span><b>3.67</b>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6493e7ad7f": {
+  "src": "<span>专业排名</span><b>前 10%</b>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "342ed94399": {
+  "src": "主线",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "616a888664": {
+  "src": "<b>复旦大学 · 资源与环境 硕士</b><small>2025 – 今 · GPA 3.67 / 4.0，专业前 10%</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6f1972e48e": {
+  "src": "进行中",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "998970dcf6": {
+  "src": "<b>上海师范大学 · 园艺 学士</b><small>2021 – 2025 · 专业前 10%</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e99b48a29b": {
+  "src": "已完成",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "94c8d6d618": {
+  "src": "支线",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1471a51f7e": {
+  "src": "<b>上海市环境科学研究院 · 数据分析实习生</b><small>2023 – 2026 · 长时间序列影像分类、土地利用与景观格局分析</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f394cdc91d": {
+  "src": "作品",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "63daa66473": {
+  "src": "《黑夜君临》大型内容扩展 Mod",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ae11a94fa0": {
+  "src": "· 独立制作",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3bb16cb26c": {
+  "src": "2026.08 – 今 · 测试版已发布，B 站播放近 6000",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ed1459a5e9": {
+  "src": "《宇宙汉堡》",
+  "kind": "html",
+  "pages": [
+   "about.html",
+   "js/stage.js"
+  ]
+ },
+ "46695d5d9c": {
+  "src": "2026.09 – 10 · 抖音竖屏增量经营小游戏，开发完成",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8919a2d392": {
+  "src": "《发条人偶》Tidewheel",
+  "kind": "html",
+  "pages": [
+   "about.html",
+   "js/stage.js"
+  ]
+ },
+ "08817ae1de": {
+  "src": "· 策划（兼部分程序）",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "df953a7e0f": {
+  "src": "2026.10 – 11 · thatgamejam #02，4 人团队，Unity 2D",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "bc57c91025": {
+  "src": "策划",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4236857abb": {
+  "src": "系统设计",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "86949ddca2": {
+  "src": "数值设计",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f8f18a3ae6": {
+  "src": "关卡设计",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e48186ac48": {
+  "src": "系统拆解",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "54e56b1115": {
+  "src": "GDD 撰写",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "eb3774e356": {
+  "src": "开发",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "808563510e": {
+  "src": "Unity / C# 开发",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8e95b729cd": {
+  "src": "网页原型",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "477c4b2f61": {
+  "src": "自动化测试脚本",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a1c1bd9348": {
+  "src": "地信与数据",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "581cdd016c": {
+  "src": "遥感影像分类",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b614c3b567": {
+  "src": "DEM 与栅格处理",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "47f96c6a8c": {
+  "src": "景观格局分析",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "09fc3b6228": {
+  "src": "把鼠标移到技能上，看它用在了哪里。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "96cdf6c5d3": {
+  "src": "<i>武器</i><b>Unity</b><small>宇宙汉堡、Tidewheel</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "add248c653": {
+  "src": "<i>武器</i><b>Excel</b><small>数值建模</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0dad0716b2": {
+  "src": "<i>护甲</i><b>飞书</b><small>团队 GDD</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8da27eea89": {
+  "src": "<i>护甲</i><b>Axure</b><small>交互原型</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d718da87fb": {
+  "src": "<i>饰品</i><b>Claude Code</b><small>写代码、排查问题</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7de4e3f8b8": {
+  "src": "<i>饰品</i><b>Codex</b><small>像素素材、代码</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d01c800721": {
+  "src": "<i>饰品</i><b>Scenario</b><small>宇宙汉堡店面场景</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1c777b1176": {
+  "src": "<i>道具</i><b>ArcGIS</b><small>空间分析</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b5dde03d06": {
+  "src": "<i>道具</i><b>GEE</b><small>遥感影像处理</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "aacedd1bb1": {
+  "src": "<b>组队邀请</b><span>13283750773@163.com</span>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5af0be830c": {
+  "src": "游戏经历",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "743b0daf7e": {
+  "src": "四个平台、35 款有记录的游戏，合计 4600 小时以上。时长最多的是两款长线手游，火影和炉石各 1000 小时，两份系统拆解都从这里来；单机以魂系动作为主，PS5 上玩过的 11 款里有 10 款白金。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8a89e8ff29": {
+  "src": "平台分布<small>按下方游戏库统计，共 4618 小时</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5ce4ebe048": {
+  "src": "<span>手游 / 网游</span><span class=\"bar\"><i style=\"--v:50%;--c:var(--grass-d)\"></i></span><span>2300h · 4 款</span> <span>Steam</span><span class=\"bar\"><i style=\"--v:37%;--c:var(--blue-d)\"></i></span><span>1716h · 18 款</span> <span>PS5</span><span class=\"bar\"><i style=\"--v:11%;--c:var(--blue)\"></i></span><span>502h · 11 款</span> <span>Switch</span><span class=\"bar\"><i style=\"--v:2%;--c:var(--red)\"></i></span><span>100h · 2 款</span>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "cc08d98672": {
+  "src": "投入最多的作品",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ac87876682": {
+  "src": "火影忍者手游",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ec9ba851f3": {
+  "src": "V12 账号，也是系统拆解的研究样本。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "bc7beca829": {
+  "src": "炉石传说",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a3b3fc6375": {
+  "src": "酒馆战棋 6120 分，也是系统拆解的研究样本。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ed30990144": {
+  "src": "黑夜君临",
+  "kind": "html",
+  "pages": [
+   "about.html",
+   "js/stage.js"
+  ]
+ },
+ "008c48af1f": {
+  "src": "白金，深夜模式 9999 分，为其制作大型 Mod。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "00e4ee2b2a": {
+  "src": "艾尔登法环",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e816d27497": {
+  "src": "白金。由此深入魂系，也是制作 Mod 的起点。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9992f94dae": {
+  "src": "游戏库<small id=\"g-count\"></small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "dc35af8d69": {
+  "src": "排序",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e4b9d69486": {
+  "src": "平台",
+  "kind": "html",
+  "pages": [
+   "about.html",
+   "projects/nightreign-mod.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "29d0552d2e": {
+  "src": "时长",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6b69c6bab2": {
+  "src": "白金优先",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8262a4df23": {
+  "src": "<b>INSERT CARTRIDGE</b><span>点任意一张卡带插进来</span>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4cb45eab2f": {
+  "src": "YS·16<small>SAVE STATION</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a5c150afdb": {
+  "src": "<span>◀ ▶ 换游戏</span><span>A 随机</span><span>B 退卡</span>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "cda4ca6785": {
+  "src": "艾尔登法环 黑夜君临",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "32f598d9ea": {
+  "src": "Steam · <span class=\"plat\"><span class=\"px-ico trophy\"></span>白金</span>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "224043b2be": {
+  "src": "深夜 5 级 9999 分 · 做了 Mod",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "19b06cf017": {
+  "src": "使命召唤 19：现代战争 II",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5a36042a55": {
+  "src": "星露谷物语",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "93f9bbc1bd": {
+  "src": "怪物猎人：荒野",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4acd395f64": {
+  "src": "刺客信条：奥德赛",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a1a4db00f1": {
+  "src": "Steam · 主线通关",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b9fbb1dc0c": {
+  "src": "消逝的光芒",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "664c3b8529": {
+  "src": "木筏求生",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8722f460d8": {
+  "src": "沙石镇时光",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "22f8c24a3b": {
+  "src": "泰拉瑞亚",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "dc21dbd572": {
+  "src": "怪物猎人：世界",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3449616318": {
+  "src": "异星探险家",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0964e846ac": {
+  "src": "Unheard 疑案追声",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4e2e60e338": {
+  "src": "双影奇境",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3692bd79c3": {
+  "src": "禁闭求生",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b4d530c37b": {
+  "src": "底特律：化身为人",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a97c5768da": {
+  "src": "英灵神殿",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "aa8322abb0": {
+  "src": "黑暗之魂 3",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "bd05fac230": {
+  "src": "PS5 · <span class=\"plat\"><span class=\"px-ico trophy\"></span>白金</span>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4678943e43": {
+  "src": "黑神话：悟空",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "abeef5063a": {
+  "src": "血源诅咒",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2345037640": {
+  "src": "胡闹厨房",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "24ac44f6e8": {
+  "src": "战神 4",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "61a42a0f5e": {
+  "src": "黑暗之魂 重制版",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "75f141ca3b": {
+  "src": "宇宙机器人",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "98013f8b96": {
+  "src": "漫威蜘蛛侠 2",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b4ce58d107": {
+  "src": "最后生还者 第一部",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "81c4a04e54": {
+  "src": "麻布仔大冒险",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3cfde5ebaa": {
+  "src": "双人成行",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e28f38a9a6": {
+  "src": "超级马力欧 奥德赛",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c7f1e756c2": {
+  "src": "手游",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1a46db742e": {
+  "src": "V12 · 写了 36 页拆解",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "356e24cb22": {
+  "src": "酒馆战棋 · 写了 20 页拆解",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4bd2c2b860": {
+  "src": "保卫向日葵",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "df8fb4203c": {
+  "src": "原神",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "df316e17de": {
+  "src": "…",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e7fd6b85aa": {
+  "src": "还有更多存档",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "eae4a4ddeb": {
+  "src": "每个平台都还有没列出来的",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "fa7bd5f39e": {
+  "src": "<span></span><span class=\"hrs\">？？</span>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d8f975d784": {
+  "src": "影视经历",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c66c87402f": {
+  "src": "看得最多的是日本动画和特摄，假面骑士从平成到令和全部看完。电影和剧集偏科幻和悬疑，诺兰的作品看了一个系列，也看岩井俊二这类安静的日本电影。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "44e9d6766c": {
+  "src": "片架<small>共 32 部 · 拖动、点两侧卡牌或按 ← → 切换</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a0c1c58328": {
+  "src": "……还有很多，没有全部列出来。",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "58f29cdf43": {
+  "src": "BGM 播放列表<small>喜欢的音乐人 · 卡面是代表专辑</small>",
+  "kind": "html",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3b65753a56": {
+  "src": "© 2026 殷硕",
+  "kind": "html",
+  "pages": [
+   "about.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "c3923efb88": {
+  "src": "全部存档",
+  "kind": "html",
+  "pages": [
+   "about.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "a86608fe11": {
+  "src": "殷硕的玩家档案：游戏经历、影视经历、教育与实习经历、策划与工具技能。",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "38d14472aa": {
+  "src": "顶存档方块可以收集硬币",
+  "kind": "text",
+  "pages": [
+   "about.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "76d8a88780": {
+  "src": "顶一下存档方块",
+  "kind": "text",
+  "pages": [
+   "about.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "ebb4a4703c": {
+  "src": "点一下角色",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "567d4fca05": {
+  "src": "小咪",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5fc6336b90": {
+  "src": "称号",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3bb24e915c": {
+  "src": "角色信息",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "41a3fbdbc0": {
+  "src": "黑夜君临的夜律与护符成长；宇宙汉堡的三层目标",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e136a3c2cc": {
+  "src": "宇宙汉堡：用跑局模拟器调价格和节奏",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1a045c1f17": {
+  "src": "黑夜君临腐败湖地上、地下双层地形；Tidewheel 四章关卡",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "dde721140a": {
+  "src": "火影手游 36 页 MDA 拆解；酒馆战棋 20 页经济拆解",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0bfcf9b498": {
+  "src": "Tidewheel 标准 GDD，事先定好削减顺序",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0cafe14907": {
+  "src": "宇宙汉堡 7300 行 C#，31 个脚本",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5bc6a0b331": {
+  "src": "Tidewheel 6 版可玩网页原型",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "43e0bfe082": {
+  "src": "Tidewheel 用脚本测出每段的出手窗口；宇宙汉堡自动截图和长时间运行测试",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "71471176fb": {
+  "src": "环科院实习：长时间序列影像分类",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a8e9c9277c": {
+  "src": "地形高程、栅格处理，可用于地形生成",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "05cf04b702": {
+  "src": "景观连通性分析，可用于关卡动线分析",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3af37352d4": {
+  "src": "游戏机。点卡带插进来，左右方向键换游戏",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3b97d53b8d": {
+  "src": "换游戏",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ddf933a55b": {
+  "src": "上一款",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e535f21a69": {
+  "src": "下一款",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "60bdcd8b3a": {
+  "src": "退出卡带",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "85afc35a6b": {
+  "src": "随机插一张",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e506cf878f": {
+  "src": "白金",
+  "kind": "text",
+  "pages": [
+   "about.html",
+   "js/about.js"
+  ]
+ },
+ "0067f2ee37": {
+  "src": "《艾尔登法环 黑夜君临》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6a31001d9c": {
+  "src": "《使命召唤 19：现代战争 II》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5ac48f44b0": {
+  "src": "《艾尔登法环》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "07476c8d1d": {
+  "src": "《星露谷物语》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "712c52ea07": {
+  "src": "《怪物猎人：荒野》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "fae07039a5": {
+  "src": "通关",
+  "kind": "text",
+  "pages": [
+   "about.html",
+   "js/about.js"
+  ]
+ },
+ "aa4735cbd9": {
+  "src": "《刺客信条：奥德赛》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7e75478aeb": {
+  "src": "《消逝的光芒》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0c38c7e793": {
+  "src": "《木筏求生》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1e7ea19175": {
+  "src": "《沙石镇时光》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9adcec7dd8": {
+  "src": "《CS2》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b96c615434": {
+  "src": "《泰拉瑞亚》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "28c4a02f72": {
+  "src": "《怪物猎人：世界》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8cec5d88c3": {
+  "src": "《异星探险家》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7379c3f15f": {
+  "src": "《Unheard 疑案追声》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f93e308be6": {
+  "src": "《双影奇境》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1516ee5706": {
+  "src": "《禁闭求生》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e29f0d780f": {
+  "src": "《底特律：化身为人》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4824bf40f2": {
+  "src": "《英灵神殿》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c1ed260491": {
+  "src": "《黑暗之魂 3》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c2e409ead7": {
+  "src": "《黑神话：悟空》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "90671aa643": {
+  "src": "《血源诅咒》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f10384921d": {
+  "src": "《胡闹厨房》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "003a5f3500": {
+  "src": "《战神 4》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "25955655c1": {
+  "src": "《黑暗之魂 重制版》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d7921235c6": {
+  "src": "《宇宙机器人》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "edb62c63b8": {
+  "src": "《漫威蜘蛛侠 2》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "25aa81458c": {
+  "src": "《最后生还者 第一部》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a11315f78d": {
+  "src": "《麻布仔大冒险》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9c20c67042": {
+  "src": "《双人成行》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d71edb841f": {
+  "src": "《Pokopia》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6068f13f34": {
+  "src": "《超级马力欧 奥德赛》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7a1c40d967": {
+  "src": "《火影忍者手游》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "17ee7b8b78": {
+  "src": "《炉石传说》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6ff1981ec0": {
+  "src": "《保卫向日葵》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "58fe89b2ec": {
+  "src": "《原神》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b41561d807": {
+  "src": "上一页",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1e67078d1a": {
+  "src": "卡带架分页",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "67a246a344": {
+  "src": "下一页",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b62329edfc": {
+  "src": "片架，按左右方向键切换",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6877cac0b9": {
+  "src": "火影忍者",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0afa4ac58f": {
+  "src": "TV 动画 · 2002",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "135f634fed": {
+  "src": "动画",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "eb481ce25e": {
+  "src": "《火影忍者》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "bdad879d84": {
+  "src": "葬送的芙莉莲",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "00fd595141": {
+  "src": "TV 动画 · 2023",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "12a2ece107": {
+  "src": "《葬送的芙莉莲》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "181a075fed": {
+  "src": "龙珠",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "18a4998c51": {
+  "src": "TV 动画 · 1986",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b872aa7983": {
+  "src": "《龙珠》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8e96ee9c47": {
+  "src": "名侦探柯南",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "413b825709": {
+  "src": "TV 动画 · 1996",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "260b593aa9": {
+  "src": "卡面：剧场版《黑铁的鱼影》",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8e5395d13c": {
+  "src": "《名侦探柯南》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "84bd078ea7": {
+  "src": "新世纪福音战士",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d2b700b650": {
+  "src": "TV 动画 · 1995",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "286d3396b5": {
+  "src": "卡面：剧场版《Air / 真心为你》",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "379f407ba8": {
+  "src": "《新世纪福音战士》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "baee3fe250": {
+  "src": "赛博朋克：边缘行者",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "52239d5ccb": {
+  "src": "网络动画 · 2022",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b675684be6": {
+  "src": "《赛博朋克：边缘行者》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "966641406f": {
+  "src": "哈尔的移动城堡",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7132ae94e4": {
+  "src": "动画电影 · 2004",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b634f0c885": {
+  "src": "《哈尔的移动城堡》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f336dfe575": {
+  "src": "你的名字。",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "70e83ff883": {
+  "src": "动画电影 · 2016",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "89659c9d6d": {
+  "src": "《你的名字。》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "56e036ba6e": {
+  "src": "天气之子",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "31a198a509": {
+  "src": "动画电影 · 2019",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c3a87b35e9": {
+  "src": "《天气之子》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a932a32ef1": {
+  "src": "铃芽之旅",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "70c7fa7317": {
+  "src": "动画电影 · 2022",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b51f495495": {
+  "src": "《铃芽之旅》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5441534aab": {
+  "src": "蜘蛛侠：平行宇宙",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "69372df054": {
+  "src": "动画电影 · 2018",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5e0a798229": {
+  "src": "《蜘蛛侠：平行宇宙》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "df164d072c": {
+  "src": "蜘蛛侠：纵横宇宙",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "495e00cdc2": {
+  "src": "动画电影 · 2023",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "39f0024bb8": {
+  "src": "《蜘蛛侠：纵横宇宙》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8e3c0009ec": {
+  "src": "四月是你的谎言",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7dfda1dc74": {
+  "src": "TV 动画 · 2014",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3b2293c4f7": {
+  "src": "《四月是你的谎言》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2d3e8bdfd4": {
+  "src": "我想吃掉你的胰脏",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b440ef655d": {
+  "src": "《我想吃掉你的胰脏》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "23c9b0df88": {
+  "src": "从零开始的异世界生活",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f10f2a1edd": {
+  "src": "TV 动画 · 2016",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "535acd4fe9": {
+  "src": "《从零开始的异世界生活》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "238be424a6": {
+  "src": "进击的巨人",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d7e5e3e5e8": {
+  "src": "TV 动画 · 2013",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "91cf2137b8": {
+  "src": "《进击的巨人》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "07a2ef8c82": {
+  "src": "鬼灭之刃",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "867b0ff820": {
+  "src": "TV 动画 · 2019",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f26a1c10a1": {
+  "src": "《鬼灭之刃》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f2d2a31a91": {
+  "src": "假面骑士系列",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2ad9b693f1": {
+  "src": "TV 剧集 · 2000 至今",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f858eef223": {
+  "src": "平成到令和全部看完",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1dd561ffed": {
+  "src": "平成 · 2000–2019 · 20 部",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7212490f10": {
+  "src": "空我 Kuuga",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4c3dd15da8": {
+  "src": "亚极陀 Agito",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1fa8a6ad23": {
+  "src": "龙骑 Ryuki",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "32fd307ffb": {
+  "src": "剑 Blade",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "56ab40e7da": {
+  "src": "响鬼 Hibiki",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2db4dd043b": {
+  "src": "甲斗 Kabuto",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "32e1d88d68": {
+  "src": "电王 Den-O",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b783345f6f": {
+  "src": "月骑 Kiva",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b5d9b14108": {
+  "src": "帝骑 Decade",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d52fe7bab1": {
+  "src": "铠武 Gaim",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0abec04f9c": {
+  "src": "时王 Zi-O",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "61bc69e09a": {
+  "src": "令和 · 2019 至今 · 7 部",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b810af03f8": {
+  "src": "零一 Zero-One",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0374879a93": {
+  "src": "圣刃 Saber",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0d44be92c1": {
+  "src": "利维斯 Revice",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "85e04c595a": {
+  "src": "极狐 Geats",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9bb8639336": {
+  "src": "特摄",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5e181019c6": {
+  "src": "《假面骑士系列》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c7838a2d11": {
+  "src": "奥特曼系列",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2493a5dccb": {
+  "src": "1966 至今",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f873f58cef": {
+  "src": "卡面：《新·奥特曼》",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9764837275": {
+  "src": "《奥特曼系列》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9369995793": {
+  "src": "哈利·波特系列",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e09b325b82": {
+  "src": "电影 · 2001–2011",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "30c3f4e5b7": {
+  "src": "卡面：《哈利·波特与魔法石》",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0c0b09eb6f": {
+  "src": "电影与剧集",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4f3cd1dfcd": {
+  "src": "《哈利·波特系列》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c82bb4b772": {
+  "src": "漫威超级英雄系列",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "94f8ebe84a": {
+  "src": "电影 · 2008 至今",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "419d46562f": {
+  "src": "卡面：《复仇者联盟 4》",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ac31b4806e": {
+  "src": "《漫威超级英雄系列》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "374696ecd9": {
+  "src": "神探夏洛克",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9aca6473c4": {
+  "src": "剧集 · 2010–2017",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "04728f00bc": {
+  "src": "《神探夏洛克》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "556d875db5": {
+  "src": "喜鹊谋杀案",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "884806fe3e": {
+  "src": "剧集 · 2022",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "11630b2909": {
+  "src": "《喜鹊谋杀案》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "dc4f039649": {
+  "src": "沙丘",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d3e012043f": {
+  "src": "电影 · 2021",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "38ab492a56": {
+  "src": "《沙丘》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "960ad6f17c": {
+  "src": "盗梦空间",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "bf23a78826": {
+  "src": "电影 · 2010",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "bdba55778e": {
+  "src": "诺兰的作品看了一个系列",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a2fd485eec": {
+  "src": "《盗梦空间》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e0c2c09eeb": {
+  "src": "银翼杀手",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1acc6270c8": {
+  "src": "电影 · 1982",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "02446189ec": {
+  "src": "《银翼杀手》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "fcc1feab37": {
+  "src": "2001太空漫游",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "fa96321e26": {
+  "src": "电影 · 1968",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ddb448d3e2": {
+  "src": "《2001太空漫游》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "590ff25352": {
+  "src": "黑客帝国",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "57d80e82e3": {
+  "src": "电影 · 1999",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0cfd7d1db7": {
+  "src": "《黑客帝国》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3456941851": {
+  "src": "情书",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6669e49218": {
+  "src": "电影 · 1995",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b02606eb98": {
+  "src": "《情书》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6b690814a0": {
+  "src": "花与爱丽丝",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a8f3a44bc3": {
+  "src": "电影 · 2004",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "29a6ede88f": {
+  "src": "《花与爱丽丝》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5726546d31": {
+  "src": "余命十年",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "aafb49b5f9": {
+  "src": "电影 · 2022",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "18bbc11caa": {
+  "src": "《余命十年》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "832d276f69": {
+  "src": "布达佩斯大饭店",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "242c86a2a0": {
+  "src": "电影 · 2014",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "bfadef18c7": {
+  "src": "《布达佩斯大饭店》封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b9f734ae80": {
+  "src": "上一张",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9a3dc99df8": {
+  "src": "下一张",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7e9d22d5d0": {
+  "src": "喜欢的音乐人，按左右方向键切换",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "bee524d0d5": {
+  "src": "ずっと真夜中でいいのに。",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "20ec3455b8": {
+  "src": "永远是深夜有多好。（ZTMY） · 日本",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "35281b7260": {
+  "src": "代表专辑《潜潜話》2019",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "44da6bbcf2": {
+  "src": "日本",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9771b08a74": {
+  "src": "ずっと真夜中でいいのに。（永远是深夜有多好。（ZTMY））的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d9c4da657d": {
+  "src": "ヨルシカ",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f397551440": {
+  "src": "夜鹿 · 日本",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "42524b4b1c": {
+  "src": "代表专辑《だから僕は音楽を辞めた》2019",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "30813cf024": {
+  "src": "ヨルシカ（夜鹿）的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "452e04683d": {
+  "src": "夜游 · 日本",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ad4ecd6b21": {
+  "src": "代表专辑《THE BOOK》2021",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2d157aa5fe": {
+  "src": "YOASOBI（夜游）的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "90083b4ff5": {
+  "src": "あいみょん",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "67fd0a441b": {
+  "src": "爱缪 · 日本",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "63d57545d1": {
+  "src": "代表专辑《瞬間的シックスセンス》2019",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0fc0a79837": {
+  "src": "あいみょん（爱缪）的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0ed5abcf30": {
+  "src": "代表专辑《eyes》2020",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4c480c3d5c": {
+  "src": "milet的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3b615bbb27": {
+  "src": "宇多田ヒカル",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "203d41feae": {
+  "src": "宇多田光 · 日本",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6b163468bc": {
+  "src": "代表专辑《First Love》1999",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "478ff9a87e": {
+  "src": "宇多田ヒカル（宇多田光）的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b58363af3e": {
+  "src": "緑黄色社会",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "cf7ba81377": {
+  "src": "绿黄色社会 · 日本",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "da7eb4eb63": {
+  "src": "代表专辑《SINGALONG》2020",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ffc99310cf": {
+  "src": "緑黄色社会（绿黄色社会）的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c0994d9d55": {
+  "src": "代表专辑《daydream》2016",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "806367b466": {
+  "src": "Aimer的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6b638def88": {
+  "src": "陈绮贞",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f1c1bffea7": {
+  "src": "华语",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b60fe3aa2f": {
+  "src": "代表专辑《华丽的冒险》2005",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b9a85a95c3": {
+  "src": "陈绮贞的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "8052124ce2": {
+  "src": "张悬",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "42f1f92d8f": {
+  "src": "代表专辑《亲爱的...我还不知道》2007",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "11721994f6": {
+  "src": "张悬的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2470006912": {
+  "src": "王菲",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "019b6be843": {
+  "src": "代表专辑《唱游》1998",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a59898296b": {
+  "src": "王菲的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a03dcdf0fa": {
+  "src": "徐佳莹",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1f8fcca12b": {
+  "src": "代表专辑《LaLa 首张创作专辑》2009",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2656693507": {
+  "src": "徐佳莹的专辑封面",
+  "kind": "text",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "778fc8f994": {
+  "src": "全部",
+  "kind": "js",
+  "pages": [
+   "about.html",
+   "js/deck.js"
+  ]
+ },
+ "497064be1f": {
+  "src": "共 ",
+  "kind": "js",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "57d88ae3e1": {
+  "src": " 款",
+  "kind": "js",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "41cbb4e2f9": {
+  "src": "简历 · 殷硕作品集",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "60abdbc5d1": {
+  "src": "简历 · 1 页",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "064db06789": {
+  "src": "<span class=\"px-ico pdf\"></span>下载 PDF",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "908c378543": {
+  "src": "<span class=\"px-ico map\"></span>看角色档案",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "6bbc11df9a": {
+  "src": "<span>resume.pdf · 1 页</span><span><a download=\"殷硕-游戏策划-简历.pdf\" href=\"files/resume.pdf\">下载 PDF</a></span>",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "52ab12ba12": {
+  "src": "手机上无法内嵌 PDF。<a class=\"more\" href=\"files/resume.pdf\" rel=\"noopener\" style=\"color:var(--gold)\" target=\"_blank\">在新标签页打开 PDF</a>，看完关掉那个标签页就回到这里。",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "a9b76be790": {
+  "src": "<span>回到</span><b>全部存档</b>",
+  "kind": "html",
+  "pages": [
+   "resume.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "12869573fc": {
+  "src": "<span>前往</span><b>关于我</b>",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "f32a286d3e": {
+  "src": "<span>© 2026 殷硕</span><span><a href=\"#top\">回到顶部</a><a href=\"index.html\">全部存档</a><a href=\"about.html\">关于我</a></span>",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "2f7a2b29fa": {
+  "src": "殷硕的游戏策划简历，在站内直接阅读，也可以下载 PDF。",
+  "kind": "text",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "b80ba76eba": {
+  "src": "殷硕的简历",
+  "kind": "text",
+  "pages": [
+   "resume.html"
+  ]
+ },
+ "55405cac17": {
+  "src": "黑夜君临大型内容扩展 Mod · 殷硕作品集",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "2e1eb03e91": {
+  "src": "<img alt=\"\" src=\"../img/px/avatar.png\"/>殷硕<small>游戏策划</small>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "e64853f56d": {
+  "src": "黑夜君临 Mod",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "ae64ea2617": {
+  "src": "<a class=\"hide-s\" href=\"#boss\">夜王与地图</a> <a class=\"hide-s\" href=\"#law\">夜律</a> <a class=\"hide-s\" href=\"#deep\">深夜模式</a> <a href=\"https://b23.tv/og0igX2\" rel=\"noopener\" target=\"_blank\">B 站视频</a> <a class=\"pill sm\" href=\"../index.html#saves\">全部存档</a>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "477a621e10": {
+  "src": "存档 01 · 可玩作品 · 独立制作",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html",
+   "js/stage.js"
+  ]
+ },
+ "48039bd23b": {
+  "src": "《艾尔登法环 黑夜君临》<br/>大型内容扩展 Mod",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "8b8e534e00": {
+  "src": "在原版框架上<b>新增 7 位夜王、12 条夜律与“腐败湖”特异地形</b>，重做护符成长，支持 1–3 人无缝联机。<b>测试版于 2026 年 11 月 1 日公开发布</b>，B 站、抖音同步招募测试，发布后 3 天内根据玩家反馈连续更新两版。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "60bf870ebc": {
+  "src": "观看 B 站视频",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "5399887367": {
+  "src": "抖音视频",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0c2b4fb433": {
+  "src": "玩家反响 · 数据截至 2026.11.09",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "c60c796fd5": {
+  "src": "<span>B 站播放</span><b>5,965</b><span>发布 8 天，接近 6000</span>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "26565a9526": {
+  "src": "<span>双平台点赞</span><b>292</b><span>B 站 172 · 抖音 120</span>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "da3cf1aee1": {
+  "src": "<span>双平台收藏</span><b>176</b><span>B 站 164 · 抖音 12</span>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "e222e9952e": {
+  "src": "<span>双平台转发</span><b>331</b><span>B 站 213 · 抖音 118</span>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "6770ba4747": {
+  "src": "内容规模",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "f52decdd84": {
+  "src": "<span>新增夜王</span><b>7</b><span>每位配 2 套前两夜组合</span>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "ad05814a33": {
+  "src": "<span>夜律</span><b>12</b><span>条，已实装并公开测试</span>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "ee8f82448e": {
+  "src": "<span>腐败湖 敌人 / 宝物点</span><b>152 / 44</b><span>地上、地下两层</span>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "6e3a92b4c8": {
+  "src": "<span>实机迭代</span><b>80+</b><span>轮</span>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "ce719238b7": {
+  "src": "夜王与地图",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "d15ce50369": {
+  "src": "同一位夜王的两次挑战，<b>前两天遭遇的敌人可以不同</b>。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "3bff322de6": {
+  "src": "新增 7 位夜王：火焰巨人、贝勒、龙王、拉塔恩、玛利喀斯、玛莲妮亚、梅瑟莫。每位配置 2 套“前两夜 Boss + 小怪”的随机组合；原版野外 Boss 调整为终局 Boss，并重新设定血量、二阶段与多人缩放，支持 1–3 人挑战。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "07f4a80056": {
+  "src": "每位夜王均配有专属图标、战斗音乐、天空氛围与第三天决战场景，演出规格与原版保持一致。普通远征可直接选择，深夜模式中也会随机遇到。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "ab3fdc6757": {
+  "src": "七位新夜王。图标取自《艾尔登法环》追忆道具的原画，按原版夜王图标的风格重新处理。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "4c48be8a62": {
+  "src": "腐败湖特异地形",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0d254a5924": {
+  "src": "腐败湖替换森林所在的区域，分为地上、地下两层。地上分三个区域随机投放共鸣结晶，共 64 种组合，全部击碎后封印解除，传送门才会开启，通往地下回廊；两层之间以传送门连接，减少无效跑图。全图共布置 152 个敌人与 44 个宝物点，地下最深处设有守护者与祝福。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "c2cf87c671": {
+  "src": "特异地形占用原版森林的位置：引擎抽到湖区方案时，原生插件在开局前把这一局的森林地形文件换成湖区，其他局保持森林。普通远征与深夜模式都可能出现，概率约 5%，与其他特异地形相当。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "6b5affdd73": {
+  "src": "腐败湖实机画面：地表湖区、湖岸、空中俯瞰与地下入口。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "3c3d80e31e": {
+  "src": "成长与互救",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "b5d668830b": {
+  "src": "原版中救援仅起止损作用。新增的互救增益<b>为被救者提供反打动机</b>，也提高了救援行为本身的收益。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "3f9c41e825": {
+  "src": "重做 30 个护符的成长曲线与三档掉落，使第一天获得的护符在第三天仍具备取舍价值。玩家被队友救起后，攻击力逐步提升。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "6d3c1105e0": {
+  "src": "开发期间共进行 80 余轮实机测试，主要工作量集中在闪退排查。所有问题均定位至根因后修复，未以删减内容的方式规避。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "93355df965": {
+  "src": "夜律：每局一条规则",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "fbe20b0703": {
+  "src": "夜律是“每局一条”的规则卡，作用于路线、资源用途、行动时机与队伍配合，<b>每条都有收益，也有代价</b>，不额外提高敌人强度。<b>12 条已全部实装</b>并随测试版公开，按 1、2、3 人分档设定数值。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "bf50072ebd": {
+  "src": "游戏内的夜律卡牌（12 张中的 6 张）。落地时右下角提示本局夜律，按 F6 翻开卡牌，再按一次看背面的完整规则。卡面插画为 AI 辅助生成。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "5222e2fb06": {
+  "src": "夜律",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "e00136ae56": {
+  "src": "收益",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "cb368d1476": {
+  "src": "代价",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0675ed52a1": {
+  "src": "坚壁之夜",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "2874503269": {
+  "src": "防御反击附带圣光冲击，成功防御回复生命，开局送小盾",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "c3c3aa8609": {
+  "src": "翻滚后短时间内承受伤害提高",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "366f4207b3": {
+  "src": "疫病契约",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0f628e192e": {
+  "src": "攻击附带本局异常，对已中异常的敌人伤害 +15%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "f998149701": {
+  "src": "自己挨打也积累同一种异常",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "a80b28a84b": {
+  "src": "燃命之夜",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "ac0010353b": {
+  "src": "血量低于 40% 时攻击 +30%，打倒敌人回复生命",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0987f37d9a": {
+  "src": "生命持续流失，圣杯瓶回复 −30%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "c58e0edb54": {
+  "src": "无瑕之夜",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "bf222001e9": {
+  "src": "满血时攻击 +15%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "535a84845c": {
+  "src": "不满血时攻击 −15%、承伤 +10%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "e1cc286e93": {
+  "src": "征伐令",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "d019a71d92": {
+  "src": "击败各类据点首领，永久提升对应属性",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "178832e6fe": {
+  "src": "本局基础攻击力降低",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "f9c5599d19": {
+  "src": "寻宝之夜",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "4730950a4e": {
+  "src": "地图显示隐藏宝藏，物品发现力提升",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "796a6358b4": {
+  "src": "打倒敌人获得的卢恩减少",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "aa3c60a2b7": {
+  "src": "贪婪之潮",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0ef07960bd": {
+  "src": "卢恩获取 +30% 至 +40%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "429524c98d": {
+  "src": "每次濒死倒地，本局血量上限降低",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0a2054f42b": {
+  "src": "兵器谱",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "405c80824e": {
+  "src": "本类兵器更易出现，凑齐 3 把攻击 +25%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "b2bc5e3439": {
+  "src": "基础攻击 −10%，凑不齐就是纯亏",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "6fb650302f": {
+  "src": "命运骰",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "2daa706eab": {
+  "src": "每人抽一张命运：狂战、磐石、疾风、秘术",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "cb3229b993": {
+  "src": "每张命运都带对应的弱项",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "f42e9ecba0": {
+  "src": "共饮之誓",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "7919244966": {
+  "src": "喝圣杯瓶同时治疗附近队友，道具效果共享",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "45f6e2aa1b": {
+  "src": "圣杯瓶对自己的回复 −30%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "39c6af889b": {
+  "src": "并肩之夜",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "ded74917c3": {
+  "src": "打倒敌人为附近队友回复，队友精力回复加快",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "e0f9719bb0": {
+  "src": "身边没有队友时承伤 +15%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "fcedecda82": {
+  "src": "行囊之夜",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "f147c901fc": {
+  "src": "投掷壶、飞刀、辉石道具伤害 +50%，每天补给",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "53500f4d9e": {
+  "src": "武器攻击力 −10%",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "e276ae78d8": {
+  "src": "12 条规则遵循四条设计原则：",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "bff8aaf501": {
+  "src": "<i>原则 1</i><b>收益与代价作用于同一个决策</b>燃命之夜让低血量变成输出窗口，代价也落在血量上；兵器谱的收益要凑齐武器才兑现，凑不齐就是纯亏。代价不是单纯的数值削弱，而是改变玩家的取舍。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "9748670266": {
+  "src": "<i>原则 2</i><b>区分全队与个人</b>疫病契约的异常全队相同；命运骰、兵器谱则每人各自抽取，队友之间可能不同，形成互补。每条夜律都注明按全队还是按个人生效。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "ea38de3186": {
+  "src": "<i>原则 3</i><b>按人数分档</b>数值按 1、2、3 人分别设定；并肩之夜只在 2–3 人局出现，共饮之誓在单人局改为自用版本。出发时按人数锁定规则，中途有人掉线不会重算。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "6790e23b8a": {
+  "src": "<i>原则 4</i><b>只组合原版已有效果</b>全部 12 条都由原版遗物、道具的效果组合而成，不新增动作和模型，降低联机不同步与闪退风险。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "7a24a972b5": {
+  "src": "深夜模式",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "a658dc7f02": {
+  "src": "深夜模式同样有夜律、新夜王和腐败湖，并且<b>原版永夜之王与新夜王同时进入随机池</b>。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "14f7be823c": {
+  "src": "游戏只用“基础夜王编号 + 是否永夜”来表示目标，没有第三种身份，所以新夜王只能借用永夜之王的位置。最初的版本因此把永夜之王挤出了深夜模式。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "76c96c983d": {
+  "src": "改版后同一个位置每局决定是谁：深夜抽取表加回 7 位原版永夜之王并沿用原版权重（深度 1 不出现，越深越常见）；抽到原版永夜之王时，原生插件把第三夜战场文件换回原版，并在内存中临时改回菜单的名字与图标。联机时，每台机器在落地后根据本局方案独立推导，结果一致。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "f8f8c98bc2": {
+  "src": "深夜深度可以在配置文件中直接指定（1–5），玩家不必从深度 1 重新打起；深夜入口也不再依赖存档解锁。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "d48f9a961c": {
+  "src": "发布后的玩家反馈",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "e500a3b593": {
+  "src": "测试版发布后 3 天内收到 6 类问题反馈，<b>每一项都先查到根因再修</b>，修复随 11.02 补丁与 11.03 完整版发布。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "9d97514dd1": {
+  "src": "玩家反馈",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "4917290fb6": {
+  "src": "根因",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "590253af48": {
+  "src": "修复",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "6ea2e731a5": {
+  "src": "联机时夜律只对房主生效",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "acd9998316": {
+  "src": "房主写入的联网状态无法同步到无缝联机的客户端",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "cb0f160bf7": {
+  "src": "每台机器根据本局地图方案独立推导出同一条夜律，不再依赖网络同步",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "154100e93d": {
+  "src": "队友拿不到“打倒黑夜入侵者提升攻击力”的遗物效果",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "54141527e7": {
+  "src": "原版只在房主一端累加计数",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "baaebfca26": {
+  "src": "改为每台机器各自记录入侵者死亡并累加",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "7dc653b492": {
+  "src": "腐败湖第二夜后没有灵魂树，进不了第三天",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "41de546617": {
+  "src": "湖区地图缺少灵魂树物件和通往决战场景的连接",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "fc7599105f": {
+  "src": "在赐福旁补回灵魂树与传送连接",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "e01ee9cb4d": {
+  "src": "深夜模式重开后不见了；想直接从高深度开始",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "36598627d7": {
+  "src": "深夜入口依赖存档里的解锁标记",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "eec60bda5b": {
+  "src": "取消解锁条件，新增深度配置",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "d2e9512895": {
+  "src": "新夜王的局里主城和野外 Boss 消失",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "f1cc1e317f": {
+  "src": "地图扩展 Mod 把这些敌人挪进了变体 1–8，新夜王的方案从原版复制，变体仍是 0",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "259d212d43": {
+  "src": "按该 Mod 自己的分布重新分配 5215 行变体，其余数据逐表核对未变",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0e42abc9d2": {
+  "src": "深夜模式随机不到永夜之王",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "b9826cedc5": {
+  "src": "新夜王借用了永夜之王的位置",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "314f8a1ead": {
+  "src": "同一位置每局切换，原版永夜之王回到随机池",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "59ab9a1760": {
+  "src": "以上修复均已在单人环境实测；联机效果由测试玩家继续验证。",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "d6366487c2": {
+  "src": "存档信息",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "6b26695e4d": {
+  "src": "角色",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "2f353da9ac": {
+  "src": "独立制作：系统、关卡、演出",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "8a12b12125": {
+  "src": "周期",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "02ef91c9a4": {
+  "src": "2026.08 至今",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "a12ebe1bf8": {
+  "src": "PC · 支持 1–3 人联机",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "62e951a692": {
+  "src": "状态",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "a7a0a8d3b8": {
+  "src": "测试版 2026.11.01 公开发布，11.02 补丁、11.03 完整版更新；12 条夜律已实装，联机持续测试中",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "fa4e33b698": {
+  "src": "视频",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "a65c5cd115": {
+  "src": "<a class=\"more ext\" href=\"https://b23.tv/og0igX2\" rel=\"noopener\" target=\"_blank\">B 站</a> <a class=\"more ext\" href=\"https://v.douyin.com/git4n1o39RE/\" rel=\"noopener\" target=\"_blank\">抖音</a>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "54b8a90b3c": {
+  "src": "数据",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0e85b46f40": {
+  "src": "B 站播放 5,965、投币 51、评论 34；双平台点赞 292、收藏 176、转发 331（截至 2026.11.09）",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "b77d6cffb8": {
+  "src": "<span>返回</span><b>全部存档</b>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "3f4ef39579": {
+  "src": "<span>下一存档 · 02</span><b>《发条人偶》Tidewheel</b>",
+  "kind": "html",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "796249a337": {
+  "src": "永夜之律封面：夜律卡牌",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "4936911259": {
+  "src": "七位新夜王的图标与名字",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "824ec30614": {
+  "src": "腐败湖实机截图：地表湖区、地下回廊",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "56fcd17156": {
+  "src": "夜律：坚壁之夜",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "141c099cba": {
+  "src": "夜律：燃命之夜",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "fe8348c419": {
+  "src": "夜律：无瑕之夜",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "0155e91015": {
+  "src": "夜律：兵器谱",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "acb36f25e9": {
+  "src": "夜律：命运骰",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "d29c333553": {
+  "src": "夜律：共饮之誓",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
+ "75cf5a61eb": {
+  "src": "《发条人偶》Tidewheel · 殷硕作品集",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "4c364d3e1d": {
+  "src": "<a class=\"hide-s\" href=\"#core\">核心规则</a> <a class=\"hide-s\" href=\"#data\">手感调校</a> <a class=\"hide-s\" href=\"#onboard\">少字引导</a> <a class=\"hide-s\" href=\"#story\">开场与结尾</a> <a class=\"hide-s\" href=\"https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh\" rel=\"noopener\" target=\"_blank\">GDD</a> <a class=\"pill sm\" href=\"https://shuo-yin.itch.io/tidewheel\" rel=\"noopener\" target=\"_blank\">试玩</a>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "0126dfb7fb": {
+  "src": "存档 02 · 可玩作品 · thatgamejam #02",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "a64ca65b9e": {
+  "src": "《发条人偶》<br/>Tidewheel",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "41e330efbd": {
+  "src": "2D 横版物理解谜。发条人偶要在风暴中登上灯塔，把灯点亮。人偶甩出胸口的时间齿轮，<b>齿轮周围那片海的时间随之停止</b>，停住的浪成为<b>可以踩的地形</b>，召回齿轮时海面回弹，能把人偶弹起。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "8417192708": {
+  "src": "<span class=\"px-ico pad\"></span>在 itch.io 试玩",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "0ccd9cf9b9": {
+  "src": "<span class=\"px-ico book\"></span>GDD 文档（飞书）",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "9cdbc5484c": {
+  "src": "<span>概念阶段</span><b>4 + 3</b><span>否决方案 / 灰盒版本</span>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "d944555c88": {
+  "src": "<span>召回弹射窗口</span><b>1.6 s</b><span>由约 0.5 秒放宽</span>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "914d16983d": {
+  "src": "<span>网页原型</span><b>6 版</b><span>用于验证规则和数值</span>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "f79e5791ce": {
+  "src": "<span>自动化测试</span><b>57 项</b><span>端到端流程检查</span>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "2a8ff0a4fc": {
+  "src": "一组规则，解释两件事",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "b89899d1e1": {
+  "src": "人偶是铁做的，掉进海里会沉；同时它又需要被海浪弹起来。两件事如果各写一条特殊规则，玩家要多记一条。最后用<b>同一组规则</b>解释了两者。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "6cfd601bc5": {
+  "src": "<i>规则 1 · 停住</i><b>停住的海水压不开</b>人沉下去，需要水向两边流开。时间停住的水流不开，多重都压不开，所以能站。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "4aad14f69f": {
+  "src": "<i>规则 2 · 召回与回弹</i><b>召回时，海面回弹</b>停住的海面在 0.2 秒内回到现在应有的高度，滑动期间仍是实体。海面往上走时，站在上面的人偶被弹起。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "95082dcca0": {
+  "src": "流动的水托不住铁做的身体，回弹中的海面仍然是实体，“会沉”和“能被弹起”都从这两条推出来，设定和玩法用的是同一套逻辑。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "f8573f949b": {
+  "src": "概念阶段先后否决了 4 套方案和 3 版灰盒，其中包括倒带、因果链和零件系统，最后定下“停住大自然”。齿轮停住的是时间，不是海水，所以全程不用冰、玻璃这类表现：停住的海仍保留浪形、白沫和水纹，只褪去饱和度，可站立的范围用一条黄铜刻度线标出，冻结圈画成钟面。动物不受影响，螃蟹照常爬过停住的海面，用来演示这条规则。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "728ede47ac": {
+  "src": "风暴段。齿轮落在岩石边缘，钟面形状的冻结圈碰到的那段闪电停在半空，可以踩上去过桥。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "60cf2acbd3": {
+  "src": "用脚本测手感",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "d1e91df6b4": {
+  "src": "在 AI 辅助下搭了可玩的网页原型，迭代 6 版；写自动化脚本<b>模拟玩家按键</b>，测出每一段的出手时机窗口，再按数据调参。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "1701273c25": {
+  "src": "最初的甩出方式是瞄准模式：按住进入瞄准，调远近，海浪减速，路径可达时虚线变绿。试玩下来操作步骤太多，10 月 29 日改成蓄力：按住蓄力，松开甩出，蓄力时只显示飞行轨迹、落点和冻结范围。落点预测和实际落点的误差约 1 像素。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "83318889b9": {
+  "src": "关卡段",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "307fd291c8": {
+  "src": "测什么",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "0a2c91cec6": {
+  "src": "结果",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "1b48221d45": {
+  "src": "1-1 潮池",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "ac1a566a01": {
+  "src": "停住浪头的出手窗口",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "ef365f14c8": {
+  "src": "约 1.4 秒",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "9700acc971": {
+  "src": "1-2 浪坡",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "bcddb0f64c": {
+  "src": "停住浪坡的出手窗口",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "9c0bc71482": {
+  "src": "约 1.1 秒",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "9bd9c4cd11": {
+  "src": "1-3 浪花台阶",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "70a1ed796b": {
+  "src": "停住空中水珠的出手窗口",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "d3182624f2": {
+  "src": "原来只有约 0.1 秒；调整水珠半径、判定距离和重力后，蓄力 0.65 时为 0.8 秒",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "e6e30c9238": {
+  "src": "1-4 召回弹射",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "cc42a37468": {
+  "src": "召回的有效时机",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "a8d1034204": {
+  "src": "由约 0.5 秒放宽到约 1.6 秒，召回提示没有误报",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "2cefc47df5": {
+  "src": "4-3 灯塔巨浪",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "ac06a7cbde": {
+  "src": "停住巨浪的出手窗口",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "12b06a8a45": {
+  "src": "蓄力 0.6–0.9 时约 2.25 秒",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "19f7ff118d": {
+  "src": "1-3 的窗口一开始只有约 0.1 秒，真人几乎做不到。脚本把它标成了待办，改完参数后重新跑一遍，确认达标再交给程序。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "c1f194c536": {
+  "src": "崖间段。左上角是时间齿轮的状态条，右上角是浪周期环。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "99672d9bf8": {
+  "src": "第 1 章海岸。螃蟹不受冻结影响，右边的木牌用两格图示讲停住浪头再爬上去。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "3f81032fe0": {
+  "src": "少字引导",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "c181f0522e": {
+  "src": "引导参考了《超级马力欧兄弟》1-1、Portal、Celeste 和 Tunic：<b>先在没有代价的地方学，再到有代价的地方用</b>。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "44f004dabc": {
+  "src": "浅水池教学：掉进浅水池只会沉到池底，可以在池底走和跳，不算死。同一个技巧先在浅池学，再到深海用。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "729138764c": {
+  "src": "按键提示学会就消失。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "4ce5b16ef3": {
+  "src": "木牌只用图示，不写字。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "c1cf9eef64": {
+  "src": "同一处失败两次，才出现提示圈，不打扰熟练玩家。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "84ea6489f9": {
+  "src": "内部试玩时，团队一致认为画面上的文字太多，玩家的注意力都在读字上。当时已经接近提交，美术不能再改，所以我只用程序改动做了一版少字方案，先在原型里实现，附上前后对照截图交给程序：",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "d1313af5ee": {
+  "src": "去掉常驻的节拍名、目标句和状态标签；",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "a3aaec8d25": {
+  "src": "头顶按键提示只留按键图标，蓄力键外面加一圈进度弧，代替“按住”两个字；",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "1f1736cf78": {
+  "src": "提示圈平时淡显，该停住的浪或水珠到位时全亮，玩家看的是时机而不是一句话；",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "8a0e6b5922": {
+  "src": "提示句移进暂停菜单，想看的人按暂停才看得到；",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "45e50bc78c": {
+  "src": "人偶走近木牌时，木牌三格依次点亮，引导阅读顺序。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "9c14d315e0": {
+  "src": "开场与结尾",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "a5e0c5a04b": {
+  "src": "剧情是一条直线：守灯人老海豹出海收网，风暴提前到来，灯塔没有亮。人偶穿过海岸，<b>登上灯塔上紧发条</b>，灯亮了，小船朝着光划回来。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "e59a7f6b6b": {
+  "src": "开场原本是一段摸头动画，美术提议改成可操作的对话：人偶走到老海豹身边按 E 交谈，4 句台词交代了出海收网、看好家和回来再上发条，之后电视里的天气广播说风暴提前。这是全游戏唯一有对白的地方，台词不直接说出目标，玩家出门后看到远处没亮的灯塔，自己明白要去哪。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "26673247fc": {
+  "src": "结尾配赛事主题音频，整段原样播放。音频里有五声发条，画面依次对上：0.3 秒开始上发条，20.6 秒灯亮，36.5 秒光束扫过海面找到小船，44.5 秒小船转向，53.0 秒小船靠岸。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "3e5d6330ef": {
+  "src": "开场：老海豹的修理铺门前。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "1b978b82e2": {
+  "src": "结尾：天亮后，人偶和老海豹坐在灯塔下。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "25e3c3b718": {
+  "src": "文档与提交",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "b96857d3cb": {
+  "src": "写了一份标准 GDD，并<b>事先定好削减顺序</b>。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "3d43c81b55": {
+  "src": "<a class=\"px-btn sm paper\" href=\"https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh\" rel=\"noopener\" target=\"_blank\"><span class=\"px-ico ext\"></span>在飞书阅读 GDD</a>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "558731ca37": {
+  "src": "GDD 包括四章关卡、机制规则、数值表、美术规格与资源清单、音效清单、技术方案、P0 / P1 / P2 版本范围，以及里程碑和风险对策。团队在飞书上维护同一份文档。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "3d16177b0b": {
+  "src": "提交前逐条核对赛事规则：默认语言为英文，提交页写明 AI 的使用情况，主题音频整段原样播放。itch.io 页面的简介、操作说明和设计陈述也由我准备。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "d46800cb66": {
+  "src": "策划（兼部分程序）",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "21d7042ff0": {
+  "src": "团队",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "09381f7ab2": {
+  "src": "4 人：策划、程序、两名美术（第二位美术在开发中途加入）",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "51cb076743": {
+  "src": "赛事",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "9413bdc38c": {
+  "src": "引擎",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html",
+   "projects/burger/index.html"
+  ]
+ },
+ "034ae1fd20": {
+  "src": "Unity 2D · Windows",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "09d316b965": {
+  "src": "流程",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "830ee58b80": {
+  "src": "单次通关约 10–15 分钟，支持键盘和手柄，英文 / 中文",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "e01ab0240d": {
+  "src": "<a class=\"more ext\" href=\"https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh\" rel=\"noopener\" target=\"_blank\">飞书文档</a>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "71630dbb7d": {
+  "src": "试玩",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "33f666a9ab": {
+  "src": "<span>上一存档 · 01</span><b>黑夜君临大型内容扩展 Mod</b>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "7d2f1f17c4": {
+  "src": "<span>下一存档 · 03</span><b>《宇宙汉堡》</b>",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "c35ffc4d67": {
+  "src": "thatgamejam #02 参赛作品《Tidewheel》：甩出时间齿轮停住海面，把浪变成地形。殷硕担任策划（兼部分程序）。",
+  "kind": "text",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "65a2d8afe0": {
+  "src": "封面：发条人偶冒雨从码头跑向灯塔，巨浪在灯塔下翻起",
+  "kind": "text",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "d8a0360b17": {
+  "src": "风暴段：钟面形状的冻结圈罩住岩石边缘，落下的闪电停在半空",
+  "kind": "text",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "737eee0a7e": {
+  "src": "崖间段：人偶站在高岩上，远处是悬停的水珠",
+  "kind": "text",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "e9f6230199": {
+  "src": "第 1 章海岸：码头、螃蟹和两格图示木牌",
+  "kind": "text",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "6b4ef320d2": {
+  "src": "开场：老海豹的五金修理铺门前，人偶站在草坡上",
+  "kind": "text",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "86586d0abe": {
+  "src": "结尾：天亮后，人偶和老海豹坐在灯塔下",
+  "kind": "text",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "1932b0370e": {
+  "src": "Tidewheel · 殷硕作品集",
+  "kind": "html",
+  "pages": [
+   "projects/tidewound.html"
+  ]
+ },
+ "2ad4a26aaf": {
+  "src": "页面已移到 <a href=\"tidewheel.html\">tidewheel.html</a>。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewound.html"
+  ]
+ },
+ "e78c84217d": {
+  "src": "《火影忍者》手游 成长与经济系统拆解 · 殷硕作品集",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "2a6f7fe9dd": {
+  "src": "火影手游 · 成长与经济系统",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "82846d57fc": {
+  "src": "<a class=\"hide-s\" href=\"#summary\">一页结论</a> <a class=\"hide-s\" href=\"#ab\">A/B 对比</a> <a class=\"hide-s\" href=\"#fix\">问题与建议</a> <a href=\"#read\">阅读全文</a>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "400b55a6f3": {
+  "src": "存档 04 · 系统拆解 · 36 页",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "b608ebb200": {
+  "src": "《火影忍者》手游<br/>成长与经济系统",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "73ccb11a4e": {
+  "src": "按 MDA 框架把系统拆成机制、动态、体验三层，每条结论都写成一条链：<b>哪条规则 → 玩家因此怎么做 → 产生什么情绪</b>。再拿同一工作室的《异人之下》做 A/B 对比。口径为 2026 年 10 月实机版本，账号 V12。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "70bdbf76d7": {
+  "src": "<span class=\"px-ico book\"></span>在这里阅读全文",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "5b4a1ff56e": {
+  "src": "<span class=\"px-ico ext\"></span>飞书原文",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "0b4dbbd2af": {
+  "src": "<span>高级招募与点券直售价差</span><b>25×</b><span>按充值折算</span>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "d177fa0f5d": {
+  "src": "<span>拿满一名 S 忍</span><b>≈300</b><span>抽，玩家统计口径</span>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "811a385665": {
+  "src": "<span>战力线养成系统</span><b>7</b><span>套</span>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "efd45857f0": {
+  "src": "<span>招募入口</span><b>8</b><span>个，3 层货币</span>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "d5ae315f94": {
+  "src": "一页结论",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "7f0a002e69": {
+  "src": "《火影忍者》手游把<b>忍者作为唯一核心商品</b>，用两套相反的 PVP 规则同时卖给操作型和养成型玩家：决斗场统一数值，积分赛按战力结算。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "7895e237ab": {
+  "src": "层",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "ce3e735732": {
+  "src": "做法",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "c7dca996f8": {
+  "src": "关键证据",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "b3b9356d68": {
+  "src": "机制",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "9ffb8d7b9c": {
+  "src": "3 层货币、8 个招募入口、7 套养成系统；决斗场统一战力，积分赛按战力结算",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "aeb48bdfd8": {
+  "src": "高招 S 碎片 11.5%，十连必送 S 碎片；V12 特权全是次数类",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "753ccc8e2e": {
+  "src": "动态",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "8cc825856f": {
+  "src": "决斗场玩家跟着新忍者脉冲式付费，战力玩家每天买体力持续付费；等级锁时间，次数锁产出，付费只能放宽次数",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "b528901c70": {
+  "src": "团本 110–160 级分 5 档；秘境饰品魔抗门槛每档涨约 10%",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "efa76d1095": {
+  "src": "体验",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "418f6b44b6": {
+  "src": "决斗场提供挑战和表达，战力线提供成就和收集；同一次强势忍者投放，大 R 和零氪的情绪方向相反",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "dee8bca14e": {
+  "src": "强势付费忍者上线横扫决斗场后被削弱",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "5fd3910c37": {
+  "src": "和《异人之下》的 A/B",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "1ffa954fb5": {
+  "src": "两款都出自腾讯魔方工作室群，都是动漫 IP 改编的格斗游戏，但<b>商业化走了相反的路</b>。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "f35f4ff844": {
+  "src": "<i>卖什么</i><b>“有没有”和“有多少”</b>火影卖忍者、秘卷、通灵，以及战力；《异人之下》公开口径是角色可以通过签到和任务免费获得，付费主要是皮肤。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "a441994222": {
+  "src": "<i>公平靠什么</i><b>屏蔽一部分 / 全部屏蔽</b>火影在部分模式里屏蔽数值，再用 BAN 位让忍者储备重新有价值；《异人之下》在 PVP 全面屏蔽等级和装备。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "88fc58139f": {
+  "src": "<i>风险</i><b>方向相反</b>火影的风险是强度膨胀、战力线越叠越深；《异人之下》的风险是外观付费天花板低，以及养成一旦进入 PVP 会破坏公平承诺。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "b111016eaa": {
+  "src": "<i>方法</i><b>每条结论一条链</b>为了不让 MDA 变成贴标签，每条结论都从规则推到玩家行为，再推到情绪，并给出实机截图作证据。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "79d76f13e3": {
+  "src": "优点、问题与建议",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "02eb706f70": {
+  "src": "三条优点",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "ebafcbbb0a": {
+  "src": "忍者同时服务两条成长线，一次投放卖给两类玩家，收入有峰值也有基本盘。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "f952461217": {
+  "src": "防挫败规则集中在低中段：低段输了不扣分，中段有段位地板。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "8c77cfc738": {
+  "src": "等级门槛只能靠时间推进，付费只能放宽次数，内容消耗速度可控。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "5e6f41d8b5": {
+  "src": "三个问题",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "31c9e3650a": {
+  "src": "点券渠道的忍者零氪永远拿不到，强势期内也没有练习机会。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "50f4a382a6": {
+  "src": "高级招募只公示十连必送 S 碎片，拿满一名 S 忍要多少抽没有说明。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "d5a0686d56": {
+  "src": "战力线已有 7 套养成系统，回流和新玩家的追赶成本逐年上涨。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "0918d8d047": {
+  "src": "三条建议",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "7e7015f0ce": {
+  "src": "高级招募明示保底进度，和祈愿夺宝的幸运值做法一致。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "de21954521": {
+  "src": "付费忍者上线满 4 周后，进入决斗场“本周免费”轮换，只给体验权。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "636acfefdc": {
+  "src": "借鉴《异人之下》PVE 与 PVP 两套技能模组，把新忍者的决斗场强度和积分赛强度分开调。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "41e5243e2d": {
+  "src": "目录",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "6328c9b0ff": {
+  "src": "<b>零</b>拆解说明：对象、MDA 用法、为什么选《异人之下》",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "30c457f11a": {
+  "src": "<b>一</b>系统目的",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "4a30fc1e1f": {
+  "src": "<b>二</b>机制层：系统怎么设计",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "d6bb85d52f": {
+  "src": "<b>三</b>动态层：设计如何达成目的",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "94aa4dfbe5": {
+  "src": "<b>四</b>体验层：玩家实际感受到什么",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "cadc31b5b1": {
+  "src": "<b>五</b>A/B 对比：火影 vs 异人之下",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "262e343b94": {
+  "src": "<b>六</b>优缺点分析",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "78482337cb": {
+  "src": "<b>七</b>改进建议",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "41442bf802": {
+  "src": "阅读全文",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "71ab66881e": {
+  "src": "全文在下面直接翻阅，看完点顶栏或底部按钮回到存档。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "7788ac4506": {
+  "src": "<span>naruto-mda.pdf · 36 页</span><span><a download=\"\" href=\"../files/naruto-mda.pdf\">下载 PDF</a> <a href=\"https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd\">飞书原文 ↗</a></span>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "417ec638a6": {
+  "src": "手机上无法内嵌 PDF。<a class=\"more\" href=\"../files/naruto-mda.pdf\" style=\"color:var(--gold)\">打开 PDF</a> <a class=\"more ext\" href=\"https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd\" style=\"color:var(--gold)\">飞书原文</a>（新标签页打开）",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "bbb8764124": {
+  "src": "<span>上一存档 · 03</span><b>《宇宙汉堡》</b>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "01fe3369b3": {
+  "src": "<span>下一存档 · 05</span><b>酒馆战棋：经济与对局节奏</b>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "77ab3a4776": {
+  "src": "按 MDA 框架拆解《火影忍者》手游的成长与经济系统，并与《异人之下》做 A/B 对比。",
+  "kind": "text",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "30ab997895": {
+  "src": "火影忍者手游主界面（昵称已打码）",
+  "kind": "text",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "5b1facb6e0": {
+  "src": "《火影忍者》手游成长与经济系统拆解全文",
+  "kind": "text",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "3ab0da0f51": {
+  "src": "《炉石传说》酒馆战棋 经济与对局节奏拆解 · 殷硕作品集",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "c96dcec590": {
+  "src": "酒馆战棋 · 经济与对局节奏",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "6006cb313c": {
+  "src": "<a class=\"hide-s\" href=\"#summary\">一页结论</a> <a class=\"hide-s\" href=\"#pay\">付费与体验</a> <a class=\"hide-s\" href=\"#fix\">改进方向</a> <a href=\"#read\">阅读全文</a>",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "5de70c85be": {
+  "src": "存档 05 · 系统拆解 · 20 页",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "6f78b94b06": {
+  "src": "《炉石传说》酒馆战棋<br/>经济与对局节奏",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "ad331deb3b": {
+  "src": "酒馆战棋没有卡牌收集，8 名玩家共用一个随从池，胜负几乎全部取决于单局内的资源决策。这份拆解只看单局：<b>铸币怎么来、怎么花，随从池怎么限制选择，强弱差距怎么拉开又怎么被收住</b>。口径为第 14 赛季，2026 年 10 月。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "463808d376": {
+  "src": "<span>6 星随从全场</span><b>7 份</b><span>份数控制稀缺</span>",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "d3e06db9ad": {
+  "src": "<span>一次三连拿走</span><b>43%</b><span>顶端强度的份数</span>",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "4bb80568f2": {
+  "src": "<span>铸币封顶</span><b>10</b><span>每回合 +1，第 8 回合封顶</span>",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "63834a090e": {
+  "src": "<span>游玩时长</span><b>501h</b><span>6120 分</span>",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "d2d665aace": {
+  "src": "核心矛盾：8 名玩家用完全相同的收入、共用一个随从池，却要打出每局都不一样的结果；<b>强弱差距要拉得开，又不能太早定局</b>。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "88b5e77f83": {
+  "src": "<i>结论 1</i><b>收入和价格固定，差异只来自花法</b>铸币每回合 +1，第 8 回合封顶 10，随从一律 3 枚。每回合的核心问题是升本还是买强度，血量是这笔账的押金。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "d5d6fc976e": {
+  "src": "<i>结论 2</i><b>稀缺性由份数制造，不靠概率表</b>6 星单卡全场 7 份，一次三连就拿走 43%。共享池还带来了撞种族和读对手的博弈。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "3599b5900c": {
+  "src": "<i>结论 3</i><b>滚雪球靠阵容，并配了刹车</b>没有利息和连胜奖励，另有伤害上限、份数限制、发现只高一本；英雄强弱用护甲换算成血量来平衡。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "3bba18de54": {
+  "src": "<i>结论 4</i><b>赛季机制加一个就减一个</b>每季的新机制都是商店之外的额外选择，底层经济不动，同时在场的额外系统控制在一到两个。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "2707575374": {
+  "src": "付费与体验",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "666f63853f": {
+  "src": "<strong>付费只卖选择权。</strong>赛季通行证把开局英雄从 2 选 1 变成 4 选 1，再加上外观，不卖局内数值，但英雄选项数仍然会影响排位。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "962b137d11": {
+  "src": "<strong>体验以挑战和探索为主</strong>，主要服务成就型和探索型玩家。前 4 名加分的规则让第 5 名最难受，也最想再来一局。社交是这个模式的短板。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "8c04dffce2": {
+  "src": "和火影手游对比：火影的成长按月、按年累计，付费可以直接买进度；酒馆战棋的成长压缩在一局之内，付费几乎碰不到局内数值，系统设计落在经济曲线、共享资源的稀缺和强弱分化的节奏上。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "a3ccb79733": {
+  "src": "改进方向",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "7cabe771eb": {
+  "src": "优先级",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "0fee25f074": {
+  "src": "方案",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "a5b3b8ad1b": {
+  "src": "商店显示剩余份数的三档提示，附 AB 测试方案",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "75a0ee46ad": {
+  "src": "赛季初的新机制教学局",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "a8dfa2f329": {
+  "src": "排位统一英雄选项数",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "4cbcac148d": {
+  "src": "中期落后补偿",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "4f1acb85ba": {
+  "src": "另外推演了把升本费用改成线性，结论是不建议改。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "28f7fcddca": {
+  "src": "<b>一</b>游戏概况与拆解范围",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "42a0be2e62": {
+  "src": "<b>二</b>核心循环：招募与战斗",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "be395c6d39": {
+  "src": "<b>三</b>铸币经济：收入曲线与定价",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "635637cc52": {
+  "src": "<b>四</b>共享随从池：稀缺性从哪里来",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "71776d2302": {
+  "src": "<b>五</b>三连与发现：滚雪球和刹车",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "54bfa246e5": {
+  "src": "<b>六</b>英雄：起点不对称和三个平衡旋钮",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "42f5df0d46": {
+  "src": "<b>七</b>战斗结算与伤害：淘汰节奏怎么控制",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "5f88969c89": {
+  "src": "<b>八</b>变量注入与赛季节奏",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "49dd4cd9df": {
+  "src": "<b>九</b>排位与付费：只卖选择权",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "503b958be7": {
+  "src": "<b>十</b>体验层：这些机制让玩家感受到什么",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "97df72048f": {
+  "src": "<b>十一</b>问题与改进方案",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "7d8fc979ef": {
+  "src": "<span>hearthstone-bg.pdf · 20 页</span><span><a download=\"\" href=\"../files/hearthstone-bg.pdf\">下载 PDF</a> <a href=\"https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e\">飞书原文 ↗</a></span>",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "7fc2f785cc": {
+  "src": "手机上无法内嵌 PDF。<a class=\"more\" href=\"../files/hearthstone-bg.pdf\" style=\"color:var(--gold)\">打开 PDF</a> <a class=\"more ext\" href=\"https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e\" style=\"color:var(--gold)\">飞书原文</a>（新标签页打开）",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "6e4271dc95": {
+  "src": "<span>上一存档 · 04</span><b>火影手游：成长与经济系统</b>",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "5e51f2068e": {
+  "src": "拆解酒馆战棋的铸币曲线、份数稀缺与防滚雪球机制，并为首选改进方案设计 AB 测试。",
+  "kind": "text",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "675a600a26": {
+  "src": "酒馆战棋对局界面",
+  "kind": "text",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "5192bff904": {
+  "src": "酒馆战棋经济与对局节奏拆解全文",
+  "kind": "text",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "453a3164d9": {
+  "src": "《宇宙汉堡》 · 殷硕作品集",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "417543e6d2": {
+  "src": "<img alt=\"\" src=\"../../img/px/avatar.png\"/>殷硕<small>游戏策划</small>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "75386b4314": {
+  "src": "<a class=\"hide-s\" href=\"#loop\">核心循环</a> <a class=\"hide-s\" href=\"#shots\">截图</a> <a class=\"hide-s\" href=\"#design\">策划设计</a> <a class=\"hide-s\" href=\"#iterate\">测试迭代</a> <a href=\"#pacing\">数值节奏</a> <a class=\"hide-s\" href=\"#dev\">开发</a>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "34e6e5cf98": {
+  "src": "存档 03 · 可玩作品 · 独立制作 · 2026.09 – 10",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "543d8d7a4c": {
+  "src": "宇宙<span class=\"burger\">汉堡</span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "50bbf67dc9": {
+  "src": "竖屏放置经营小游戏。玩家用手指拖着锅铲煎肉饼赚钱，在培训中心升级工具和配方，<b>从地球路边摊一路把汉堡店开到太空</b>。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "be74e6b1da": {
+  "src": "系统策划",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f9bbb88b02": {
+  "src": "数值策划",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "ac5cb6f24d": {
+  "src": "Unity 2022.3 · C#",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b037ea6d8d": {
+  "src": "WebGL · 抖音 TTSDK",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "d4eef3ba9c": {
+  "src": "像素美术管线",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "2b09ed4504": {
+  "src": "状态：<b>开发完成</b>，软著已经提交申请，拿到软著后在抖音小游戏备案上线。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a5ab1fbd80": {
+  "src": "<span class=\"px-ico pad\"></span>看游戏截图",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "5f271c7482": {
+  "src": "宇宙汉堡 · 营业中",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b45a8dcc74": {
+  "src": "<span>C# 代码</span><b>7300</b><span>行，31 个脚本，策划和开发一人完成</span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "bce50ac657": {
+  "src": "<span>升级项</span><b>63</b><span>个，分地球、星际两套</span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "ccb00621cd": {
+  "src": "<span>店面章节</span><b>9</b><span>个，每个都有自己的像素场景</span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "20eaa0fe6c": {
+  "src": "<span>第一次发射</span><b>49′</b><span>模拟器结果，不看广告</span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "4fa2ee658c": {
+  "src": "<span>成就</span><b>39</b><span>个，另有 11 种每日任务</span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a1cef0d22c": {
+  "src": "核心循环",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "dcde7192f6": {
+  "src": "一轮营业 15 秒左右，短到可以在刷视频的间隙玩一把；<b>升级和搬店提供中期目标，“发射”转生提供长期目标</b>。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "5d76ec56e8": {
+  "src": "一轮 · 15 秒以上",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "234bb292c8": {
+  "src": "煎肉饼",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b217ffef9c": {
+  "src": "拖动锅铲盖住肉饼加热，熟了自动出餐；翻面、躲火苗、捡道具、赶小猫。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "4c506e4ef1": {
+  "src": "结算",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "4767a25979": {
+  "src": "过关拿星",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "e9ab06e934": {
+  "src": "第 N 关 · 1～3 星目标，按星给 10% / 20% / 35% 额外收入。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "ab550c225b": {
+  "src": "花钱",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "d387b07c89": {
+  "src": "培训中心",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "dc8219a2e4": {
+  "src": "火力、范围、售价、帮厨……按类别排成清单。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "0e730eb8eb": {
+  "src": "新章节",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "dd38467015": {
+  "src": "搬店",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "32868ce1b6": {
+  "src": "路边摊 → 美食街 → 购物中心，换场景，收入翻倍。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "326aa47a0f": {
+  "src": "转生",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "2f90e1db9e": {
+  "src": "发射",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "3853872e8b": {
+  "src": "清空地球进度换星星（永久加成），解锁星际地图：月球、火星、木星环、银河中心。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "511e903584": {
+  "src": "发射之后回到路边摊重新开始，但有星星加成，每一轮会越来越快：第一轮 49 分钟，第二轮 23 分钟，第三轮 11 分钟。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "c95fea2c03": {
+  "src": "游戏截图",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "782df02506": {
+  "src": "<b>主页</b>关卡卡片 → 店面场景 → 开始营业 → 培训中心 → 成就",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "70e98ccdda": {
+  "src": "<b>营业中</b>喷火枪留下的火焰拖尾、帮厨、道具、狂热时间",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "9c8d4ef5ec": {
+  "src": "<b>工具特技</b>太阳灶每 6 秒一次日光爆发",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "3cf685f74d": {
+  "src": "<b>结算</b>没拿到一星时，提示去培训中心升级再来",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "2eb4162597": {
+  "src": "<b>培训中心</b>代替技能树的目录式升级清单",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f976d0dc75": {
+  "src": "<b>暂停</b>继续营业，或提前收工回到店里",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b134723264": {
+  "src": "<b>第 3 章 购物中心</b>每搬一次店，场景跟着换",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "1503792215": {
+  "src": "<b>星际</b>发射之后的第二张地图",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f4d9af3f21": {
+  "src": "<b>星际营业</b>黑洞会把附近的肉饼吸走，还有更值钱的行星肉饼",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "747c985ff9": {
+  "src": "<b>星际科技</b>用发射获得的星星买永久加成",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "de84e5037a": {
+  "src": "<b>成就</b>每个成就让收入永久 +1%",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f07c0785d0": {
+  "src": "<b>开场</b>第一次打开时先展示整条旅程，让玩家知道终点在哪",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "c1a6a2cc84": {
+  "src": "截图来自电脑版自动截图（手机竖屏比例），共 12 张。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "33c38c70c8": {
+  "src": "策划设计",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "496f9d8c19": {
+  "src": "经营游戏最容易出现的两个问题是<b>“不知道为什么要继续玩”和“后期只是数字变大”</b>。下面是针对这两点做的设计。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "941f08313a": {
+  "src": "目标",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "e9aaa44cd1": {
+  "src": "三层目标",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "8cb6cc35a2": {
+  "src": "<strong>短期</strong>：每一轮是一关，1～3 星。目标按玩家最近几轮卖出的汉堡数 × 现在的售价来算，升级售价目标会涨，升级火力和范围就更容易拿星。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "dbf542e136": {
+  "src": "<strong>中期</strong>：培训中心按钮上一直显示“下一个目标”和进度条；搬店就是进入下一章。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "179edfa1e7": {
+  "src": "<strong>长期</strong>：发射转生、星际地图、39 个成就。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f88309a8df": {
+  "src": "每 5 关一个<strong>挑战关</strong>，奖励翻倍，五种规则轮换：金肉饼大放送、肉饼狂潮、火苗满地、滑溜大作战、限时冲刺。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "44a2504bdc": {
+  "src": "成长",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "0438435a09": {
+  "src": "每把工具一个特技",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "fb1ad8734c": {
+  "src": "最早的版本里换工具只是范围变大，测试玩家很快觉得无聊。后来每把新工具都多一个能看见的特技，并保留前面工具的特技：",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "d523dfd12e": {
+  "src": "<strong>双面铲</strong>：多一把镜像锅铲，在铁板对称的位置跟着你煎",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a4f3ee04bb": {
+  "src": "<strong>喷火枪</strong>：锅铲划过的地方留下一道火焰，继续煎肉饼",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a44508b4f4": {
+  "src": "<strong>太阳灶</strong>：每 6 秒一次日光爆发，所有肉饼一下熟 4 成",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f3ea6d345e": {
+  "src": "操作",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "dfc7636173": {
+  "src": "增加操作性的机制",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "0839804ce7": {
+  "src": "<strong>翻面</strong>：煎到三到八成熟时快速划过可以翻面，加钱",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "90bbb57ae4": {
+  "src": "<strong>火苗</strong>：先预警再冒出来，碰到会停火 1.2 秒，也能帮忙煎",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "cc1aaa4589": {
+  "src": "<strong>道具</strong>：加时、磁铁、双倍售价、辣椒爆炒，要凑过去拿",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "fbe8793c39": {
+  "src": "<strong>滑溜肉饼</strong>：会躲锅铲，抓到更值钱",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "6a0ff71b3f": {
+  "src": "<strong>小猫</strong>：6 秒没人煎的肉饼会被叼走，碰一下小猫就能吓跑",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "e7998d9613": {
+  "src": "<strong>狂热时间</strong>：连击满了以后售价和出饼速度翻倍",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "306afbe18c": {
+  "src": "开局与变现",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "c489a9b3e1": {
+  "src": "开局和变现",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "df36fc8541": {
+  "src": "<strong>开业酬宾</strong>：前 3 轮收入 ×3，第一次升级几乎马上就能买",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "e00b79735d": {
+  "src": "<strong>第 4 轮必出金肉饼</strong>：早点给一次惊喜",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "2a3169f1d2": {
+  "src": "<strong>新玩法第一次出现时弹一条提示</strong>，不做长教程",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "105697c1be": {
+  "src": "<strong>只用激励广告</strong>：看广告加时、收入翻倍、免费升级，不做内购",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "285d0f00dd": {
+  "src": "<strong>埋点 8 个关键事件</strong>：营业结束、搬店、发射、成就等，上线后用来找玩家在哪一步流失",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "287f00da22": {
+  "src": "根据测试反馈的迭代",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "357a642290": {
+  "src": "找朋友在 iPhone 上试玩，<b>每一轮反馈都对应一次改版</b>。下面按时间顺序排列。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "ac1fea357d": {
+  "src": "测试反馈",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "aaef5de1ad": {
+  "src": "改动",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "01c0fad3a2": {
+  "src": "游戏画面在屏幕里占比太小，顶部留白多",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "9b51920ffd": {
+  "src": "<span class=\"tg ui\">UI</span>读取抖音右上角胶囊按钮的位置来排顶栏；铁板高度随屏幕在 720～880 之间变化",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "e662116614": {
+  "src": "星际主页背景在 iPhone 上只显示左下角一小块",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a00ab9617b": {
+  "src": "<span class=\"tg tech\">技术</span>iOS WebGL 的平铺贴图要求尺寸是 2 的次方，把贴图改成 128 像素",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a478bd763d": {
+  "src": "数字太大，看着累",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "62fe7309e7": {
+  "src": "<span class=\"tg num\">数值</span>价格和倍率整体开 0.7 次方，再按模拟器调回原来的节奏；显示改成“万 / 亿”；老存档读档时自动换算",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "40b429e7f4": {
+  "src": "玩一会儿就无聊，工具只是范围在变",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "6babd64d70": {
+  "src": "<span class=\"tg play\">玩法</span>工具特技，加上翻面、火苗、道具、滑溜肉饼、狂热时间",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "bf247f4f2a": {
+  "src": "开局不够吸引人，但整体进度又有点快",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "871ce24c0a": {
+  "src": "<span class=\"tg num\">数值</span>开业酬宾、第 4 轮金肉饼让开局更快；同时把中后期价格整体调高",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f5504957df": {
+  "src": "目标不明确，没有关卡，动力不够",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a47b48ec46": {
+  "src": "<span class=\"tg sys\">系统</span>关卡和 1～3 星、挑战关、主页的“下一个目标”进度条",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "514da9ef88": {
+  "src": "营业中想暂停，想中途退出",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a88a15eaca": {
+  "src": "<span class=\"tg ux\">UX</span>暂停按钮；提前收工照拿已经赚的钱，但这一关不算通过；切到后台自动暂停",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "810ee150fc": {
+  "src": "主页太乱，技能树看不懂",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "4bd72ab093": {
+  "src": "<span class=\"tg ui\">UI</span>主页按“开始营业 → 培训中心 → 成就”重新排；技能树改成按类别排列的清单；新画了 9 张店面场景",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b8c96eec8f": {
+  "src": "锅铲满级太大，快把屏幕占满",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "1cce9d87af": {
+  "src": "<span class=\"tg num\">数值</span>原来每级 +10% 叠着乘，满级半径约 290（铁板宽 450）。改成每级固定加 6%，工具加成调小，满级约 100；给双面铲加煎熟速度作补偿，模拟器确认节奏只慢了 5 分钟",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f415b4bf65": {
+  "src": "数值节奏：用模拟器调，不靠手感",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "7b16c79ab2": {
+  "src": "我在 Unity 编辑器里写了一个机器人玩家，直接调用游戏本身的逻辑代码自动跑局：它会追肉饼、捡道具、躲火苗，并按性价比买升级。<b>每次改价格都先跑一遍</b>，看下面这些时间点有没有落在目标范围里。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "1c0048c5e1": {
+  "src": "第一轮：新玩家，不看广告",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "774abd18b8": {
+  "src": "<i></i><span>0:00<small>路边摊开张</small></span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "ed5942fd5e": {
+  "src": "<i></i><span>26:55<small>搬到美食街</small></span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "cbe5541073": {
+  "src": "<i></i><span>29:48<small>换双面铲</small></span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b027754fcd": {
+  "src": "<i></i><span style=\"transform:translateX(-85%)\">42:37<small>搬到购物中心</small></span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "118c39aca4": {
+  "src": "<i></i><span>43:18<small>换喷火枪</small></span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "19e8f4d8a3": {
+  "src": "<i></i><span>49:14<small>第一次发射</small></span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "460c166567": {
+  "src": "49:14 第一次发射时获得 14 颗星，此时约第 53 关。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f342ababfd": {
+  "src": "之后的节奏",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "ca272ea353": {
+  "src": "<span>地球 第 1 轮</span><span class=\"bar\"><i style=\"--v:100%;--c:var(--red)\"></i></span><span>49:14 · 14 ★</span> <span>地球 第 2 轮</span><span class=\"bar\"><i style=\"--v:46%;--c:var(--gold-d)\"></i></span><span>22:40 · 37 ★</span> <span>地球 第 3 轮</span><span class=\"bar\"><i style=\"--v:23%;--c:var(--grass)\"></i></span><span>11:28 · 69 ★</span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "e59552f0f3": {
+  "src": "星际通关用时 1:28:22。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f3ab476509": {
+  "src": "<strong>设计意图</strong>：第一轮慢一点，让玩家把每家店都看一遍；之后靠星星加成越来越快，转生的回报能明显感觉到。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "1c08f89f87": {
+  "src": "开发实现",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "953c96d7dd": {
+  "src": "结构",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "410a1574a9": {
+  "src": "代码结构",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "1c411a15d1": {
+  "src": "玩法逻辑和画面完全分开，所以同一份逻辑既能在手机上跑，也能被模拟器拿去自动跑局。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "151aa79ce8": {
+  "src": "Scripts/\n  Core/      <span class=\"c\">纯逻辑：配置、存档数据、公式、一轮的模拟</span>\n    GameConfig.cs   <span class=\"c\">所有数值和升级项</span>\n    GameLogic.cs    <span class=\"c\">属性推导、关卡目标、结算</span>\n    Run.cs          <span class=\"c\">一轮营业：肉饼、火苗、小猫、道具</span>\n  Platform/  <span class=\"c\">抖音 SDK、广告、存档、音效、震动</span>\n  UI/        <span class=\"c\">主页、营业画面、培训中心、弹窗</span>\nEditor/\n  PacingSim.cs      <span class=\"c\">节奏模拟器</span>\n  BuildTools.cs     <span class=\"c\">命令行编译</span>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "0b5d7ed54b": {
+  "src": "测试",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "28b030f9e4": {
+  "src": "自动化检查",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "982af5f31e": {
+  "src": "每次改完都跑一遍，不用手动点：",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "5186645267": {
+  "src": "<strong>命令行编译</strong>：抖音 WebGL 包（压缩后约 0.6MB）和电脑版",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "1e381c99e5": {
+  "src": "<strong>自动截图</strong>：程序自己走一遍所有界面，输出 40 张截图检查排版",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "da722a2abe": {
+  "src": "<strong>长时间运行测试</strong>：自动玩 4 分钟，记录最慢帧和内存",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "89a3156090": {
+  "src": "<strong>节奏模拟</strong>：确认改动没有打乱进度",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "2f0d65ae4a": {
+  "src": "抖音平台接入",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "67d3eab602": {
+  "src": "激励广告、本地存档（带备份）、数据埋点、震动、侧边栏复访奖励",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "7777ed63de": {
+  "src": "读取胶囊按钮位置做安全区适配，电脑上用参数模拟胶囊",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "9e56f3edfd": {
+  "src": "切到后台时静音、存档、自动暂停",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "fee2c3ee46": {
+  "src": "存档只往末尾加升级项，改数值量级时带迁移，老玩家进度不丢",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "1617c4d22d": {
+  "src": "排查",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "c81c53df01": {
+  "src": "排查过的问题",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "67b25ea0ea": {
+  "src": "<strong>开局卡一下</strong>：每轮开始时强制刷新画布、重画铁板贴图。去掉强制刷新，铁板和光标贴图按大小缓存",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b6c631fb34": {
+  "src": "<strong>火焰拖尾变成一大坨</strong>：拖尾宽度设上限，锅铲不动时不再加火焰点",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "477b55811e": {
+  "src": "<strong>道具被大锅铲自动吸走</strong>：拾取距离单独设上限，必须凑过去拿",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "1c551adab1": {
+  "src": "<strong>iOS 贴图只显示一角</strong>：平铺贴图改成 2 的次方尺寸",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b3679fd89a": {
+  "src": "美术管线",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "e7894958d8": {
+  "src": "统一的像素风：<b>一个像素等于画布上 3 个单位</b>，字体是 12 像素的像素字，只用 12 的整数倍字号，保证清楚。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "023d61fbf6": {
+  "src": "9 张店面场景：先用 Scenario 生成，再用 Python 脚本统一降到 256×288、40 色，每张约 40KB。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "c41a1ed7d9": {
+  "src": "16×16 小图标（工具、外星人、道具、小猫）由 Python 脚本逐像素画出来。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a5997aa112": {
+  "src": "音频与字体",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "67da0e34f8": {
+  "src": "声音和字体",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "ce990c2584": {
+  "src": "29 个音效全部用代码合成（煎肉滋滋声、火苗噼啪、出餐叮一声），不依赖外部音频素材",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "fdf2a319fc": {
+  "src": "中文像素字体按游戏里实际用到的字裁剪，只打包用到的字",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "79a1360104": {
+  "src": "关于 AI 工具",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "2d75e915ed": {
+  "src": "开发中使用了 AI 工具：用 Claude Code 写代码、排查问题，用 Scenario 生成店面场景图。我负责的部分是：玩法和系统设计、数值目标和调参决策、组织真机测试并把反馈转成改版需求、每一版的验收，以及整体美术风格的把控。",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "8aebbdf39b": {
+  "src": "独立制作：系统、数值、开发",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "f3cfbd20a2": {
+  "src": "抖音小游戏（WebGL · TTSDK），竖屏",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "46e50ed073": {
+  "src": "开发完成，软著申请中",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "b50d4d8352": {
+  "src": "字体",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "6c812109c4": {
+  "src": "缝合像素字体 Fusion Pixel Font，© 2022 TakWolf，SIL Open Font License 1.1",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "de859ac434": {
+  "src": "<span>上一存档 · 02</span><b>《发条人偶》Tidewheel</b>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "fff353413f": {
+  "src": "<span>下一存档 · 04</span><b>火影手游：成长与经济系统</b>",
+  "kind": "html",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "fb1196c076": {
+  "src": "抖音竖屏增量经营小游戏《宇宙汉堡》：煎肉饼、升级、搬店、发射转生。殷硕独立完成策划、数值与开发，用跑局模拟器调整节奏。",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "4940187d0b": {
+  "src": "游戏截图，可以左右滑动",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "10b748834f": {
+  "src": "主页：关卡卡片、路边摊场景、开始营业按钮、培训中心和成就入口",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "cdcccd2f37": {
+  "src": "营业中：火焰拖尾、帮厨、道具和狂热时间",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "89e64fbee3": {
+  "src": "太阳灶的日光爆发",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "9e94966b1b": {
+  "src": "结算界面：第 1 关 差一点，零星",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "4cd33618a1": {
+  "src": "培训中心升级清单",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "7b67c65368": {
+  "src": "暂停界面",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "41bec306be": {
+  "src": "购物中心店面",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "0cea316922": {
+  "src": "星际主页",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "a527f8f73c": {
+  "src": "星际营业：黑洞和行星肉饼",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "3b449dbaf3": {
+  "src": "星际科技商店",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "9a22c04dc8": {
+  "src": "成就列表",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "c8595af147": {
+  "src": "开场的旅程地图",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "3f43c7cf69": {
+  "src": "上一组截图",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "46ffae2d6a": {
+  "src": "下一组截图",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "55919a832a": {
+  "src": "第一轮进度：26 分 55 秒搬到美食街，29 分 48 秒换双面铲，42 分 37 秒搬到购物中心，43 分 18 秒换喷火枪，49 分 14 秒第一次发射",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "3260f32e19": {
+  "src": "9 张店面像素场景：地球 4 张，星际 5 张",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "92533e46fb": {
+  "src": "16×16 像素小图标",
+  "kind": "text",
+  "pages": [
+   "projects/burger/index.html"
+  ]
+ },
+ "639e8128b4": {
+  "src": "♪ 关",
+  "kind": "js",
+  "pages": [
+   "js/site.js"
+  ]
+ },
+ "e4ed8e0eca": {
+  "src": "♪ 开",
+  "kind": "js",
+  "pages": [
+   "js/site.js"
+  ]
+ },
+ "3215a474d9": {
+  "src": "打开音效",
+  "kind": "js",
+  "pages": [
+   "js/site.js"
+  ]
+ },
+ "6e9d1226ad": {
+  "src": "关闭音效",
+  "kind": "js",
+  "pages": [
+   "js/site.js"
+  ]
+ },
+ "e0bf0591d6": {
+  "src": "隐藏关卡：硬币雨！",
+  "kind": "js",
+  "pages": [
+   "js/site.js"
+  ]
+ },
+ "bf6a31bef5": {
+  "src": "<div class=\"pct\">0%</div><div class=\"skip\">点击任意处跳过</div></div>",
+  "kind": "js",
+  "pages": [
+   "js/site.js"
+  ]
+ },
+ "22ce59ece6": {
+  "src": "测试版已发布",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "764c20a7d1": {
+  "src": "《艾尔登法环 黑夜君临》大型内容扩展 Mod",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "9b0692246f": {
+  "src": "新增 7 位夜王、12 条夜律与腐败湖双层地形，重做 30 个护符的成长与掉落。测试版发布 8 天，B 站播放近 6000，双平台转发 331 次。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "33e3e01574": {
+  "src": "召回弹射的有效窗口由约 0.5 秒放宽至约 1.6 秒，数据来自模拟玩家操作的脚本。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "e323051d43": {
+  "src": "itch.io 可试玩",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "cb9e9f2476": {
+  "src": "存档 02 · 可玩作品 · 策划（兼部分程序）",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "7a74d2f657": {
+  "src": "甩出时间齿轮，让周围海面的时间停止，停住的浪变成可以踩的地形。thatgamejam #02 参赛作品，4 人团队。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "d5b5c1fb9c": {
+  "src": "首次转生约 49 分钟；获得星星加成后，第二轮缩短至 23 分钟，第三轮 11 分钟。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "03e22e90c6": {
+  "src": "开发完成 · 软著申请中",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "1c5b3cce38": {
+  "src": "存档 03 · 可玩作品 · 独立制作",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "9f73e01c98": {
+  "src": "抖音竖屏增量经营小游戏。以自编跑局模拟器调整节奏，首次转生控制在约 49 分钟。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "8d79c5fbec": {
+  "src": "高级招募拿满一名 S 忍约需 300 抽，按充值折算约 5040 元，是点券直售的 25 倍。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "74d2547eee": {
+  "src": "36 页 · MDA",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "e616e8c286": {
+  "src": "存档 04 · 系统拆解",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "a88a4504ca": {
+  "src": "《火影忍者》手游：成长与经济系统",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "19769e711c": {
+  "src": "按 MDA 框架分层拆解，测算出高级招募与点券直售约 25 倍的价差，并与《异人之下》对比。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "a4999c423e": {
+  "src": "火影拆解",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "e45a3aa009": {
+  "src": "6 星随从只有 7 份，一次三连即拿走 43%：顶端强度的稀缺由份数控制，而非概率表。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "567d55112c": {
+  "src": "20 页 · 501 小时",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "9d99f43cfa": {
+  "src": "存档 05 · 系统拆解",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "a375bea083": {
+  "src": "《炉石传说》酒馆战棋：经济与对局节奏",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "1a468cb34d": {
+  "src": "拆解铸币曲线、份数稀缺与四项防滚雪球机制，并为首选改进方案设计 AB 测试。",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "af5130cec9": {
+  "src": "酒馆战棋",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "7f2c8ac24f": {
+  "src": "读取存档 0",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "570462fe35": {
+  "src": "：",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "8e31044bb1": {
+  "src": "点方块直接进入",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "470b6b075e": {
+  "src": "← → 走，空格跳！",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "d6d0bc35ea": {
+  "src": "点门进入",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "372f58e7f9": {
+  "src": "↓ 进门",
+  "kind": "js",
+  "pages": [
+   "js/stage.js"
+  ]
+ },
+ "532bfd6cad": {
+  "src": "</b>：",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ },
+ "f375b06377": {
+  "src": "<span class=\"px-ico trophy\"></span>白金",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ },
+ "35c87be6b9": {
+  "src": "主线通关",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ },
+ "d0569eb865": {
+  "src": "《",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ },
+ "a6c4771d76": {
+  "src": "》封面",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ },
+ "cbaba181e6": {
+  "src": "把《",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ },
+ "463e9fec8b": {
+  "src": "》插进游戏机",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ },
+ "f495347d6a": {
+  "src": "第 ",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ },
+ "af8438feb2": {
+  "src": " 页",
+  "kind": "js",
+  "pages": [
+   "js/about.js"
+  ]
+ }
+}

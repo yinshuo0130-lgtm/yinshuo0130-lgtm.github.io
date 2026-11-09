@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Tidewheel · Yin Shuo Portfolio</title>
+<meta content="Tidewheel, a thatgamejam #02 entry: throw a time gear to stop the sea and turn waves into terrain. Yin Shuo was the designer (and part-time programmer)." name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../img/px/favicon.png" rel="icon"/>
+<link href="../../css/shell.css" rel="stylesheet"/>
+<link href="../../css/site.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../fonts/fusion-pixel-en.woff2") format("woff2");font-display:swap}:root{--body-font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;--px-font:"Fusion Pixel",ui-monospace,Consolas,monospace}</style><link href="../../projects/tidewheel.html" hreflang="zh-Hans" rel="alternate"/><link href="../../zh-hant/projects/tidewheel.html" hreflang="zh-Hant" rel="alternate"/><link href="../../en/projects/tidewheel.html" hreflang="en" rel="alternate"/><link href="../../ja/projects/tidewheel.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="Back to title" href="../index.html"><img alt="" src="../../img/px/avatar.png"/>Yin Shuo<small>Game Designer</small></a>
+<nav aria-label="Main navigation" class="hud-nav">
+<a aria-current="page" data-slot="Select Save" href="../index.html">Saves</a>
+<a data-slot="Open player profile" href="../about.html">About</a>
+<a class="hide-s" data-slot="Open resume" href="../resume.html">Resume</a>
+</nav>
+<div class="hud-coins" title="Hit save blocks to collect coins"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>Tidewheel</b>
+<nav><a class="hide-s" href="#core">Core rules</a> <a class="hide-s" href="#data">Feel tuning</a> <a class="hide-s" href="#onboard">Wordless guidance</a> <a class="hide-s" href="#story">Opening &amp; ending</a> <a class="hide-s" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" rel="noopener" target="_blank">GDD</a> <a class="pill sm" href="https://shuo-yin.itch.io/tidewheel" rel="noopener" target="_blank">Play</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">Save 02 · Playable · thatgamejam #02</span>
+<h1 class="mega on-sky">Tidewheel</h1>
+<p class="feature">A 2D side-scrolling physics puzzler. A clockwork doll has to climb a lighthouse in a storm and light the lamp. The doll throws the time gear from its chest, and <b>time stops on the patch of sea around the gear</b>; the frozen waves become <b>terrain you can stand on</b>. When the gear is recalled, the sea snaps back and can bounce the doll upward.</p>
+<div class="acts">
+<a class="px-btn red" href="https://shuo-yin.itch.io/tidewheel" rel="noopener" target="_blank"><span class="px-ico pad"></span>Play on itch.io</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" rel="noopener" target="_blank"><span class="px-ico book"></span>GDD (Feishu, Chinese)</a>
+<button aria-label="Hit the save block" class="px-block" data-coin="tidewheel-1"></button>
+</div>
+<div class="c-cover" data-r=""><img alt="Cover: the clockwork doll runs from the pier toward the lighthouse in the rain as huge waves rise below it" src="../../img/tidewheel/cover.webp"/></div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats">
+<div data-r=""><span>Concept phase</span><b>4 + 3</b><span>rejected concepts / greybox builds</span></div>
+<div data-r="2"><span>Recall-bounce window</span><b>1.6 s</b><span>widened from about 0.5 s</span></div>
+<div data-r="3"><span>Web prototypes</span><b>6</b><span>to validate rules and numbers</span></div>
+<div data-r="4"><span>Automated tests</span><b>57</b><span>end-to-end flow checks</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="core">
+<div class="narrow">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">One set of rules, two explanations</h2>
+<p class="feature" data-r="">The doll is made of iron, so it should sink in the sea, yet it also needs to be launched by waves. A special rule for each would give players one more thing to remember. In the end, <b>a single set of rules</b> explains both.</p>
+<ul class="rules" data-r="">
+<li><i>Rule 1 · Stop</i><b>Stopped water cannot be pushed aside</b>To sink, a body has to push water out of the way. Water with stopped time cannot flow, so no weight can push through it, and you can stand on it.</li>
+<li><i>Rule 2 · Recall and snap-back</i><b>On recall, the sea snaps back</b>The stopped surface returns to its present height within 0.2 seconds and stays solid while it moves. As it rises, a doll standing on it is launched upward.</li>
+</ul>
+<div class="prose" data-r="" style="margin-top:32px">
+<p>Flowing water cannot hold up an iron body, and the sea stays solid while it snaps back: both “it sinks” and “it can be launched” follow from these two rules, so the fiction and the mechanics share the same logic.</p>
+<p>The concept phase rejected 4 concepts and 3 greybox builds, including rewind, causal chains and a parts system, before settling on “stopping nature”. The gear stops time, not water, so the game never uses ice or glass: stopped sea keeps its wave shape, foam and ripples and only loses saturation. A brass tick line marks where you can stand, and the freeze radius is drawn as a clock face. Animals are unaffected: crabs keep walking across the stopped sea, which demonstrates the rule.</p>
+</div>
+<figure class="fig" data-r="">
+<img alt="Storm section: the clock-face freeze circle covers the rock's edge, and falling lightning hangs in mid-air" loading="lazy" src="../../img/tidewheel/storm.webp"/>
+<figcaption>Storm section. The gear lands on the edge of a rock, and the stretch of lightning inside the clock-face freeze circle hangs in mid-air, forming a bridge you can walk across.</figcaption>
+</figure>
+</div>
+</section>
+<section class="chapter" id="data">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">Tuning feel with scripts</h2>
+<p class="feature" data-r="">I built playable web prototypes with AI assistance and iterated through 6 versions, then wrote automated scripts that <b>simulate player input</b> to measure the timing window of each section and tune against the data.</p>
+<div class="prose" data-r="">
+<p>The throw first used an aim mode: hold to aim, adjust distance, waves slow down, and the dotted line turns green when the path is reachable. Playtests showed it took too many steps, so on 29 October it became a charge: hold to charge and release to throw, with only the flight path, landing point and freeze area shown while charging. The predicted landing point is within about 1 pixel of the actual one.</p>
+</div>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>Section</th><th>What was measured</th><th>Result</th></tr>
+<tr><td>1-1 Tide pool</td><td>Window to stop a wave crest</td><td>About 1.4 s</td></tr>
+<tr><td>1-2 Wave slope</td><td>Window to stop a wave slope</td><td>About 1.1 s</td></tr>
+<tr><td>1-3 Spray steps</td><td>Window to stop droplets in mid-air</td><td>Only about 0.1 s at first; after adjusting droplet radius, hit distance and gravity, 0.8 s at 0.65 charge</td></tr>
+<tr><td>1-4 Recall bounce</td><td>Valid timing for recall</td><td>Widened from about 0.5 s to about 1.6 s, with no false recall prompts</td></tr>
+<tr><td>4-3 Lighthouse wave</td><td>Window to stop the giant wave</td><td>About 2.25 s at 0.6–0.9 charge</td></tr>
+</table>
+</div>
+<div class="prose" data-r="">
+<p class="note">The 1-3 window started at only about 0.1 s, which a human can barely hit. The script flagged it as a to-do; after the parameters changed, it was run again to confirm the target before the change went to the programmer.</p>
+</div>
+<div class="shots" data-r="">
+<figure><img alt="Cliff section: the doll stands on a high rock with suspended droplets in the distance" loading="lazy" src="../../img/tidewheel/cliffs.webp"/><figcaption>Cliff section. Top left is the time gear's status bar; top right is the wave-cycle ring.</figcaption></figure>
+<figure><img alt="Chapter 1 coast: the pier, crabs and a two-panel picture sign" loading="lazy" src="../../img/tidewheel/beach.webp"/><figcaption>Chapter 1 coast. Crabs are unaffected by the freeze, and the wooden sign on the right uses two panels to show “stop the wave crest, then climb it”.</figcaption></figure>
+</div>
+</div>
+</section>
+<section class="chapter" id="onboard">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">Wordless guidance</h2>
+<p class="feature" data-r="">The guidance draws on Super Mario Bros. 1-1, Portal, Celeste and Tunic: <b>learn where mistakes are free, then apply it where they cost something</b>.</p>
+<div class="prose" data-r="">
+<ul>
+<li>Shallow-pool tutorial: falling into a shallow pool only sinks you to the bottom, where you can still walk and jump, so it is not a death. Each technique is learned in the shallows first and used in the deep sea later.</li>
+<li>Button prompts disappear once learned.</li>
+<li>Signs use pictures only, no words.</li>
+<li>A hint circle appears only after two failures in the same place, so skilled players are not interrupted.</li>
+</ul>
+<p>In internal playtests the team agreed there was too much text on screen and players were busy reading. We were close to submission and the art could not change, so I designed a low-text version using code changes only, implemented it in the prototype, and handed it to the programmer with before-and-after screenshots:</p>
+<ul>
+<li>Removed the always-on beat names, objective lines and status labels;</li>
+<li>Kept only the key icon in the overhead prompt, with a progress arc around the charge key instead of the word “hold”;</li>
+<li>Hint circles stay faint and light up fully when the wave or droplet to stop is in position, so players watch the timing instead of reading a sentence;</li>
+<li>Moved hint text into the pause menu, so only players who want it see it;</li>
+<li>When the doll approaches a sign, its three panels light up in turn to set the reading order.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="chapter" id="story">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">Opening &amp; ending</h2>
+<p class="feature" data-r="">The story is a straight line: the old seal who keeps the lighthouse goes out to haul in his nets, the storm arrives early, and the lighthouse is dark. The doll crosses the coast, <b>climbs the lighthouse and winds the clockwork</b>; the lamp comes on, and the boat rows back toward the light.</p>
+<div class="prose" data-r="">
+<p>The opening was originally a head-pat animation; the artist proposed turning it into a playable conversation. The doll walks up to the old seal and presses E to talk, and four lines cover hauling the nets, minding the house and winding the doll when he gets back. Then the weather report on the TV says the storm is early. This is the only dialogue in the game, and it never states the goal: once outside, players see the dark lighthouse in the distance and work out where to go.</p>
+<p>The ending uses the jam's theme audio, played in full and unedited. The audio has five clockwork turns, and the visuals are matched to them: winding starts at 0.3 s, the lamp lights at 20.6 s, the beam sweeps the sea and finds the boat at 36.5 s, the boat turns at 44.5 s, and it reaches the shore at 53.0 s.</p>
+</div>
+<div class="shots" data-r="">
+<figure><img alt="Opening: the doll stands on a grassy slope in front of the old seal's hardware and repair shop" loading="lazy" src="../../img/tidewheel/home.webp"/><figcaption>Opening: in front of the old seal's repair shop.</figcaption></figure>
+<figure><img alt="Ending: at dawn, the doll and the old seal sit beneath the lighthouse" loading="lazy" src="../../img/tidewheel/ending.webp"/><figcaption>Ending: at dawn, the doll and the old seal sit beneath the lighthouse.</figcaption></figure>
+</div>
+</div>
+</section>
+<section class="chapter" id="scope">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">Documentation &amp; submission</h2>
+<p class="feature" data-r="">I wrote a standard GDD and <b>agreed on the cut order in advance</b>.</p>
+<p data-r="" style="margin:-8px 0 24px"><a class="px-btn sm paper" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" rel="noopener" target="_blank"><span class="px-ico ext"></span>Read the GDD on Feishu (Chinese)</a></p>
+<div class="prose" data-r="">
+<p>The GDD covers four chapters of levels, mechanic rules, balance tables, art specs and asset lists, a sound list, the technical approach, P0 / P1 / P2 scope, and milestones with risk responses. The team maintained a single copy on Feishu.</p>
+<p>Before submitting, I checked the jam rules one by one: English as the default language, AI use disclosed on the submission page, and the theme audio played in full and unedited. I also wrote the itch.io description, controls and design statement.</p>
+</div>
+</div>
+</section>
+<section class="info light">
+<div class="narrow">
+<h2 class="h-sec" data-r="">Save info</h2>
+<div class="spec" data-r="">
+<div><h3>Role</h3><div class="c">Designer (and part-time programmer)</div></div>
+<div><h3>Team</h3><div class="c">4 people: designer, programmer and two artists (the second artist joined mid-development)</div></div>
+<div><h3>Jam</h3><div class="c">thatgamejam #02</div></div>
+<div><h3>Period</h3><div class="c">2026.10 – 11</div></div>
+<div><h3>Engine</h3><div class="c">Unity 2D · Windows</div></div>
+<div><h3>Length</h3><div class="c">About 10–15 minutes per playthrough, keyboard and gamepad, English / Chinese</div></div>
+<div><h3>GDD</h3><div class="c"><a class="more ext" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" rel="noopener" target="_blank">Feishu doc (Chinese)</a></div></div>
+<div><h3>Play</h3><div class="c"><a class="more ext" href="https://shuo-yin.itch.io/tidewheel" rel="noopener" target="_blank">shuo-yin.itch.io/tidewheel</a></div></div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="Load save 01" href="nightreign-mod.html"><span>Previous save · 01</span><b>Nightreign Content Expansion Mod</b></a>
+<a data-slot="Load save 03" href="burger/index.html"><span>Next save · 03</span><b>Cosmic Burger</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 Yin Shuo</span><span><a href="#top">Back to top</a><a href="../index.html">All saves</a><a data-slot="Open resume" href="../resume.html">Resume</a></span></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

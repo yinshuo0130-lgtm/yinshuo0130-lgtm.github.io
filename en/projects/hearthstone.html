@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Hearthstone Battlegrounds: Economy and Match Pacing Teardown · Yin Shuo Portfolio</title>
+<meta content="A teardown of the Gold curve, copy scarcity and anti-snowball mechanics in Hearthstone Battlegrounds, with an A/B test designed for the preferred improvement." name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../img/px/favicon.png" rel="icon"/>
+<link href="../../css/shell.css" rel="stylesheet"/>
+<link href="../../css/site.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../fonts/fusion-pixel-en.woff2") format("woff2");font-display:swap}:root{--body-font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;--px-font:"Fusion Pixel",ui-monospace,Consolas,monospace}</style><link href="../../projects/hearthstone.html" hreflang="zh-Hans" rel="alternate"/><link href="../../zh-hant/projects/hearthstone.html" hreflang="zh-Hant" rel="alternate"/><link href="../../en/projects/hearthstone.html" hreflang="en" rel="alternate"/><link href="../../ja/projects/hearthstone.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="Back to title" href="../index.html"><img alt="" src="../../img/px/avatar.png"/>Yin Shuo<small>Game Designer</small></a>
+<nav aria-label="Main navigation" class="hud-nav">
+<a aria-current="page" data-slot="Select Save" href="../index.html">Saves</a>
+<a data-slot="Open player profile" href="../about.html">About</a>
+<a class="hide-s" data-slot="Open resume" href="../resume.html">Resume</a>
+</nav>
+<div class="hud-coins" title="Hit save blocks to collect coins"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>Battlegrounds · Economy &amp; Match Pacing</b>
+<nav><a class="hide-s" href="#summary">Summary</a> <a class="hide-s" href="#pay">Monetization &amp; experience</a> <a class="hide-s" href="#fix">Improvements</a> <a href="#read">Full text</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">Save 05 · System teardown · 20 pages</span>
+<h1 class="mega on-sky">Hearthstone Battlegrounds<br/>Economy &amp; Match Pacing</h1>
+<p class="feature">Battlegrounds has no card collection: 8 players share one minion pool, and the result depends almost entirely on in-match resource decisions. This teardown looks only at a single match: <b>how Gold comes in and is spent, how the minion pool limits choice, and how the gap between strong and weak boards opens up and is then reined in</b>. Based on Season 14, October 2026.</p>
+<div class="acts">
+<a class="px-btn" href="#read"><span class="px-ico book"></span>Read the full text here</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e"><span class="px-ico ext"></span>Feishu original (Chinese)</a>
+<button aria-label="Hit the save block" class="px-block" data-coin="hearthstone-1"></button>
+</div>
+<div class="c-cover" data-r=""><img alt="Battlegrounds match screen" src="../../img/hs/main.webp" style="object-position:center 42%;max-height:520px"/></div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats">
+<div data-r=""><span>Copies of a Tier 6 minion</span><b>7</b><span>scarcity set by copy count</span></div>
+<div data-r="2"><span>Taken by one triple</span><b>43%</b><span>of top-end copies</span></div>
+<div data-r="3"><span>Gold cap</span><b>10</b><span>+1 per turn, capped on turn 8</span></div>
+<div data-r="4"><span>Playtime</span><b>501h</b><span>rating 6,120</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="summary">
+<div class="narrow">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">Summary</h2>
+<p class="feature" data-r="">The core tension: 8 players with identical income share one minion pool, yet every match has to play out differently. <b>The gap between strong and weak has to open up, but not decide the match too early</b>.</p>
+<ul class="rules" data-r="">
+<li><i>Finding 1</i><b>Income and prices are fixed; differences come only from spending</b>Gold rises by 1 per turn to a cap of 10 on turn 8, and every minion costs 3. Each turn comes down to levelling the Tavern or buying power, with health as the stake.</li>
+<li><i>Finding 2</i><b>Scarcity comes from copy counts, not odds tables</b>A Tier 6 card has only 7 copies in the whole lobby, and one triple takes 43% of them. The shared pool also creates a mind game around contested tribes and reading opponents.</li>
+<li><i>Finding 3</i><b>Snowballing comes from the board, and it has brakes</b>There is no interest or win-streak bonus, and there are damage caps, copy limits and Discovers only one tier up; hero strength is balanced by converting armor into health.</li>
+<li><i>Finding 4</i><b>Add one seasonal mechanic, remove one</b>Each season's new mechanic is an extra choice outside the shop. The underlying economy stays fixed, and only one or two extra systems are live at a time.</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="pay">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">Monetization &amp; experience</h2>
+<div class="prose" data-r="">
+<p><strong>Payment only buys choice.</strong> The season pass widens the starting hero pick from 2 to 4, plus cosmetics. It sells no in-match stats, but the number of hero options still affects ranked play.</p>
+<p><strong>The experience centers on challenge and exploration</strong>, serving mainly achievers and explorers. Since only the top 4 gain rating, 5th place hurts the most and makes players most eager to queue again. Social play is this mode's weak spot.</p>
+<p>Compared with Naruto Mobile: Naruto's progression accumulates over months and years, and payment can buy progress directly; Battlegrounds compresses progression into a single match and payment barely touches in-match stats, so the system design lives in the economy curve, the scarcity of shared resources and the pace at which strong and weak boards diverge.</p>
+</div>
+</div>
+</section>
+<section class="chapter" id="fix">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">Improvements</h2>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>Priority</th><th>Proposal</th></tr>
+<tr><td>①</td><td>A three-level hint in the shop for remaining copies, with an A/B test plan</td></tr>
+<tr><td>②</td><td>A tutorial match for each season's new mechanic at season start</td></tr>
+<tr><td>③</td><td>A uniform number of hero options in ranked</td></tr>
+<tr><td>④</td><td>Mid-game catch-up for players who fall behind</td></tr>
+</table>
+</div>
+<div class="prose" data-r=""><p class="note">I also modeled making Tavern upgrade costs linear and concluded it should not be changed.</p></div>
+</div>
+</section>
+<section class="chapter" id="toc">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">Contents</h2>
+<ul class="toc-list" data-r="">
+<li><b>1</b>Game overview and scope</li>
+<li><b>2</b>Core loop: recruit and combat</li>
+<li><b>3</b>Gold economy: income curve and pricing</li>
+<li><b>4</b>Shared minion pool: where scarcity comes from</li>
+<li><b>5</b>Triples and Discover: snowballing and its brakes</li>
+<li><b>6</b>Heroes: asymmetric starts and three balance knobs</li>
+<li><b>7</b>Combat resolution and damage: controlling the pace of elimination</li>
+<li><b>8</b>Injected variables and seasonal pacing</li>
+<li><b>9</b>Ranked and monetization: selling only choice</li>
+<li><b>10</b>Aesthetics: what these mechanics make players feel</li>
+<li><b>11</b>Issues and proposals</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="read">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">Full text</h2>
+<p class="feature" data-r="">Browse the full text below (in Chinese). When you are done, use the top bar or the buttons at the bottom to return to the saves.</p>
+</div>
+<div class="wrap">
+<div class="pdf" data-r="">
+<div class="bar"><span>hearthstone-bg.pdf · 20 pages · Chinese</span><span><a download="" href="../../files/hearthstone-bg.pdf">Download PDF</a> <a href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e">Feishu original ↗</a></span></div>
+<iframe loading="lazy" src="../../files/hearthstone-bg.pdf#view=FitH" title="Full text of the Battlegrounds economy and match pacing teardown"></iframe>
+<div class="pdf-alt">PDFs cannot be embedded on phones. <a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">Open the PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e" style="color:var(--gold)">Feishu original</a> (opens in a new tab)</div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="Load save 04" href="naruto.html"><span>Previous save · 04</span><b>Naruto Mobile: Progression &amp; Economy</b></a>
+<a data-slot="Select Save" href="../index.html"><span>Back to</span><b>All saves</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 Yin Shuo</span><span><a href="#top">Back to top</a><a href="../index.html">All saves</a><a data-slot="Open resume" href="../resume.html">Resume</a></span></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

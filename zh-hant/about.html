@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>關於我 · 殷碩作品集</title>
+<meta content="殷碩的玩家檔案：遊戲經歷、影視經歷、教育與實習經歷、策劃與工具技能。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../img/px/favicon.png" rel="icon"/>
+<link href="../css/shell.css" rel="stylesheet"/>
+<link href="../css/site.css" rel="stylesheet"/>
+<link href="../css/about.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../fonts/fusion-pixel-zh-hant.woff2") format("woff2");font-display:swap}:root{--body-font:"PingFang TC","Microsoft JhengHei","Noto Sans TC","Heiti TC",system-ui,sans-serif;--px-font:"Fusion Pixel","PingFang TC","Microsoft JhengHei",monospace}</style><link href="../about.html" hreflang="zh-Hans" rel="alternate"/><link href="../zh-hant/about.html" hreflang="zh-Hant" rel="alternate"/><link href="../en/about.html" hreflang="en" rel="alternate"/><link href="../ja/about.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="回到標題" href="index.html"><img alt="" src="../img/px/avatar.png"/>殷碩<small>遊戲策劃</small></a>
+<nav aria-label="主導航" class="hud-nav">
+<a data-slot="選擇存檔" href="index.html">存檔</a>
+<a aria-current="page" href="about.html">關於我</a>
+<a class="hide-s" data-slot="開啟簡歷" href="resume.html">簡歷</a>
+</nav>
+<div class="hud-coins" title="頂存檔方塊可以收集硬幣"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>玩家檔案</b>
+<nav><a href="#cv">履歷與技能</a> <a href="#games">遊戲經歷</a> <a href="#films">影視經歷</a></nav>
+</div>
+</div>
+<main>
+<!-- ============ 玩家卡 ============ -->
+<section class="about-hero">
+<div class="wrap">
+<div class="panel" data-r="">
+<div class="pcard">
+<img alt="殷碩的畫素頭像" class="ava" src="../img/px/avatar.png"/>
+<div>
+<h1>殷碩</h1>
+<p class="cls">職業：遊戲策劃 · 系統 / 數值 / 關卡</p>
+<p class="bio">復旦大學碩士在讀。獨立製作《黑夜君臨》大型 Mod 與抖音小遊戲《宇宙漢堡》，在 game jam 擔任主策劃，寫過火影手遊、酒館戰棋兩份系統拆解。習慣先用腳本模擬，再按資料調參。</p>
+<div class="traits"><span>遊戲時長 4600h+</span> <span>白金 16 款</span> <span>三年 GIS 與遙感資料分析</span> <span>AI 工具：Claude Code · Codex</span> <span>同伴：小貓 · 小咪</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="hero-floor">
+<div class="px-hills"></div>
+<button aria-label="頂一下存檔方塊" class="px-block" data-coin="about-1"></button>
+<div aria-hidden="true" class="idle"></div>
+<div aria-hidden="true" class="idle-cat px-cat wag"></div>
+<div class="px-ground"></div>
+</div>
+</section>
+<div class="zone">
+<!-- ============ 履历与技能：角色介绍页 ============ -->
+<section class="sec" id="cv">
+<div class="wrap">
+<div class="sec-head" data-r="">
+<span class="px-ico map" style="width:48px;height:48px;background-size:576px 48px;background-position:-528px 0"></span>
+<h2 class="h-sec">履歷與技能</h2>
+<button aria-label="頂一下存檔方塊" class="px-block" data-coin="about-cv"></button>
+</div>
+<div class="chara" data-r="">
+<!-- 左：角色立绘，点一下会跳 -->
+<div class="chara-l">
+<p class="chara-tag">CHARACTER</p>
+<button aria-label="點一下角色" class="chara-fig" type="button"><span class="spr"></span><span class="ped"></span><span aria-hidden="true" class="chara-cat px-cat wag" title="小咪"><i aria-hidden="true" class="cat-heart px-ico heart"></i></span></button>
+<div class="chara-name">
+<h3>殷碩</h3>
+<p>職業 · 遊戲策劃</p>
+<p>流派 · 系統 / 數值 / 關卡</p>
+</div>
+<ul aria-label="稱號" class="titles">
+<li>白金收集者 ×16</li>
+<li>Mod 作者</li>
+<li>Game Jam 主策劃</li>
+</ul>
+</div>
+<!-- 右：分页 -->
+<div class="chara-r">
+<div aria-label="角色資訊" class="ctabs" role="tablist">
+<button aria-controls="ct-stat" aria-selected="true" id="t-stat" role="tab" type="button">屬性</button>
+<button aria-controls="ct-quest" aria-selected="false" id="t-quest" role="tab" type="button">經歷</button>
+<button aria-controls="ct-skill" aria-selected="false" id="t-skill" role="tab" type="button">技能</button>
+<button aria-controls="ct-gear" aria-selected="false" id="t-gear" role="tab" type="button">裝備</button>
+</div>
+<div aria-labelledby="t-stat" class="cpanel" id="ct-stat" role="tabpanel">
+<p class="cp-lede">復旦大學碩士在讀，三年 GIS 與遙感資料分析經歷。做遊戲的習慣是先用腳本模擬，再按資料調參。</p>
+<div class="cstats">
+<div><span>遊戲時長</span><b data-n="4600" data-suf="h+">4600h+</b></div>
+<div><span>白金</span><b data-n="16" data-suf=" 款">16 款</b></div>
+<div><span>可玩作品</span><b data-n="3" data-suf=" 個">3 個</b></div>
+<div><span>系統拆解</span><b data-n="56" data-suf=" 頁">56 頁</b></div>
+<div><span>Mod 實機迭代</span><b data-n="80" data-suf="+ 輪">80+ 輪</b></div>
+<div><span>Mod B 站播放</span><b data-n="5965" data-suf="">5965</b></div>
+<div><span>碩士 GPA</span><b>3.67</b></div>
+<div><span>專業排名</span><b>前 10%</b></div>
+</div>
+</div>
+<div aria-labelledby="t-quest" class="cpanel" id="ct-quest" role="tabpanel">
+<ol class="quests">
+<li class="main"><span class="qk">主線</span><div><b>復旦大學 · 資源與環境 碩士</b><small>2025 – 今 · GPA 3.67 / 4.0，專業前 10%</small></div><span class="st on">進行中</span></li>
+<li class="main"><span class="qk">主線</span><div><b>上海師範大學 · 園藝 學士</b><small>2021 – 2025 · 專業前 10%</small></div><span class="st">已完成</span></li>
+<li><span class="qk">支線</span><div><b>上海市環境科學研究院 · 資料分析實習生</b><small>2023 – 2026 · 長時間序列影像分類、土地利用與景觀格局分析</small></div></li>
+<li class="work"><span class="qk">作品</span><div><b><a data-slot="讀取存檔 01" href="projects/nightreign-mod.html">《黑夜君臨》大型內容擴充套件 Mod</a> · 獨立製作</b><small>2026.08 – 今 · 測試版已釋出，B 站播放近 6000</small></div><span class="st on">進行中</span></li>
+<li class="work"><span class="qk">作品</span><div><b><a data-slot="讀取存檔 03" href="projects/burger/index.html">《宇宙漢堡》</a> · 獨立製作</b><small>2026.09 – 10 · 抖音豎屏增量經營小遊戲，開發完成</small></div><span class="st">已完成</span></li>
+<li class="work"><span class="qk">作品</span><div><b><a data-slot="讀取存檔 02" href="projects/tidewheel.html">《發條人偶》Tidewheel</a> · 策劃（兼部分程式）</b><small>2026.10 – 11 · thatgamejam #02，4 人團隊，Unity 2D</small></div><span class="st">已完成</span></li>
+</ol>
+</div>
+<div aria-labelledby="t-skill" class="cpanel" id="ct-skill" role="tabpanel">
+<div class="sk-tree">
+<div class="sk-br"><h4>策劃</h4>
+<button class="sk" data-use="黑夜君臨的夜律與護符成長；宇宙漢堡的三層目標" type="button">系統設計</button>
+<button class="sk" data-use="宇宙漢堡：用跑局模擬器調價格和節奏" type="button">數值設計</button>
+<button class="sk" data-use="黑夜君臨腐敗湖地上、地下雙層地形；Tidewheel 四章關卡" type="button">關卡設計</button>
+<button class="sk" data-use="火影手遊 36 頁 MDA 拆解；酒館戰棋 20 頁經濟拆解" type="button">系統拆解</button>
+<button class="sk" data-use="Tidewheel 標準 GDD，事先定好削減順序" type="button">GDD 撰寫</button>
+</div>
+<div class="sk-br"><h4>開發</h4>
+<button class="sk" data-use="宇宙漢堡 7300 行 C#，31 個腳本" type="button">Unity / C# 開發</button>
+<button class="sk" data-use="Tidewheel 6 版可玩網頁原型" type="button">網頁原型</button>
+<button class="sk" data-use="Tidewheel 用腳本測出每段的出手視窗；宇宙漢堡自動截圖和長時間執行測試" type="button">自動化測試腳本</button>
+</div>
+<div class="sk-br"><h4>地信與資料</h4>
+<button class="sk" data-use="環科院實習：長時間序列影像分類" type="button">遙感影像分類</button>
+<button class="sk" data-use="地形高程、柵格處理，可用於地形生成" type="button">DEM 與柵格處理</button>
+<button class="sk" data-use="景觀連通性分析，可用於關卡動線分析" type="button">景觀格局分析</button>
+</div>
+</div>
+<p aria-live="polite" class="sk-info">把滑鼠移到技能上，看它用在了哪裡。</p>
+</div>
+<div aria-labelledby="t-gear" class="cpanel" id="ct-gear" role="tabpanel">
+<div class="gear">
+<div class="slotg"><i>武器</i><b>Unity</b><small>宇宙漢堡、Tidewheel</small></div>
+<div class="slotg"><i>武器</i><b>Excel</b><small>數值建模</small></div>
+<div class="slotg"><i>護甲</i><b>飛書</b><small>團隊 GDD</small></div>
+<div class="slotg"><i>護甲</i><b>Axure</b><small>互動原型</small></div>
+<div class="slotg"><i>飾品</i><b>Claude Code</b><small>寫程式碼、排查問題</small></div>
+<div class="slotg"><i>飾品</i><b>Codex</b><small>畫素素材、程式碼</small></div>
+<div class="slotg"><i>飾品</i><b>Scenario</b><small>宇宙漢堡店面場景</small></div>
+<div class="slotg"><i>道具</i><b>ArcGIS</b><small>空間分析</small></div>
+<div class="slotg"><i>道具</i><b>GEE</b><small>遙感影像處理</small></div>
+</div>
+</div>
+<div class="party" id="contact">
+<div><b>組隊邀請</b><span>13283750773@163.com</span></div>
+<div class="party-btns">
+<a class="px-btn paper sm" data-slot="開啟簡歷" href="resume.html"><span class="px-ico pdf"></span>簡歷</a>
+<a class="px-btn sm" href="mailto:13283750773@163.com"><span class="px-ico mail"></span>傳送郵件</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ 游戏经历 ============ -->
+<section class="sec" id="games">
+<div class="wrap">
+<div class="sec-head" data-r="">
+<span class="px-ico pad" style="width:48px;height:48px;background-size:576px 48px"></span>
+<h2 class="h-sec">遊戲經歷</h2>
+<button aria-label="頂一下存檔方塊" class="px-block" data-coin="about-games"></button>
+</div>
+<p class="sec-lede" data-r="">四個平臺、35 款有記錄的遊戲，合計 4600 小時以上。時長最多的是兩款長線手遊，火影和爐石各 1000 小時，兩份系統拆解都從這裡來；單機以魂系動作為主，PS5 上玩過的 11 款裡有 10 款白金。</p>
+<h3 class="sub" data-r="">平臺分佈<small>按下方遊戲庫統計，共 4618 小時</small></h3>
+<div class="panel tight" data-r="" style="max-width:760px">
+<div class="bars"><span>手遊 / 網遊</span><span class="bar"><i style="--v:50%;--c:var(--grass-d)"></i></span><span>2300h · 4 款</span> <span>Steam</span><span class="bar"><i style="--v:37%;--c:var(--blue-d)"></i></span><span>1716h · 18 款</span> <span>PS5</span><span class="bar"><i style="--v:11%;--c:var(--blue)"></i></span><span>502h · 11 款</span> <span>Switch</span><span class="bar"><i style="--v:2%;--c:var(--red)"></i></span><span>100h · 2 款</span></div>
+</div>
+<h3 class="sub" data-r="">投入最多的作品</h3>
+<div class="favs">
+<div class="fav" data-r=""><span class="rank">No.1</span><img alt="" class="fcover" loading="lazy" src="../img/games/naruto.webp"/><h4>火影忍者手遊</h4><p>V12 賬號，也是系統拆解的研究樣本。</p><span class="hrs">1000h+</span></div>
+<div class="fav" data-r="2"><span class="rank">No.2</span><img alt="" class="fcover" loading="lazy" src="../img/games/hearthstone.webp"/><h4>爐石傳說</h4><p>酒館戰棋 6120 分，也是系統拆解的研究樣本。</p><span class="hrs">1000h+</span></div>
+<div class="fav" data-r="3"><span class="rank">No.3</span><img alt="" class="fcover" loading="lazy" src="../img/games/nightreign.webp"/><h4>黑夜君臨</h4><p>白金，深夜模式 9999 分，為其製作大型 Mod。</p><span class="hrs">600h+</span></div>
+<div class="fav" data-r="4"><span class="rank">No.4</span><img alt="" class="fcover" loading="lazy" src="../img/games/eldenring.webp"/><h4>艾爾登法環</h4><p>白金。由此深入魂系，也是製作 Mod 的起點。</p><span class="hrs">200h+</span></div>
+</div>
+<h3 class="sub" data-r="">遊戲庫<small id="g-count"></small></h3>
+<div class="lib-bar" data-r="">
+<div class="filters" id="g-filters"></div>
+<div aria-label="排序" class="sorter" id="g-sort" role="group"><span>排序</span><button aria-pressed="true" class="chip" data-sort="def" type="button">平臺</button><button aria-pressed="false" class="chip" data-sort="hrs" type="button">時長</button><button aria-pressed="false" class="chip" data-sort="plat" type="button">白金優先</button></div>
+</div>
+<div class="arcade">
+<div class="console-col">
+<div aria-label="遊戲機。點卡帶插進來，左右方向鍵換遊戲" class="console" id="console" tabindex="0">
+<div class="c-slot"><span class="c-cart"></span></div>
+<div class="c-bezel">
+<span aria-hidden="true" class="c-led"></span>
+<div aria-live="polite" class="c-screen">
+<div class="scr-off"><b>INSERT CARTRIDGE</b><span>點任意一張卡帶插進來</span></div>
+<div class="scr-on">
+<img alt="" class="sc-cover"/>
+<div class="sc-info">
+<p class="sc-plat"></p>
+<h4 class="sc-title"></h4>
+<p class="sc-stat"></p>
+<div class="sc-h"><span>PLAY TIME</span><b>0h</b></div>
+<div class="sc-bar"><i></i></div>
+<p class="sc-note"></p>
+</div>
+</div>
+<span aria-hidden="true" class="scan"></span>
+</div>
+</div>
+<div class="c-ctrl">
+<div aria-label="換遊戲" class="dpad">
+<button aria-label="上一款" class="d-l" type="button">◀</button>
+<span aria-hidden="true" class="d-c"></span>
+<button aria-label="下一款" class="d-r" type="button">▶</button>
+</div>
+<p class="c-brand">YS·16<small>SAVE STATION</small></p>
+<div class="ab">
+<button aria-label="退出卡帶" class="b-b" type="button">B</button>
+<button aria-label="隨機插一張" class="b-a" type="button">A</button>
+</div>
+</div>
+<p class="c-help"><span>◀ ▶ 換遊戲</span><span>A 隨機</span><span>B 退卡</span></p>
+<div aria-hidden="true" class="c-grill"></div>
+</div>
+</div>
+<div class="rack">
+<div class="lib" id="g-lib">
+<article class="cart" data-tags="Steam 白金" style="--c:var(--blue-d)"><div class="lbl"><img alt="《艾爾登法環 黑夜君臨》封面" class="cover" loading="lazy" src="../img/games/nightreign.webp"/><h4>艾爾登法環 黑夜君臨</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><p class="note-l">深夜 5 級 9999 分 · 做了 Mod</p><div class="meta"><span></span><span class="hrs">600h+</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="《使命召喚 19：現代戰爭 II》封面" class="cover" loading="lazy" src="../img/games/mw2.webp"/><h4>使命召喚 19：現代戰爭 II</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">200h</span></div></div></article>
+<article class="cart" data-tags="Steam 白金" style="--c:var(--blue-d)"><div class="lbl"><img alt="《艾爾登法環》封面" class="cover" loading="lazy" src="../img/games/eldenring.webp"/><h4>艾爾登法環</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">200h+</span></div></div></article>
+<article class="cart" data-tags="Steam 白金" style="--c:var(--blue-d)"><div class="lbl"><img alt="《星露穀物語》封面" class="cover" loading="lazy" src="../img/games/stardew.webp"/><h4>星露穀物語</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">150h+</span></div></div></article>
+<article class="cart" data-tags="Steam 白金" style="--c:var(--blue-d)"><div class="lbl"><img alt="《怪物獵人：荒野》封面" class="cover" loading="lazy" src="../img/games/mhwilds.webp"/><h4>怪物獵人：荒野</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">80h+</span></div></div></article>
+<article class="cart" data-tags="Steam 通關" style="--c:var(--blue-d)"><div class="lbl"><img alt="《刺客信條：奧德賽》封面" class="cover" loading="lazy" src="../img/games/acodyssey.webp"/><h4>刺客信條：奧德賽</h4><p class="tags">Steam · 主線通關</p><div class="meta"><span></span><span class="hrs">70h</span></div></div></article>
+<article class="cart" data-tags="Steam 通關" style="--c:var(--blue-d)"><div class="lbl"><img alt="《消逝的光芒》封面" class="cover" loading="lazy" src="../img/games/dyinglight.webp"/><h4>消逝的光芒</h4><p class="tags">Steam · 主線通關</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="《木筏求生》封面" class="cover" loading="lazy" src="../img/games/raft.webp"/><h4>木筏求生</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="Steam 通關" style="--c:var(--blue-d)"><div class="lbl"><img alt="《沙石鎮時光》封面" class="cover" loading="lazy" src="../img/games/sandrock.webp"/><h4>沙石鎮時光</h4><p class="tags">Steam · 主線通關</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="《CS2》封面" class="cover" loading="lazy" src="../img/games/cs2.webp"/><h4>CS2</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">50h+</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="《泰拉瑞亞》封面" class="cover" loading="lazy" src="../img/games/terraria.webp"/><h4>泰拉瑞亞</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">40h+</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="《怪物獵人：世界》封面" class="cover" loading="lazy" src="../img/games/mhworld.webp"/><h4>怪物獵人：世界</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">40h</span></div></div></article>
+<article class="cart" data-tags="Steam 白金" style="--c:var(--blue-d)"><div class="lbl"><img alt="《異星探險家》封面" class="cover" loading="lazy" src="../img/games/astroneer.webp"/><h4>異星探險家</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">33h+</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="《Unheard 疑案追聲》封面" class="cover" loading="lazy" src="../img/games/unheard.webp"/><h4>Unheard 疑案追聲</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">30h</span></div></div></article>
+<article class="cart" data-tags="Steam 白金" style="--c:var(--blue-d)"><div class="lbl"><img alt="《雙影奇境》封面" class="cover" loading="lazy" src="../img/games/splitfiction.webp"/><h4>雙影奇境</h4><p class="tags">Steam · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">23h</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="《禁閉求生》封面" class="cover" loading="lazy" src="../img/games/grounded.webp"/><h4>禁閉求生</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">20h</span></div></div></article>
+<article class="cart" data-tags="Steam 通關" style="--c:var(--blue-d)"><div class="lbl"><img alt="《底特律：化身為人》封面" class="cover" loading="lazy" src="../img/games/detroit.webp"/><h4>底特律：化身為人</h4><p class="tags">Steam · 主線通關</p><div class="meta"><span></span><span class="hrs">15h</span></div></div></article>
+<article class="cart" data-tags="Steam" style="--c:var(--blue-d)"><div class="lbl"><img alt="《英靈神殿》封面" class="cover" loading="lazy" src="../img/games/valheim.webp"/><h4>英靈神殿</h4><p class="tags">Steam</p><div class="meta"><span></span><span class="hrs">15h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《黑暗之魂 3》封面" class="cover" loading="lazy" src="../img/games/darksouls3.webp"/><h4>黑暗之魂 3</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">100h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《黑神話：悟空》封面" class="cover" loading="lazy" src="../img/games/wukong.webp"/><h4>黑神話：悟空</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">80h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《血源詛咒》封面" class="cover" loading="lazy" src="../img/games/bloodborne.webp"/><h4>血源詛咒</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">60h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《胡鬧廚房》封面" class="cover" loading="lazy" src="../img/games/overcooked2.webp"/><h4>胡鬧廚房</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">40h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《戰神 4》封面" class="cover" loading="lazy" src="../img/games/godofwar.webp"/><h4>戰神 4</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">40h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《黑暗之魂 重製版》封面" class="cover" loading="lazy" src="../img/games/darksouls1.webp"/><h4>黑暗之魂 重製版</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">40h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《宇宙機器人》封面" class="cover" loading="lazy" src="../img/games/astrobot.webp"/><h4>宇宙機器人</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">37h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《漫威蜘蛛俠 2》封面" class="cover" loading="lazy" src="../img/games/spiderman2.webp"/><h4>漫威蜘蛛俠 2</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">35h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《最後生還者 第一部》封面" class="cover" loading="lazy" src="../img/games/tlou1.webp"/><h4>最後生還者 第一部</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">30h</span></div></div></article>
+<article class="cart" data-tags="PS5" style="--c:var(--blue)"><div class="lbl"><img alt="《麻布仔大冒險》封面" class="cover" loading="lazy" src="../img/games/sackboy.webp"/><h4>麻布仔大冒險</h4><p class="tags">PS5</p><div class="meta"><span></span><span class="hrs">20h</span></div></div></article>
+<article class="cart" data-tags="PS5 白金" style="--c:var(--blue)"><div class="lbl"><img alt="《雙人成行》封面" class="cover" loading="lazy" src="../img/games/ittakestwo.webp"/><h4>雙人成行</h4><p class="tags">PS5 · <span class="plat"><span class="px-ico trophy"></span>白金</span></p><div class="meta"><span></span><span class="hrs">20h</span></div></div></article>
+<article class="cart" data-tags="Switch" style="--c:var(--red)"><div class="lbl"><img alt="《Pokopia》封面" class="cover" loading="lazy" src="../img/games/pokopia.webp"/><h4>Pokopia</h4><p class="tags">Switch</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="Switch" style="--c:var(--red)"><div class="lbl"><img alt="《超級馬力歐 奧德賽》封面" class="cover" loading="lazy" src="../img/games/odyssey.webp"/><h4>超級馬力歐 奧德賽</h4><p class="tags">Switch</p><div class="meta"><span></span><span class="hrs">50h</span></div></div></article>
+<article class="cart" data-tags="手遊" style="--c:var(--grass-d)"><div class="lbl"><img alt="《火影忍者手遊》封面" class="cover" loading="lazy" src="../img/games/naruto.webp"/><h4>火影忍者手遊</h4><p class="tags">手遊</p><p class="note-l">V12 · 寫了 36 頁拆解</p><div class="meta"><span></span><span class="hrs">1000h+</span></div></div></article>
+<article class="cart" data-tags="手遊" style="--c:var(--grass-d)"><div class="lbl"><img alt="《爐石傳說》封面" class="cover" loading="lazy" src="../img/games/hearthstone.webp"/><h4>爐石傳說</h4><p class="tags">手遊</p><p class="note-l">酒館戰棋 · 寫了 20 頁拆解</p><div class="meta"><span></span><span class="hrs">1000h+</span></div></div></article>
+<article class="cart" data-tags="手遊" style="--c:var(--grass-d)"><div class="lbl"><img alt="《保衛向日葵》封面" class="cover" loading="lazy" src="../img/games/sunflower.webp"/><h4>保衛向日葵</h4><p class="tags">手遊</p><div class="meta"><span></span><span class="hrs">200h+</span></div></div></article>
+<article class="cart" data-tags="手遊" style="--c:var(--grass-d)"><div class="lbl"><img alt="《原神》封面" class="cover" loading="lazy" src="../img/games/genshin.webp"/><h4>原神</h4><p class="tags">手遊</p><div class="meta"><span></span><span class="hrs">100h+</span></div></div></article>
+<article class="cart more-cart" data-tags="Steam PS5 Switch 手遊"><div class="lbl"><div class="q">…</div><h4>還有更多存檔</h4><p class="tags">每個平臺都還有沒列出來的</p><div class="meta"><span></span><span class="hrs">？？</span></div></div></article>
+</div>
+<div class="rack-nav">
+<button aria-label="上一頁" class="px-btn sm paper pg-prev" type="button">◀</button>
+<div aria-label="卡帶架分頁" class="pg-dots" role="tablist"></div>
+<span class="pg-n"></span>
+<button aria-label="下一頁" class="px-btn sm paper pg-next" type="button">▶</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ 影视经历 ============ -->
+<section class="sec" id="films">
+<div class="wrap">
+<div class="sec-head" data-r="">
+<span class="px-ico film" style="width:48px;height:48px;background-size:576px 48px;background-position:-48px 0"></span>
+<h2 class="h-sec">影視經歷</h2>
+<button aria-label="頂一下存檔方塊" class="px-block" data-coin="about-films"></button>
+</div>
+<p class="sec-lede" data-r="">看得最多的是日本動畫和特攝，假面騎士從平成到令和全部看完。電影和劇集偏科幻和懸疑，諾蘭的作品看了一個系列，也看巖井俊二這類安靜的日本電影。</p>
+<h3 class="sub" data-r="">片架<small>共 32 部 · 拖動、點兩側卡牌或按 ← → 切換</small></h3>
+<div class="filters" data-for="f-deck" data-r=""></div>
+<div aria-label="片架，按左右方向鍵切換" class="deck film" data-r="" id="f-deck" tabindex="0">
+<div class="deck-stage">
+<figure class="dcard" data-meta="" data-sub="TV 動畫 · 2002" data-tags="動畫" data-title="火影忍者"><img alt="《火影忍者》封面" draggable="false" src="../img/films/naruto.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV 動畫 · 2023" data-tags="動畫" data-title="葬送的芙莉蓮"><img alt="《葬送的芙莉蓮》封面" draggable="false" src="../img/films/frieren.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV 動畫 · 1986" data-tags="動畫" data-title="龍珠"><img alt="《龍珠》封面" draggable="false" src="../img/films/dragonball.webp"/></figure>
+<figure class="dcard" data-meta="卡面：劇場版《黑鐵的魚影》" data-sub="TV 動畫 · 1996" data-tags="動畫" data-title="名偵探柯南"><img alt="《名偵探柯南》封面" draggable="false" src="../img/films/conan.webp"/></figure>
+<figure class="dcard" data-meta="卡面：劇場版《Air / 真心為你》" data-sub="TV 動畫 · 1995" data-tags="動畫" data-title="新世紀福音戰士"><img alt="《新世紀福音戰士》封面" draggable="false" src="../img/films/eva.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="網路動畫 · 2022" data-tags="動畫" data-title="賽博朋克：邊緣行者"><img alt="《賽博朋克：邊緣行者》封面" draggable="false" src="../img/films/edgerunners.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="動畫電影 · 2004" data-tags="動畫" data-title="哈爾的移動城堡"><img alt="《哈爾的移動城堡》封面" draggable="false" loading="lazy" src="../img/films/howl.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="動畫電影 · 2016" data-tags="動畫" data-title="你的名字。"><img alt="《你的名字。》封面" draggable="false" loading="lazy" src="../img/films/yourname.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="動畫電影 · 2019" data-tags="動畫" data-title="天氣之子"><img alt="《天氣之子》封面" draggable="false" loading="lazy" src="../img/films/weathering.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="動畫電影 · 2022" data-tags="動畫" data-title="鈴芽之旅"><img alt="《鈴芽之旅》封面" draggable="false" loading="lazy" src="../img/films/suzume.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="動畫電影 · 2018" data-tags="動畫" data-title="蜘蛛俠：平行宇宙"><img alt="《蜘蛛俠：平行宇宙》封面" draggable="false" loading="lazy" src="../img/films/spiderverse1.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="動畫電影 · 2023" data-tags="動畫" data-title="蜘蛛俠：縱橫宇宙"><img alt="《蜘蛛俠：縱橫宇宙》封面" draggable="false" loading="lazy" src="../img/films/spiderverse2.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV 動畫 · 2014" data-tags="動畫" data-title="四月是你的謊言"><img alt="《四月是你的謊言》封面" draggable="false" loading="lazy" src="../img/films/aprillie.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="動畫電影 · 2018" data-tags="動畫" data-title="我想吃掉你的胰臟"><img alt="《我想吃掉你的胰臟》封面" draggable="false" loading="lazy" src="../img/films/pancreas.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV 動畫 · 2016" data-tags="動畫" data-title="從零開始的異世界生活"><img alt="《從零開始的異世界生活》封面" draggable="false" loading="lazy" src="../img/films/rezero.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV 動畫 · 2013" data-tags="動畫" data-title="進擊的巨人"><img alt="《進擊的巨人》封面" draggable="false" loading="lazy" src="../img/films/aot.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="TV 動畫 · 2019" data-tags="動畫" data-title="鬼滅之刃"><img alt="《鬼滅之刃》封面" draggable="false" loading="lazy" src="../img/films/demonslayer.webp"/></figure>
+<figure class="dcard" data-list="平成 · 2000–2019 · 20 部|空我 Kuuga 2000=../img/films/kr/kuuga.webp,亞極陀 Agito 2001=../img/films/kr/agito.webp,龍騎 Ryuki 2002=../img/films/kr/ryuki.webp,555 Faiz 2003=../img/films/kr/555.webp,劍 Blade 2004=../img/films/kr/blade.webp,響鬼 Hibiki 2005=../img/films/kr/hibiki.webp,甲鬥 Kabuto 2006=../img/films/kr/kabuto.webp,電王 Den-O 2007=../img/films/kr/deno.webp,月騎 Kiva 2008=../img/films/kr/kiva.webp,帝騎 Decade 2009=../img/films/kr/decade.webp,W 2009=../img/films/kr/w.webp,OOO 2010=../img/films/kr/ooo.webp,Fourze 2011=../img/films/kr/fourze.webp,Wizard 2012=../img/films/kr/wizard.webp,鎧武 Gaim 2013=../img/films/kr/gaim.webp,Drive 2014=../img/films/kr/drive.webp,Ghost 2015=../img/films/kr/ghost.webp,Ex-Aid 2016=../img/films/kr/exaid.webp,Build 2017=../img/films/kr/build.webp,時王 Zi-O 2018=../img/films/kr/zio.webp;令和 · 2019 至今 · 7 部|零一 Zero-One 2019=../img/films/kr/zeroone.webp,聖刃 Saber 2020=../img/films/kr/saber.webp,利維斯 Revice 2021=../img/films/kr/revice.webp,極狐 Geats 2022=../img/films/kr/geats.webp,Gotchard 2023=../img/films/kr/gotchard.webp,Gavv 2024=../img/films/kr/gavv.webp,Zeztz 2025=../img/films/kr/zeztz.webp" data-meta="平成到令和全部看完" data-sub="TV 劇集 · 2000 至今" data-tags="特攝" data-title="假面騎士系列"><img alt="《假面騎士系列》封面" draggable="false" loading="lazy" src="../img/films/kamenrider.webp"/></figure>
+<figure class="dcard" data-meta="卡面：《新·奧特曼》" data-sub="1966 至今" data-tags="特攝" data-title="奧特曼系列"><img alt="《奧特曼系列》封面" draggable="false" loading="lazy" src="../img/films/ultraman.webp"/></figure>
+<figure class="dcard" data-meta="卡面：《哈利·波特與魔法石》" data-sub="電影 · 2001–2011" data-tags="電影與劇集" data-title="哈利·波特系列"><img alt="《哈利·波特系列》封面" draggable="false" loading="lazy" src="../img/films/harrypotter.webp"/></figure>
+<figure class="dcard" data-meta="卡面：《復仇者聯盟 4》" data-sub="電影 · 2008 至今" data-tags="電影與劇集" data-title="漫威超級英雄系列"><img alt="《漫威超級英雄系列》封面" draggable="false" loading="lazy" src="../img/films/marvel.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="劇集 · 2010–2017" data-tags="電影與劇集" data-title="神探夏洛克"><img alt="《神探夏洛克》封面" draggable="false" loading="lazy" src="../img/films/sherlock.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="劇集 · 2022" data-tags="電影與劇集" data-title="喜鵲謀殺案"><img alt="《喜鵲謀殺案》封面" draggable="false" loading="lazy" src="../img/films/magpie.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="電影 · 2021" data-tags="電影與劇集" data-title="沙丘"><img alt="《沙丘》封面" draggable="false" loading="lazy" src="../img/films/dune.webp"/></figure>
+<figure class="dcard" data-meta="諾蘭的作品看了一個系列" data-sub="電影 · 2010" data-tags="電影與劇集" data-title="盜夢空間"><img alt="《盜夢空間》封面" draggable="false" loading="lazy" src="../img/films/inception.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="電影 · 1982" data-tags="電影與劇集" data-title="銀翼殺手"><img alt="《銀翼殺手》封面" draggable="false" loading="lazy" src="../img/films/bladerunner.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="電影 · 1968" data-tags="電影與劇集" data-title="2001太空漫遊"><img alt="《2001太空漫遊》封面" draggable="false" loading="lazy" src="../img/films/2001.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="電影 · 1999" data-tags="電影與劇集" data-title="駭客帝國"><img alt="《駭客帝國》封面" draggable="false" loading="lazy" src="../img/films/matrix.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="電影 · 1995" data-tags="電影與劇集" data-title="情書"><img alt="《情書》封面" draggable="false" src="../img/films/loveletter.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="電影 · 2004" data-tags="電影與劇集" data-title="花與愛麗絲"><img alt="《花與愛麗絲》封面" draggable="false" src="../img/films/hanaalice.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="電影 · 2022" data-tags="電影與劇集" data-title="餘命十年"><img alt="《餘命十年》封面" draggable="false" src="../img/films/last10.webp"/></figure>
+<figure class="dcard" data-meta="" data-sub="電影 · 2014" data-tags="電影與劇集" data-title="布達佩斯大飯店"><img alt="《布達佩斯大飯店》封面" draggable="false" src="../img/films/budapest.webp"/></figure>
+</div>
+<div class="deck-ui">
+<button aria-label="上一張" class="px-btn sm paper prev" type="button">◀</button>
+<div class="deck-info"><b class="t"></b><span class="s"></span><span class="m"></span></div>
+<span class="n"></span>
+<button aria-label="下一張" class="px-btn sm paper next" type="button">▶</button>
+</div>
+<div aria-hidden="true" class="deck-scrub"><i></i></div>
+<div class="deck-list" hidden=""></div>
+</div>
+<p class="deck-more" data-r="">……還有很多，沒有全部列出來。</p>
+<h3 class="sub" data-r="">BGM 播放列表<small>喜歡的音樂人 · 卡面是代表專輯</small></h3>
+<div class="filters" data-for="m-deck" data-r=""></div>
+<div aria-label="喜歡的音樂人，按左右方向鍵切換" class="deck music" data-r="" id="m-deck" tabindex="0">
+<div class="deck-stage">
+<figure class="dcard" data-meta="代表專輯《潛潛話》2019" data-sub="永遠是深夜有多好。（ZTMY） · 日本" data-tags="日本" data-title="ずっと真夜中でいいのに。"><span class="vinyl"><i style="background-image:url(../img/music/ztmy.webp)"></i></span><img alt="ずっと真夜中でいいのに。（永遠是深夜有多好。（ZTMY））的專輯封面" draggable="false" src="../img/music/ztmy.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《だから僕は音楽を辭めた》2019" data-sub="夜鹿 · 日本" data-tags="日本" data-title="ヨルシカ"><span class="vinyl"><i style="background-image:url(../img/music/yorushika.webp)"></i></span><img alt="ヨルシカ（夜鹿）的專輯封面" draggable="false" src="../img/music/yorushika.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《THE BOOK》2021" data-sub="夜遊 · 日本" data-tags="日本" data-title="YOASOBI"><span class="vinyl"><i style="background-image:url(../img/music/yoasobi.webp)"></i></span><img alt="YOASOBI（夜遊）的專輯封面" draggable="false" src="../img/music/yoasobi.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《瞬間的シックスセンス》2019" data-sub="愛繆 · 日本" data-tags="日本" data-title="あいみょん"><span class="vinyl"><i style="background-image:url(../img/music/aimyon.webp)"></i></span><img alt="あいみょん（愛繆）的專輯封面" draggable="false" src="../img/music/aimyon.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《eyes》2020" data-sub="日本" data-tags="日本" data-title="milet"><span class="vinyl"><i style="background-image:url(../img/music/milet.webp)"></i></span><img alt="milet的專輯封面" draggable="false" src="../img/music/milet.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《First Love》1999" data-sub="宇多田光 · 日本" data-tags="日本" data-title="宇多田ヒカル"><span class="vinyl"><i style="background-image:url(../img/music/utada.webp)"></i></span><img alt="宇多田ヒカル（宇多田光）的專輯封面" draggable="false" src="../img/music/utada.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《SINGALONG》2020" data-sub="綠黃色社會 · 日本" data-tags="日本" data-title="緑黃色社會"><span class="vinyl"><i style="background-image:url(../img/music/ryokuoushoku.webp)"></i></span><img alt="緑黃色社會（綠黃色社會）的專輯封面" draggable="false" src="../img/music/ryokuoushoku.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《daydream》2016" data-sub="日本" data-tags="日本" data-title="Aimer"><span class="vinyl"><i style="background-image:url(../img/music/aimer.webp)"></i></span><img alt="Aimer的專輯封面" draggable="false" src="../img/music/aimer.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《華麗的冒險》2005" data-sub="華語" data-tags="華語" data-title="陳綺貞"><span class="vinyl"><i style="background-image:url(../img/music/cheer.webp)"></i></span><img alt="陳綺貞的專輯封面" draggable="false" src="../img/music/cheer.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《親愛的...我還不知道》2007" data-sub="華語" data-tags="華語" data-title="張懸"><span class="vinyl"><i style="background-image:url(../img/music/deserts.webp)"></i></span><img alt="張懸的專輯封面" draggable="false" src="../img/music/deserts.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《唱遊》1998" data-sub="華語" data-tags="華語" data-title="王菲"><span class="vinyl"><i style="background-image:url(../img/music/faye.webp)"></i></span><img alt="王菲的專輯封面" draggable="false" src="../img/music/faye.webp"/></figure>
+<figure class="dcard" data-meta="代表專輯《LaLa 首張創作專輯》2009" data-sub="華語" data-tags="華語" data-title="徐佳瑩"><span class="vinyl"><i style="background-image:url(../img/music/lala.webp)"></i></span><img alt="徐佳瑩的專輯封面" draggable="false" src="../img/music/lala.webp"/></figure>
+</div>
+<div class="deck-ui">
+<button aria-label="上一張" class="px-btn sm paper prev" type="button">◀</button>
+<div class="deck-info"><b class="t"></b><span class="s"></span><span class="m"></span></div>
+<span class="n"></span>
+<button aria-label="下一張" class="px-btn sm paper next" type="button">▶</button>
+</div>
+<div aria-hidden="true" class="deck-scrub"><i></i></div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷碩</span><span><a href="#top">回到頂部</a><a href="index.html">全部存檔</a><a data-slot="開啟簡歷" href="resume.html">簡歷</a></span></div></div>
+</footer>
+<script src="js/site.js"></script>
+<script src="js/deck.js"></script>
+<script src="js/about.js"></script>
+<script>
+// 游戏库：按平台 / 完成度筛选，按平台、时长、白金排序
+(function(){
+  var lib = document.getElementById('g-lib'), fil = document.getElementById('g-filters'), cnt = document.getElementById('g-count');
+  var items = [].slice.call(lib.querySelectorAll('.cart'));
+  var more = lib.querySelector('.more-cart');
+  var real = items.filter(function(it){ return it !== more; });
+  real.forEach(function(it, i){
+    it._i = i;
+    it._h = parseInt(it.querySelector('.hrs').textContent, 10) || 0;
+    var t = it.dataset.tags.split(' ');
+    it._p = t.indexOf('白金') >= 0 ? 2 : t.indexOf('通關') >= 0 ? 1 : 0;
+  });
+  var tally = {};
+  real.forEach(function(it){ it.dataset.tags.split(' ').forEach(function(t){ tally[t] = (tally[t] || 0) + 1; }); });
+  var order = ['Steam', 'PS5', 'Switch', '手遊', '白金', '通關'];
+  ['全部'].concat(order.filter(function(t){ return tally[t]; })).forEach(function(t, i){
+    var b = document.createElement('button');
+    b.className = 'chip'; b.type = 'button'; b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.innerHTML = t + '<b>' + (i === 0 ? real.length : tally[t]) + '</b>';
+    b.addEventListener('click', function(){
+      fil.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      items.forEach(function(it){ it.hidden = !(t === '全部' || it.dataset.tags.split(' ').indexOf(t) >= 0); });
+      window.ysRack && window.ysRack.refresh(0);
+      window.ysSfx && window.ysSfx('select');
+    });
+    fil.appendChild(b);
+  });
+  cnt.textContent = '共 ' + real.length + ' 款';
+
+  var SORT = {
+    def: function(a, b){ return a._i - b._i; },
+    hrs: function(a, b){ return b._h - a._h || a._i - b._i; },
+    plat: function(a, b){ return b._p - a._p || b._h - a._h || a._i - b._i; }
+  };
+  var sorter = document.getElementById('g-sort');
+  sorter.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click', function(){
+      sorter.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      real.slice().sort(SORT[b.dataset.sort]).forEach(function(it){ lib.insertBefore(it, more); });
+      window.ysRack && window.ysRack.refresh(0);
+      window.ysSfx && window.ysSfx('select');
+    });
+  });
+})();
+</script>
+</body>
+</html>

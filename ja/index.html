@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>殷 碩 · ゲームプランナー ポートフォリオ</title>
+<meta content="殷碩のゲームプランナー ポートフォリオ。『ナイトレイン』大型 Mod、game jam 作品『Tidewheel』、Douyin 向けミニゲーム『宇宙バーガー』、そして『NARUTO』モバイルと『バトルグラウンド』のシステム分析。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../img/px/favicon.png" rel="icon"/>
+<link href="../css/shell.css" rel="stylesheet"/>
+<link href="../css/site.css" rel="stylesheet"/>
+<link href="../css/home.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<link as="image" fetchpriority="high" href="../img/mod/cover-cards.webp" rel="preload"/>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../fonts/fusion-pixel-ja.woff2") format("woff2");font-display:swap}:root{--body-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo","Noto Sans JP",system-ui,sans-serif;--px-font:"Fusion Pixel","Hiragino Sans","Yu Gothic","Meiryo",monospace}</style><link href="../index.html" hreflang="zh-Hans" rel="alternate"/><link href="../zh-hant/index.html" hreflang="zh-Hant" rel="alternate"/><link href="../en/index.html" hreflang="en" rel="alternate"/><link href="../ja/index.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="タイトルへ戻る" href="index.html"><img alt="" src="../img/px/avatar.png"/>殷碩<small>ゲームプランナー</small></a>
+<nav aria-label="メインナビゲーション" class="hud-nav">
+<a aria-current="page" href="index.html">セーブ</a>
+<a data-slot="プレイヤーデータを開く" data-tip="ゲーム歴、映像・音楽、経歴とスキル。" href="about.html">自己紹介</a>
+<a class="hide-s" data-slot="履歴書を開く" href="resume.html">履歴書</a>
+</nav>
+<div class="hud-coins" title="セーブブロックを叩くとコインが集まります"><i></i><b>×00</b></div>
+</div>
+</header>
+<main>
+<!-- ============ 选关舞台：可以操作的小关卡 ============ -->
+<section aria-label="セーブを選択" class="stg" id="stg">
+<div aria-label="操作説明" class="stg-help">
+<div class="bd">
+<p class="hd">あそびかた<small>HOW TO PLAY</small></p>
+<span aria-hidden="true" class="bang">!</span>
+<div class="row"><span class="keys"><kbd class="k-l">←</kbd><kbd class="k-r">→</kbd></span>移動</div>
+<div class="row"><span class="keys"><kbd class="k-sp">Space</kbd></span>ジャンプでブロックを叩く</div>
+<div class="row"><span class="keys"><kbd>↓</kbd></span>ドアの前で入る</div>
+<div class="row or"><span class="keys"><span class="mouse"></span></span>ブロックをクリックでも可</div>
+</div>
+</div>
+<div class="stg-top">
+<p class="eyebrow on-sky-s">殷 碩 · ゲームプランナー</p>
+<h1 class="mega on-sky">セーブを選択</h1>
+</div>
+<div aria-live="polite" class="board">
+<div class="board-scr"><span class="badge"></span><div class="scan"></div></div>
+<div class="board-cap">
+<span class="kicker"></span>
+<h2></h2>
+<p></p>
+<div class="board-act"><button class="px-btn sm go" type="button">ロード</button><small>ジャンプでブロックを叩いても入れます</small></div>
+</div>
+</div>
+<div class="sblocks"></div>
+<div class="px-hills"></div>
+<button aria-label="ドア：自己紹介" class="door" type="button"><span class="lbl"><i>↓</i> 自己紹介</span></button>
+<div aria-hidden="true" class="hero-p"><span class="say">↓ 入る</span></div>
+<div class="px-ground"></div>
+<div aria-hidden="true" class="touch">
+<div><button data-k="l" type="button">◀</button><button data-k="r" type="button">▶</button></div>
+<div><button class="a" data-k="j" type="button">A</button></div>
+</div>
+<noscript>
+<p style="position:absolute;left:24px;bottom:120px;z-index:9;background:#fff;padding:12px"><a href="projects/nightreign-mod.html">ナイトレイン Mod</a> · <a href="projects/tidewheel.html">Tidewheel</a> · <a href="projects/burger/index.html">宇宙バーガー</a> · <a href="projects/naruto.html">NARUTO 分析</a> · <a href="projects/hearthstone.html">バトルグラウンド分析</a> · <a href="about.html">自己紹介</a></p>
+</noscript>
+</section>
+<!-- ============ 下半场景：从黄昏走到夜里 ============ -->
+<div class="world">
+<div aria-hidden="true" class="sun"></div>
+<div aria-hidden="true" class="moon"></div>
+<!-- 玩家状态 -->
+<section class="wsec" id="status">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">STATUS</span><h2 class="h-sec">プレイヤーステータス</h2></div>
+<div class="win status" data-r="">
+<div class="who">
+<img alt="殷碩のドット絵アバター" src="../img/px/avatar.png"/>
+<b>殷 碩</b>
+<small>職業：ゲームプランナー</small>
+<small>復旦大学 · 修士課程在学中</small>
+</div>
+<div>
+<div class="dlg" id="dlg">まず数値で考え、それから形にする。<b>個人で</b>『ナイトレイン』の大型 Mod と Douyin 向けミニゲーム『宇宙バーガー』を<b>制作</b>し、game jam では<b>メインプランナー</b>を担当。『NARUTO』モバイルと『バトルグラウンド』の<b>システム分析</b>も書きました。『宇宙バーガー』のゲームテンポも『Tidewheel』の操作猶予も、<b>まずスクリプトでシミュレーションし、データを見て調整</b>しています。<i class="more-ind"></i></div>
+<div class="attrs">
+<div class="attr"><span>プレイ時間</span><span class="lead"></span><span class="num" data-n="4600" data-suf="h+">4600h+</span></div>
+<div class="attr"><span>プラチナ</span><span class="lead"></span><span class="num" data-n="16" data-suf=" 本">16 本</span></div>
+<div class="attr"><span>Mod 実機テスト</span><span class="lead"></span><span class="num" data-n="80" data-suf="+ 回">80+ 回</span></div>
+<div class="attr"><span>システム分析</span><span class="lead"></span><span class="num" data-n="56" data-suf=" ページ">56 ページ</span></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="island"></div>
+</div>
+</section>
+<!-- 读取存档 -->
+<section class="wsec" id="saves">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">LOAD</span><h2 class="h-sec">ロード</h2></div>
+<div class="win saves" data-r="">
+<div class="saves-head"><span>セーブデータを選んで再開</span><span>使用中のスロット 5 / 6</span></div>
+<a class="slot" data-slot="セーブ 01 をロード" data-tip="同じ夜の王への 2 回の挑戦でも、最初の 2 日間に出会う敵は変わりえます。" href="projects/nightreign-mod.html">
+<span class="no">01</span>
+<span class="th"><img alt="" loading="lazy" src="../img/mod/cover-cards.webp"/></span>
+<div><h4>ナイトレイン 大型コンテンツ拡張 Mod</h4><div class="meta"><i>プレイ可能</i>個人制作：システム・レベル・演出 · 2026.08 – 現在 · テスト版公開済み、bilibili 再生数 約 6,000</div></div>
+<span class="key"><b>7</b>体の新しい夜の王、それぞれ序盤 2 夜の組み合わせ 2 種</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="セーブ 02 をロード" data-tip="回収バウンドの受付時間を約 0.5 秒から約 1.6 秒に広げました。" href="projects/tidewheel.html">
+<span class="no">02</span>
+<span class="th"><img alt="" loading="lazy" src="../img/tidewheel/beach.webp"/></span>
+<div><h4>ゼンマイ人形 Tidewheel</h4><div class="meta"><i>プレイ可能</i>プランナー（一部プログラム兼任）· 4 人チーム · thatgamejam #02 · itch.io で遊べます</div></div>
+<span class="key"><b>1.6 秒</b>回収バウンドの受付時間、約 0.5 秒から拡大</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="セーブ 03 をロード" data-tip="初回転生は約 49 分。星ボーナスを得ると 2 周目は 23 分まで短縮。" href="projects/burger/index.html">
+<span class="no">03</span>
+<span class="th phones"><img alt="" loading="lazy" src="../img/burger/02_home.webp"/><img alt="" loading="lazy" src="../img/burger/12c_run_burst.webp"/><img alt="" loading="lazy" src="../img/burger/19_space_home.webp"/></span>
+<div><h4>宇宙バーガー</h4><div class="meta"><i>プレイ可能</i>個人制作：システム・数値・開発 · 2026.09 – 10 · ソフトウェア著作権 登録申請中</div></div>
+<span class="key"><b>49 分</b>初回転生までの時間（シミュレーター結果）</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="セーブ 04 をロード" data-tip="高級招募で S 忍を 1 体完成させるには約 300 回。クーポン直販の 25 倍です。" href="projects/naruto.html">
+<span class="no">04</span>
+<span class="th"><img alt="" loading="lazy" src="../img/naruto/main.webp" style="object-position:30% center"/></span>
+<div><h4>NARUTO モバイル 成長と経済システム</h4><div class="meta"><i>システム分析</i>MDA · 数値試算 · 製品比較 · 36 ページ</div></div>
+<span class="key"><b>25 倍</b>高級招募とクーポン直販の価格差</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="セーブ 05 をロード" data-tip="★6 ミニオンは 7 枚しかなく、1 回のトリプルで 43% が消えます。" href="projects/hearthstone.html">
+<span class="no">05</span>
+<span class="th"><img alt="" loading="lazy" src="../img/hs/main.webp"/></span>
+<div><h4>バトルグラウンド 経済と対戦テンポ</h4><div class="meta"><i>システム分析</i>数値試算 · A/B テスト設計 · 20 ページ · 501 時間</div></div>
+<span class="key"><b>43%</b>1 回のトリプルで持っていかれる★6 ミニオンの割合</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" href="#goal" style="opacity:.7">
+<span class="no">06</span>
+<span class="th" style="display:grid;place-items:center;font-family:var(--px-font);font-size:12px;color:var(--gold)">NEW GAME</span>
+<div><h4>空きスロット</h4><div class="meta">このスロットは次のプロジェクトのために空けてあります。</div></div>
+<span class="key"></span>
+<span class="go px-btn sm paper">連絡先</span>
+</a>
+<div class="saves-foot"><span>↑↓ 選択 · Enter ロード</span><a data-slot="履歴書を開く" href="resume.html">履歴書を見る ▶</a></div>
+</div>
+<div aria-hidden="true" class="island"></div>
+</div>
+</section>
+<!-- 玩家档案：三扇门 -->
+<section class="wsec" id="profile">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">PLAYER</span><h2 class="h-sec">プレイヤーデータ</h2></div>
+<div class="doors">
+<a class="wdoor" data-r="" data-slot="プレイヤーデータを開く" data-tip="プレイ時間 4,600 時間以上、35 本、プラチナ 16 本。" href="about.html#games"><span class="d"></span> <span class="sign"><b><span class="px-ico pad"></span> ゲーム歴</b><small>35 本 · パッケージ一覧 · 機種で絞り込み</small></span></a>
+<a class="wdoor" data-r="2" data-slot="プレイヤーデータを開く" data-tip="アニメ・特撮・映画・ドラマ 30 本以上と、BGM プレイリスト。" href="about.html#films"><span class="d"></span> <span class="sign"><b><span class="px-ico film"></span> 映像・音楽</b><small>アニメ · 特撮 · 映画 · 音楽</small></span></a>
+<a class="wdoor" data-r="3" data-slot="プレイヤーデータを開く" data-tip="復旦大学 修士課程在学中。GIS とリモートセンシングのデータ分析経験 3 年。" href="about.html#cv"><span class="d"></span> <span class="sign"><b><span class="px-ico map"></span> 経歴とスキル</b><small>学歴・インターン・スキル</small></span></a>
+</div>
+<div aria-hidden="true" class="island doors-ground"></div>
+</div>
+</section>
+<!-- 终点 -->
+<section class="wsec" id="goal">
+<div class="wrap goal">
+<div class="win clear" data-r="">
+<div aria-label="STAGE CLEAR!" class="big"></div>
+<p>ご覧いただきありがとうございます。ゲームプランナー職のインターンおよび正社員の機会を探しています。</p>
+<div class="score"><span>コイン<b id="goal-coins">0</b></span> <span>セーブ数<b>5</b></span> <span>プレイ時間<b id="goal-time">00:00</b></span></div>
+<div class="row">
+<a class="px-btn" href="mailto:13283750773@163.com"><span class="px-ico mail"></span>メールを送る</a>
+<a class="px-btn paper" data-slot="履歴書を開く" href="resume.html"><span class="px-ico pdf"></span>履歴書</a>
+<a class="px-btn blue" href="#top" id="again">もう一度遊ぶ</a>
+</div>
+</div>
+<div aria-hidden="true" class="tower"></div>
+</div>
+</section>
+</div>
+</main>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷 碩 · ↑↑↓↓←→←→BA を試してみて</span><span><a href="#top">ページ上部へ</a><a href="about.html">自己紹介</a><a data-slot="履歴書を開く" href="resume.html">履歴書</a></span></div></div>
+</footer>
+<script src="js/site.js"></script>
+<script src="js/stage.js"></script>
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sfx = window.ysSfx || function(){};
+
+  // 对话框逐字出现，点一下直接显示全文
+  var dlg = document.getElementById('dlg');
+  var full = dlg.innerHTML, tokens = full.match(/<[^>]+>|[^<]/g) || [];
+  var typed = reduce, n = 0, timer = null;
+  function paint(){ dlg.innerHTML = tokens.slice(0, n).join('') + '<span class="ghost">' + tokens.slice(n).join('').replace(/<i class="more-ind"><\/i>/, '') + '</span>'; }
+  function finish(){ clearInterval(timer); n = tokens.length; dlg.innerHTML = full; typed = true; }
+  function type(){
+    if (typed) return; typed = true;
+    timer = setInterval(function(){
+      n++; while (n < tokens.length && tokens[n - 1].charAt(0) === '<') n++;
+      if (n >= tokens.length) finish(); else paint();
+    }, 28);
+  }
+  if (!reduce){ n = 0; paint(); typed = false; }
+  dlg.addEventListener('click', finish);
+
+  // 数字从 0 滚上去
+  function count(el){
+    var to = +el.dataset.n, suf = el.dataset.suf || '', t0 = performance.now();
+    (function f(t){ var k = Math.min(1, (t - t0) / 900); el.textContent = Math.round(to * k) + suf; if (k < 1) requestAnimationFrame(f); })(t0);
+  }
+
+  // STAGE CLEAR 逐字跳
+  var big = document.querySelector('.clear .big');
+  'STAGE CLEAR!'.split('').forEach(function(ch, i){ var s = document.createElement('span'); s.style.setProperty('--i', i); s.textContent = ch === ' ' ? ' ' : ch; big.appendChild(s); });
+
+  var t0 = Date.now();
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var el = en.target;
+      if (el.classList.contains('status')){ type(); if (!reduce) el.querySelectorAll('.num').forEach(count); }
+      if (el.classList.contains('clear')){
+        var coins = 0; try { coins = Object.keys(JSON.parse(localStorage.getItem('ys-coins')) || {}).length; } catch(e){}
+        document.getElementById('goal-coins').textContent = coins;
+        var s = Math.round((Date.now() - t0) / 1000);
+        document.getElementById('goal-time').textContent = ('0' + Math.floor(s / 60)).slice(-2) + ':' + ('0' + s % 60).slice(-2);
+        sfx('clear');
+      }
+      io.unobserve(el);
+    });
+  }, {threshold:.35});
+  io.observe(document.querySelector('.win.status'));
+  io.observe(document.querySelector('.win.clear'));
+
+  // 存档菜单：悬停有选择音，↑↓ 在存档之间移动
+  var slots = [].slice.call(document.querySelectorAll('.slot'));
+  slots.forEach(function(a, i){
+    a.addEventListener('mouseenter', function(){ sfx('select'); });
+    a.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+        e.preventDefault(); e.stopPropagation();
+        var j = (i + (e.key === 'ArrowDown' ? 1 : -1) + slots.length) % slots.length;
+        slots[j].focus(); sfx('select');
+      }
+    });
+  });
+  document.querySelectorAll('.wdoor').forEach(function(d){ d.addEventListener('mouseenter', function(){ sfx('door'); }); });
+})();
+</script>
+</body>
+</html>

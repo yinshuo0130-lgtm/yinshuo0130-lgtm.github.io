@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>『ゼンマイ人形』Tidewheel · 殷碩ポートフォリオ</title>
+<meta content="thatgamejam #02 参加作品『Tidewheel』：時のゼンマイを投げて海を止め、波を足場に変える。殷碩はプランナー（一部プログラム兼任）を担当。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../img/px/favicon.png" rel="icon"/>
+<link href="../../css/shell.css" rel="stylesheet"/>
+<link href="../../css/site.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../fonts/fusion-pixel-ja.woff2") format("woff2");font-display:swap}:root{--body-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo","Noto Sans JP",system-ui,sans-serif;--px-font:"Fusion Pixel","Hiragino Sans","Yu Gothic","Meiryo",monospace}</style><link href="../../projects/tidewheel.html" hreflang="zh-Hans" rel="alternate"/><link href="../../zh-hant/projects/tidewheel.html" hreflang="zh-Hant" rel="alternate"/><link href="../../en/projects/tidewheel.html" hreflang="en" rel="alternate"/><link href="../../ja/projects/tidewheel.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="タイトルへ戻る" href="../index.html"><img alt="" src="../../img/px/avatar.png"/>殷碩<small>ゲームプランナー</small></a>
+<nav aria-label="メインナビゲーション" class="hud-nav">
+<a aria-current="page" data-slot="セーブを選択" href="../index.html">セーブ</a>
+<a data-slot="プレイヤーデータを開く" href="../about.html">自己紹介</a>
+<a class="hide-s" data-slot="履歴書を開く" href="../resume.html">履歴書</a>
+</nav>
+<div class="hud-coins" title="セーブブロックを叩くとコインが集まります"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>ゼンマイ人形 Tidewheel</b>
+<nav><a class="hide-s" href="#core">コアルール</a> <a class="hide-s" href="#data">手触りの調整</a> <a class="hide-s" href="#onboard">文字の少ない導線</a> <a class="hide-s" href="#story">オープニングとエンディング</a> <a class="hide-s" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" rel="noopener" target="_blank">GDD</a> <a class="pill sm" href="https://shuo-yin.itch.io/tidewheel" rel="noopener" target="_blank">遊ぶ</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">セーブ 02 · プレイ可能 · thatgamejam #02</span>
+<h1 class="mega on-sky">『ゼンマイ人形』<br/>Tidewheel</h1>
+<p class="feature">2D 横スクロールの物理パズル。ゼンマイ人形は嵐の中で灯台に登り、灯りをともさなければなりません。人形が胸の時のゼンマイを投げると、<b>その周りの海の時間が止まり</b>、止まった波は<b>足場</b>になります。ゼンマイを回収すると海面が元に戻り、人形を跳ね上げます。</p>
+<div class="acts">
+<a class="px-btn red" href="https://shuo-yin.itch.io/tidewheel" rel="noopener" target="_blank"><span class="px-ico pad"></span>itch.io で遊ぶ</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" rel="noopener" target="_blank"><span class="px-ico book"></span>GDD（Feishu・中国語）</a>
+<button aria-label="セーブブロックを叩く" class="px-block" data-coin="tidewheel-1"></button>
+</div>
+<div class="c-cover" data-r=""><img alt="カバー：雨の中、ゼンマイ人形が桟橋から灯台へ走り、灯台の下で大波がうねる" src="../../img/tidewheel/cover.webp"/></div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats">
+<div data-r=""><span>コンセプト段階</span><b>4 + 3</b><span>不採用案 / グレーボックス版</span></div>
+<div data-r="2"><span>回収バウンドの受付時間</span><b>1.6 秒</b><span>約 0.5 秒から拡大</span></div>
+<div data-r="3"><span>Web プロトタイプ</span><b>6 版</b><span>ルールと数値の検証用</span></div>
+<div data-r="4"><span>自動テスト</span><b>57 項目</b><span>エンドツーエンドの確認</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="core">
+<div class="narrow">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">ひとつのルールで、ふたつを説明する</h2>
+<p class="feature" data-r="">人形は鉄でできているので、海に落ちれば沈むはず。一方で波に跳ね上げられる必要もあります。それぞれに特別なルールを作ると、プレイヤーが覚えることが 1 つ増えます。最終的に<b>同じひとつのルール</b>で両方を説明しました。</p>
+<ul class="rules" data-r="">
+<li><i>ルール 1 · 止める</i><b>止まった海水は押しのけられない</b>沈むには水を左右に押しのける必要があります。時間の止まった水は流れないので、どれだけ重くても押しのけられず、上に立てます。</li>
+<li><i>ルール 2 · 回収と復元</i><b>回収すると、海面が元に戻る</b>止まっていた海面は 0.2 秒で現在あるべき高さに戻り、動いている間も実体のままです。海面が上がるとき、その上に立つ人形は跳ね上げられます。</li>
+</ul>
+<div class="prose" data-r="" style="margin-top:32px">
+<p>流れる水は鉄の体を支えられず、元に戻る途中の海面は実体のまま。「沈む」も「跳ね上げられる」もこの 2 つのルールから導かれ、設定とゲームプレイが同じ論理を共有しています。</p>
+<p>コンセプト段階では、巻き戻し、因果の連鎖、パーツシステムを含む 4 案とグレーボックス 3 版を不採用にし、最終的に「自然を止める」に決めました。ゼンマイが止めるのは時間であって水ではないので、氷やガラスのような表現は一切使いません。止まった海は波の形、白い泡、波紋を残したまま彩度だけが落ち、立てる範囲は真鍮の目盛り線で示し、停止範囲は時計の文字盤として描きます。動物は影響を受けず、カニは止まった海面をそのまま歩いて渡り、このルールを示します。</p>
+</div>
+<figure class="fig" data-r="">
+<img alt="嵐の区間：文字盤形の停止範囲が岩の縁を覆い、落ちてきた稲妻が空中で止まる" loading="lazy" src="../../img/tidewheel/storm.webp"/>
+<figcaption>嵐の区間。ゼンマイが岩の縁に落ち、文字盤形の停止範囲にかかった稲妻が空中で止まり、橋として渡れます。</figcaption>
+</figure>
+</div>
+</section>
+<section class="chapter" id="data">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">手触りをスクリプトで測る</h2>
+<p class="feature" data-r="">AI の補助でプレイ可能な Web プロトタイプを作って 6 版まで改良し、<b>プレイヤーのキー入力を再現する</b>自動スクリプトで各区間の操作猶予を計測、そのデータをもとに調整しました。</p>
+<div class="prose" data-r="">
+<p>最初の投げ方は照準モードでした。長押しで照準に入り、距離を調整、波が減速し、届くルートでは点線が緑になる。試遊すると手順が多すぎたため、10 月 29 日にチャージ式に変更しました。長押しでチャージ、離して投げる。チャージ中は軌道、着地点、停止範囲だけを表示します。予測着地点と実際の着地点の誤差は約 1 ピクセルです。</p>
+</div>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>区間</th><th>計測内容</th><th>結果</th></tr>
+<tr><td>1-1 潮だまり</td><td>波頭を止める操作猶予</td><td>約 1.4 秒</td></tr>
+<tr><td>1-2 波の坂</td><td>波の坂を止める操作猶予</td><td>約 1.1 秒</td></tr>
+<tr><td>1-3 しぶきの階段</td><td>空中の水しぶきを止める操作猶予</td><td>当初は約 0.1 秒。しぶきの半径、判定距離、重力を調整し、チャージ 0.65 で 0.8 秒に</td></tr>
+<tr><td>1-4 回収バウンド</td><td>回収の有効タイミング</td><td>約 0.5 秒から約 1.6 秒に拡大、回収の誤表示なし</td></tr>
+<tr><td>4-3 灯台の大波</td><td>大波を止める操作猶予</td><td>チャージ 0.6〜0.9 で約 2.25 秒</td></tr>
+</table>
+</div>
+<div class="prose" data-r="">
+<p class="note">1-3 の猶予は当初約 0.1 秒で、人間にはほぼ不可能でした。スクリプトがこれを要対応として示し、パラメータ変更後にもう一度走らせて基準を満たすことを確認してから、プログラマーに渡しました。</p>
+</div>
+<div class="shots" data-r="">
+<figure><img alt="崖の区間：人形が高い岩の上に立ち、遠くに宙に浮いた水しぶき" loading="lazy" src="../../img/tidewheel/cliffs.webp"/><figcaption>崖の区間。左上は時のゼンマイの状態バー、右上は波の周期リング。</figcaption></figure>
+<figure><img alt="第 1 章の海岸：桟橋、カニ、2 コマの図の立て札" loading="lazy" src="../../img/tidewheel/beach.webp"/><figcaption>第 1 章の海岸。カニは停止の影響を受けず、右の立て札は 2 コマの図で「波頭を止めてから登る」ことを伝えます。</figcaption></figure>
+</div>
+</div>
+</section>
+<section class="chapter" id="onboard">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">文字の少ない導線</h2>
+<p class="feature" data-r="">導線は『スーパーマリオブラザーズ』の 1-1、Portal、Celeste、Tunic を参考にしました。<b>失敗しても代償のない場所で学び、代償のある場所で使う</b>。</p>
+<div class="prose" data-r="">
+<ul>
+<li>浅い池でのチュートリアル：浅い池に落ちても底に沈むだけで、底を歩いたりジャンプしたりでき、ミスにはなりません。同じテクニックをまず浅い池で学び、それから深い海で使います。</li>
+<li>ボタン表示は覚えたら消えます。</li>
+<li>立て札は図だけで、文字はありません。</li>
+<li>同じ場所で 2 回失敗したときだけヒントの円が出て、慣れたプレイヤーの邪魔をしません。</li>
+</ul>
+<p>社内試遊で、画面の文字が多すぎてプレイヤーが文字を読むのに気を取られている、という意見でチームが一致しました。提出間近で美術は変更できなかったため、プログラムの変更だけで文字を減らす案を作り、プロトタイプで実装してから、比較スクリーンショットを添えてプログラマーに渡しました：</p>
+<ul>
+<li>常時表示のビート名、目標文、状態ラベルを削除；</li>
+<li>頭上のボタン表示はキーアイコンだけにし、チャージキーの周りに進行状況の円弧を付けて「長押し」の文字の代わりに；</li>
+<li>ヒントの円は普段は薄く、止めるべき波やしぶきが位置に来たときだけ明るくなるので、プレイヤーは文ではなくタイミングを見る；</li>
+<li>ヒントの文はポーズメニューに移し、見たい人だけがポーズして読む；</li>
+<li>人形が立て札に近づくと、3 コマが順に点灯して読む順番を示す。</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="chapter" id="story">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">オープニングとエンディング</h2>
+<p class="feature" data-r="">物語は一本道です。灯台守の老アザラシが網を上げに海へ出たところ、嵐が早く来て、灯台に灯りがともっていない。人形は海岸を抜け、<b>灯台に登ってゼンマイを巻き</b>、灯りがつくと、小舟は光に向かって漕ぎ戻ってきます。</p>
+<div class="prose" data-r="">
+<p>オープニングは当初、頭をなでるアニメーションでしたが、美術担当の提案で操作できる会話に変えました。人形が老アザラシのそばに行き E で話しかけると、4 つのセリフで網を上げに出ること、留守を頼むこと、帰ったらゼンマイを巻くことが語られ、そのあとテレビの天気予報が嵐が早まったと告げます。ゲーム中で会話があるのはここだけで、セリフは目的を直接言いません。外に出たプレイヤーは遠くの暗い灯台を見て、自分で行き先を理解します。</p>
+<p>エンディングにはジャムのテーマ音源を使い、全体をそのまま流しています。音源には 5 回のゼンマイの音があり、映像を順に合わせました：0.3 秒で巻き始め、20.6 秒で灯りがつき、36.5 秒で光が海面をなでて小舟を見つけ、44.5 秒で小舟が向きを変え、53.0 秒で岸に着きます。</p>
+</div>
+<div class="shots" data-r="">
+<figure><img alt="オープニング：老アザラシの金物・修理屋の前、草の斜面に立つ人形" loading="lazy" src="../../img/tidewheel/home.webp"/><figcaption>オープニング：老アザラシの修理屋の前。</figcaption></figure>
+<figure><img alt="エンディング：夜が明け、人形と老アザラシが灯台の下に座る" loading="lazy" src="../../img/tidewheel/ending.webp"/><figcaption>エンディング：夜が明け、人形と老アザラシが灯台の下に座る。</figcaption></figure>
+</div>
+</div>
+</section>
+<section class="chapter" id="scope">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">ドキュメントと提出</h2>
+<p class="feature" data-r="">標準的な GDD を書き、<b>削る順番を事前に決めておきました</b>。</p>
+<p data-r="" style="margin:-8px 0 24px"><a class="px-btn sm paper" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" rel="noopener" target="_blank"><span class="px-ico ext"></span>Feishu で GDD を読む（中国語）</a></p>
+<div class="prose" data-r="">
+<p>GDD には 4 章分のステージ、メカニクスのルール、数値表、美術仕様と素材リスト、効果音リスト、技術方針、P0 / P1 / P2 のスコープ、マイルストーンとリスク対策が含まれます。チームは Feishu 上で 1 つのドキュメントを共同管理しました。</p>
+<p>提出前にジャムのルールを 1 つずつ確認しました：既定言語は英語、提出ページに AI の使用状況を明記、テーマ音源は全体をそのまま再生。itch.io ページの紹介文、操作説明、デザインステートメントも私が用意しました。</p>
+</div>
+</div>
+</section>
+<section class="info light">
+<div class="narrow">
+<h2 class="h-sec" data-r="">セーブ情報</h2>
+<div class="spec" data-r="">
+<div><h3>担当</h3><div class="c">プランナー（一部プログラム兼任）</div></div>
+<div><h3>チーム</h3><div class="c">4 人：プランナー、プログラマー、アーティスト 2 名（2 人目は開発途中から参加）</div></div>
+<div><h3>ジャム</h3><div class="c">thatgamejam #02</div></div>
+<div><h3>期間</h3><div class="c">2026.10 – 11</div></div>
+<div><h3>エンジン</h3><div class="c">Unity 2D · Windows</div></div>
+<div><h3>プレイ時間</h3><div class="c">1 周約 10〜15 分、キーボードとゲームパッドに対応、英語 / 中国語</div></div>
+<div><h3>GDD</h3><div class="c"><a class="more ext" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" rel="noopener" target="_blank">Feishu ドキュメント（中国語）</a></div></div>
+<div><h3>試遊</h3><div class="c"><a class="more ext" href="https://shuo-yin.itch.io/tidewheel" rel="noopener" target="_blank">shuo-yin.itch.io/tidewheel</a></div></div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="セーブ 01 をロード" href="nightreign-mod.html"><span>前のセーブ · 01</span><b>ナイトレイン 大型コンテンツ拡張 Mod</b></a>
+<a data-slot="セーブ 03 をロード" href="burger/index.html"><span>次のセーブ · 03</span><b>『宇宙バーガー』</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷 碩</span><span><a href="#top">ページ上部へ</a><a href="../index.html">すべてのセーブ</a><a data-slot="履歴書を開く" href="../resume.html">履歴書</a></span></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

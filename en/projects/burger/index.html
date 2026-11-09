@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html data-root="../../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Cosmic Burger · Yin Shuo Portfolio</title>
+<meta content="Cosmic Burger, a vertical incremental management mini-game for Douyin: grill patties, upgrade, move shops, launch to prestige. Yin Shuo handled design, balancing and development alone, tuning the pacing with a run simulator." name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../../img/px/favicon.png" rel="icon"/>
+<link href="../../../css/shell.css" rel="stylesheet"/>
+<link href="../../../css/site.css" rel="stylesheet"/>
+<link href="../../../css/burger.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../../fonts/fusion-pixel-en.woff2") format("woff2");font-display:swap}:root{--body-font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;--px-font:"Fusion Pixel",ui-monospace,Consolas,monospace}</style><link href="../../../projects/burger/index.html" hreflang="zh-Hans" rel="alternate"/><link href="../../../zh-hant/projects/burger/index.html" hreflang="zh-Hant" rel="alternate"/><link href="../../../en/projects/burger/index.html" hreflang="en" rel="alternate"/><link href="../../../ja/projects/burger/index.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="Back to title" href="../../index.html"><img alt="" src="../../../img/px/avatar.png"/>Yin Shuo<small>Game Designer</small></a>
+<nav aria-label="Main navigation" class="hud-nav">
+<a aria-current="page" data-slot="Select Save" href="../../index.html">Saves</a>
+<a data-slot="Open player profile" href="../../about.html">About</a>
+<a class="hide-s" data-slot="Open resume" href="../../resume.html">Resume</a>
+</nav>
+<div class="hud-coins" title="Hit save blocks to collect coins"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>Cosmic Burger</b>
+<nav><a class="hide-s" href="#loop">Core loop</a> <a class="hide-s" href="#shots">Screenshots</a> <a class="hide-s" href="#design">Design</a> <a class="hide-s" href="#iterate">Iteration</a> <a href="#pacing">Pacing</a> <a class="hide-s" href="#dev">Development</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">Save 03 · Playable · Solo project · 2026.09 – 10</span>
+<h1 class="mega on-sky bg-title">Cosmic <span class="burger">Burger</span></h1>
+<p class="feature">A vertical idle management mini-game. Players drag a spatula with a finger to grill patties for money, upgrade tools and recipes at the Training Center, and <b>grow a roadside burger stand all the way into space</b>.</p>
+<ul class="bg-tags">
+<li>Systems design</li><li>Balancing</li><li>Unity 2022.3 · C#</li><li>WebGL · Douyin TTSDK</li><li>Pixel art pipeline</li>
+</ul>
+<p class="bg-status">Status: <b>development complete</b>. The software copyright application has been filed; once it is granted, the game will be registered and released as a Douyin mini-game.</p>
+<div class="acts">
+<a class="px-btn red" href="#shots"><span class="px-ico pad"></span>See screenshots</a>
+<button aria-label="Hit the save block" class="px-block" data-coin="burger-1"></button>
+</div>
+<div aria-hidden="true" class="stall" data-r="">
+<span class="sign">Cosmic Burger · open for business</span>
+<div class="awning"></div>
+<div class="win">
+<div class="phone"><img alt="" src="../../../projects/burger/img/02_home.webp"/></div>
+<div class="phone"><img alt="" src="../../../projects/burger/img/12b_run_items.webp"/></div>
+<div class="phone"><img alt="" src="../../../projects/burger/img/21_space_run.webp"/></div>
+</div>
+<div class="counter"></div>
+</div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats five">
+<div data-r=""><span>Lines of C#</span><b>7300</b><span>across 31 scripts, design and development by one person</span></div>
+<div data-r="2"><span>Upgrades</span><b>63</b><span>in two sets, Earth and Interstellar</span></div>
+<div data-r="3"><span>Shop chapters</span><b>9</b><span>each with its own pixel scene</span></div>
+<div data-r="4"><span>First launch</span><b>49′</b><span>simulator result, no ads watched</span></div>
+<div data-r="5"><span>Achievements</span><b>39</b><span>plus 11 kinds of daily tasks</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="loop">
+<div class="wrap">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">Core loop</h2>
+<p class="feature" data-r="">A round of business lasts about 15 seconds, short enough to play between videos. <b>Upgrades and moving shops provide mid-term goals; the “launch” prestige provides the long-term goal</b>.</p>
+<ol class="lvmap" data-r="">
+<li><span class="node">1</span><div class="card"><div class="k">One round · 15 s or more</div><div class="t">Grill patties</div><p class="d">Drag the spatula over patties to cook them; cooked patties are served automatically. Flip them, dodge flames, grab items, shoo the cat.</p></div></li>
+<li><span class="node">2</span><div class="card"><div class="k">Results</div><div class="t">Clear levels for stars</div><p class="d">Level N · 1–3 star targets, worth 10% / 20% / 35% bonus income by stars.</p></div></li>
+<li><span class="node">3</span><div class="card"><div class="k">Spend</div><div class="t">Training Center</div><p class="d">Heat, range, price, kitchen helpers… listed by category.</p></div></li>
+<li><span class="node">4</span><div class="card"><div class="k">New chapter</div><div class="t">Move shop</div><p class="d">Roadside stand → food street → shopping mall: a new scene and double income.</p></div></li>
+<li class="boss"><span class="node">★</span><div class="card"><div class="k">Prestige</div><div class="t">Launch</div><p class="d">Reset Earth progress for stars (permanent bonuses) and unlock the interstellar map: the Moon, Mars, Jupiter's rings and the galactic center.</p></div></li>
+</ol>
+<p class="loopback" data-r="">After a launch you start over at the roadside stand, but with the star bonus each run is faster: 49 minutes for the first, 23 for the second and 11 for the third.</p>
+</div>
+</section>
+<section class="chapter" id="shots">
+<div class="wrap">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">Screenshots</h2>
+<div class="rail-wrap" data-r="">
+<div aria-label="Screenshots; swipe left and right" class="rail" id="rail" tabindex="0">
+<figure><div class="phone"><img alt="Home: level card, roadside stand scene, open-for-business button, Training Center and achievements" loading="lazy" src="../../../projects/burger/img/02_home.webp"/></div><figcaption><b>Home</b>Level card → shop scene → open for business → Training Center → achievements</figcaption></figure>
+<figure><div class="phone"><img alt="In business: flame trail, helpers, items and Fever Time" loading="lazy" src="../../../projects/burger/img/12b_run_items.webp"/></div><figcaption><b>In business</b>The blowtorch's flame trail, helpers, items and Fever Time</figcaption></figure>
+<figure><div class="phone"><img alt="The solar cooker's sunlight burst" loading="lazy" src="../../../projects/burger/img/12c_run_burst.webp"/></div><figcaption><b>Tool skill</b>The solar cooker bursts with sunlight every 6 seconds</figcaption></figure>
+<figure><div class="phone"><img alt="Results screen: level 1, just short, zero stars" loading="lazy" src="../../../projects/burger/img/06_result.webp"/></div><figcaption><b>Results</b>Missing the first star suggests upgrading at the Training Center and trying again</figcaption></figure>
+<figure><div class="phone"><img alt="Training Center upgrade list" loading="lazy" src="../../../projects/burger/img/02b_shop.webp"/></div><figcaption><b>Training Center</b>A catalog-style upgrade list instead of a skill tree</figcaption></figure>
+<figure><div class="phone"><img alt="Pause screen" loading="lazy" src="../../../projects/burger/img/04b_pause.webp"/></div><figcaption><b>Pause</b>Keep going, or close early and return to the shop</figcaption></figure>
+<figure><div class="phone"><img alt="Shopping mall shop" loading="lazy" src="../../../projects/burger/img/11_home_late.webp"/></div><figcaption><b>Chapter 3 · Shopping mall</b>Each move brings a new scene</figcaption></figure>
+<figure><div class="phone"><img alt="Interstellar home" loading="lazy" src="../../../projects/burger/img/19_space_home.webp"/></div><figcaption><b>Interstellar</b>The second map, after the launch</figcaption></figure>
+<figure><div class="phone"><img alt="Interstellar business: black hole and planet patties" loading="lazy" src="../../../projects/burger/img/21_space_run.webp"/></div><figcaption><b>Interstellar business</b>Black holes pull in nearby patties, and planet patties are worth more</figcaption></figure>
+<figure><div class="phone"><img alt="Interstellar tech shop" loading="lazy" src="../../../projects/burger/img/16_star_shop.webp"/></div><figcaption><b>Interstellar tech</b>Spend stars from launches on permanent bonuses</figcaption></figure>
+<figure><div class="phone"><img alt="Achievement list" loading="lazy" src="../../../projects/burger/img/27c_achievements.webp"/></div><figcaption><b>Achievements</b>Each one adds +1% income permanently</figcaption></figure>
+<figure><div class="phone"><img alt="Journey map in the intro" loading="lazy" src="../../../projects/burger/img/01a_intro.webp"/></div><figcaption><b>Intro</b>On first launch the whole journey is shown, so players know where it ends</figcaption></figure>
+</div>
+<div class="rail-btns">
+<span>Screenshots come from automated captures of the PC build (phone portrait ratio), 12 in total.</span>
+<div><button aria-label="Previous screenshots" class="px-btn sm paper" data-dir="-1" type="button">◀</button><button aria-label="Next screenshots" class="px-btn sm paper" data-dir="1" type="button">▶</button></div>
+</div>
+</div>
+</div>
+</section>
+<section class="chapter" id="design">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">Design</h2>
+<p class="feature" data-r="">The two most common problems in management games are <b>“why should I keep playing?” and “late game is just bigger numbers”</b>. The designs below target both.</p>
+<ul class="rules bg" data-r="">
+<li><i>Goals</i><b>Three layers of goals</b>
+<ul>
+<li><strong>Short term</strong>: each round is a level with 1–3 stars. Targets are based on burgers sold in the player's recent rounds × the current price, so upgrading the price raises the target, while upgrading heat and range makes stars easier.</li>
+<li><strong>Mid term</strong>: the Training Center button always shows the “next goal” and a progress bar; moving shops means entering the next chapter.</li>
+<li><strong>Long term</strong>: launch prestige, the interstellar map and 39 achievements.</li>
+</ul>
+<p>Every 5th level is a <strong>challenge level</strong> with double rewards, rotating through five rule sets: golden patty bonanza, patty frenzy, flames everywhere, slippery showdown and time rush.</p>
+</li>
+<li><i>Growth</i><b>A skill for every tool</b>
+<p style="margin-top:0">In the earliest version, new tools only increased range, and testers soon got bored. Later every new tool gained a visible skill while keeping the skills of the tools before it:</p>
+<ul>
+<li><strong>Double spatula</strong>: a mirrored second spatula grills at the symmetric spot on the griddle</li>
+<li><strong>Blowtorch</strong>: the spatula leaves a flame trail that keeps cooking patties</li>
+<li><strong>Solar cooker</strong>: a burst of sunlight every 6 seconds cooks every patty 40% at once</li>
+</ul>
+</li>
+<li><i>Controls</i><b>Mechanics that add skill</b>
+<ul>
+<li><strong>Flip</strong>: a quick swipe between 30% and 80% cooked flips the patty for extra money</li>
+<li><strong>Flames</strong>: telegraphed before they appear; touching one stops your heat for 1.2 s, but they also help cook</li>
+<li><strong>Items</strong>: extra time, magnet, double price, chili stir-fry; you have to move over to grab them</li>
+<li><strong>Slippery patties</strong>: dodge the spatula, and are worth more when caught</li>
+<li><strong>Cat</strong>: steals any patty left uncooked for 6 s; touch the cat to scare it away</li>
+<li><strong>Fever Time</strong>: a full combo doubles price and serving speed</li>
+</ul>
+</li>
+<li><i>Onboarding &amp; monetization</i><b>Onboarding and monetization</b>
+<ul>
+<li><strong>Grand opening</strong>: ×3 income for the first 3 rounds, so the first upgrade is affordable almost immediately</li>
+<li><strong>Guaranteed golden patty in round 4</strong>: an early surprise</li>
+<li><strong>A one-line tip the first time a mechanic appears</strong>, instead of a long tutorial</li>
+<li><strong>Rewarded ads only</strong>: watch an ad for extra time, double income or a free upgrade; no in-app purchases</li>
+<li><strong>8 tracked key events</strong>: end of business, shop move, launch, achievements and more, to find where players drop off after release</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="iterate">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">Iterating on playtest feedback</h2>
+<p class="feature" data-r="">Friends playtested on iPhone, and <b>every round of feedback led to a revision</b>. Listed in chronological order below.</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>Playtest feedback</th><th>Change</th></tr>
+<tr><td class="q">The game area was too small on screen, with too much empty space at the top</td><td><span class="tg ui">UI</span>Lay out the top bar from the position of Douyin's capsule button in the top right; the griddle height adapts between 720 and 880 to the screen</td></tr>
+<tr><td class="q">The interstellar home background showed only a small patch in the bottom-left corner on iPhone</td><td><span class="tg tech">Tech</span>iOS WebGL requires power-of-two sizes for tiled textures, so the texture became 128 px</td></tr>
+<tr><td class="q">The numbers were too big and tiring to read</td><td><span class="tg num">Balance</span>Raised all prices and multipliers to the power of 0.7, then retuned to the original pacing with the simulator; numbers now display as 10K / 100M units; old saves convert automatically on load</td></tr>
+<tr><td class="q">It got boring after a while; tools only changed in range</td><td><span class="tg play">Gameplay</span>Tool skills, plus flipping, flames, items, slippery patties and Fever Time</td></tr>
+<tr><td class="q">The opening was not engaging enough, yet overall progress felt a bit fast</td><td><span class="tg num">Balance</span>Grand opening and the round-4 golden patty speed up the start, while mid- and late-game prices go up across the board</td></tr>
+<tr><td class="q">Goals were unclear, there were no levels, and motivation was low</td><td><span class="tg sys">Systems</span>Levels with 1–3 stars, challenge levels and a “next goal” progress bar on the home screen</td></tr>
+<tr><td class="q">Players wanted to pause mid-round or quit early</td><td><span class="tg ux">UX</span>A pause button; closing early keeps the money earned but does not clear the level; the game auto-pauses in the background</td></tr>
+<tr><td class="q">The home screen was cluttered and the skill tree was hard to read</td><td><span class="tg ui">UI</span>Reordered the home screen as “open for business → Training Center → achievements”; turned the skill tree into a list grouped by category; drew 9 new shop scenes</td></tr>
+<tr><td class="q">The spatula at max level was huge and nearly filled the screen</td><td><span class="tg num">Balance</span>It used to multiply +10% per level, giving a max radius of about 290 (on a 450-wide griddle). Now each level adds a flat 6% and tool bonuses are smaller, for about 100 at max; the double spatula gained cooking speed to compensate, and the simulator confirmed pacing slowed by only 5 minutes</td></tr>
+</table>
+</div>
+</div>
+</section>
+<section class="chapter" id="pacing">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">Pacing: tuned with a simulator, not by feel</h2>
+<p class="feature" data-r="">I wrote a bot player in the Unity editor that runs the game's own logic code to play automatically: it chases patties, grabs items, dodges flames and buys upgrades by value. <b>Every price change is run through it first</b> to check that the milestones below land within their target ranges.</p>
+<div class="run" data-r="">
+<h3>First run: new player, no ads</h3>
+<div aria-label="First-run progress: move to food street at 26:55, double spatula at 29:48, move to the mall at 42:37, blowtorch at 43:18, first launch at 49:14" class="track" role="img">
+<div class="fill"></div>
+<span class="mk st dn" style="left:0"><i></i><span>0:00<small>Roadside stand opens</small></span></span>
+<span class="mk up" style="left:54.7%"><i></i><span>26:55<small>Move to food street</small></span></span>
+<span class="mk dn" style="left:60.5%"><i></i><span>29:48<small>Double spatula</small></span></span>
+<span class="mk up" style="left:86.6%"><i></i><span style="transform:translateX(-85%)">42:37<small>Move to the mall</small></span></span>
+<span class="mk dn" style="left:87.9%"><i></i><span>43:18<small>Blowtorch</small></span></span>
+<span class="mk end up" style="left:100%"><i></i><span>49:14<small>First launch</small></span></span>
+</div>
+<p class="legend">The first launch at 49:14 earns 14 stars, at around level 53.</p>
+</div>
+<div class="rounds" data-r="">
+<div class="run" style="margin-top:0">
+<h3>Pacing after that</h3>
+<div class="bars"><span>Earth run 1</span><span class="bar"><i style="--v:100%;--c:var(--red)"></i></span><span>49:14 · 14 ★</span> <span>Earth run 2</span><span class="bar"><i style="--v:46%;--c:var(--gold-d)"></i></span><span>22:40 · 37 ★</span> <span>Earth run 3</span><span class="bar"><i style="--v:23%;--c:var(--grass)"></i></span><span>11:28 · 69 ★</span></div>
+<p class="legend" style="margin-top:16px;font-size:14px;color:var(--mute)">Interstellar completion time: 1:28:22.</p>
+</div>
+<p class="why"><strong>Design intent</strong>: the first run is slower so players see every shop; after that, the star bonus makes each run faster, so the payoff of prestige is clearly felt.</p>
+</div>
+</div>
+</section>
+<section class="chapter" id="dev">
+<div class="narrow">
+<p class="kicker" data-r="">06</p>
+<h2 class="h-sec" data-r="">Development</h2>
+<ul class="rules bg" data-r="">
+<li><i>Structure</i><b>Code structure</b>
+<p style="margin-top:0">Game logic and presentation are fully separated, so the same logic runs on phones and can also be driven by the simulator for automated runs.</p>
+<pre class="term">Scripts/
+  Core/      <span class="c">pure logic: config, save data, formulas, round simulation</span>
+    GameConfig.cs   <span class="c">all numbers and upgrades</span>
+    GameLogic.cs    <span class="c">stat derivation, level targets, results</span>
+    Run.cs          <span class="c">one round: patties, flames, cat, items</span>
+  Platform/  <span class="c">Douyin SDK, ads, saves, audio, haptics</span>
+  UI/        <span class="c">home, business screen, Training Center, pop-ups</span>
+Editor/
+  PacingSim.cs      <span class="c">pacing simulator</span>
+  BuildTools.cs     <span class="c">command-line builds</span></pre>
+</li>
+<li><i>Testing</i><b>Automated checks</b>
+<p style="margin-top:0">Run after every change, with no manual clicking:</p>
+<ul>
+<li><strong>Command-line builds</strong>: the Douyin WebGL package (about 0.6 MB compressed) and the PC build</li>
+<li><strong>Automated screenshots</strong>: the program walks through every screen and outputs 40 screenshots to check layout</li>
+<li><strong>Long-run test</strong>: plays automatically for 4 minutes, logging the slowest frame and memory</li>
+<li><strong>Pacing simulation</strong>: confirms that changes do not break progression</li>
+</ul>
+</li>
+<li><i>Platform</i><b>Douyin platform integration</b>
+<ul>
+<li>Rewarded ads, local saves (with backup), analytics events, haptics, sidebar return rewards</li>
+<li>Safe-area layout from the capsule button position, simulated by parameters on PC</li>
+<li>Mute, save and auto-pause when the app goes to the background</li>
+<li>Saves only append new upgrades at the end, and changes in number scale come with migrations, so existing players keep their progress</li>
+</ul>
+</li>
+<li><i>Debugging</i><b>Issues tracked down</b>
+<ul>
+<li><strong>Stutter at round start</strong>: each round forced a canvas refresh and redrew the griddle texture. Removed the forced refresh and cached the griddle and cursor textures by size</li>
+<li><strong>The flame trail turned into a big blob</strong>: capped the trail width and stopped adding flame points while the spatula is still</li>
+<li><strong>Items were auto-collected by the big spatula</strong>: gave pickup distance its own cap, so players have to move over to grab them</li>
+<li><strong>Textures showed only one corner on iOS</strong>: tiled textures now use power-of-two sizes</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="art">
+<div class="narrow">
+<p class="kicker" data-r="">07</p>
+<h2 class="h-sec" data-r="">Art pipeline</h2>
+<p class="feature" data-r="">A consistent pixel style: <b>one pixel equals 3 units on the canvas</b>, and the 12 px pixel font is only used at multiples of 12 to stay crisp.</p>
+<figure class="art-fig" data-r="">
+<img alt="9 pixel shop scenes: 4 on Earth, 5 interstellar" loading="lazy" src="../../../projects/burger/img/scenes.webp"/>
+<figcaption>9 shop scenes: generated with Scenario first, then normalized by a Python script to 256×288 and 40 colors, about 40 KB each.</figcaption>
+</figure>
+<div class="art-row">
+<figure class="art-fig" data-r="">
+<img alt="16×16 pixel icons" loading="lazy" src="../../../projects/burger/img/icons.webp"/>
+<figcaption>16×16 icons (tools, aliens, items, the cat) were drawn pixel by pixel by a Python script.</figcaption>
+</figure>
+<ul class="rules bg" data-r="" style="grid-template-columns:1fr;margin-top:28px">
+<li><i>Audio &amp; fonts</i><b>Sound and type</b>
+<ul>
+<li>All 29 sound effects are synthesized in code (sizzling patties, crackling flames, the serving ding), with no external audio assets</li>
+<li>The Chinese pixel font is subset to the characters actually used in the game, so only those are packaged</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="chapter" id="ai">
+<div class="narrow">
+<p class="kicker" data-r="">08</p>
+<h2 class="h-sec" data-r="">About AI tools</h2>
+<div class="prose" data-r="">
+<p class="note">AI tools were used in development: Claude Code for writing code and debugging, and Scenario for the shop scene images. My part was the gameplay and systems design, balance targets and tuning decisions, organizing on-device playtests and turning feedback into revision requirements, signing off each version, and keeping the overall art style consistent.</p>
+</div>
+</div>
+</section>
+<section class="info light">
+<div class="narrow">
+<h2 class="h-sec" data-r="">Save info</h2>
+<div class="spec" data-r="">
+<div><h3>Role</h3><div class="c">Solo project: systems, balancing, development</div></div>
+<div><h3>Period</h3><div class="c">2026.09 – 10</div></div>
+<div><h3>Engine</h3><div class="c">Unity 2022.3 · C#</div></div>
+<div><h3>Platform</h3><div class="c">Douyin mini-game (WebGL · TTSDK), portrait</div></div>
+<div><h3>Status</h3><div class="c">Development complete, software copyright pending</div></div>
+<div><h3>Font</h3><div class="c">Fusion Pixel Font, © 2022 TakWolf, SIL Open Font License 1.1</div></div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="Load save 02" href="../tidewheel.html"><span>Previous save · 02</span><b>Tidewheel</b></a>
+<a data-slot="Load save 04" href="../naruto.html"><span>Next save · 04</span><b>Naruto Mobile: Progression &amp; Economy</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 Yin Shuo</span><span><a href="#top">Back to top</a><a href="../../index.html">All saves</a><a data-slot="Open resume" href="../../resume.html">Resume</a></span></div></div>
+</footer>
+<script src="../../js/site.js"></script>
+<script>
+// 截图轨道：左右按钮一次翻一屏
+(function(){
+  var rail = document.getElementById('rail');
+  document.querySelectorAll('.rail-btns [data-dir]').forEach(function(b){
+    b.addEventListener('click', function(){
+      rail.scrollBy({left: +b.getAttribute('data-dir') * rail.clientWidth * 0.8, behavior: 'smooth'});
+      window.ysSfx && window.ysSfx('select');
+    });
+  });
+})();
+</script>
+</body>
+</html>

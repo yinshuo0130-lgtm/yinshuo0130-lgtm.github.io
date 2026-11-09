@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>殷碩 · 遊戲策劃作品集</title>
+<meta content="殷碩的遊戲策劃作品集：黑夜君臨大型 Mod、game jam 作品《Tidewheel》、抖音小遊戲《宇宙漢堡》，以及火影手遊、酒館戰棋兩份系統拆解。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../img/px/favicon.png" rel="icon"/>
+<link href="../css/shell.css" rel="stylesheet"/>
+<link href="../css/site.css" rel="stylesheet"/>
+<link href="../css/home.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<link as="image" fetchpriority="high" href="../img/mod/cover-cards.webp" rel="preload"/>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../fonts/fusion-pixel-zh-hant.woff2") format("woff2");font-display:swap}:root{--body-font:"PingFang TC","Microsoft JhengHei","Noto Sans TC","Heiti TC",system-ui,sans-serif;--px-font:"Fusion Pixel","PingFang TC","Microsoft JhengHei",monospace}</style><link href="../index.html" hreflang="zh-Hans" rel="alternate"/><link href="../zh-hant/index.html" hreflang="zh-Hant" rel="alternate"/><link href="../en/index.html" hreflang="en" rel="alternate"/><link href="../ja/index.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="回到標題" href="index.html"><img alt="" src="../img/px/avatar.png"/>殷碩<small>遊戲策劃</small></a>
+<nav aria-label="主導航" class="hud-nav">
+<a aria-current="page" href="index.html">存檔</a>
+<a data-slot="開啟玩家檔案" data-tip="遊戲經歷、影視經歷、履歷與技能。" href="about.html">關於我</a>
+<a class="hide-s" data-slot="開啟簡歷" href="resume.html">簡歷</a>
+</nav>
+<div class="hud-coins" title="頂方塊可以收集硬幣"><i></i><b>×00</b></div>
+</div>
+</header>
+<main>
+<!-- ============ 选关舞台：可以操作的小关卡 ============ -->
+<section aria-label="選擇存檔" class="stg" id="stg">
+<div aria-label="操作說明" class="stg-help">
+<div class="bd">
+<p class="hd">怎麼玩<small>HOW TO PLAY</small></p>
+<span aria-hidden="true" class="bang">!</span>
+<div class="row"><span class="keys"><kbd class="k-l">←</kbd><kbd class="k-r">→</kbd></span>移動</div>
+<div class="row"><span class="keys"><kbd class="k-sp">空格</kbd></span>跳起頂方塊</div>
+<div class="row"><span class="keys"><kbd>↓</kbd></span>在門前進門</div>
+<div class="row or"><span class="keys"><span class="mouse"></span></span>點方塊直接進</div>
+</div>
+</div>
+<div class="stg-top">
+<p class="eyebrow on-sky-s">殷碩 · 遊戲策劃</p>
+<h1 class="mega on-sky">選擇存檔</h1>
+</div>
+<div aria-live="polite" class="board">
+<div class="board-scr"><span class="badge"></span><div class="scan"></div></div>
+<div class="board-cap">
+<span class="kicker"></span>
+<h2></h2>
+<p></p>
+<div class="board-act"><button class="px-btn sm go" type="button">讀取存檔</button><small>跳起來頂方塊也能進入</small></div>
+</div>
+</div>
+<div class="sblocks"></div>
+<div class="px-hills"></div>
+<button aria-label="進門：關於我" class="door" type="button"><span class="lbl"><i>↓</i> 關於我</span></button>
+<div aria-hidden="true" class="hero-p"><span class="say">↓ 進門</span></div>
+<div class="px-ground"></div>
+<div aria-hidden="true" class="touch">
+<div><button data-k="l" type="button">◀</button><button data-k="r" type="button">▶</button></div>
+<div><button class="a" data-k="j" type="button">A</button></div>
+</div>
+<noscript>
+<p style="position:absolute;left:24px;bottom:120px;z-index:9;background:#fff;padding:12px"><a href="projects/nightreign-mod.html">黑夜君臨 Mod</a> · <a href="projects/tidewheel.html">Tidewheel</a> · <a href="projects/burger/index.html">宇宙漢堡</a> · <a href="projects/naruto.html">火影拆解</a> · <a href="projects/hearthstone.html">酒館戰棋拆解</a> · <a href="about.html">關於我</a></p>
+</noscript>
+</section>
+<!-- ============ 下半场景：从黄昏走到夜里 ============ -->
+<div class="world">
+<div aria-hidden="true" class="sun"></div>
+<div aria-hidden="true" class="moon"></div>
+<!-- 玩家状态 -->
+<section class="wsec" id="status">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">STATUS</span><h2 class="h-sec">玩家狀態</h2></div>
+<div class="win status" data-r="">
+<div class="who">
+<img alt="殷碩的畫素頭像" src="../img/px/avatar.png"/>
+<b>殷碩</b>
+<small>職業：遊戲策劃</small>
+<small>復旦大學 · 碩士在讀</small>
+</div>
+<div>
+<div class="dlg" id="dlg">先量化，後實現。<b>獨立製作</b>了《黑夜君臨》大型 Mod 和抖音小遊戲《宇宙漢堡》，在 game jam 擔任<b>主策劃</b>，寫過火影手遊、酒館戰棋兩份<b>系統拆解</b>。《宇宙漢堡》的節奏和《Tidewheel》的操作視窗，都是<b>先用腳本模擬，再按資料調參</b>。<i class="more-ind"></i></div>
+<div class="attrs">
+<div class="attr"><span>遊戲時長</span><span class="lead"></span><span class="num" data-n="4600" data-suf="h+">4600h+</span></div>
+<div class="attr"><span>白金</span><span class="lead"></span><span class="num" data-n="16" data-suf=" 款">16 款</span></div>
+<div class="attr"><span>Mod 實機迭代</span><span class="lead"></span><span class="num" data-n="80" data-suf="+ 輪">80+ 輪</span></div>
+<div class="attr"><span>系統拆解</span><span class="lead"></span><span class="num" data-n="56" data-suf=" 頁">56 頁</span></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="island"></div>
+</div>
+</section>
+<!-- 读取存档 -->
+<section class="wsec" id="saves">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">LOAD</span><h2 class="h-sec">讀取存檔</h2></div>
+<div class="win saves" data-r="">
+<div class="saves-head"><span>選擇一個存檔繼續</span><span>已用存檔位 5 / 6</span></div>
+<a class="slot" data-slot="讀取存檔 01" data-tip="同一位夜王的兩次挑戰，前兩天遭遇的敵人可以不同。" href="projects/nightreign-mod.html">
+<span class="no">01</span>
+<span class="th"><img alt="" loading="lazy" src="../img/mod/cover-cards.webp"/></span>
+<div><h4>黑夜君臨 大型內容擴充套件 Mod</h4><div class="meta"><i>可玩作品</i>獨立製作：系統、關卡、演出 · 2026.08 至今 · 測試版已釋出，B 站播放近 6000</div></div>
+<span class="key"><b>7</b>新增夜王，每位 2 套前兩夜組合</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="讀取存檔 02" data-tip="召回彈射的有效視窗由約 0.5 秒放寬至約 1.6 秒。" href="projects/tidewheel.html">
+<span class="no">02</span>
+<span class="th"><img alt="" loading="lazy" src="../img/tidewheel/beach.webp"/></span>
+<div><h4>發條人偶 Tidewheel</h4><div class="meta"><i>可玩作品</i>策劃（兼部分程式）· 4 人團隊 · thatgamejam #02 · itch.io 可試玩</div></div>
+<span class="key"><b>1.6 s</b>召回彈射視窗，由約 0.5 秒放寬</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="讀取存檔 03" data-tip="首次轉生約 49 分鐘；獲得星星加成後，第二輪縮短至 23 分鐘。" href="projects/burger/index.html">
+<span class="no">03</span>
+<span class="th phones"><img alt="" loading="lazy" src="../img/burger/02_home.webp"/><img alt="" loading="lazy" src="../img/burger/12c_run_burst.webp"/><img alt="" loading="lazy" src="../img/burger/19_space_home.webp"/></span>
+<div><h4>宇宙漢堡</h4><div class="meta"><i>可玩作品</i>獨立製作：系統、數值、開發 · 2026.09 – 10 · 軟著申請中</div></div>
+<span class="key"><b>49′</b>首次轉生用時（模擬器結果）</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="讀取存檔 04" data-tip="高階招募拿滿一名 S 忍約需 300 抽，是點券直售的 25 倍。" href="projects/naruto.html">
+<span class="no">04</span>
+<span class="th"><img alt="" loading="lazy" src="../img/naruto/main.webp" style="object-position:30% center"/></span>
+<div><h4>火影忍者手遊 成長與經濟系統</h4><div class="meta"><i>系統拆解</i>MDA · 數值推算 · 產品對比 · 36 頁</div></div>
+<span class="key"><b>25×</b>高階招募與點券直售的價差</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" data-slot="讀取存檔 05" data-tip="6 星隨從只有 7 份，一次三連即拿走 43%。" href="projects/hearthstone.html">
+<span class="no">05</span>
+<span class="th"><img alt="" loading="lazy" src="../img/hs/main.webp"/></span>
+<div><h4>酒館戰棋 經濟與對局節奏</h4><div class="meta"><i>系統拆解</i>數值推算 · AB 測試設計 · 20 頁 · 501 小時</div></div>
+<span class="key"><b>43%</b>6 星隨從一次三連拿走的份數</span>
+<span class="go px-btn sm">LOAD</span>
+</a>
+<a class="slot" href="#goal" style="opacity:.7">
+<span class="no">06</span>
+<span class="th" style="display:grid;place-items:center;font-family:var(--px-font);font-size:12px;color:var(--gold)">NEW GAME</span>
+<div><h4>空存檔</h4><div class="meta">此存檔位留給下一個專案。</div></div>
+<span class="key"></span>
+<span class="go px-btn sm paper">聯絡</span>
+</a>
+<div class="saves-foot"><span>↑↓ 選擇 · Enter 讀取</span><a data-slot="開啟簡歷" href="resume.html">檢視簡歷 ▶</a></div>
+</div>
+<div aria-hidden="true" class="island"></div>
+</div>
+</section>
+<!-- 玩家档案：三扇门 -->
+<section class="wsec" id="profile">
+<div class="wrap">
+<div class="wtitle" data-r=""><span class="kicker">PLAYER</span><h2 class="h-sec">玩家檔案</h2></div>
+<div class="doors">
+<a class="wdoor" data-r="" data-slot="開啟玩家檔案" data-tip="4600 小時以上的遊戲時長，35 款遊戲，16 款白金。" href="about.html#games"><span class="d"></span> <span class="sign"><b><span class="px-ico pad"></span> 遊戲經歷</b><small>35 款遊戲 · 封面牆 · 按平臺篩選</small></span></a>
+<a class="wdoor" data-r="2" data-slot="開啟玩家檔案" data-tip="動畫、特攝、電影與劇集 30 多部，外加一張 BGM 播放列表。" href="about.html#films"><span class="d"></span> <span class="sign"><b><span class="px-ico film"></span> 影視經歷</b><small>動畫 · 特攝 · 電影 · 音樂</small></span></a>
+<a class="wdoor" data-r="3" data-slot="開啟玩家檔案" data-tip="復旦大學碩士在讀，三年 GIS 與遙感資料分析經歷。" href="about.html#cv"><span class="d"></span> <span class="sign"><b><span class="px-ico map"></span> 履歷與技能</b><small>教育、實習、技能</small></span></a>
+</div>
+<div aria-hidden="true" class="island doors-ground"></div>
+</div>
+</section>
+<!-- 终点 -->
+<section class="wsec" id="goal">
+<div class="wrap goal">
+<div class="win clear" data-r="">
+<div aria-label="STAGE CLEAR!" class="big"></div>
+<p>感謝瀏覽。正在尋找遊戲策劃方向的實習與工作機會。</p>
+<div class="score"><span>收集硬幣<b id="goal-coins">0</b></span> <span>存檔數<b>5</b></span> <span>本次用時<b id="goal-time">00:00</b></span></div>
+<div class="row">
+<a class="px-btn" href="mailto:13283750773@163.com"><span class="px-ico mail"></span>傳送郵件</a>
+<a class="px-btn paper" data-slot="開啟簡歷" href="resume.html"><span class="px-ico pdf"></span>簡歷</a>
+<a class="px-btn blue" href="#top" id="again">再玩一次</a>
+</div>
+</div>
+<div aria-hidden="true" class="tower"></div>
+</div>
+</section>
+</div>
+</main>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷碩 · 試試 ↑↑↓↓←→←→BA</span><span><a href="#top">回到頂部</a><a href="about.html">關於我</a><a data-slot="開啟簡歷" href="resume.html">簡歷</a></span></div></div>
+</footer>
+<script src="js/site.js"></script>
+<script src="js/stage.js"></script>
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sfx = window.ysSfx || function(){};
+
+  // 对话框逐字出现，点一下直接显示全文
+  var dlg = document.getElementById('dlg');
+  var full = dlg.innerHTML, tokens = full.match(/<[^>]+>|[^<]/g) || [];
+  var typed = reduce, n = 0, timer = null;
+  function paint(){ dlg.innerHTML = tokens.slice(0, n).join('') + '<span class="ghost">' + tokens.slice(n).join('').replace(/<i class="more-ind"><\/i>/, '') + '</span>'; }
+  function finish(){ clearInterval(timer); n = tokens.length; dlg.innerHTML = full; typed = true; }
+  function type(){
+    if (typed) return; typed = true;
+    timer = setInterval(function(){
+      n++; while (n < tokens.length && tokens[n - 1].charAt(0) === '<') n++;
+      if (n >= tokens.length) finish(); else paint();
+    }, 28);
+  }
+  if (!reduce){ n = 0; paint(); typed = false; }
+  dlg.addEventListener('click', finish);
+
+  // 数字从 0 滚上去
+  function count(el){
+    var to = +el.dataset.n, suf = el.dataset.suf || '', t0 = performance.now();
+    (function f(t){ var k = Math.min(1, (t - t0) / 900); el.textContent = Math.round(to * k) + suf; if (k < 1) requestAnimationFrame(f); })(t0);
+  }
+
+  // STAGE CLEAR 逐字跳
+  var big = document.querySelector('.clear .big');
+  'STAGE CLEAR!'.split('').forEach(function(ch, i){ var s = document.createElement('span'); s.style.setProperty('--i', i); s.textContent = ch === ' ' ? ' ' : ch; big.appendChild(s); });
+
+  var t0 = Date.now();
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var el = en.target;
+      if (el.classList.contains('status')){ type(); if (!reduce) el.querySelectorAll('.num').forEach(count); }
+      if (el.classList.contains('clear')){
+        var coins = 0; try { coins = Object.keys(JSON.parse(localStorage.getItem('ys-coins')) || {}).length; } catch(e){}
+        document.getElementById('goal-coins').textContent = coins;
+        var s = Math.round((Date.now() - t0) / 1000);
+        document.getElementById('goal-time').textContent = ('0' + Math.floor(s / 60)).slice(-2) + ':' + ('0' + s % 60).slice(-2);
+        sfx('clear');
+      }
+      io.unobserve(el);
+    });
+  }, {threshold:.35});
+  io.observe(document.querySelector('.win.status'));
+  io.observe(document.querySelector('.win.clear'));
+
+  // 存档菜单：悬停有选择音，↑↓ 在存档之间移动
+  var slots = [].slice.call(document.querySelectorAll('.slot'));
+  slots.forEach(function(a, i){
+    a.addEventListener('mouseenter', function(){ sfx('select'); });
+    a.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+        e.preventDefault(); e.stopPropagation();
+        var j = (i + (e.key === 'ArrowDown' ? 1 : -1) + slots.length) % slots.length;
+        slots[j].focus(); sfx('select');
+      }
+    });
+  });
+  document.querySelectorAll('.wdoor').forEach(function(d){ d.addEventListener('mouseenter', function(){ sfx('door'); }); });
+})();
+</script>
+</body>
+</html>

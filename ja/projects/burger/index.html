@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html data-root="../../" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>『宇宙バーガー』 · 殷碩ポートフォリオ</title>
+<meta content="Douyin 向け縦画面の放置系経営ミニゲーム『宇宙バーガー』：パティを焼き、強化し、店を移し、打ち上げで転生。殷碩が企画・数値・開発を 1 人で担当し、プレイシミュレーターでテンポを調整しました。" name="description"/>
+<meta content="#1f1a24" name="theme-color"/>
+<link href="../../../img/px/favicon.png" rel="icon"/>
+<link href="../../../css/shell.css" rel="stylesheet"/>
+<link href="../../../css/site.css" rel="stylesheet"/>
+<link href="../../../css/burger.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>@font-face{font-family:"Fusion Pixel";src:url("../../../fonts/fusion-pixel-ja.woff2") format("woff2");font-display:swap}:root{--body-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo","Noto Sans JP",system-ui,sans-serif;--px-font:"Fusion Pixel","Hiragino Sans","Yu Gothic","Meiryo",monospace}</style><link href="../../../projects/burger/index.html" hreflang="zh-Hans" rel="alternate"/><link href="../../../zh-hant/projects/burger/index.html" hreflang="zh-Hant" rel="alternate"/><link href="../../../en/projects/burger/index.html" hreflang="en" rel="alternate"/><link href="../../../ja/projects/burger/index.html" hreflang="ja" rel="alternate"/></head>
+<body class="px-sky" id="top">
+<header class="hud">
+<div class="hud-in">
+<a class="hud-brand" data-slot="タイトルへ戻る" href="../../index.html"><img alt="" src="../../../img/px/avatar.png"/>殷碩<small>ゲームプランナー</small></a>
+<nav aria-label="メインナビゲーション" class="hud-nav">
+<a aria-current="page" data-slot="セーブを選択" href="../../index.html">セーブ</a>
+<a data-slot="プレイヤーデータを開く" href="../../about.html">自己紹介</a>
+<a class="hide-s" data-slot="履歴書を開く" href="../../resume.html">履歴書</a>
+</nav>
+<div class="hud-coins" title="セーブブロックを叩くとコインが集まります"><i></i><b>×00</b></div>
+</div>
+</header>
+<div class="lnav">
+<div class="wrap">
+<b>宇宙バーガー</b>
+<nav><a class="hide-s" href="#loop">コアループ</a> <a class="hide-s" href="#shots">スクリーンショット</a> <a class="hide-s" href="#design">企画設計</a> <a class="hide-s" href="#iterate">テストと改善</a> <a href="#pacing">数値テンポ</a> <a class="hide-s" href="#dev">開発</a></nav>
+</div>
+</div>
+<section class="c-hero">
+<div class="wrap">
+<span class="kicker">セーブ 03 · プレイ可能 · 個人制作 · 2026.09 – 10</span>
+<h1 class="mega on-sky bg-title">宇宙<span class="burger">バーガー</span></h1>
+<p class="feature">縦画面の放置系経営ミニゲーム。指でヘラを動かしてパティを焼いて稼ぎ、研修センターで道具とレシピを強化して、<b>地球の屋台から宇宙までバーガー店を広げていきます</b>。</p>
+<ul class="bg-tags">
+<li>システム設計</li><li>数値設計</li><li>Unity 2022.3 · C#</li><li>WebGL · Douyin TTSDK</li><li>ドット絵の制作パイプライン</li>
+</ul>
+<p class="bg-status">状況：<b>開発完了</b>。ソフトウェア著作権の登録を申請済みで、登録後に Douyin ミニゲームとして届け出て公開します。</p>
+<div class="acts">
+<a class="px-btn red" href="#shots"><span class="px-ico pad"></span>スクリーンショットを見る</a>
+<button aria-label="セーブブロックを叩く" class="px-block" data-coin="burger-1"></button>
+</div>
+<div aria-hidden="true" class="stall" data-r="">
+<span class="sign">宇宙バーガー · 営業中</span>
+<div class="awning"></div>
+<div class="win">
+<div class="phone"><img alt="" src="../../../projects/burger/img/02_home.webp"/></div>
+<div class="phone"><img alt="" src="../../../projects/burger/img/12b_run_items.webp"/></div>
+<div class="phone"><img alt="" src="../../../projects/burger/img/21_space_run.webp"/></div>
+</div>
+<div class="counter"></div>
+</div>
+</div>
+</section>
+<section class="c-stats">
+<div class="wrap">
+<div class="stats five">
+<div data-r=""><span>C# コード</span><b>7300</b><span>行、スクリプト 31 本、企画と開発を 1 人で担当</span></div>
+<div data-r="2"><span>強化項目</span><b>63</b><span>種、地球と星間の 2 セット</span></div>
+<div data-r="3"><span>店舗の章</span><b>9</b><span>章、それぞれ専用のドット絵シーン</span></div>
+<div data-r="4"><span>初回の打ち上げ</span><b>49 分</b><span>シミュレーター結果、広告視聴なし</span></div>
+<div data-r="5"><span>実績</span><b>39</b><span>種、ほかにデイリータスク 11 種</span></div>
+</div>
+</div>
+</section>
+<div class="px-ground"></div>
+<div class="white">
+<section class="chapter" id="loop">
+<div class="wrap">
+<p class="kicker" data-r="">01</p>
+<h2 class="h-sec" data-r="">コアループ</h2>
+<p class="feature" data-r="">1 回の営業は 15 秒ほどで、動画を見る合間に 1 回遊べる短さです。<b>強化と店舗移転が中期の目標、「打ち上げ」による転生が長期の目標</b>になります。</p>
+<ol class="lvmap" data-r="">
+<li><span class="node">1</span><div class="card"><div class="k">1 回 · 15 秒以上</div><div class="t">パティを焼く</div><p class="d">ヘラを動かしてパティに当てて加熱し、焼けたら自動で提供。ひっくり返す、炎を避ける、アイテムを拾う、猫を追い払う。</p></div></li>
+<li><span class="node">2</span><div class="card"><div class="k">結果</div><div class="t">クリアで星を獲得</div><p class="d">ステージ N · 星 1〜3 の目標。星の数に応じて 10% / 20% / 35% のボーナス収入。</p></div></li>
+<li><span class="node">3</span><div class="card"><div class="k">お金を使う</div><div class="t">研修センター</div><p class="d">火力、範囲、価格、手伝い……をカテゴリ別のリストで。</p></div></li>
+<li><span class="node">4</span><div class="card"><div class="k">新しい章</div><div class="t">店舗移転</div><p class="d">屋台 → グルメ街 → ショッピングモール。シーンが変わり、収入は 2 倍に。</p></div></li>
+<li class="boss"><span class="node">★</span><div class="card"><div class="k">転生</div><div class="t">打ち上げ</div><p class="d">地球での進行をリセットして星（永続ボーナス）に交換し、星間マップを解放：月、火星、木星の環、銀河中心。</p></div></li>
+</ol>
+<p class="loopback" data-r="">打ち上げ後は屋台からやり直しですが、星ボーナスがあるので周回ごとに速くなります：1 周目 49 分、2 周目 23 分、3 周目 11 分。</p>
+</div>
+</section>
+<section class="chapter" id="shots">
+<div class="wrap">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">スクリーンショット</h2>
+<div class="rail-wrap" data-r="">
+<div aria-label="スクリーンショット、左右にスワイプできます" class="rail" id="rail" tabindex="0">
+<figure><div class="phone"><img alt="ホーム：ステージカード、屋台のシーン、営業開始ボタン、研修センターと実績の入り口" loading="lazy" src="../../../projects/burger/img/02_home.webp"/></div><figcaption><b>ホーム</b>ステージカード → 店舗シーン → 営業開始 → 研修センター → 実績</figcaption></figure>
+<figure><div class="phone"><img alt="営業中：炎の軌跡、手伝い、アイテム、フィーバータイム" loading="lazy" src="../../../projects/burger/img/12b_run_items.webp"/></div><figcaption><b>営業中</b>バーナーが残す炎の軌跡、手伝い、アイテム、フィーバータイム</figcaption></figure>
+<figure><div class="phone"><img alt="ソーラークッカーの日光バースト" loading="lazy" src="../../../projects/burger/img/12c_run_burst.webp"/></div><figcaption><b>道具の特技</b>ソーラークッカーは 6 秒ごとに日光バースト</figcaption></figure>
+<figure><div class="phone"><img alt="結果画面：ステージ 1、あと少しで星ゼロ" loading="lazy" src="../../../projects/burger/img/06_result.webp"/></div><figcaption><b>結果</b>星 1 つに届かなかったとき、研修センターで強化してから再挑戦するよう案内</figcaption></figure>
+<figure><div class="phone"><img alt="研修センターの強化リスト" loading="lazy" src="../../../projects/burger/img/02b_shop.webp"/></div><figcaption><b>研修センター</b>スキルツリーの代わりにカタログ式の強化リスト</figcaption></figure>
+<figure><div class="phone"><img alt="ポーズ画面" loading="lazy" src="../../../projects/burger/img/04b_pause.webp"/></div><figcaption><b>ポーズ</b>営業を続けるか、早めに切り上げて店に戻る</figcaption></figure>
+<figure><div class="phone"><img alt="ショッピングモールの店舗" loading="lazy" src="../../../projects/burger/img/11_home_late.webp"/></div><figcaption><b>第 3 章 ショッピングモール</b>移転するたびにシーンも変わる</figcaption></figure>
+<figure><div class="phone"><img alt="星間ホーム" loading="lazy" src="../../../projects/burger/img/19_space_home.webp"/></div><figcaption><b>星間</b>打ち上げ後の 2 つ目のマップ</figcaption></figure>
+<figure><div class="phone"><img alt="星間営業：ブラックホールと惑星パティ" loading="lazy" src="../../../projects/burger/img/21_space_run.webp"/></div><figcaption><b>星間営業</b>ブラックホールが近くのパティを吸い込み、惑星パティはより高く売れる</figcaption></figure>
+<figure><div class="phone"><img alt="星間テックショップ" loading="lazy" src="../../../projects/burger/img/16_star_shop.webp"/></div><figcaption><b>星間テック</b>打ち上げで得た星で永続ボーナスを購入</figcaption></figure>
+<figure><div class="phone"><img alt="実績一覧" loading="lazy" src="../../../projects/burger/img/27c_achievements.webp"/></div><figcaption><b>実績</b>1 つごとに収入が永続的に +1%</figcaption></figure>
+<figure><div class="phone"><img alt="オープニングの旅の地図" loading="lazy" src="../../../projects/burger/img/01a_intro.webp"/></div><figcaption><b>オープニング</b>初回起動時に旅の全体を見せ、ゴールがどこかを伝える</figcaption></figure>
+</div>
+<div class="rail-btns">
+<span>スクリーンショットは PC 版の自動撮影（スマートフォン縦画面の比率）で、全 12 枚です。</span>
+<div><button aria-label="前のスクリーンショット" class="px-btn sm paper" data-dir="-1" type="button">◀</button><button aria-label="次のスクリーンショット" class="px-btn sm paper" data-dir="1" type="button">▶</button></div>
+</div>
+</div>
+</div>
+</section>
+<section class="chapter" id="design">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">企画設計</h2>
+<p class="feature" data-r="">経営ゲームで起きやすい 2 つの問題は<b>「なぜ続けて遊ぶのか分からない」と「後半は数字が大きくなるだけ」</b>です。以下はその 2 点に対する設計です。</p>
+<ul class="rules bg" data-r="">
+<li><i>目標</i><b>3 層の目標</b>
+<ul>
+<li><strong>短期</strong>：1 回の営業が 1 ステージで、星 1〜3。目標はプレイヤーの直近数回の販売数 × 現在の価格で計算するため、価格を強化すると目標も上がり、火力や範囲を強化すると星を取りやすくなります。</li>
+<li><strong>中期</strong>：研修センターのボタンに常に「次の目標」と進行バーを表示。店舗移転が次の章への入り口です。</li>
+<li><strong>長期</strong>：打ち上げによる転生、星間マップ、39 種の実績。</li>
+</ul>
+<p>5 ステージごとに<strong>チャレンジステージ</strong>があり、報酬 2 倍。ルールは 5 種類を交代で：金のパティ大放出、パティ大量発生、炎だらけ、つるつる大作戦、タイムラッシュ。</p>
+</li>
+<li><i>成長</i><b>道具ごとに 1 つの特技</b>
+<p style="margin-top:0">最初の版では道具を替えても範囲が広がるだけで、テスターはすぐ飽きてしまいました。そこで新しい道具ごとに目に見える特技を 1 つ加え、前の道具の特技も残すようにしました：</p>
+<ul>
+<li><strong>ダブルヘラ</strong>：鏡写しのヘラがもう 1 本増え、鉄板の対称の位置で一緒に焼く</li>
+<li><strong>バーナー</strong>：ヘラが通った跡に炎が残り、パティを焼き続ける</li>
+<li><strong>ソーラークッカー</strong>：6 秒ごとの日光バーストで、すべてのパティが一気に 4 割焼ける</li>
+</ul>
+</li>
+<li><i>操作</i><b>操作性を高める仕組み</b>
+<ul>
+<li><strong>ひっくり返し</strong>：3〜8 割焼けたときに素早くなぞると裏返り、ボーナス</li>
+<li><strong>炎</strong>：予告してから出現。触れると 1.2 秒加熱が止まるが、焼くのを手伝ってもくれる</li>
+<li><strong>アイテム</strong>：時間延長、マグネット、価格 2 倍、唐辛子炒め。近づいて取る必要がある</li>
+<li><strong>つるつるパティ</strong>：ヘラから逃げるが、捕まえると高く売れる</li>
+<li><strong>猫</strong>：6 秒間誰も焼かないパティをくわえて持っていく。猫に触れると逃げる</li>
+<li><strong>フィーバータイム</strong>：コンボが満タンになると価格と提供速度が 2 倍</li>
+</ul>
+</li>
+<li><i>序盤とマネタイズ</i><b>序盤とマネタイズ</b>
+<ul>
+<li><strong>開店セール</strong>：最初の 3 回は収入 ×3、最初の強化はほぼすぐに買える</li>
+<li><strong>4 回目は金のパティ確定</strong>：早めにサプライズを 1 回</li>
+<li><strong>新しい遊びが初めて出たときに一言ヒント</strong>、長いチュートリアルは作らない</li>
+<li><strong>リワード広告のみ</strong>：広告で時間延長、収入 2 倍、無料強化。アプリ内課金はなし</li>
+<li><strong>8 つの主要イベントを計測</strong>：営業終了、店舗移転、打ち上げ、実績など。公開後、プレイヤーがどこで離脱するかを探るため</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="iterate">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">テストの声にもとづく改善</h2>
+<p class="feature" data-r="">友人に iPhone で試遊してもらい、<b>フィードバックのたびに 1 回改修</b>しました。以下は時系列順です。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>テストでの声</th><th>変更</th></tr>
+<tr><td class="q">画面に対してゲーム部分が小さく、上部の余白が多い</td><td><span class="tg ui">UI</span>Douyin 右上のカプセルボタンの位置を読み取って上部バーを配置、鉄板の高さは画面に合わせて 720〜880 で変化</td></tr>
+<tr><td class="q">星間ホームの背景が iPhone では左下の一部しか表示されない</td><td><span class="tg tech">技術</span>iOS の WebGL ではタイル状テクスチャのサイズが 2 のべき乗である必要があるため、128 ピクセルに変更</td></tr>
+<tr><td class="q">数字が大きすぎて見ていて疲れる</td><td><span class="tg num">数値</span>価格と倍率を全体的に 0.7 乗し、シミュレーターで元のテンポに戻るよう再調整。表示は「万 / 億」単位に、古いセーブはロード時に自動換算</td></tr>
+<tr><td class="q">しばらくすると飽きる、道具は範囲が変わるだけ</td><td><span class="tg play">遊び</span>道具の特技に加え、ひっくり返し、炎、アイテム、つるつるパティ、フィーバータイム</td></tr>
+<tr><td class="q">序盤の引きが弱いのに、全体の進行はやや速い</td><td><span class="tg num">数値</span>開店セールと 4 回目の金のパティで序盤を速く。同時に中盤以降の価格を全体的に引き上げ</td></tr>
+<tr><td class="q">目標が分かりにくく、ステージがなくて動機が弱い</td><td><span class="tg sys">システム</span>ステージと星 1〜3、チャレンジステージ、ホームの「次の目標」進行バー</td></tr>
+<tr><td class="q">営業中にポーズしたい、途中でやめたい</td><td><span class="tg ux">UX</span>ポーズボタンを追加。早めに切り上げても稼いだお金はもらえるが、そのステージはクリア扱いにならない。バックグラウンドに移ると自動ポーズ</td></tr>
+<tr><td class="q">ホームがごちゃごちゃして、スキルツリーが分かりにくい</td><td><span class="tg ui">UI</span>ホームを「営業開始 → 研修センター → 実績」の順に並べ直し、スキルツリーをカテゴリ別のリストに変更、店舗シーン 9 枚を新たに描き起こし</td></tr>
+<tr><td class="q">最大レベルのヘラが大きすぎて画面をほぼ覆う</td><td><span class="tg num">数値</span>以前は 1 レベルごとに +10% を掛け合わせ、最大半径は約 290（鉄板の幅 450）。1 レベルごとに一律 6% 加算に変え、道具のボーナスも小さくして最大約 100 に。補償としてダブルヘラに焼き速度を追加し、シミュレーターでテンポが 5 分しか遅くならないことを確認</td></tr>
+</table>
+</div>
+</div>
+</section>
+<section class="chapter" id="pacing">
+<div class="narrow">
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">数値テンポ：感覚ではなくシミュレーターで調整</h2>
+<p class="feature" data-r="">Unity エディター内にボットプレイヤーを書き、ゲーム本体のロジックコードを直接呼び出して自動でプレイさせました。パティを追いかけ、アイテムを拾い、炎を避け、費用対効果の高い順に強化を買います。<b>価格を変えるたびにまずこれを走らせ</b>、下の各時点が目標範囲に収まっているかを確認します。</p>
+<div class="run" data-r="">
+<h3>1 周目：新規プレイヤー、広告なし</h3>
+<div aria-label="1 周目の進行：26 分 55 秒でグルメ街へ移転、29 分 48 秒でダブルヘラに、42 分 37 秒でモールへ移転、43 分 18 秒でバーナーに、49 分 14 秒で初回の打ち上げ" class="track" role="img">
+<div class="fill"></div>
+<span class="mk st dn" style="left:0"><i></i><span>0:00<small>屋台を開店</small></span></span>
+<span class="mk up" style="left:54.7%"><i></i><span>26:55<small>グルメ街へ移転</small></span></span>
+<span class="mk dn" style="left:60.5%"><i></i><span>29:48<small>ダブルヘラに</small></span></span>
+<span class="mk up" style="left:86.6%"><i></i><span style="transform:translateX(-85%)">42:37<small>モールへ移転</small></span></span>
+<span class="mk dn" style="left:87.9%"><i></i><span>43:18<small>バーナーに</small></span></span>
+<span class="mk end up" style="left:100%"><i></i><span>49:14<small>初回の打ち上げ</small></span></span>
+</div>
+<p class="legend">49:14 の初回打ち上げで星 14 個を獲得、この時点で約ステージ 53。</p>
+</div>
+<div class="rounds" data-r="">
+<div class="run" style="margin-top:0">
+<h3>その後のテンポ</h3>
+<div class="bars"><span>地球 1 周目</span><span class="bar"><i style="--v:100%;--c:var(--red)"></i></span><span>49:14 · 14 ★</span> <span>地球 2 周目</span><span class="bar"><i style="--v:46%;--c:var(--gold-d)"></i></span><span>22:40 · 37 ★</span> <span>地球 3 周目</span><span class="bar"><i style="--v:23%;--c:var(--grass)"></i></span><span>11:28 · 69 ★</span></div>
+<p class="legend" style="margin-top:16px;font-size:14px;color:var(--mute)">星間のクリア時間は 1:28:22。</p>
+</div>
+<p class="why"><strong>設計意図</strong>：1 周目はゆっくりにして、すべての店を一通り見てもらう。その後は星ボーナスで周回ごとに速くなり、転生の見返りをはっきり感じられるようにしました。</p>
+</div>
+</div>
+</section>
+<section class="chapter" id="dev">
+<div class="narrow">
+<p class="kicker" data-r="">06</p>
+<h2 class="h-sec" data-r="">開発の実装</h2>
+<ul class="rules bg" data-r="">
+<li><i>構成</i><b>コード構成</b>
+<p style="margin-top:0">ゲームロジックと描画を完全に分けているので、同じロジックがスマートフォンで動き、シミュレーターからも自動プレイに使えます。</p>
+<pre class="term">Scripts/
+  Core/      <span class="c">純粋なロジック：設定、セーブデータ、計算式、1 回分のシミュレーション</span>
+    GameConfig.cs   <span class="c">すべての数値と強化項目</span>
+    GameLogic.cs    <span class="c">能力値の算出、ステージ目標、結果</span>
+    Run.cs          <span class="c">1 回の営業：パティ、炎、猫、アイテム</span>
+  Platform/  <span class="c">Douyin SDK、広告、セーブ、効果音、振動</span>
+  UI/        <span class="c">ホーム、営業画面、研修センター、ポップアップ</span>
+Editor/
+  PacingSim.cs      <span class="c">テンポシミュレーター</span>
+  BuildTools.cs     <span class="c">コマンドラインビルド</span></pre>
+</li>
+<li><i>テスト</i><b>自動チェック</b>
+<p style="margin-top:0">変更のたびに実行し、手で操作する必要はありません：</p>
+<ul>
+<li><strong>コマンドラインビルド</strong>：Douyin 用 WebGL パッケージ（圧縮後 約 0.6MB）と PC 版</li>
+<li><strong>自動スクリーンショット</strong>：プログラムがすべての画面を巡回し、40 枚のスクリーンショットでレイアウトを確認</li>
+<li><strong>長時間稼働テスト</strong>：4 分間自動でプレイし、最も遅いフレームとメモリを記録</li>
+<li><strong>テンポのシミュレーション</strong>：変更で進行が崩れていないかを確認</li>
+</ul>
+</li>
+<li><i>機種</i><b>Douyin プラットフォーム対応</b>
+<ul>
+<li>リワード広告、ローカルセーブ（バックアップ付き）、データ計測、振動、サイドバーからの再訪報酬</li>
+<li>カプセルボタンの位置を読み取ってセーフエリアに対応、PC ではパラメータでカプセルを再現</li>
+<li>バックグラウンドに移るとミュート、セーブ、自動ポーズ</li>
+<li>セーブには強化項目を末尾に追加するだけにし、数値の桁を変えるときは移行処理を付けて、既存プレイヤーの進行を失わない</li>
+</ul>
+</li>
+<li><i>調査</i><b>調査した問題</b>
+<ul>
+<li><strong>開始時に一瞬引っかかる</strong>：毎回の開始時にキャンバスを強制更新し、鉄板のテクスチャを描き直していた。強制更新をやめ、鉄板とカーソルのテクスチャをサイズ別にキャッシュ</li>
+<li><strong>炎の軌跡が大きな塊になる</strong>：軌跡の幅に上限を設け、ヘラが止まっているときは炎を追加しない</li>
+<li><strong>大きなヘラがアイテムを自動で吸い取る</strong>：拾える距離に個別の上限を設け、近づいて取る必要があるように</li>
+<li><strong>iOS でテクスチャが一部しか表示されない</strong>：タイル状テクスチャを 2 のべき乗サイズに変更</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="art">
+<div class="narrow">
+<p class="kicker" data-r="">07</p>
+<h2 class="h-sec" data-r="">美術パイプライン</h2>
+<p class="feature" data-r="">統一したドット絵スタイル：<b>1 ピクセルはキャンバス上の 3 単位</b>。フォントは 12 ピクセルのドットフォントで、くっきり見えるよう 12 の倍数のサイズだけを使います。</p>
+<figure class="art-fig" data-r="">
+<img alt="店舗のドット絵シーン 9 枚：地球 4 枚、星間 5 枚" loading="lazy" src="../../../projects/burger/img/scenes.webp"/>
+<figcaption>店舗シーン 9 枚：まず Scenario で生成し、Python スクリプトで 256×288・40 色にそろえ、1 枚あたり約 40KB。</figcaption>
+</figure>
+<div class="art-row">
+<figure class="art-fig" data-r="">
+<img alt="16×16 のドット絵アイコン" loading="lazy" src="../../../projects/burger/img/icons.webp"/>
+<figcaption>16×16 の小さなアイコン（道具、宇宙人、アイテム、猫）は Python スクリプトで 1 ピクセルずつ描いています。</figcaption>
+</figure>
+<ul class="rules bg" data-r="" style="grid-template-columns:1fr;margin-top:28px">
+<li><i>音とフォント</i><b>音とフォント</b>
+<ul>
+<li>効果音 29 種はすべてコードで合成（パティのジュージュー音、炎のパチパチ音、提供時のチーン）、外部の音声素材は使っていません</li>
+<li>中国語のドットフォントはゲームで実際に使う文字だけに絞り、使う文字だけを同梱</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="chapter" id="ai">
+<div class="narrow">
+<p class="kicker" data-r="">08</p>
+<h2 class="h-sec" data-r="">AI ツールについて</h2>
+<div class="prose" data-r="">
+<p class="note">開発では AI ツールを使いました。Claude Code でコードを書き問題を調査し、Scenario で店舗シーンの画像を生成しています。私が担当したのは、ゲームプレイとシステムの設計、数値目標と調整の判断、実機テストの運営とフィードバックの改修要件への落とし込み、各バージョンの検収、そして全体のアートスタイルの統一です。</p>
+</div>
+</div>
+</section>
+<section class="info light">
+<div class="narrow">
+<h2 class="h-sec" data-r="">セーブ情報</h2>
+<div class="spec" data-r="">
+<div><h3>担当</h3><div class="c">個人制作：システム・数値・開発</div></div>
+<div><h3>期間</h3><div class="c">2026.09 – 10</div></div>
+<div><h3>エンジン</h3><div class="c">Unity 2022.3 · C#</div></div>
+<div><h3>機種</h3><div class="c">Douyin ミニゲーム（WebGL · TTSDK）、縦画面</div></div>
+<div><h3>状況</h3><div class="c">開発完了、ソフトウェア著作権 登録申請中</div></div>
+<div><h3>フォント</h3><div class="c">フュージョンピクセルフォント Fusion Pixel Font、© 2022 TakWolf、SIL Open Font License 1.1</div></div>
+</div>
+</div>
+</section>
+<nav class="pager" style="padding-top:88px">
+<div class="wrap">
+<a data-slot="セーブ 02 をロード" href="../tidewheel.html"><span>前のセーブ · 02</span><b>『ゼンマイ人形』Tidewheel</b></a>
+<a data-slot="セーブ 04 をロード" href="../naruto.html"><span>次のセーブ · 04</span><b>NARUTO モバイル：成長と経済システム</b></a>
+</div>
+</nav>
+</div>
+<footer class="px-foot">
+<div class="px-ground"></div>
+<div class="px-under"><div><span>© 2026 殷 碩</span><span><a href="#top">ページ上部へ</a><a href="../../index.html">すべてのセーブ</a><a data-slot="履歴書を開く" href="../../resume.html">履歴書</a></span></div></div>
+</footer>
+<script src="../../js/site.js"></script>
+<script>
+// 截图轨道：左右按钮一次翻一屏
+(function(){
+  var rail = document.getElementById('rail');
+  document.querySelectorAll('.rail-btns [data-dir]').forEach(function(b){
+    b.addEventListener('click', function(){
+      rail.scrollBy({left: +b.getAttribute('data-dir') * rail.clientWidth * 0.8, behavior: 'smooth'});
+      window.ysSfx && window.ysSfx('select');
+    });
+  });
+})();
+</script>
+</body>
+</html>
