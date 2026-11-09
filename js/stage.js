@@ -50,6 +50,10 @@
 
   var W = 0, H = 0, G = 0, slotX = [], doorX = 0, BLOCK_BOTTOM = 216, BW = 48, narrow = false;
   function layout(){
+    // 手机屏幕偏矮时，广告牌会压住方块：按广告牌实际高度撑高舞台，方块离地高度不变，仍能跳着顶到
+    stg.style.minHeight = '';
+    var need = board.offsetTop + board.offsetHeight + 20 + 44 + 48 + BLOCK_BOTTOM;
+    if (need > stg.clientHeight) stg.style.minHeight = need + 'px';
     W = stg.clientWidth; H = stg.clientHeight; G = H - 48;
     narrow = W < 640;
     // 宽屏时左侧留出操作说明木牌的位置

@@ -194,8 +194,12 @@
   .stg{height:max(680px,calc(100svh - 56px))}
   .stg-top .mega{font-size:36px}
   .stg-help{display:none}
-  .board-scr{border-width:4px}
-  .board-cap h2{font-size:12px;line-height:1.6}
+  .stg-top{padding-top:16px}
+  .board{margin-top:12px}
+  .board-scr{border-width:4px;aspect-ratio:2/1}
+  .board-cap{padding:10px 14px 12px}
+  .board-cap h2{font-size:12px;line-height:1.6;min-height:3.2em}
+  .board-act{padding-top:6px}
   .board-act small{display:none}
   .sblock .lbl{font-size:12px;padding:4px 5px}
   .sblock .lbl span{display:none}

@@ -170,3 +170,4 @@
 @media (prefers-reduced-motion:reduce){
   .px-clouds i,.hud-coins i,.px-loader .runner,.px-loader .coin,.hud-nav a[aria-current="page"]::before{animation:none}
 }
+@media (hover:none) and (pointer:coarse){.px-prog .man,.px-prog .goal{display:none}}
