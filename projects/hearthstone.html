@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>《炉石传说》酒馆战棋 经济与对局节奏拆解 · 殷硕作品集</title>
+<meta name="description" content="拆解酒馆战棋的铸币曲线、份数稀缺与防滚雪球机制，并为首选改进方案设计 AB 测试。">
+<meta name="theme-color" content="#1f1a24">
+<link rel="icon" href="../img/px/favicon.png">
+<link rel="stylesheet" href="../css/shell.css">
+<link rel="stylesheet" href="../css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="px-sky" id="top">
+
+<header class="hud">
+  <div class="hud-in">
+    <a class="hud-brand" href="../index.html" data-slot="回到标题"><img src="../img/px/avatar.png" alt="">殷硕<small>游戏策划</small></a>
+    <nav class="hud-nav" aria-label="主导航">
+      <a href="../index.html" aria-current="page" data-slot="选择存档">存档</a>
+      <a href="../about.html" data-slot="打开玩家档案">关于我</a>
+      <a class="hide-s" href="../resume.html" data-slot="打开简历">简历</a>
+    </nav>
+    <div class="hud-coins" title="顶方块可以收集硬币"><i></i><b>×00</b></div>
+  </div>
+</header>
+
+<div class="lnav">
+  <div class="wrap">
+    <b>酒馆战棋 · 经济与对局节奏</b>
+    <nav>
+      <a class="hide-s" href="#summary">一页结论</a>
+      <a class="hide-s" href="#pay">付费与体验</a>
+      <a class="hide-s" href="#fix">改进方向</a>
+      <a href="#read">阅读全文</a>
+    </nav>
+  </div>
+</div>
+
+<section class="c-hero">
+  <div class="wrap">
+    <span class="kicker">存档 05 · 系统拆解 · 20 页</span>
+    <h1 class="mega on-sky">《炉石传说》酒馆战棋<br>经济与对局节奏</h1>
+    <p class="feature">酒馆战棋没有卡牌收集，8 名玩家共用一个随从池，胜负几乎全部取决于单局内的资源决策。这份拆解只看单局：<b>铸币怎么来、怎么花，随从池怎么限制选择，强弱差距怎么拉开又怎么被收住</b>。口径为第 14 赛季，2026 年 10 月。</p>
+    <div class="acts">
+      <a class="px-btn" href="#read"><span class="px-ico book"></span>在这里阅读全文</a>
+      <a class="px-btn paper" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e"><span class="px-ico ext"></span>飞书原文</a>
+      <button class="px-block" data-coin="hearthstone-1" aria-label="顶一下存档方块"></button>
+    </div>
+    <div class="c-cover" data-r><img src="../img/hs/main.jpg" alt="酒馆战棋对局界面" style="object-position:center 42%;max-height:520px"></div>
+  </div>
+</section>
+
+<section class="c-stats">
+  <div class="wrap">
+    <div class="stats">
+      <div data-r><span>6 星随从全场</span><b>7 份</b><span>份数控制稀缺</span></div>
+      <div data-r="2"><span>一次三连拿走</span><b>43%</b><span>顶端强度的份数</span></div>
+      <div data-r="3"><span>铸币封顶</span><b>10</b><span>每回合 +1，第 8 回合封顶</span></div>
+      <div data-r="4"><span>游玩时长</span><b>501h</b><span>6120 分</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="px-ground"></div>
+<div class="white">
+
+  <section class="chapter" id="summary">
+    <div class="narrow">
+      <p class="kicker" data-r>01</p>
+      <h2 class="h-sec" data-r>一页结论</h2>
+      <p class="feature" data-r>核心矛盾：8 名玩家用完全相同的收入、共用一个随从池，却要打出每局都不一样的结果；<b>强弱差距要拉得开，又不能太早定局</b>。</p>
+      <ul class="rules" data-r>
+        <li><i>结论 1</i><b>收入和价格固定，差异只来自花法</b>铸币每回合 +1，第 8 回合封顶 10，随从一律 3 枚。每回合的核心问题是升本还是买强度，血量是这笔账的押金。</li>
+        <li><i>结论 2</i><b>稀缺性由份数制造，不靠概率表</b>6 星单卡全场 7 份，一次三连就拿走 43%。共享池还带来了撞种族和读对手的博弈。</li>
+        <li><i>结论 3</i><b>滚雪球靠阵容，并配了刹车</b>没有利息和连胜奖励，另有伤害上限、份数限制、发现只高一本；英雄强弱用护甲换算成血量来平衡。</li>
+        <li><i>结论 4</i><b>赛季机制加一个就减一个</b>每季的新机制都是商店之外的额外选择，底层经济不动，同时在场的额外系统控制在一到两个。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="pay">
+    <div class="narrow">
+      <p class="kicker" data-r>02</p>
+      <h2 class="h-sec" data-r>付费与体验</h2>
+      <div class="prose" data-r>
+        <p><strong>付费只卖选择权。</strong>赛季通行证把开局英雄从 2 选 1 变成 4 选 1，再加上外观，不卖局内数值，但英雄选项数仍然会影响排位。</p>
+        <p><strong>体验以挑战和探索为主</strong>，主要服务成就型和探索型玩家。前 4 名加分的规则让第 5 名最难受，也最想再来一局。社交是这个模式的短板。</p>
+        <p>和火影手游对比：火影的成长按月、按年累计，付费可以直接买进度；酒馆战棋的成长压缩在一局之内，付费几乎碰不到局内数值，系统设计落在经济曲线、共享资源的稀缺和强弱分化的节奏上。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="fix">
+    <div class="narrow">
+      <p class="kicker" data-r>03</p>
+      <h2 class="h-sec" data-r>改进方向</h2>
+      <div class="table-scroll" data-r>
+        <table>
+          <tr><th>优先级</th><th>方案</th></tr>
+          <tr><td>①</td><td>商店显示剩余份数的三档提示，附 AB 测试方案</td></tr>
+          <tr><td>②</td><td>赛季初的新机制教学局</td></tr>
+          <tr><td>③</td><td>排位统一英雄选项数</td></tr>
+          <tr><td>④</td><td>中期落后补偿</td></tr>
+        </table>
+      </div>
+      <div class="prose" data-r><p class="note">另外推演了把升本费用改成线性，结论是不建议改。</p></div>
+    </div>
+  </section>
+
+  <section class="chapter" id="toc">
+    <div class="narrow">
+      <p class="kicker" data-r>04</p>
+      <h2 class="h-sec" data-r>目录</h2>
+      <ul class="toc-list" data-r>
+        <li><b>一</b>游戏概况与拆解范围</li>
+        <li><b>二</b>核心循环：招募与战斗</li>
+        <li><b>三</b>铸币经济：收入曲线与定价</li>
+        <li><b>四</b>共享随从池：稀缺性从哪里来</li>
+        <li><b>五</b>三连与发现：滚雪球和刹车</li>
+        <li><b>六</b>英雄：起点不对称和三个平衡旋钮</li>
+        <li><b>七</b>战斗结算与伤害：淘汰节奏怎么控制</li>
+        <li><b>八</b>变量注入与赛季节奏</li>
+        <li><b>九</b>排位与付费：只卖选择权</li>
+        <li><b>十</b>体验层：这些机制让玩家感受到什么</li>
+        <li><b>十一</b>问题与改进方案</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="read">
+    <div class="narrow">
+      <p class="kicker" data-r>05</p>
+      <h2 class="h-sec" data-r>阅读全文</h2>
+      <p class="feature" data-r>全文在下面直接翻阅，看完点顶栏或底部按钮回到存档。</p>
+    </div>
+    <div class="wrap">
+      <div class="pdf" data-r>
+        <div class="bar"><span>hearthstone-bg.pdf · 20 页</span><span><a href="../files/hearthstone-bg.pdf" download>下载 PDF</a>　<a href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e">飞书原文 ↗</a></span></div>
+        <iframe src="../files/hearthstone-bg.pdf#view=FitH" title="酒馆战棋经济与对局节奏拆解全文" loading="lazy"></iframe>
+        <div class="pdf-alt">手机上无法内嵌 PDF。<a class="more" href="../files/hearthstone-bg.pdf" style="color:var(--gold)">打开 PDF</a>　<a class="more ext" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e" style="color:var(--gold)">飞书原文</a>（新标签页打开）</div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager" style="padding-top:88px">
+    <div class="wrap">
+      <a href="naruto.html" data-slot="读取存档 04"><span>上一存档 · 04</span><b>火影手游：成长与经济系统</b></a>
+      <a href="../index.html" data-slot="选择存档"><span>回到</span><b>全部存档</b></a>
+    </div>
+  </nav>
+</div>
+
+<footer class="px-foot">
+  <div class="px-ground"></div>
+  <div class="px-under"><div><span>© 2026 殷硕</span><span><a href="#top">回到顶部</a><a href="../index.html">全部存档</a><a href="../resume.html" data-slot="打开简历">简历</a></span></div></div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* 首页专用：可操作的选关舞台 + 从白天到夜晚的下半场景 */
+
+/* ================= 舞台 ================= */
+.stg{position:relative;height:max(720px,calc(100vh - 64px));max-height:900px;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.stg:focus{outline:none}
+.stg-top{position:relative;z-index:3;padding-top:24px;text-align:center}
+.stg-top .eyebrow{font-size:12px}
+.stg-top .mega{font-size:48px;margin-top:8px}
+/* 操作说明：立在地面左侧的教学木牌，头上有个跳动的“!”，按键依次按下 */
+.stg-help{position:absolute;z-index:2;left:16px;bottom:48px;width:188px;padding-bottom:28px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;color:var(--ink)}
+.stg-help::before,.stg-help::after{content:"";position:absolute;bottom:0;width:8px;height:32px;background:var(--dirt-d);box-shadow:0 0 0 2px var(--ink)}
+.stg-help::before{left:36px}.stg-help::after{right:36px}
+.stg-help .bd{position:relative;display:grid;gap:10px;padding:0 12px 14px;background:var(--paper);box-shadow:0 0 0 4px var(--dirt),0 0 0 6px var(--ink),6px 10px 0 6px rgba(31,26,36,.25)}
+.stg-help .hd{margin:0 -12px 2px;padding:8px 12px;background:var(--red);color:#fff;font-size:24px;line-height:1;box-shadow:0 4px 0 var(--ink)}
+.stg-help .hd small{display:block;margin-top:4px;font-size:12px;color:var(--gold)}
+.stg-help .bang{position:absolute;left:-6px;top:-30px;display:grid;place-items:center;width:28px;height:28px;background:var(--gold);color:var(--ink);font-size:24px;box-shadow:0 0 0 3px var(--ink);animation:px-bob .6s steps(2) infinite}
+.stg-help .row{display:flex;align-items:center;gap:8px}
+.stg-help .keys{display:inline-flex;gap:4px;min-width:64px}
+.stg-help kbd{font:inherit;display:inline-block;min-width:28px;padding:6px 6px;text-align:center;background:#fff;color:var(--ink);box-shadow:0 0 0 2px var(--ink),0 4px 0 2px var(--ink)}
+.stg-help .k-sp{min-width:60px}
+.stg-help .k-l{animation:px-key 2.4s steps(1) infinite}
+.stg-help .k-r{animation:px-key 2.4s steps(1) .6s infinite}
+.stg-help .k-sp{animation:px-key 2.4s steps(1) 1.2s infinite}
+.stg-help .or{padding-top:10px;border-top:2px dashed var(--paper-3)}
+.stg-help .mouse{display:inline-block;width:18px;height:26px;margin:0 23px 0 23px;border-radius:9px 9px 7px 7px;background:#fff;box-shadow:0 0 0 2px var(--ink);position:relative}
+.stg-help .mouse::before{content:"";position:absolute;left:7px;top:4px;width:4px;height:8px;background:var(--red);animation:px-blink 1s steps(2) infinite}
+@keyframes px-key{0%{transform:translateY(0);background:#fff}5%,20%{transform:translateY(4px);background:var(--gold);box-shadow:0 0 0 2px var(--ink),0 0 0 2px var(--ink)}21%{transform:translateY(0);background:#fff}}
+@keyframes px-blink{50%{opacity:0}}
+.hero-p .say.cue{background:var(--gold);animation:px-say .8s steps(2) infinite}
+@keyframes px-say{50%{bottom:90px}}
+@keyframes px-bob{50%{transform:translateY(-4px)}}
+.stg-sound{position:absolute;z-index:3;right:24px;top:24px}
+
+/* 广告牌：显示小人头顶那块方块对应的存档 */
+.board{position:relative;z-index:3;width:min(920px,100% - 48px);margin:20px auto 0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0;background:var(--ink);box-shadow:0 0 0 4px #000,10px 10px 0 4px rgba(31,26,36,.3)}
+.board::after{content:"";position:absolute;left:var(--arrow,50%);bottom:-20px;width:24px;height:16px;margin-left:-12px;background:var(--ink);clip-path:polygon(0 0,100% 0,50% 100%);transition:left .25s steps(5)}
+.board-scr{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000;border:8px solid var(--ink)}
+.board-scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.board-scr .phones{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:5%;background:var(--dirt-3) url("../img/px/brick.png") 0 0/32px 32px;image-rendering:pixelated}
+.board-scr .phones img{position:static;width:22%;height:auto;aspect-ratio:450/975;image-rendering:auto;box-shadow:0 0 0 3px var(--ink)}
+.board-scr .scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(180deg,rgba(0,0,0,.12) 0 2px,transparent 2px 4px)}
+.board-scr.flick img,.board-scr.flick .phones{animation:px-flick .25s steps(3)}
+@keyframes px-flick{0%{opacity:0;transform:scaleY(.04)}60%{opacity:1;transform:scaleY(1.02)}100%{transform:none}}
+.board .badge{top:14px;left:14px}
+.board-cap{padding:20px 24px 20px 20px;color:#f3ead9;display:flex;flex-direction:column}
+.board-cap .kicker{align-self:flex-start;background:var(--gold);color:var(--ink)}
+.board-cap h2{margin-top:12px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:24px;line-height:1.3;color:#fff}
+.board-cap p{margin-top:10px;font-size:15px;line-height:1.65;color:#d9cdb9}
+.board-act{margin-top:auto;padding-top:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.board-act small{font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;color:var(--gold);animation:px-blink 1.2s steps(2) infinite}
+
+/* 方块一排 */
+.sblocks{position:absolute;z-index:4;left:0;right:0;bottom:216px;height:48px}
+.sblock{position:absolute;bottom:0;width:48px;height:48px;margin-left:-24px;padding:0;border:0;cursor:pointer;background:url("../img/px/block.png") 0 0/96px 48px;image-rendering:pixelated}
+.sblock.bump{animation:px-bump .22s steps(3)}
+.sblock .lbl{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);white-space:nowrap;padding:5px 7px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;color:var(--ink);background:var(--paper);box-shadow:0 0 0 2px var(--ink)}
+.sblock .lbl b{font-weight:normal;color:var(--dirt-d);margin-right:4px}
+.sblock.on .lbl{background:var(--gold)}
+.sblock:focus-visible{outline:4px solid #fff;outline-offset:4px}
+.sblock .pop{position:absolute;left:12px;top:-8px;width:24px;height:24px;background:url("../img/px/coin.png") 0 0/96px 24px;image-rendering:pixelated;animation:px-pop .6s steps(6) forwards,px-coin .3s steps(4) infinite;pointer-events:none}
+
+.stg .px-hills{position:absolute;z-index:1;left:0;right:0;bottom:48px}
+.stg .px-ground{position:absolute;z-index:2;left:0;right:0;bottom:0}
+.stg .door{position:absolute;z-index:3;bottom:48px;width:48px;height:72px;margin-left:-24px;background:url("../img/px/door.png") 0 0/96px 72px;image-rendering:pixelated;border:0;padding:0;cursor:pointer}
+.stg .door.open{background-position:-48px 0}
+.stg .door .lbl{position:absolute;left:50%;bottom:80px;transform:translateX(-50%);white-space:nowrap;padding:5px 7px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;background:var(--paper);color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
+.stg .door .lbl i{font-style:normal;color:var(--red-d)}
+
+/* 小人 */
+.hero-p{position:absolute;z-index:5;left:0;top:0;width:72px;height:72px;background:url("../img/px/runner.png") -504px 0/576px 72px;image-rendering:pixelated;will-change:transform;pointer-events:none}
+.hero-p .say{position:absolute;left:50%;bottom:84px;transform:translateX(-50%) scaleX(var(--flip,1));white-space:nowrap;padding:6px 8px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;background:#fff;color:var(--ink);box-shadow:0 0 0 2px var(--ink);opacity:0;transition:opacity .2s steps(2)}
+.hero-p .say::after{content:"";position:absolute;left:50%;bottom:-8px;margin-left:-4px;width:8px;height:6px;background:var(--ink);clip-path:polygon(0 0,100% 0,50% 100%)}
+.hero-p .say.on{opacity:1}
+.hero-cat{position:absolute;z-index:4;left:0;top:0;pointer-events:none;will-change:transform}
+@media (max-width:599px){.hero-cat{display:none}}
+
+/* 触屏按键 */
+.touch{display:none;position:absolute;z-index:6;left:10px;right:10px;bottom:2px;justify-content:space-between;pointer-events:none}
+.touch > div{display:flex;gap:14px;pointer-events:auto}
+.touch button{width:44px;height:44px;padding:0;border:0;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:24px;color:var(--ink);background:rgba(255,244,220,.85);box-shadow:0 -4px 0 0 var(--ink),0 4px 0 0 var(--ink),-4px 0 0 0 var(--ink),4px 0 0 0 var(--ink)}
+.touch button.a{background:rgba(229,72,77,.9);color:#fff;border-radius:0}
+.touch button:active,.touch button.down{transform:translateY(3px)}
+@media (hover:none) and (pointer:coarse){.touch{display:flex}.stg-help{display:none}}
+
+/* ================= 下半场景：黄昏到夜晚 ================= */
+.world{position:relative;overflow:hidden;
+  background:linear-gradient(180deg,
+    #8ac6f2 0 4%,#f6c27a 4% 9%,#f2a25f 9% 14%,#e07a52 14% 19%,#b55a6a 19% 25%,#7d4a78 25% 33%,#4b3a6e 33% 44%,#2c2a55 44% 58%,#1d1d3e 58% 74%,#14142c 74% 100%)}
+.world::before{content:"";position:absolute;inset:30% 0 0 0;pointer-events:none;
+  background-image:radial-gradient(#fff 1.4px,transparent 1.6px),radial-gradient(rgba(255,255,255,.7) 1px,transparent 1.2px);
+  background-size:137px 113px,71px 89px;background-position:11px 7px,40px 33px;opacity:.85;animation:px-twinkle 3s steps(2) infinite}
+@keyframes px-twinkle{50%{opacity:.55}}
+.world .sun{position:absolute;right:9%;top:4.5%;width:144px;height:144px;background:#ffd36b;box-shadow:0 0 0 12px rgba(255,211,107,.35),0 0 0 28px rgba(255,211,107,.15);clip-path:polygon(30% 0,70% 0,70% 8%,85% 8%,85% 15%,92% 15%,92% 30%,100% 30%,100% 70%,92% 70%,92% 85%,85% 85%,85% 92%,70% 92%,70% 100%,30% 100%,30% 92%,15% 92%,15% 85%,8% 85%,8% 70%,0 70%,0 30%,8% 30%,8% 15%,15% 15%,15% 8%,30% 8%)}
+.world .moon{position:absolute;left:6%;top:56%;width:96px;height:96px;background:#f4f1dc;clip-path:polygon(30% 0,70% 0,70% 8%,85% 8%,85% 15%,92% 15%,92% 30%,100% 30%,100% 70%,92% 70%,92% 85%,85% 85%,85% 92%,70% 92%,70% 100%,30% 100%,30% 92%,15% 92%,15% 85%,8% 85%,8% 70%,0 70%,0 30%,8% 30%,8% 15%,15% 15%,15% 8%,30% 8%)}
+.world .moon::after{content:"";position:absolute;left:52%;top:22%;width:16px;height:16px;background:#d9d4b4;box-shadow:-28px 28px 0 -2px #d9d4b4,8px 40px 0 4px #d9d4b4}
+.wsec{position:relative;z-index:1;padding:112px 0 0}
+.wsec:last-child{padding-bottom:120px}
+.wtitle{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.wtitle .h-sec{color:#fff;text-shadow:3px 0 0 var(--ink),-3px 0 0 var(--ink),0 3px 0 var(--ink),0 -3px 0 var(--ink),3px 3px 0 var(--ink),-3px -3px 0 var(--ink),3px -3px 0 var(--ink),-3px 3px 0 var(--ink),6px 6px 0 rgba(0,0,0,.3)}
+.wtitle .kicker{background:var(--gold);color:var(--ink)}
+
+/* 浮空草地平台：放在窗口下面 */
+.island{position:relative;height:40px;margin:0 24px;background:url("../img/px/ground.png") 0 0/48px 48px repeat-x;image-rendering:pixelated}
+.island::after{content:"";position:absolute;left:8%;right:8%;top:40px;height:28px;background:var(--dirt-d);clip-path:polygon(0 0,100% 0,92% 40%,80% 40%,72% 100%,28% 100%,20% 40%,8% 40%)}
+
+/* RPG 窗口（深蓝底、双线白框） */
+.win{position:relative;padding:28px;color:#f3f1ff;background:linear-gradient(180deg,#2a3a8f,#1c2766);box-shadow:0 0 0 4px #fff,0 0 0 8px var(--ink),12px 14px 0 8px rgba(0,0,0,.35)}
+.win h3{font-family:var(--px-font);-webkit-font-smoothing:none;font-size:24px;line-height:1.2;color:var(--gold)}
+
+/* STATUS */
+.status{display:grid;grid-template-columns:auto minmax(0,1fr);gap:32px}
+.status .who{text-align:center}
+.status .who img{width:144px;height:144px;image-rendering:pixelated;box-shadow:0 0 0 4px #fff}
+.status .who b{display:block;margin-top:14px;font-family:var(--px-font);-webkit-font-smoothing:none;font-weight:normal;font-size:24px}
+.status .who small{display:block;margin-top:6px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;color:#aab4ff}
+.dlg{position:relative;min-height:7.5em;padding:16px 20px 24px;font-size:17px;line-height:1.8;background:rgba(0,0,0,.25);box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
+.dlg b{color:var(--gold)}
+.dlg .more-ind{position:absolute;right:14px;bottom:8px;width:12px;height:8px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%);animation:px-blink 1s steps(2) infinite}
+.dlg .ghost{visibility:hidden}
+.attrs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;margin-top:20px}
+.attr{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px}
+.attr .lead{height:0;border-bottom:4px dotted rgba(255,255,255,.35)}
+.attr .gauge{height:12px;background:#0d1440;box-shadow:0 0 0 2px #fff}
+.attr .gauge i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--c,#5bd15b) 0 8px,transparent 8px 10px);transition:width 1.2s steps(12)}
+.in .attr .gauge i{width:var(--v)}
+.attr .num{font-size:24px;color:#fff;min-width:4.2em;text-align:right}
+
+/* 读取存档菜单 */
+.saves{padding:20px}
+.saves-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:4px 8px 16px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;color:#aab4ff;border-bottom:4px solid rgba(255,255,255,.25)}
+.slot{position:relative;display:grid;grid-template-columns:28px 52px 160px minmax(0,1fr) 150px 124px;align-items:center;gap:18px;padding:14px 12px;margin-top:8px;color:#f3f1ff;text-decoration:none;transition:background .1s steps(2)}
+.slot::before{content:"";width:12px;height:18px;background:var(--gold);clip-path:polygon(0 0,100% 50%,0 100%);opacity:0}
+.slot:hover,.slot:focus-visible{background:rgba(255,200,61,.16);outline:none;box-shadow:inset 0 0 0 2px var(--gold)}
+.slot:hover::before,.slot:focus-visible::before{opacity:1;animation:px-blink .6s steps(2) infinite}
+.slot .no{font-family:var(--px-font);-webkit-font-smoothing:none;font-size:24px;color:#aab4ff}
+.slot .th{width:160px;aspect-ratio:16/9;overflow:hidden;box-shadow:0 0 0 2px #fff;background:#000}
+.slot .th img{width:100%;height:100%;object-fit:cover}
+.slot .th.phones{display:flex;justify-content:center;gap:6%;background:var(--dirt-3)}
+.slot .th.phones img{width:24%;height:100%;object-fit:cover}
+.slot h4{font-family:var(--px-font);-webkit-font-smoothing:none;font-size:24px;line-height:1.25;color:#fff}
+.slot .meta{margin-top:6px;font-size:14px;line-height:1.5;color:#c9cdf5}
+.slot .meta i{font-style:normal;display:inline-block;margin-right:8px;padding:2px 6px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;background:rgba(255,255,255,.15)}
+.slot .key{font-size:13px;line-height:1.4;color:#c9cdf5}
+.slot .key b{display:block;font-family:var(--px-font);-webkit-font-smoothing:none;font-weight:normal;font-size:36px;line-height:1.1;color:var(--gold)}
+.slot .go{justify-self:end}
+.slot .done{display:block;margin-top:8px;height:8px;background:#0d1440;box-shadow:0 0 0 2px rgba(255,255,255,.6)}
+.slot .done i{display:block;height:100%;width:var(--v);background:#5bd15b}
+.saves-foot{display:flex;justify-content:space-between;gap:16px;padding:16px 8px 0;margin-top:12px;border-top:4px solid rgba(255,255,255,.25);font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;color:#aab4ff}
+.saves-foot a{color:var(--gold);text-decoration:none}
+
+/* 三扇门 */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:end;padding:0 24px}
+.wdoor{position:relative;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#fff;padding-top:12px}
+.wdoor .sign{order:-1;margin-bottom:16px;padding:10px 14px;text-align:center;background:var(--paper);color:var(--ink);box-shadow:0 0 0 4px var(--ink),6px 8px 0 4px rgba(0,0,0,.3);transition:transform .1s steps(2)}
+.wdoor .sign b{display:block;font-family:var(--px-font);-webkit-font-smoothing:none;font-weight:normal;font-size:24px;line-height:1.2}
+.wdoor .sign small{display:block;margin-top:6px;font-size:13px;color:var(--mute)}
+.wdoor .d{width:96px;height:144px;background:url("../img/px/door.png") 0 0/192px 144px;image-rendering:pixelated;position:relative}
+.wdoor:hover .d,.wdoor:focus-visible .d{background-position:-96px 0}
+.wdoor:hover .sign,.wdoor:focus-visible .sign{transform:translateY(-6px)}
+.wdoor:focus-visible{outline:none}
+.wdoor:focus-visible .sign{outline:4px solid var(--gold);outline-offset:4px}
+.doors-ground{margin-top:0}
+
+/* 终点：灯塔与关卡完成 */
+.goal{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
+.clear{padding:32px}
+.clear .big{font-family:var(--px-font);-webkit-font-smoothing:none;font-size:48px;line-height:1.1;color:var(--gold);text-shadow:4px 4px 0 var(--ink)}
+.clear .big span{display:inline-block}
+.in .clear .big span{animation:px-hop .5s steps(4) both;animation-delay:calc(var(--i) * 60ms)}
+@keyframes px-hop{0%{transform:translateY(0)}40%{transform:translateY(-16px)}100%{transform:translateY(0)}}
+.clear p{margin-top:16px;font-size:17px;color:#e6e8ff}
+.clear .row{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px}
+.clear .score{display:flex;gap:28px;margin-top:20px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;color:#aab4ff}
+.clear .score b{display:block;margin-top:6px;font-weight:normal;font-size:24px;color:#fff}
+.tower{position:relative;width:192px;height:384px;background:url("../img/px/lighthouse.png") 0 0/100% 100%;image-rendering:pixelated}
+/* Generated lighthouse lamp center: native pixel (16, 13). */
+.tower::before{content:"";position:absolute;left:96px;top:78px;width:620px;height:110px;margin-top:-55px;transform-origin:0 50%;background:linear-gradient(90deg,rgba(255,226,140,.4),rgba(255,226,140,0));clip-path:polygon(0 45%,100% 0,100% 100%,0 55%);animation:px-beam 6s steps(48) infinite;pointer-events:none}
+@keyframes px-beam{0%{transform:rotate(-170deg)}50%{transform:rotate(-10deg)}100%{transform:rotate(-170deg)}}
+
+@media (max-width:900px){
+  .board{grid-template-columns:1fr;width:calc(100% - 32px)}
+  .board-cap{padding:14px 16px 16px}
+  .board-cap p{display:none}
+  .slot{grid-template-columns:20px 40px 110px minmax(0,1fr);gap:12px}
+  .slot .th{width:110px}
+  .slot .key,.slot .go{grid-column:3 / -1}
+  .slot .go{justify-self:start}
+  .status{grid-template-columns:1fr}
+  .goal{grid-template-columns:1fr}
+  .tower{justify-self:center;width:128px;height:256px}
+  .tower::before{left:64px;top:52px}
+}
+@media (max-width:734px){
+  .stg{height:max(680px,calc(100svh - 56px))}
+  .stg-top .mega{font-size:36px}
+  .stg-help{display:none}
+  .board-scr{border-width:4px}
+  .board-cap h2{font-size:12px;line-height:1.6}
+  .board-act small{display:none}
+  .sblock .lbl{font-size:12px;padding:4px 5px}
+  .sblock .lbl span{display:none}
+  .sblock .lbl b{margin:0}
+  .attrs{grid-template-columns:1fr}
+  .doors{grid-template-columns:1fr;gap:48px}
+  .clear .big{font-size:36px}
+  .slot{grid-template-columns:96px minmax(0,1fr);gap:8px 14px}
+  .slot::before,.slot .no{display:none}
+  .slot .th{width:96px;grid-row:span 3;align-self:start}
+  .slot h4{font-size:12px;line-height:1.6}
+  .slot .key,.slot .go{grid-column:2}
+  .slot .key b{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .stg-help,.stg-help *,.hero-p .say.cue{animation:none!important}
+  .world::before,.tower::before{animation:none}
+}

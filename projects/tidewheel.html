@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>《发条人偶》Tidewheel · 殷硕作品集</title>
+<meta name="description" content="thatgamejam #02 参赛作品《Tidewheel》：甩出时间齿轮停住海面，把浪变成地形。殷硕担任策划（兼部分程序）。">
+<meta name="theme-color" content="#1f1a24">
+<link rel="icon" href="../img/px/favicon.png">
+<link rel="stylesheet" href="../css/shell.css">
+<link rel="stylesheet" href="../css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="px-sky" id="top">
+
+<header class="hud">
+  <div class="hud-in">
+    <a class="hud-brand" href="../index.html" data-slot="回到标题"><img src="../img/px/avatar.png" alt="">殷硕<small>游戏策划</small></a>
+    <nav class="hud-nav" aria-label="主导航">
+      <a href="../index.html" aria-current="page" data-slot="选择存档">存档</a>
+      <a href="../about.html" data-slot="打开玩家档案">关于我</a>
+      <a class="hide-s" href="../resume.html" data-slot="打开简历">简历</a>
+    </nav>
+    <div class="hud-coins" title="顶存档方块可以收集硬币"><i></i><b>×00</b></div>
+  </div>
+</header>
+
+<div class="lnav">
+  <div class="wrap">
+    <b>发条人偶 Tidewheel</b>
+    <nav>
+      <a class="hide-s" href="#core">核心规则</a>
+      <a class="hide-s" href="#data">手感调校</a>
+      <a class="hide-s" href="#onboard">少字引导</a>
+      <a class="hide-s" href="#story">开场与结尾</a>
+      <a class="hide-s" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" target="_blank" rel="noopener">GDD</a>
+      <a class="pill sm" href="https://shuo-yin.itch.io/tidewheel" target="_blank" rel="noopener">试玩</a>
+    </nav>
+  </div>
+</div>
+
+<section class="c-hero">
+  <div class="wrap">
+    <span class="kicker">存档 02 · 可玩作品 · thatgamejam #02</span>
+    <h1 class="mega on-sky">《发条人偶》<br>Tidewheel</h1>
+    <p class="feature">2D 横版物理解谜。发条人偶要在风暴中登上灯塔，把灯点亮。人偶甩出胸口的时间齿轮，<b>齿轮周围那片海的时间随之停止</b>，停住的浪成为<b>可以踩的地形</b>，召回齿轮时海面回弹，能把人偶弹起。</p>
+    <div class="acts">
+      <a class="px-btn red" href="https://shuo-yin.itch.io/tidewheel" target="_blank" rel="noopener"><span class="px-ico pad"></span>在 itch.io 试玩</a>
+      <a class="px-btn paper" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" target="_blank" rel="noopener"><span class="px-ico book"></span>GDD 文档（飞书）</a>
+      <button class="px-block" data-coin="tidewheel-1" aria-label="顶一下存档方块"></button>
+    </div>
+    <div class="c-cover" data-r><img src="../img/tidewheel/cover.jpg" alt="封面：发条人偶冒雨从码头跑向灯塔，巨浪在灯塔下翻起"></div>
+  </div>
+</section>
+
+<section class="c-stats">
+  <div class="wrap">
+    <div class="stats">
+      <div data-r><span>概念阶段</span><b>4 + 3</b><span>否决方案 / 灰盒版本</span></div>
+      <div data-r="2"><span>召回弹射窗口</span><b>1.6 s</b><span>由约 0.5 秒放宽</span></div>
+      <div data-r="3"><span>网页原型</span><b>6 版</b><span>用于验证规则和数值</span></div>
+      <div data-r="4"><span>自动化测试</span><b>57 项</b><span>端到端流程检查</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="px-ground"></div>
+<div class="white">
+
+  <section class="chapter" id="core">
+    <div class="narrow">
+      <p class="kicker" data-r>01</p>
+      <h2 class="h-sec" data-r>一组规则，解释两件事</h2>
+      <p class="feature" data-r>人偶是铁做的，掉进海里会沉；同时它又需要被海浪弹起来。两件事如果各写一条特殊规则，玩家要多记一条。最后用<b>同一组规则</b>解释了两者。</p>
+      <ul class="rules" data-r>
+        <li><i>规则 1 · 停住</i><b>停住的海水压不开</b>人沉下去，需要水向两边流开。时间停住的水流不开，多重都压不开，所以能站。</li>
+        <li><i>规则 2 · 召回与回弹</i><b>召回时，海面回弹</b>停住的海面在 0.2 秒内回到现在应有的高度，滑动期间仍是实体。海面往上走时，站在上面的人偶被弹起。</li>
+      </ul>
+      <div class="prose" data-r style="margin-top:32px">
+        <p>流动的水托不住铁做的身体，回弹中的海面仍然是实体，“会沉”和“能被弹起”都从这两条推出来，设定和玩法用的是同一套逻辑。</p>
+        <p>概念阶段先后否决了 4 套方案和 3 版灰盒，其中包括倒带、因果链和零件系统，最后定下“停住大自然”。齿轮停住的是时间，不是海水，所以全程不用冰、玻璃这类表现：停住的海仍保留浪形、白沫和水纹，只褪去饱和度，可站立的范围用一条黄铜刻度线标出，冻结圈画成钟面。动物不受影响，螃蟹照常爬过停住的海面，用来演示这条规则。</p>
+      </div>
+      <figure class="fig" data-r>
+        <img src="../img/tidewheel/storm.jpg" alt="风暴段：钟面形状的冻结圈罩住岩石边缘，落下的闪电停在半空" loading="lazy">
+        <figcaption>风暴段。齿轮落在岩石边缘，钟面形状的冻结圈碰到的那段闪电停在半空，可以踩上去过桥。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter" id="data">
+    <div class="narrow">
+      <p class="kicker" data-r>02</p>
+      <h2 class="h-sec" data-r>用脚本测手感</h2>
+      <p class="feature" data-r>在 AI 辅助下搭了可玩的网页原型，迭代 6 版；写自动化脚本<b>模拟玩家按键</b>，测出每一段的出手时机窗口，再按数据调参。</p>
+      <div class="prose" data-r>
+        <p>最初的甩出方式是瞄准模式：按住进入瞄准，调远近，海浪减速，路径可达时虚线变绿。试玩下来操作步骤太多，10 月 29 日改成蓄力：按住蓄力，松开甩出，蓄力时只显示飞行轨迹、落点和冻结范围。落点预测和实际落点的误差约 1 像素。</p>
+      </div>
+      <div class="table-scroll" data-r>
+        <table>
+          <tr><th>关卡段</th><th>测什么</th><th>结果</th></tr>
+          <tr><td>1-1 潮池</td><td>停住浪头的出手窗口</td><td>约 1.4 秒</td></tr>
+          <tr><td>1-2 浪坡</td><td>停住浪坡的出手窗口</td><td>约 1.1 秒</td></tr>
+          <tr><td>1-3 浪花台阶</td><td>停住空中水珠的出手窗口</td><td>原来只有约 0.1 秒；调整水珠半径、判定距离和重力后，蓄力 0.65 时为 0.8 秒</td></tr>
+          <tr><td>1-4 召回弹射</td><td>召回的有效时机</td><td>由约 0.5 秒放宽到约 1.6 秒，召回提示没有误报</td></tr>
+          <tr><td>4-3 灯塔巨浪</td><td>停住巨浪的出手窗口</td><td>蓄力 0.6–0.9 时约 2.25 秒</td></tr>
+        </table>
+      </div>
+      <div class="prose" data-r>
+        <p class="note">1-3 的窗口一开始只有约 0.1 秒，真人几乎做不到。脚本把它标成了待办，改完参数后重新跑一遍，确认达标再交给程序。</p>
+      </div>
+      <div class="shots" data-r>
+        <figure><img src="../img/tidewheel/cliffs.jpg" alt="崖间段：人偶站在高岩上，远处是悬停的水珠" loading="lazy"><figcaption>崖间段。左上角是时间齿轮的状态条，右上角是浪周期环。</figcaption></figure>
+        <figure><img src="../img/tidewheel/beach.jpg" alt="第 1 章海岸：码头、螃蟹和两格图示木牌" loading="lazy"><figcaption>第 1 章海岸。螃蟹不受冻结影响，右边的木牌用两格图示讲停住浪头再爬上去。</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="onboard">
+    <div class="narrow">
+      <p class="kicker" data-r>03</p>
+      <h2 class="h-sec" data-r>少字引导</h2>
+      <p class="feature" data-r>引导参考了《超级马力欧兄弟》1-1、Portal、Celeste 和 Tunic：<b>先在没有代价的地方学，再到有代价的地方用</b>。</p>
+      <div class="prose" data-r>
+        <ul>
+          <li>浅水池教学：掉进浅水池只会沉到池底，可以在池底走和跳，不算死。同一个技巧先在浅池学，再到深海用。</li>
+          <li>按键提示学会就消失。</li>
+          <li>木牌只用图示，不写字。</li>
+          <li>同一处失败两次，才出现提示圈，不打扰熟练玩家。</li>
+        </ul>
+        <p>内部试玩时，团队一致认为画面上的文字太多，玩家的注意力都在读字上。当时已经接近提交，美术不能再改，所以我只用程序改动做了一版少字方案，先在原型里实现，附上前后对照截图交给程序：</p>
+        <ul>
+          <li>去掉常驻的节拍名、目标句和状态标签；</li>
+          <li>头顶按键提示只留按键图标，蓄力键外面加一圈进度弧，代替“按住”两个字；</li>
+          <li>提示圈平时淡显，该停住的浪或水珠到位时全亮，玩家看的是时机而不是一句话；</li>
+          <li>提示句移进暂停菜单，想看的人按暂停才看得到；</li>
+          <li>人偶走近木牌时，木牌三格依次点亮，引导阅读顺序。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="story">
+    <div class="narrow">
+      <p class="kicker" data-r>04</p>
+      <h2 class="h-sec" data-r>开场与结尾</h2>
+      <p class="feature" data-r>剧情是一条直线：守灯人老海豹出海收网，风暴提前到来，灯塔没有亮。人偶穿过海岸，<b>登上灯塔上紧发条</b>，灯亮了，小船朝着光划回来。</p>
+      <div class="prose" data-r>
+        <p>开场原本是一段摸头动画，美术提议改成可操作的对话：人偶走到老海豹身边按 E 交谈，4 句台词交代了出海收网、看好家和回来再上发条，之后电视里的天气广播说风暴提前。这是全游戏唯一有对白的地方，台词不直接说出目标，玩家出门后看到远处没亮的灯塔，自己明白要去哪。</p>
+        <p>结尾配赛事主题音频，整段原样播放。音频里有五声发条，画面依次对上：0.3 秒开始上发条，20.6 秒灯亮，36.5 秒光束扫过海面找到小船，44.5 秒小船转向，53.0 秒小船靠岸。</p>
+      </div>
+      <div class="shots" data-r>
+        <figure><img src="../img/tidewheel/home.jpg" alt="开场：老海豹的五金修理铺门前，人偶站在草坡上" loading="lazy"><figcaption>开场：老海豹的修理铺门前。</figcaption></figure>
+        <figure><img src="../img/tidewheel/ending.jpg" alt="结尾：天亮后，人偶和老海豹坐在灯塔下" loading="lazy"><figcaption>结尾：天亮后，人偶和老海豹坐在灯塔下。</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="scope">
+    <div class="narrow">
+      <p class="kicker" data-r>05</p>
+      <h2 class="h-sec" data-r>文档与提交</h2>
+      <p class="feature" data-r>写了一份标准 GDD，并<b>事先定好削减顺序</b>。</p>
+      <p data-r style="margin:-8px 0 24px"><a class="px-btn sm paper" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" target="_blank" rel="noopener"><span class="px-ico ext"></span>在飞书阅读 GDD</a></p>
+      <div class="prose" data-r>
+        <p>GDD 包括四章关卡、机制规则、数值表、美术规格与资源清单、音效清单、技术方案、P0 / P1 / P2 版本范围，以及里程碑和风险对策。团队在飞书上维护同一份文档。</p>
+        <p>提交前逐条核对赛事规则：默认语言为英文，提交页写明 AI 的使用情况，主题音频整段原样播放。itch.io 页面的简介、操作说明和设计陈述也由我准备。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info light">
+    <div class="narrow">
+      <h2 class="h-sec" data-r>存档信息</h2>
+      <div class="spec" data-r>
+        <div><h3>角色</h3><div class="c">策划（兼部分程序）</div></div>
+        <div><h3>团队</h3><div class="c">4 人：策划、程序、两名美术（第二位美术在开发中途加入）</div></div>
+        <div><h3>赛事</h3><div class="c">thatgamejam #02</div></div>
+        <div><h3>周期</h3><div class="c">2026.10 – 11</div></div>
+        <div><h3>引擎</h3><div class="c">Unity 2D · Windows</div></div>
+        <div><h3>流程</h3><div class="c">单次通关约 10–15 分钟，支持键盘和手柄，英文 / 中文</div></div>
+        <div><h3>GDD</h3><div class="c"><a class="more ext" href="https://my.feishu.cn/wiki/RG8Aw1RGkiIKGsk5d5vcce1Dnsh" target="_blank" rel="noopener">飞书文档</a></div></div>
+        <div><h3>试玩</h3><div class="c"><a class="more ext" href="https://shuo-yin.itch.io/tidewheel" target="_blank" rel="noopener">shuo-yin.itch.io/tidewheel</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager" style="padding-top:88px">
+    <div class="wrap">
+      <a href="nightreign-mod.html" data-slot="读取存档 01"><span>上一存档 · 01</span><b>黑夜君临大型内容扩展 Mod</b></a>
+      <a href="burger/index.html" data-slot="读取存档 03"><span>下一存档 · 03</span><b>《宇宙汉堡》</b></a>
+    </div>
+  </nav>
+</div>
+
+<footer class="px-foot">
+  <div class="px-ground"></div>
+  <div class="px-under"><div><span>© 2026 殷硕</span><span><a href="#top">回到顶部</a><a href="../index.html">全部存档</a><a href="../resume.html" data-slot="打开简历">简历</a></span></div></div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

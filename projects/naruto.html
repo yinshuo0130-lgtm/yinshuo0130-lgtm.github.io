@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>《火影忍者》手游 成长与经济系统拆解 · 殷硕作品集</title>
+<meta name="description" content="按 MDA 框架拆解《火影忍者》手游的成长与经济系统，并与《异人之下》做 A/B 对比。">
+<meta name="theme-color" content="#1f1a24">
+<link rel="icon" href="../img/px/favicon.png">
+<link rel="stylesheet" href="../css/shell.css">
+<link rel="stylesheet" href="../css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="px-sky" id="top">
+
+<header class="hud">
+  <div class="hud-in">
+    <a class="hud-brand" href="../index.html" data-slot="回到标题"><img src="../img/px/avatar.png" alt="">殷硕<small>游戏策划</small></a>
+    <nav class="hud-nav" aria-label="主导航">
+      <a href="../index.html" aria-current="page" data-slot="选择存档">存档</a>
+      <a href="../about.html" data-slot="打开玩家档案">关于我</a>
+      <a class="hide-s" href="../resume.html" data-slot="打开简历">简历</a>
+    </nav>
+    <div class="hud-coins" title="顶方块可以收集硬币"><i></i><b>×00</b></div>
+  </div>
+</header>
+
+<div class="lnav">
+  <div class="wrap">
+    <b>火影手游 · 成长与经济系统</b>
+    <nav>
+      <a class="hide-s" href="#summary">一页结论</a>
+      <a class="hide-s" href="#ab">A/B 对比</a>
+      <a class="hide-s" href="#fix">问题与建议</a>
+      <a href="#read">阅读全文</a>
+    </nav>
+  </div>
+</div>
+
+<section class="c-hero">
+  <div class="wrap">
+    <span class="kicker">存档 04 · 系统拆解 · 36 页</span>
+    <h1 class="mega on-sky">《火影忍者》手游<br>成长与经济系统</h1>
+    <p class="feature">按 MDA 框架把系统拆成机制、动态、体验三层，每条结论都写成一条链：<b>哪条规则 → 玩家因此怎么做 → 产生什么情绪</b>。再拿同一工作室的《异人之下》做 A/B 对比。口径为 2026 年 10 月实机版本，账号 V12。</p>
+    <div class="acts">
+      <a class="px-btn" href="#read"><span class="px-ico book"></span>在这里阅读全文</a>
+      <a class="px-btn paper" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd"><span class="px-ico ext"></span>飞书原文</a>
+      <button class="px-block" data-coin="naruto-1" aria-label="顶一下存档方块"></button>
+    </div>
+    <div class="c-cover" data-r><img src="../img/naruto/main.jpg" alt="火影忍者手游主界面（昵称已打码）" style="object-position:30% center;max-height:520px"></div>
+  </div>
+</section>
+
+<section class="c-stats">
+  <div class="wrap">
+    <div class="stats">
+      <div data-r><span>高级招募与点券直售价差</span><b>25×</b><span>按充值折算</span></div>
+      <div data-r="2"><span>拿满一名 S 忍</span><b>≈300</b><span>抽，玩家统计口径</span></div>
+      <div data-r="3"><span>战力线养成系统</span><b>7</b><span>套</span></div>
+      <div data-r="4"><span>招募入口</span><b>8</b><span>个，3 层货币</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="px-ground"></div>
+<div class="white">
+
+  <section class="chapter" id="summary">
+    <div class="narrow">
+      <p class="kicker" data-r>01</p>
+      <h2 class="h-sec" data-r>一页结论</h2>
+      <p class="feature" data-r>《火影忍者》手游把<b>忍者作为唯一核心商品</b>，用两套相反的 PVP 规则同时卖给操作型和养成型玩家：决斗场统一数值，积分赛按战力结算。</p>
+      <div class="table-scroll" data-r>
+        <table>
+          <tr><th>层</th><th>做法</th><th>关键证据</th></tr>
+          <tr><td>机制</td><td>3 层货币、8 个招募入口、7 套养成系统；决斗场统一战力，积分赛按战力结算</td><td>高招 S 碎片 11.5%，十连必送 S 碎片；V12 特权全是次数类</td></tr>
+          <tr><td>动态</td><td>决斗场玩家跟着新忍者脉冲式付费，战力玩家每天买体力持续付费；等级锁时间，次数锁产出，付费只能放宽次数</td><td>团本 110–160 级分 5 档；秘境饰品魔抗门槛每档涨约 10%</td></tr>
+          <tr><td>体验</td><td>决斗场提供挑战和表达，战力线提供成就和收集；同一次强势忍者投放，大 R 和零氪的情绪方向相反</td><td>强势付费忍者上线横扫决斗场后被削弱</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="ab">
+    <div class="narrow">
+      <p class="kicker" data-r>02</p>
+      <h2 class="h-sec" data-r>和《异人之下》的 A/B</h2>
+      <p class="feature" data-r>两款都出自腾讯魔方工作室群，都是动漫 IP 改编的格斗游戏，但<b>商业化走了相反的路</b>。</p>
+      <ul class="rules" data-r>
+        <li><i>卖什么</i><b>“有没有”和“有多少”</b>火影卖忍者、秘卷、通灵，以及战力；《异人之下》公开口径是角色可以通过签到和任务免费获得，付费主要是皮肤。</li>
+        <li><i>公平靠什么</i><b>屏蔽一部分 / 全部屏蔽</b>火影在部分模式里屏蔽数值，再用 BAN 位让忍者储备重新有价值；《异人之下》在 PVP 全面屏蔽等级和装备。</li>
+        <li><i>风险</i><b>方向相反</b>火影的风险是强度膨胀、战力线越叠越深；《异人之下》的风险是外观付费天花板低，以及养成一旦进入 PVP 会破坏公平承诺。</li>
+        <li><i>方法</i><b>每条结论一条链</b>为了不让 MDA 变成贴标签，每条结论都从规则推到玩家行为，再推到情绪，并给出实机截图作证据。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="fix">
+    <div class="narrow">
+      <p class="kicker" data-r>03</p>
+      <h2 class="h-sec" data-r>优点、问题与建议</h2>
+      <ul class="rules three" data-r>
+        <li><i>三条优点</i><ol><li>忍者同时服务两条成长线，一次投放卖给两类玩家，收入有峰值也有基本盘。</li><li>防挫败规则集中在低中段：低段输了不扣分，中段有段位地板。</li><li>等级门槛只能靠时间推进，付费只能放宽次数，内容消耗速度可控。</li></ol></li>
+        <li><i>三个问题</i><ol><li>点券渠道的忍者零氪永远拿不到，强势期内也没有练习机会。</li><li>高级招募只公示十连必送 S 碎片，拿满一名 S 忍要多少抽没有说明。</li><li>战力线已有 7 套养成系统，回流和新玩家的追赶成本逐年上涨。</li></ol></li>
+        <li><i>三条建议</i><ol><li>高级招募明示保底进度，和祈愿夺宝的幸运值做法一致。</li><li>付费忍者上线满 4 周后，进入决斗场“本周免费”轮换，只给体验权。</li><li>借鉴《异人之下》PVE 与 PVP 两套技能模组，把新忍者的决斗场强度和积分赛强度分开调。</li></ol></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="toc">
+    <div class="narrow">
+      <p class="kicker" data-r>04</p>
+      <h2 class="h-sec" data-r>目录</h2>
+      <ul class="toc-list" data-r>
+        <li><b>零</b>拆解说明：对象、MDA 用法、为什么选《异人之下》</li>
+        <li><b>一</b>系统目的</li>
+        <li><b>二</b>机制层：系统怎么设计</li>
+        <li><b>三</b>动态层：设计如何达成目的</li>
+        <li><b>四</b>体验层：玩家实际感受到什么</li>
+        <li><b>五</b>A/B 对比：火影 vs 异人之下</li>
+        <li><b>六</b>优缺点分析</li>
+        <li><b>七</b>改进建议</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="read">
+    <div class="narrow">
+      <p class="kicker" data-r>05</p>
+      <h2 class="h-sec" data-r>阅读全文</h2>
+      <p class="feature" data-r>全文在下面直接翻阅，看完点顶栏或底部按钮回到存档。</p>
+    </div>
+    <div class="wrap">
+      <div class="pdf" data-r>
+        <div class="bar"><span>naruto-mda.pdf · 36 页</span><span><a href="../files/naruto-mda.pdf" download>下载 PDF</a>　<a href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd">飞书原文 ↗</a></span></div>
+        <iframe src="../files/naruto-mda.pdf#view=FitH" title="《火影忍者》手游成长与经济系统拆解全文" loading="lazy"></iframe>
+        <div class="pdf-alt">手机上无法内嵌 PDF。<a class="more" href="../files/naruto-mda.pdf" style="color:var(--gold)">打开 PDF</a>　<a class="more ext" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd" style="color:var(--gold)">飞书原文</a>（新标签页打开）</div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager" style="padding-top:88px">
+    <div class="wrap">
+      <a href="burger/index.html" data-slot="读取存档 03"><span>上一存档 · 03</span><b>《宇宙汉堡》</b></a>
+      <a href="hearthstone.html" data-slot="读取存档 05"><span>下一存档 · 05</span><b>酒馆战棋：经济与对局节奏</b></a>
+    </div>
+  </nav>
+</div>
+
+<footer class="px-foot">
+  <div class="px-ground"></div>
+  <div class="px-under"><div><span>© 2026 殷硕</span><span><a href="#top">回到顶部</a><a href="../index.html">全部存档</a><a href="../resume.html" data-slot="打开简历">简历</a></span></div></div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

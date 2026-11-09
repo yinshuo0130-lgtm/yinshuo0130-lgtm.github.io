@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="zh-CN" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>《宇宙汉堡》 · 殷硕作品集</title>
+<meta name="description" content="抖音竖屏增量经营小游戏《宇宙汉堡》：煎肉饼、升级、搬店、发射转生。殷硕独立完成策划、数值与开发，用跑局模拟器调整节奏。">
+<meta name="theme-color" content="#1f1a24">
+<link rel="icon" href="../../img/px/favicon.png">
+<link rel="stylesheet" href="../../css/shell.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/burger.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="px-sky" id="top">
+
+<header class="hud">
+  <div class="hud-in">
+    <a class="hud-brand" href="../../index.html" data-slot="回到标题"><img src="../../img/px/avatar.png" alt="">殷硕<small>游戏策划</small></a>
+    <nav class="hud-nav" aria-label="主导航">
+      <a href="../../index.html" aria-current="page" data-slot="选择存档">存档</a>
+      <a href="../../about.html" data-slot="打开玩家档案">关于我</a>
+      <a class="hide-s" href="../../resume.html" data-slot="打开简历">简历</a>
+    </nav>
+    <div class="hud-coins" title="顶存档方块可以收集硬币"><i></i><b>×00</b></div>
+  </div>
+</header>
+
+<div class="lnav">
+  <div class="wrap">
+    <b>宇宙汉堡</b>
+    <nav>
+      <a class="hide-s" href="#loop">核心循环</a>
+      <a class="hide-s" href="#shots">截图</a>
+      <a class="hide-s" href="#design">策划设计</a>
+      <a class="hide-s" href="#iterate">测试迭代</a>
+      <a href="#pacing">数值节奏</a>
+      <a class="hide-s" href="#dev">开发</a>
+    </nav>
+  </div>
+</div>
+
+<section class="c-hero">
+  <div class="wrap">
+    <span class="kicker">存档 03 · 可玩作品 · 独立制作 · 2026.09 – 10</span>
+    <h1 class="mega on-sky bg-title">宇宙<span class="burger">汉堡</span></h1>
+    <p class="feature">竖屏放置经营小游戏。玩家用手指拖着锅铲煎肉饼赚钱，在培训中心升级工具和配方，<b>从地球路边摊一路把汉堡店开到太空</b>。</p>
+    <ul class="bg-tags">
+      <li>系统策划</li><li>数值策划</li><li>Unity 2022.3 · C#</li><li>WebGL · 抖音 TTSDK</li><li>像素美术管线</li>
+    </ul>
+    <p class="bg-status">状态：<b>开发完成</b>，软著已经提交申请，拿到软著后在抖音小游戏备案上线。</p>
+    <div class="acts">
+      <a class="px-btn red" href="#shots"><span class="px-ico pad"></span>看游戏截图</a>
+      <button class="px-block" data-coin="burger-1" aria-label="顶一下存档方块"></button>
+    </div>
+    <div class="stall" data-r aria-hidden="true">
+      <span class="sign">宇宙汉堡 · 营业中</span>
+      <div class="awning"></div>
+      <div class="win">
+        <div class="phone"><img src="img/02_home.png" alt=""></div>
+        <div class="phone"><img src="img/12b_run_items.png" alt=""></div>
+        <div class="phone"><img src="img/21_space_run.png" alt=""></div>
+      </div>
+      <div class="counter"></div>
+    </div>
+  </div>
+</section>
+
+<section class="c-stats">
+  <div class="wrap">
+    <div class="stats five">
+      <div data-r><span>C# 代码</span><b>7300</b><span>行，31 个脚本，策划和开发一人完成</span></div>
+      <div data-r="2"><span>升级项</span><b>63</b><span>个，分地球、星际两套</span></div>
+      <div data-r="3"><span>店面章节</span><b>9</b><span>个，每个都有自己的像素场景</span></div>
+      <div data-r="4"><span>第一次发射</span><b>49′</b><span>模拟器结果，不看广告</span></div>
+      <div data-r="5"><span>成就</span><b>39</b><span>个，另有 11 种每日任务</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="px-ground"></div>
+<div class="white">
+
+  <section class="chapter" id="loop">
+    <div class="wrap">
+      <p class="kicker" data-r>01</p>
+      <h2 class="h-sec" data-r>核心循环</h2>
+      <p class="feature" data-r>一轮营业 15 秒左右，短到可以在刷视频的间隙玩一把；<b>升级和搬店提供中期目标，“发射”转生提供长期目标</b>。</p>
+      <ol class="lvmap" data-r>
+        <li><span class="node">1</span><div class="card"><div class="k">一轮 · 15 秒以上</div><div class="t">煎肉饼</div><p class="d">拖动锅铲盖住肉饼加热，熟了自动出餐；翻面、躲火苗、捡道具、赶小猫。</p></div></li>
+        <li><span class="node">2</span><div class="card"><div class="k">结算</div><div class="t">过关拿星</div><p class="d">第 N 关 · 1～3 星目标，按星给 10% / 20% / 35% 额外收入。</p></div></li>
+        <li><span class="node">3</span><div class="card"><div class="k">花钱</div><div class="t">培训中心</div><p class="d">火力、范围、售价、帮厨……按类别排成清单。</p></div></li>
+        <li><span class="node">4</span><div class="card"><div class="k">新章节</div><div class="t">搬店</div><p class="d">路边摊 → 美食街 → 购物中心，换场景，收入翻倍。</p></div></li>
+        <li class="boss"><span class="node">★</span><div class="card"><div class="k">转生</div><div class="t">发射</div><p class="d">清空地球进度换星星（永久加成），解锁星际地图：月球、火星、木星环、银河中心。</p></div></li>
+      </ol>
+      <p class="loopback" data-r>发射之后回到路边摊重新开始，但有星星加成，每一轮会越来越快：第一轮 49 分钟，第二轮 23 分钟，第三轮 11 分钟。</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="shots">
+    <div class="wrap">
+      <p class="kicker" data-r>02</p>
+      <h2 class="h-sec" data-r>游戏截图</h2>
+      <div class="rail-wrap" data-r>
+        <div class="rail" id="rail" tabindex="0" aria-label="游戏截图，可以左右滑动">
+          <figure><div class="phone"><img src="img/02_home.png" alt="主页：关卡卡片、路边摊场景、开始营业按钮、培训中心和成就入口" loading="lazy"></div><figcaption><b>主页</b>关卡卡片 → 店面场景 → 开始营业 → 培训中心 → 成就</figcaption></figure>
+          <figure><div class="phone"><img src="img/12b_run_items.png" alt="营业中：火焰拖尾、帮厨、道具和狂热时间" loading="lazy"></div><figcaption><b>营业中</b>喷火枪留下的火焰拖尾、帮厨、道具、狂热时间</figcaption></figure>
+          <figure><div class="phone"><img src="img/12c_run_burst.png" alt="太阳灶的日光爆发" loading="lazy"></div><figcaption><b>工具特技</b>太阳灶每 6 秒一次日光爆发</figcaption></figure>
+          <figure><div class="phone"><img src="img/06_result.png" alt="结算界面：第 1 关 差一点，零星" loading="lazy"></div><figcaption><b>结算</b>没拿到一星时，提示去培训中心升级再来</figcaption></figure>
+          <figure><div class="phone"><img src="img/02b_shop.png" alt="培训中心升级清单" loading="lazy"></div><figcaption><b>培训中心</b>代替技能树的目录式升级清单</figcaption></figure>
+          <figure><div class="phone"><img src="img/04b_pause.png" alt="暂停界面" loading="lazy"></div><figcaption><b>暂停</b>继续营业，或提前收工回到店里</figcaption></figure>
+          <figure><div class="phone"><img src="img/11_home_late.png" alt="购物中心店面" loading="lazy"></div><figcaption><b>第 3 章 购物中心</b>每搬一次店，场景跟着换</figcaption></figure>
+          <figure><div class="phone"><img src="img/19_space_home.png" alt="星际主页" loading="lazy"></div><figcaption><b>星际</b>发射之后的第二张地图</figcaption></figure>
+          <figure><div class="phone"><img src="img/21_space_run.png" alt="星际营业：黑洞和行星肉饼" loading="lazy"></div><figcaption><b>星际营业</b>黑洞会把附近的肉饼吸走，还有更值钱的行星肉饼</figcaption></figure>
+          <figure><div class="phone"><img src="img/16_star_shop.png" alt="星际科技商店" loading="lazy"></div><figcaption><b>星际科技</b>用发射获得的星星买永久加成</figcaption></figure>
+          <figure><div class="phone"><img src="img/27c_achievements.png" alt="成就列表" loading="lazy"></div><figcaption><b>成就</b>每个成就让收入永久 +1%</figcaption></figure>
+          <figure><div class="phone"><img src="img/01a_intro.png" alt="开场的旅程地图" loading="lazy"></div><figcaption><b>开场</b>第一次打开时先展示整条旅程，让玩家知道终点在哪</figcaption></figure>
+        </div>
+        <div class="rail-btns">
+          <span>截图来自电脑版自动截图（手机竖屏比例），共 12 张。</span>
+          <div><button class="px-btn sm paper" type="button" data-dir="-1" aria-label="上一组截图">◀</button><button class="px-btn sm paper" type="button" data-dir="1" aria-label="下一组截图">▶</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="design">
+    <div class="narrow">
+      <p class="kicker" data-r>03</p>
+      <h2 class="h-sec" data-r>策划设计</h2>
+      <p class="feature" data-r>经营游戏最容易出现的两个问题是<b>“不知道为什么要继续玩”和“后期只是数字变大”</b>。下面是针对这两点做的设计。</p>
+      <ul class="rules bg" data-r>
+        <li><i>目标</i><b>三层目标</b>
+          <ul>
+            <li><strong>短期</strong>：每一轮是一关，1～3 星。目标按玩家最近几轮卖出的汉堡数 × 现在的售价来算，升级售价目标会涨，升级火力和范围就更容易拿星。</li>
+            <li><strong>中期</strong>：培训中心按钮上一直显示“下一个目标”和进度条；搬店就是进入下一章。</li>
+            <li><strong>长期</strong>：发射转生、星际地图、39 个成就。</li>
+          </ul>
+          <p>每 5 关一个<strong>挑战关</strong>，奖励翻倍，五种规则轮换：金肉饼大放送、肉饼狂潮、火苗满地、滑溜大作战、限时冲刺。</p>
+        </li>
+        <li><i>成长</i><b>每把工具一个特技</b>
+          <p style="margin-top:0">最早的版本里换工具只是范围变大，测试玩家很快觉得无聊。后来每把新工具都多一个能看见的特技，并保留前面工具的特技：</p>
+          <ul>
+            <li><strong>双面铲</strong>：多一把镜像锅铲，在铁板对称的位置跟着你煎</li>
+            <li><strong>喷火枪</strong>：锅铲划过的地方留下一道火焰，继续煎肉饼</li>
+            <li><strong>太阳灶</strong>：每 6 秒一次日光爆发，所有肉饼一下熟 4 成</li>
+          </ul>
+        </li>
+        <li><i>操作</i><b>增加操作性的机制</b>
+          <ul>
+            <li><strong>翻面</strong>：煎到三到八成熟时快速划过可以翻面，加钱</li>
+            <li><strong>火苗</strong>：先预警再冒出来，碰到会停火 1.2 秒，也能帮忙煎</li>
+            <li><strong>道具</strong>：加时、磁铁、双倍售价、辣椒爆炒，要凑过去拿</li>
+            <li><strong>滑溜肉饼</strong>：会躲锅铲，抓到更值钱</li>
+            <li><strong>小猫</strong>：6 秒没人煎的肉饼会被叼走，碰一下小猫就能吓跑</li>
+            <li><strong>狂热时间</strong>：连击满了以后售价和出饼速度翻倍</li>
+          </ul>
+        </li>
+        <li><i>开局与变现</i><b>开局和变现</b>
+          <ul>
+            <li><strong>开业酬宾</strong>：前 3 轮收入 ×3，第一次升级几乎马上就能买</li>
+            <li><strong>第 4 轮必出金肉饼</strong>：早点给一次惊喜</li>
+            <li><strong>新玩法第一次出现时弹一条提示</strong>，不做长教程</li>
+            <li><strong>只用激励广告</strong>：看广告加时、收入翻倍、免费升级，不做内购</li>
+            <li><strong>埋点 8 个关键事件</strong>：营业结束、搬店、发射、成就等，上线后用来找玩家在哪一步流失</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="iterate">
+    <div class="narrow">
+      <p class="kicker" data-r>04</p>
+      <h2 class="h-sec" data-r>根据测试反馈的迭代</h2>
+      <p class="feature" data-r>找朋友在 iPhone 上试玩，<b>每一轮反馈都对应一次改版</b>。下面按时间顺序排列。</p>
+      <div class="table-scroll" data-r>
+        <table>
+          <tr><th>测试反馈</th><th>改动</th></tr>
+          <tr><td class="q">游戏画面在屏幕里占比太小，顶部留白多</td><td><span class="tg ui">UI</span>读取抖音右上角胶囊按钮的位置来排顶栏；铁板高度随屏幕在 720～880 之间变化</td></tr>
+          <tr><td class="q">星际主页背景在 iPhone 上只显示左下角一小块</td><td><span class="tg tech">技术</span>iOS WebGL 的平铺贴图要求尺寸是 2 的次方，把贴图改成 128 像素</td></tr>
+          <tr><td class="q">数字太大，看着累</td><td><span class="tg num">数值</span>价格和倍率整体开 0.7 次方，再按模拟器调回原来的节奏；显示改成“万 / 亿”；老存档读档时自动换算</td></tr>
+          <tr><td class="q">玩一会儿就无聊，工具只是范围在变</td><td><span class="tg play">玩法</span>工具特技，加上翻面、火苗、道具、滑溜肉饼、狂热时间</td></tr>
+          <tr><td class="q">开局不够吸引人，但整体进度又有点快</td><td><span class="tg num">数值</span>开业酬宾、第 4 轮金肉饼让开局更快；同时把中后期价格整体调高</td></tr>
+          <tr><td class="q">目标不明确，没有关卡，动力不够</td><td><span class="tg sys">系统</span>关卡和 1～3 星、挑战关、主页的“下一个目标”进度条</td></tr>
+          <tr><td class="q">营业中想暂停，想中途退出</td><td><span class="tg ux">UX</span>暂停按钮；提前收工照拿已经赚的钱，但这一关不算通过；切到后台自动暂停</td></tr>
+          <tr><td class="q">主页太乱，技能树看不懂</td><td><span class="tg ui">UI</span>主页按“开始营业 → 培训中心 → 成就”重新排；技能树改成按类别排列的清单；新画了 9 张店面场景</td></tr>
+          <tr><td class="q">锅铲满级太大，快把屏幕占满</td><td><span class="tg num">数值</span>原来每级 +10% 叠着乘，满级半径约 290（铁板宽 450）。改成每级固定加 6%，工具加成调小，满级约 100；给双面铲加煎熟速度作补偿，模拟器确认节奏只慢了 5 分钟</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="pacing">
+    <div class="narrow">
+      <p class="kicker" data-r>05</p>
+      <h2 class="h-sec" data-r>数值节奏：用模拟器调，不靠手感</h2>
+      <p class="feature" data-r>我在 Unity 编辑器里写了一个机器人玩家，直接调用游戏本身的逻辑代码自动跑局：它会追肉饼、捡道具、躲火苗，并按性价比买升级。<b>每次改价格都先跑一遍</b>，看下面这些时间点有没有落在目标范围里。</p>
+
+      <div class="run" data-r>
+        <h3>第一轮：新玩家，不看广告</h3>
+        <div class="track" role="img" aria-label="第一轮进度：26 分 55 秒搬到美食街，29 分 48 秒换双面铲，42 分 37 秒搬到购物中心，43 分 18 秒换喷火枪，49 分 14 秒第一次发射">
+          <div class="fill"></div>
+          <span class="mk st dn" style="left:0"><i></i><span>0:00<small>路边摊开张</small></span></span>
+          <span class="mk up" style="left:54.7%"><i></i><span>26:55<small>搬到美食街</small></span></span>
+          <span class="mk dn" style="left:60.5%"><i></i><span>29:48<small>换双面铲</small></span></span>
+          <span class="mk up" style="left:86.6%"><i></i><span style="transform:translateX(-85%)">42:37<small>搬到购物中心</small></span></span>
+          <span class="mk dn" style="left:87.9%"><i></i><span>43:18<small>换喷火枪</small></span></span>
+          <span class="mk end up" style="left:100%"><i></i><span>49:14<small>第一次发射</small></span></span>
+        </div>
+        <p class="legend">49:14 第一次发射时获得 14 颗星，此时约第 53 关。</p>
+      </div>
+
+      <div class="rounds" data-r>
+        <div class="run" style="margin-top:0">
+          <h3>之后的节奏</h3>
+          <div class="bars">
+            <span>地球 第 1 轮</span><span class="bar"><i style="--v:100%;--c:var(--red)"></i></span><span>49:14 · 14 ★</span>
+            <span>地球 第 2 轮</span><span class="bar"><i style="--v:46%;--c:var(--gold-d)"></i></span><span>22:40 · 37 ★</span>
+            <span>地球 第 3 轮</span><span class="bar"><i style="--v:23%;--c:var(--grass)"></i></span><span>11:28 · 69 ★</span>
+          </div>
+          <p class="legend" style="margin-top:16px;font-size:14px;color:var(--mute)">星际通关用时 1:28:22。</p>
+        </div>
+        <p class="why"><strong>设计意图</strong>：第一轮慢一点，让玩家把每家店都看一遍；之后靠星星加成越来越快，转生的回报能明显感觉到。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="dev">
+    <div class="narrow">
+      <p class="kicker" data-r>06</p>
+      <h2 class="h-sec" data-r>开发实现</h2>
+      <ul class="rules bg" data-r>
+        <li><i>结构</i><b>代码结构</b>
+          <p style="margin-top:0">玩法逻辑和画面完全分开，所以同一份逻辑既能在手机上跑，也能被模拟器拿去自动跑局。</p>
+<pre class="term">Scripts/
+  Core/      <span class="c">纯逻辑：配置、存档数据、公式、一轮的模拟</span>
+    GameConfig.cs   <span class="c">所有数值和升级项</span>
+    GameLogic.cs    <span class="c">属性推导、关卡目标、结算</span>
+    Run.cs          <span class="c">一轮营业：肉饼、火苗、小猫、道具</span>
+  Platform/  <span class="c">抖音 SDK、广告、存档、音效、震动</span>
+  UI/        <span class="c">主页、营业画面、培训中心、弹窗</span>
+Editor/
+  PacingSim.cs      <span class="c">节奏模拟器</span>
+  BuildTools.cs     <span class="c">命令行编译</span></pre>
+        </li>
+        <li><i>测试</i><b>自动化检查</b>
+          <p style="margin-top:0">每次改完都跑一遍，不用手动点：</p>
+          <ul>
+            <li><strong>命令行编译</strong>：抖音 WebGL 包（压缩后约 0.6MB）和电脑版</li>
+            <li><strong>自动截图</strong>：程序自己走一遍所有界面，输出 40 张截图检查排版</li>
+            <li><strong>长时间运行测试</strong>：自动玩 4 分钟，记录最慢帧和内存</li>
+            <li><strong>节奏模拟</strong>：确认改动没有打乱进度</li>
+          </ul>
+        </li>
+        <li><i>平台</i><b>抖音平台接入</b>
+          <ul>
+            <li>激励广告、本地存档（带备份）、数据埋点、震动、侧边栏复访奖励</li>
+            <li>读取胶囊按钮位置做安全区适配，电脑上用参数模拟胶囊</li>
+            <li>切到后台时静音、存档、自动暂停</li>
+            <li>存档只往末尾加升级项，改数值量级时带迁移，老玩家进度不丢</li>
+          </ul>
+        </li>
+        <li><i>排查</i><b>排查过的问题</b>
+          <ul>
+            <li><strong>开局卡一下</strong>：每轮开始时强制刷新画布、重画铁板贴图。去掉强制刷新，铁板和光标贴图按大小缓存</li>
+            <li><strong>火焰拖尾变成一大坨</strong>：拖尾宽度设上限，锅铲不动时不再加火焰点</li>
+            <li><strong>道具被大锅铲自动吸走</strong>：拾取距离单独设上限，必须凑过去拿</li>
+            <li><strong>iOS 贴图只显示一角</strong>：平铺贴图改成 2 的次方尺寸</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="art">
+    <div class="narrow">
+      <p class="kicker" data-r>07</p>
+      <h2 class="h-sec" data-r>美术管线</h2>
+      <p class="feature" data-r>统一的像素风：<b>一个像素等于画布上 3 个单位</b>，字体是 12 像素的像素字，只用 12 的整数倍字号，保证清楚。</p>
+      <figure class="art-fig" data-r>
+        <img src="img/scenes.png" alt="9 张店面像素场景：地球 4 张，星际 5 张" loading="lazy">
+        <figcaption>9 张店面场景：先用 Scenario 生成，再用 Python 脚本统一降到 256×288、40 色，每张约 40KB。</figcaption>
+      </figure>
+      <div class="art-row">
+        <figure class="art-fig" data-r>
+          <img src="img/icons.png" alt="16×16 像素小图标" loading="lazy">
+          <figcaption>16×16 小图标（工具、外星人、道具、小猫）由 Python 脚本逐像素画出来。</figcaption>
+        </figure>
+        <ul class="rules bg" data-r style="grid-template-columns:1fr;margin-top:28px">
+          <li><i>音频与字体</i><b>声音和字体</b>
+            <ul>
+              <li>29 个音效全部用代码合成（煎肉滋滋声、火苗噼啪、出餐叮一声），不依赖外部音频素材</li>
+              <li>中文像素字体按游戏里实际用到的字裁剪，只打包用到的字</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="ai">
+    <div class="narrow">
+      <p class="kicker" data-r>08</p>
+      <h2 class="h-sec" data-r>关于 AI 工具</h2>
+      <div class="prose" data-r>
+        <p class="note">开发中使用了 AI 工具：用 Claude Code 写代码、排查问题，用 Scenario 生成店面场景图。我负责的部分是：玩法和系统设计、数值目标和调参决策、组织真机测试并把反馈转成改版需求、每一版的验收，以及整体美术风格的把控。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info light">
+    <div class="narrow">
+      <h2 class="h-sec" data-r>存档信息</h2>
+      <div class="spec" data-r>
+        <div><h3>角色</h3><div class="c">独立制作：系统、数值、开发</div></div>
+        <div><h3>周期</h3><div class="c">2026.09 – 10</div></div>
+        <div><h3>引擎</h3><div class="c">Unity 2022.3 · C#</div></div>
+        <div><h3>平台</h3><div class="c">抖音小游戏（WebGL · TTSDK），竖屏</div></div>
+        <div><h3>状态</h3><div class="c">开发完成，软著申请中</div></div>
+        <div><h3>字体</h3><div class="c">缝合像素字体 Fusion Pixel Font，© 2022 TakWolf，SIL Open Font License 1.1</div></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager" style="padding-top:88px">
+    <div class="wrap">
+      <a href="../tidewheel.html" data-slot="读取存档 02"><span>上一存档 · 02</span><b>《发条人偶》Tidewheel</b></a>
+      <a href="../naruto.html" data-slot="读取存档 04"><span>下一存档 · 04</span><b>火影手游：成长与经济系统</b></a>
+    </div>
+  </nav>
+</div>
+
+<footer class="px-foot">
+  <div class="px-ground"></div>
+  <div class="px-under"><div><span>© 2026 殷硕</span><span><a href="#top">回到顶部</a><a href="../../index.html">全部存档</a><a href="../../resume.html" data-slot="打开简历">简历</a></span></div></div>
+</footer>
+
+<script src="../../js/site.js"></script>
+<script>
+// 截图轨道：左右按钮一次翻一屏
+(function(){
+  var rail = document.getElementById('rail');
+  document.querySelectorAll('.rail-btns [data-dir]').forEach(function(b){
+    b.addEventListener('click', function(){
+      rail.scrollBy({left: +b.getAttribute('data-dir') * rail.clientWidth * 0.8, behavior: 'smooth'});
+      window.ysSfx && window.ysSfx('select');
+    });
+  });
+})();
+</script>
+</body>
+</html>

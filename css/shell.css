@@ -1,0 +1,172 @@
+/* 殷硕 · 作品集：全站外壳
+   所有页面都引用这一份：字体、色板、HUD 顶栏、像素按钮、天空背景、地面、页脚和读档加载条。
+   类名都带 px- / hud 前缀，不会和《宇宙汉堡》页面自带的样式冲突。
+   像素图在 img/px/，规格见 ART_SPEC.md；像素字体只用于标题和界面，正文用系统黑体。 */
+
+@font-face{
+  font-family:"Fusion Pixel";
+  src:url("../fonts/fusion-pixel-site.woff2") format("woff2");
+  font-display:swap;
+}
+
+:root{
+  --ink:#1f1a24; --ink-2:#3a3142;
+  --paper:#fff4dc; --paper-2:#f3e2bc; --paper-3:#e6cf9f;
+  --sky-1:#4f9de0; --sky-2:#5fa8e8; --sky-3:#72b6ee; --sky-4:#8ac6f2; --sky-5:#a6d6f6;
+  --gold:#ffc83d; --gold-d:#d98a1c;
+  --red:#e5484d; --red-d:#a8292e;
+  --blue:#3a6fd8; --blue-d:#264696;
+  --grass:#5bbf3a; --grass-d:#2e7d32;
+  --dirt:#c8763a; --dirt-d:#8a4b22; --dirt-3:#5e3115;
+  --mute:#6e5f55;
+  --px-font:"Fusion Pixel","PingFang SC","Microsoft YaHei",monospace;
+  --body-font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --u:4px;
+}
+
+.px{font-family:var(--px-font);-webkit-font-smoothing:none;font-smooth:never;font-weight:normal;letter-spacing:0}
+.px-img,.px-img img{image-rendering:pixelated;image-rendering:crisp-edges}
+
+/* ---------- 天空背景（分级色带，不用平滑渐变） ---------- */
+.px-sky{
+  background:linear-gradient(180deg,
+    var(--sky-1) 0 14%,var(--sky-2) 14% 30%,var(--sky-3) 30% 48%,var(--sky-4) 48% 68%,var(--sky-5) 68% 100%);
+}
+.px-clouds{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.px-clouds i{position:absolute;display:block;width:144px;height:72px;background:url("../img/px/cloud.png") 0 0/100% 100% no-repeat;image-rendering:pixelated;animation:px-drift linear infinite;opacity:.95}
+@keyframes px-drift{from{transform:translateX(-200px)}to{transform:translateX(calc(100vw + 200px))}}
+
+/* ---------- 地面与远山 ---------- */
+.px-ground{height:48px;background:url("../img/px/ground.png") 0 0/48px 48px repeat-x;image-rendering:pixelated}
+.px-hills{height:144px;background:url("../img/px/hills.png") 0 100%/384px 144px repeat-x;image-rendering:pixelated}
+
+/* ---------- HUD 顶栏 ---------- */
+.hud{position:sticky;top:0;z-index:40;background:var(--ink);color:var(--paper);border-bottom:4px solid #000;font-family:var(--px-font);-webkit-font-smoothing:none}
+.hud-in{max-width:1200px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+.hud a{color:inherit;text-decoration:none}
+.hud-brand{display:flex;align-items:center;gap:12px;font-size:24px;line-height:1;white-space:nowrap}
+.hud-brand img{width:36px;height:36px;image-rendering:pixelated;flex:none}
+.hud-brand small{font-size:12px;color:var(--gold)}
+.hud-nav{display:flex;align-items:center;gap:4px;margin-left:auto}
+.hud-nav a{position:relative;padding:8px 12px 8px 24px;font-size:24px;line-height:1;color:#cfc4b3}
+.hud-nav a::before{content:"";position:absolute;left:8px;top:50%;width:8px;height:12px;margin-top:-6px;background:var(--gold);clip-path:polygon(0 0,100% 50%,0 100%);opacity:0}
+.hud-nav a:hover{color:#fff}
+.hud-nav a:hover::before{opacity:.5}
+.hud-nav a[aria-current="page"]{color:var(--gold)}
+.hud-nav a[aria-current="page"]::before{opacity:1;animation:px-blink 1s steps(2) infinite}
+@keyframes px-blink{50%{opacity:0}}
+.hud-coins{display:flex;align-items:center;gap:8px;font-size:24px;line-height:1;white-space:nowrap;padding-left:16px;border-left:4px solid var(--ink-2)}
+.hud-coins i{width:24px;height:24px;background:url("../img/px/coin.png") 0 0/96px 24px;image-rendering:pixelated;animation:px-coin .8s steps(4) infinite}
+@keyframes px-coin{to{background-position:-96px 0}}
+.hud-coins.bump{animation:px-bump .3s steps(3)}
+@keyframes px-bump{40%{transform:translateY(-6px)}}
+
+/* ---------- 像素按钮（缺角描边：上下左右四道阴影） ---------- */
+.px-btn{
+  --bg:var(--gold); --fg:var(--ink); --sh:var(--gold-d);
+  position:relative;display:inline-flex;align-items:center;gap:12px;margin:4px;padding:12px 20px;
+  font-family:var(--px-font);font-size:24px;line-height:1;-webkit-font-smoothing:none;color:var(--fg);background:var(--bg);text-decoration:none;cursor:pointer;border:0;
+  box-shadow:0 -4px 0 0 var(--ink),0 4px 0 0 var(--ink),-4px 0 0 0 var(--ink),4px 0 0 0 var(--ink),inset 0 -4px 0 0 var(--sh),inset 4px 4px 0 0 rgba(255,255,255,.45);
+  transition:transform .08s steps(2);
+}
+.px-btn:hover{transform:translateY(-4px)}
+.px-btn:active{transform:translateY(2px);box-shadow:0 -4px 0 0 var(--ink),0 4px 0 0 var(--ink),-4px 0 0 0 var(--ink),4px 0 0 0 var(--ink),inset 0 4px 0 0 var(--sh)}
+.px-btn.sm{font-size:12px;padding:8px 12px}
+.px-btn.red{--bg:var(--red);--fg:#fff;--sh:var(--red-d)}
+.px-btn.blue{--bg:var(--blue);--fg:#fff;--sh:var(--blue-d)}
+.px-btn.paper{--bg:var(--paper);--sh:var(--paper-3)}
+.px-btn.off{--bg:#b9ae9c;--sh:#8f8576;pointer-events:none}
+.px-btn:focus-visible,.hud a:focus-visible{outline:4px solid var(--gold);outline-offset:4px}
+
+/* ---------- 图标（icons.png 的 12 格） ---------- */
+.px-ico{display:inline-block;flex:none;width:24px;height:24px;background:url("../img/px/icons.png") 0 0/288px 24px no-repeat;image-rendering:pixelated;vertical-align:-5px}
+.px-ico.pad{background-position:0 0}.px-ico.film{background-position:-24px 0}.px-ico.book{background-position:-48px 0}
+.px-ico.trophy{background-position:-72px 0}.px-ico.mail{background-position:-96px 0}.px-ico.pdf{background-position:-120px 0}
+.px-ico.ext{background-position:-144px 0}.px-ico.heart{background-position:-168px 0}.px-ico.clock{background-position:-192px 0}
+.px-ico.star{background-position:-216px 0}.px-ico.lock{background-position:-240px 0}.px-ico.map{background-position:-264px 0}
+
+/* ---------- 存档方块（可顶出硬币） ---------- */
+.px-block{position:relative;display:inline-block;width:48px;height:48px;background:url("../img/px/block.png") 0 0/96px 48px;image-rendering:pixelated;border:0;padding:0;cursor:pointer;vertical-align:middle}
+.px-block.used{background-position:-48px 0;cursor:default}
+.px-block.hit{animation:px-bump .25s steps(3)}
+.px-block .pop{position:absolute;left:12px;top:-8px;width:24px;height:24px;background:url("../img/px/coin.png") 0 0/96px 24px;image-rendering:pixelated;animation:px-pop .6s steps(6) forwards,px-coin .3s steps(4) infinite;pointer-events:none}
+@keyframes px-pop{0%{transform:translateY(0);opacity:1}60%{transform:translateY(-48px);opacity:1}100%{transform:translateY(-36px);opacity:0}}
+
+/* ---------- 页脚：地面 + 地下 ---------- */
+.px-foot{margin-top:0;padding:0;border:0;font-size:inherit;color:var(--paper);font-family:var(--px-font);-webkit-font-smoothing:none}
+.px-foot .px-under{background:var(--dirt-d) url("../img/px/brick.png") 0 0/48px 48px;image-rendering:pixelated}
+.px-foot .px-under{padding:24px}
+.px-foot .px-under > div{max-width:1200px;margin:0 auto;padding:14px 20px;background:rgba(31,26,36,.82);box-shadow:0 0 0 4px var(--ink);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:12px;line-height:1.6;text-shadow:2px 2px 0 var(--dirt-3)}
+.px-foot a{color:var(--gold);text-decoration:none;margin-left:20px}
+.px-foot a:hover{text-decoration:underline}
+
+/* ---------- 读档加载条：小人从左跑到右 ---------- */
+.px-loader{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:var(--ink);color:var(--paper);opacity:0;visibility:hidden;transition:opacity .2s steps(3),visibility 0s .2s}
+.px-loader.on{opacity:1;visibility:visible;transition:opacity .15s steps(2)}
+.px-loader .box{width:min(640px,100% - 48px);text-align:center;font-family:var(--px-font);-webkit-font-smoothing:none}
+.px-loader .slot{font-size:24px;color:var(--gold);line-height:1}
+.px-loader .tip{margin:24px auto 0;max-width:30em;min-height:3.2em;font-family:var(--body-font);font-size:18px;line-height:1.6;color:#e9dfcf}
+.px-loader .track{position:relative;height:120px;margin-top:40px}
+.px-loader .lane{position:absolute;left:0;right:0;bottom:0;height:48px;background:url("../img/px/brick.png") 0 0/48px 48px repeat-x;image-rendering:pixelated}
+.px-loader .fill{position:absolute;left:0;bottom:44px;height:4px;width:0;background:var(--gold)}
+.px-loader .runner{position:absolute;bottom:48px;left:0;width:72px;height:72px;margin-left:-36px;background:url("../img/px/runner.png") 0 0/576px 72px;image-rendering:pixelated;animation:px-run .5s steps(6) infinite}
+.px-loader .runner.jump{animation:none;background-position:-432px 0}
+@keyframes px-run{to{background-position:-432px 0}}
+.px-loader .coin{position:absolute;bottom:72px;width:24px;height:24px;margin-left:-12px;background:url("../img/px/coin.png") 0 0/96px 24px;image-rendering:pixelated;animation:px-coin .8s steps(4) infinite}
+.px-loader .coin.got{animation:px-pop .5s steps(5) forwards}
+.px-loader .flag{position:absolute;right:0;bottom:48px;width:48px;height:144px;background:url("../img/px/flag.png") 0 0/100% 100%;image-rendering:pixelated}
+.px-loader .pct{margin-top:16px;font-size:12px;color:#9c8f80}
+.px-loader .skip{margin-top:8px;font-size:12px;color:#6f6458}
+
+/* 小咪：24 × 16，统一以整数 3 倍显示。 */
+.px-cat{display:block;width:72px;height:48px;background:url("../img/px/cat.png") -288px 0/576px 48px no-repeat;image-rendering:pixelated}
+.px-cat.wag{animation:cat-wag 1.2s steps(1) infinite}
+@keyframes cat-wag{0%,100%{background-position:-288px 0}50%{background-position:-360px 0}}
+@keyframes cat-run{from{background-position:0 0}to{background-position:-288px 0}}
+.px-loader .loader-cat{position:absolute;left:-76px;bottom:48px;pointer-events:none}
+.loader-cat.run{animation:cat-run .4s steps(4) infinite}
+.loader-cat.pounce{background-position:-504px 0;transform:translateY(-9px)}
+.loader-cat.sit{background-position:-288px 0;transform:none}
+.cat-party .px-cat{background-image:none!important}
+.cat-party .px-cat::after{content:"";position:absolute;left:0;bottom:0;width:72px;height:72px;background:url("../img/px/cat_party.png") 0 0/72px 72px no-repeat;image-rendering:pixelated;pointer-events:none}
+@media (prefers-reduced-motion:reduce){
+  .px-cat,.px-cat.wag,.loader-cat.run{animation:none!important;background-position:-288px 0!important}
+  .px-loader .loader-cat{left:0!important;transform:none!important}
+}
+
+
+/* ---------- 静音按钮 ---------- */
+.hud-mute{flex:none;padding:6px 8px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;color:#cfc4b3;background:transparent;border:0;box-shadow:0 0 0 2px var(--ink-2);cursor:pointer}
+.hud-mute[aria-pressed="true"]{color:var(--gold)}
+.hud-mute:hover{color:#fff}
+
+/* ---------- 底部关卡进度条 ---------- */
+.px-prog{position:fixed;left:0;right:0;bottom:0;z-index:35;height:8px;background:rgba(31,26,36,.55);pointer-events:none;opacity:0;transition:opacity .2s steps(2)}
+.px-prog.on{opacity:1}
+.px-prog .bar{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--gold)}
+.px-prog .man{position:absolute;bottom:6px;left:0;width:24px;height:24px;background:url("../img/px/runner.png") -168px 0/192px 24px;image-rendering:pixelated}
+.px-prog .goal{position:absolute;right:2px;bottom:6px;width:8px;height:24px;background:url("../img/px/flag.png") 0 0/100% 100%;image-rendering:pixelated}
+
+/* ---------- 硬币雨与提示 ---------- */
+.coinrain{position:fixed;inset:0;z-index:90;pointer-events:none;overflow:hidden}
+.coinrain i{position:absolute;top:-30px;width:24px;height:24px;background:url("../img/px/coin.png") 0 0/96px 24px;image-rendering:pixelated;animation-name:px-fall,px-coin;animation-timing-function:linear,steps(4);animation-iteration-count:1,infinite;animation-fill-mode:forwards,none}
+@keyframes px-fall{to{transform:translateY(110vh)}}
+.px-toast{position:fixed;left:50%;top:96px;z-index:91;transform:translateX(-50%);padding:12px 18px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:24px;line-height:1;color:var(--ink);background:var(--gold);box-shadow:0 0 0 4px var(--ink),8px 8px 0 4px rgba(0,0,0,.3);animation:px-bump .3s steps(3)}
+
+@media (max-width:860px){
+  .hud-in{padding:0 12px;gap:8px;height:52px}
+  .hud-brand{font-size:12px;gap:8px}
+  .hud-brand img{width:24px;height:24px}
+  .hud-brand small{display:none}
+  .hud-nav a{font-size:12px;padding:8px 6px 8px 16px}
+  .hud-nav a::before{left:4px;width:6px;height:8px;margin-top:-4px}
+  .hud-nav .hide-s{display:none}
+  .hud-coins{font-size:12px;padding-left:8px;border-left-width:2px}
+  .hud-mute{padding:4px 5px}
+  .hud-coins i{width:16px;height:16px;background-size:64px 16px;animation-name:px-coin-s}
+  @keyframes px-coin-s{to{background-position:-64px 0}}
+  .px-btn{font-size:12px;padding:10px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  .px-clouds i,.hud-coins i,.px-loader .runner,.px-loader .coin,.hud-nav a[aria-current="page"]::before{animation:none}
+}
