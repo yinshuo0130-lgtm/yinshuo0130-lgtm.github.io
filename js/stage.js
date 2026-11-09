@@ -9,17 +9,23 @@
   var sfx = window.ysSfx || function(){};
 
   var SLOTS = [
-    {href:'projects/nightreign-mod.html', tip:'同一位夜王的两次挑战，前两天遭遇的敌人可以不同。', img:['img/mod/cover-cards.jpg'], badge:'测试版已发布',
+    {href:'projects/nightreign-mod.html', tip:'同一位夜王的两次挑战，前两天遭遇的敌人可以不同。', img:['img/mod/cover-cards.webp'], badge:'测试版已发布',
      kicker:'存档 01 · 可玩作品 · 独立制作', title:'《艾尔登法环 黑夜君临》大型内容扩展 Mod', text:'新增 7 位夜王、12 条夜律与腐败湖双层地形，重做 30 个护符的成长与掉落。测试版发布 8 天，B 站播放近 6000，双平台转发 331 次。', short:'黑夜君临'},
-    {href:'projects/tidewheel.html', tip:'召回弹射的有效窗口由约 0.5 秒放宽至约 1.6 秒，数据来自模拟玩家操作的脚本。', img:['img/tidewheel/cover.jpg'], badge:'itch.io 可试玩',
+    {href:'projects/tidewheel.html', tip:'召回弹射的有效窗口由约 0.5 秒放宽至约 1.6 秒，数据来自模拟玩家操作的脚本。', img:['img/tidewheel/cover.webp'], badge:'itch.io 可试玩',
      kicker:'存档 02 · 可玩作品 · 策划（兼部分程序）', title:'《发条人偶》Tidewheel', text:'甩出时间齿轮，让周围海面的时间停止，停住的浪变成可以踩的地形。thatgamejam #02 参赛作品，4 人团队。', short:'Tidewheel'},
-    {href:'projects/burger/index.html', tip:'首次转生约 49 分钟；获得星星加成后，第二轮缩短至 23 分钟，第三轮 11 分钟。', img:['img/burger/02_home.png','img/burger/12c_run_burst.png','img/burger/19_space_home.png'], badge:'开发完成 · 软著申请中',
+    {href:'projects/burger/index.html', tip:'首次转生约 49 分钟；获得星星加成后，第二轮缩短至 23 分钟，第三轮 11 分钟。', img:['img/burger/02_home.webp','img/burger/12c_run_burst.webp','img/burger/19_space_home.webp'], badge:'开发完成 · 软著申请中',
      kicker:'存档 03 · 可玩作品 · 独立制作', title:'《宇宙汉堡》', text:'抖音竖屏增量经营小游戏。以自编跑局模拟器调整节奏，首次转生控制在约 49 分钟。', short:'宇宙汉堡'},
-    {href:'projects/naruto.html', tip:'高级招募拿满一名 S 忍约需 300 抽，按充值折算约 5040 元，是点券直售的 25 倍。', img:['img/naruto/main.jpg'], badge:'36 页 · MDA',
+    {href:'projects/naruto.html', tip:'高级招募拿满一名 S 忍约需 300 抽，按充值折算约 5040 元，是点券直售的 25 倍。', img:['img/naruto/main.webp'], badge:'36 页 · MDA',
      kicker:'存档 04 · 系统拆解', title:'《火影忍者》手游：成长与经济系统', text:'按 MDA 框架分层拆解，测算出高级招募与点券直售约 25 倍的价差，并与《异人之下》对比。', short:'火影拆解'},
-    {href:'projects/hearthstone.html', tip:'6 星随从只有 7 份，一次三连即拿走 43%：顶端强度的稀缺由份数控制，而非概率表。', img:['img/hs/main.jpg'], badge:'20 页 · 501 小时',
+    {href:'projects/hearthstone.html', tip:'6 星随从只有 7 份，一次三连即拿走 43%：顶端强度的稀缺由份数控制，而非概率表。', img:['img/hs/main.webp'], badge:'20 页 · 501 小时',
      kicker:'存档 05 · 系统拆解', title:'《炉石传说》酒馆战棋：经济与对局节奏', text:'拆解铸币曲线、份数稀缺与四项防滚雪球机制，并为首选改进方案设计 AB 测试。', short:'酒馆战棋'}
   ];
+  /* 页面加载后空闲时预取全部广告牌图片，切换存档时直接从缓存显示 */
+  window.addEventListener('load', function(){
+    (window.requestIdleCallback || function(f){ setTimeout(f, 300); })(function(){
+      SLOTS.forEach(function(s){ s.img.forEach(function(src){ var im = new Image(); im.decoding = 'async'; im.src = src; }); });
+    });
+  });
   var DOOR = {href:'about.html', tip:'游戏经历、影视经历、履历与技能。'};
 
   /* ---------- 搭场景 ---------- */
