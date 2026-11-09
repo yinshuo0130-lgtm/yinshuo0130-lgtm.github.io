@@ -239,3 +239,18 @@
   requestAnimationFrame(function(){ requestAnimationFrame(ready); });
   setTimeout(ready, 120);
 })();
+
+/* 表格：给每个单元格记下列名，手机上按卡片逐行显示（样式见 site.css 的 table.stack） */
+(function(){
+  [].forEach.call(document.querySelectorAll('table'), function(t){
+    var head = t.querySelector('tr');
+    if (!head || !head.querySelector('th')) return;
+    var labels = [].map.call(head.children, function(c){ return c.textContent.trim(); });
+    head.classList.add('thead');
+    t.classList.add('stack');
+    [].forEach.call(t.querySelectorAll('tr'), function(tr){
+      if (tr === head) return;
+      [].forEach.call(tr.children, function(td, i){ if (labels[i]) td.setAttribute('data-label', labels[i]); });
+    });
+  });
+})();

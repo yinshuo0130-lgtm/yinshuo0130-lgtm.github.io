@@ -208,7 +208,7 @@ button{font:inherit;color:inherit}
 table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.55;margin:8px 0 32px;background:var(--paper);box-shadow:0 0 0 4px var(--ink)}
 th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:2px dashed var(--paper-3)}
 th{font-family:var(--px-font);-webkit-font-smoothing:none;font-weight:normal;font-size:12px;background:var(--ink);color:var(--gold);border-bottom:0}
-td:first-child{white-space:nowrap;font-weight:700;color:var(--ink);width:7em}
+td:first-child{font-weight:700;color:var(--ink);width:24%;min-width:6em}
 .table-scroll{overflow-x:auto;padding:4px}
 .info{padding:88px 0}
 .info .h-sec{margin-bottom:36px}
@@ -472,4 +472,18 @@ td:first-child{white-space:nowrap;font-weight:700;color:var(--ink);width:7em}
 @media (max-width:640px){
   .deck-list ul{flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
   .deck-list li.pic{flex:none;width:96px;scroll-snap-align:start}
+}
+
+/* 手机上表格改为卡片：每行一张，列名作小标签 */
+@media (max-width:734px){
+  table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:auto}
+  table.stack{background:none;box-shadow:none;margin:12px 4px 32px}
+  table.stack tr.thead{display:none}
+  table.stack tr{margin:0 0 20px;background:var(--paper);box-shadow:0 0 0 4px var(--ink),6px 8px 0 4px rgba(31,26,36,.18)}
+  table.stack td{padding:10px 14px;border-bottom:2px dashed var(--paper-3)}
+  table.stack td:last-child{border-bottom:0}
+  table.stack td::before{content:attr(data-label);display:block;margin-bottom:4px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1.4;color:var(--red-d)}
+  table.stack td:first-child{width:auto;min-width:0;background:var(--ink);color:#fff;font-weight:600;border-bottom:0}
+  table.stack td:first-child::before{color:var(--gold)}
+  .table-scroll{overflow:visible;padding:0}
 }
