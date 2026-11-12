@@ -614,3 +614,15 @@ td:first-child{font-weight:700;color:var(--ink);width:24%;min-width:6em}
   .sec-lede{padding:14px 16px 20px}
 }
 @media (prefers-reduced-motion:reduce){.sec-lede::after{animation:none}}
+
+/* 玩家留言：RPG 对话框，左上角挂说话人名牌 */
+.review{position:relative;margin:48px 0 24px;padding:34px 28px 22px;background:var(--paper);
+  box-shadow:0 -4px 0 0 var(--ink),0 4px 0 0 var(--ink),-4px 0 0 0 var(--ink),4px 0 0 0 var(--ink),inset 0 0 0 4px var(--paper-2),10px 12px 0 0 rgba(31,26,36,.18)}
+.review figcaption{position:absolute;left:16px;top:-18px;display:flex;align-items:center;gap:10px;padding:7px 12px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;color:var(--paper);background:var(--ink)}
+.review figcaption b{font-weight:normal;color:var(--gold)}
+.review blockquote{margin:0;font-size:22px;line-height:1.5;color:var(--ink)}
+.review blockquote::before{content:"“";color:var(--red)}
+.review blockquote::after{content:"”";color:var(--red)}
+.review .more{display:inline-block;margin-top:12px;font-size:14px}
+@media (max-width:640px){.review{padding:30px 18px 18px}.review blockquote{font-size:18px}}
+

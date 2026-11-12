@@ -693,8 +693,8 @@
    "about.html"
   ]
  },
- "07ec4d6eef": {
-  "src": "<span>游戏时长 4600h+</span> <span>白金 16 款</span> <span>三年 GIS 与遥感数据分析</span> <span>AI 工具：Claude Code · Codex</span> <span>同伴：小猫 · 小咪</span>",
+ "50a7ac1242": {
+  "src": "<span>游戏时长 4600h+</span> <span>白金 16 款</span> <span>三年 GIS 与遥感数据分析</span> <span>AI 工具：Claude Code · Codex</span>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1157,8 +1157,8 @@
    "about.html"
   ]
  },
- "ec9ba851f3": {
-  "src": "V12 账号，也是系统拆解的研究样本。",
+ "f06b9362c2": {
+  "src": "V12 账号，系统拆解的研究样本。",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1171,8 +1171,8 @@
    "about.html"
   ]
  },
- "03a4efa389": {
-  "src": "酒馆战棋往季最高突破 10000 分，也是系统拆解的研究样本。",
+ "26b7017971": {
+  "src": "酒馆战棋往季最高突破 10000 分，系统拆解的研究样本。",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1200,8 +1200,8 @@
    "about.html"
   ]
  },
- "e816d27497": {
-  "src": "白金。由此深入魂系，也是制作 Mod 的起点。",
+ "97a3eb4468": {
+  "src": "白金。由此深入魂系，后来开始做 Mod。",
   "kind": "html",
   "pages": [
    "about.html"
@@ -4724,6 +4724,20 @@
  },
  "3d16177b0b": {
   "src": "提交前逐条核对赛事规则：默认语言为英文，提交页写明 AI 的使用情况，主题音频整段原样播放。itch.io 页面的简介、操作说明和设计陈述也由我准备。",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "7d58d4991a": {
+  "src": "<b>singapi</b>itch.io 赛事页的玩家留言",
+  "kind": "html",
+  "pages": [
+   "projects/tidewheel.html"
+  ]
+ },
+ "2c10ab78ef": {
+  "src": "在 itch.io 查看",
   "kind": "html",
   "pages": [
    "projects/tidewheel.html"
