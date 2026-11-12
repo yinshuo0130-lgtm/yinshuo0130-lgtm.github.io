@@ -5,7 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>Naruto Mobile: Progression and Economy Teardown · Yin Shuo Portfolio</title>
-<meta content="An MDA teardown of the progression and economy systems in Naruto Mobile, with an A/B comparison against Yiren Zhi Xia." name="description"/>
+<meta content="A teardown of Naruto Mobile's growth and economy, from purpose through mechanics, dynamics and aesthetics: how two kinds of fairness coexist across modes, where account power pays off, and how acquisition channels serve different budgets." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Yin Shuo · Game Design Portfolio" property="og:site_name"/>
+<meta content="Naruto Mobile: Progression and Economy Teardown · Yin Shuo Portfolio" property="og:title"/>
+<meta content="A teardown of Naruto Mobile's growth and economy, from purpose through mechanics, dynamics and aesthetics: how two kinds of fairness coexist across modes, where account power pays off, and how acquisition channels serve different budgets." property="og:description"/>
+<meta content="https://yinshuo0130-lgtm.github.io/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <meta content="#1f1a24" name="theme-color"/>
 <link href="../../img/px/favicon.png" rel="icon"/>
 <link href="../../css/shell.css" rel="stylesheet"/>
@@ -27,17 +33,17 @@
 <div class="lnav">
 <div class="wrap">
 <b>Naruto Mobile · Progression &amp; Economy</b>
-<nav><a class="hide-s" href="#summary">Summary</a> <a class="hide-s" href="#ab">A/B comparison</a> <a class="hide-s" href="#fix">Issues &amp; proposals</a> <a href="#read">Full text</a></nav>
+<nav><a class="hide-s" href="#summary">Summary</a> <a class="hide-s" href="#fair">Two kinds of fairness</a> <a class="hide-s" href="#calc">Key estimates</a> <a class="hide-s" href="#chain">MDA mapping</a> <a class="hide-s" href="#fix">Proposals</a> <a href="#read">Read in full</a></nav>
 </div>
 </div>
 <section class="c-hero">
 <div class="wrap">
-<span class="kicker">Save 04 · System teardown · 36 pages</span>
+<span class="kicker">Save 04 · System teardown · 45 pp</span>
 <h1 class="mega on-sky">Naruto Mobile<br/>Progression &amp; Economy Systems</h1>
-<p class="feature">Using the MDA framework, the systems are split into mechanics, dynamics and aesthetics, and every conclusion is written as a chain: <b>which rule → what players do because of it → what they feel</b>. Yiren Zhi Xia, from the same studio group, serves as the A/B comparison. Based on the live version of October 2026 and a V12 account.</p>
+<p class="feature">Starting from what the system is for, this teardown goes through mechanics, dynamics and aesthetics of Naruto Mobile's growth and economy: <b>how two kinds of fairness coexist across modes, where account power pays off, and how eight recruitment channels serve different budgets</b>. Rules are taken from the live game in October–November 2026, and key claims are tagged by type of evidence.</p>
 <div class="acts">
 <a class="px-btn" href="#read"><span class="px-ico book"></span>Read the full text here</a>
-<a class="px-btn paper" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd"><span class="px-ico ext"></span>Feishu original (Chinese)</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje"><span class="px-ico ext"></span>Feishu original (Chinese)</a>
 <button aria-label="Hit the save block" class="px-block" data-coin="naruto-1"></button>
 </div>
 <div class="c-cover" data-r=""><img alt="Naruto Mobile main screen (nickname masked)" src="../../img/naruto/main.webp" style="object-position:30% center;max-height:520px"/></div>
@@ -46,10 +52,10 @@
 <section class="c-stats">
 <div class="wrap">
 <div class="stats">
-<div data-r=""><span>Premium Recruit vs. direct coupon price</span><b>25×</b><span>converted at top-up rates</span></div>
-<div data-r="2"><span>To max one S-rank ninja</span><b>≈300</b><span>pulls, per player statistics</span></div>
-<div data-r="3"><span>Power-line progression systems</span><b>7</b><span>systems</span></div>
-<div data-r="4"><span>Recruit entry points</span><b>8</b><span>across 3 currency tiers</span></div>
+<div data-r=""><span>Face-value gap, same S-rank ninja</span><b>25×</b><span>Premium recruit ≈ ¥5,040 vs. Legendary pass ¥198</span></div>
+<div data-r="2"><span>Power modes</span><b>5</b><span>Leaderboard, Peak Duel and three guild modes</span></div>
+<div data-r="3"><span>Ways to control new-ninja strength</span><b>3</b><span>Stat normalisation, bans, mode eligibility</span></div>
+<div data-r="4"><span>Magic-resist gap on my account</span><b>3080</b><span>Level requirement met, stuck on the stat threshold</span></div>
 </div>
 </div>
 </section>
@@ -59,68 +65,139 @@
 <div class="narrow">
 <p class="kicker" data-r="">01</p>
 <h2 class="h-sec" data-r="">Summary</h2>
-<p class="feature" data-r="">Naruto Mobile <b>makes ninjas its single core product</b> and sells them to skill-focused and progression-focused players at the same time through two opposite PvP rule sets: the Arena normalizes stats, while Ranked Points matches settle by power rating.</p>
+<p class="feature" data-r="">Fighting games keep players with fairness; free-to-play games earn money from paid advantages. Naruto Mobile does not pick one side for the whole game. Instead, <b>two kinds of fairness coexist mode by mode</b>: ranked duels mask combat stats, so skill and ninja roster decide; account power pays off in the server leaderboard, guild modes and the Peak Duel.</p>
+<ul class="rules" data-r="">
+<li><i>What power buys</i><b>Being seen and being needed</b>The server power leaderboard sets your ranking and gives the top five a points bonus in Peak Duel qualifiers; Fortress, Heaven &amp; Earth Battlefield and Guild Clash turn individual power into guild results. Points League still exists but is no longer what power players care about.</li>
+<li><i>Two playstyles</i><b>Heavily overlapping, not two camps</b>The Peak Duel demands power, real-time skill and a deep roster at once: 3v3 with bans before picks, and S/A/B ninjas you have used cannot return in later rounds. Most invested players do both.</li>
+<li><i>Strength control</i><b>Mode eligibility on top of normalisation and bans</b>As of November, the tenth-anniversary limited S-rank “Naruto Uzumaki · Sasuke Uchiha” and “Naruto Uzumaki · Jiraiya” cannot be used in the four power modes, so the impact of a new release stays in ranked duels first.</li>
+<li><i>Acquisition channels</i><b>Tiered by certainty</b>For the same S-rank tier, Premium Recruit costs about ¥5,040 at face value, while the Legendary pass costs ¥198 plus a season of activity. Most of the gap is absorbed by free gold and time, so it is not a price difference for the same product.</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="fair">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">Three growth lines, five places to pay off</h2>
+<p class="feature" data-r="">Ninja acquisition, ninja upgrades and account power produce two things: “do you own it” and “how strong are you”. <b>Ranked duels only care about ownership, the leaderboard and guild modes care about strength, and the Peak Duel needs both.</b></p>
+</div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="Growth-line structure: three growth lines produce ownership and power, which pay off in ranked duels, the Peak Duel, guild modes, the leaderboard and PvE; Points League draws little interest" height="976" loading="lazy" src="../../img/naruto/chart-lines.webp" width="1600"/>
+<figcaption><b>Ninjas have the widest reach of any item, but they are not the only ones that cross over.</b> Summons and scrolls affect tactics in ranked duels and also have stat upgrades; outfits provide both expression and stats.</figcaption>
+</figure>
+</div>
+<div class="narrow">
 <div class="table-scroll" data-r="">
 <table>
-<tr><th>Layer</th><th>Approach</th><th>Key evidence</th></tr>
-<tr><td>Mechanics</td><td>3 currency tiers, 8 recruit entry points, 7 progression systems; the Arena normalizes power, Ranked Points matches settle by power</td><td>Premium Recruit gives S-rank shards at 11.5%, with one guaranteed per ten-pull; every V12 perk is about extra attempts</td></tr>
-<tr><td>Dynamics</td><td>Arena players spend in bursts around new ninjas, power players spend daily on stamina; level caps gate time, attempt caps gate output, and money can only loosen the attempt caps</td><td>Raid levels 110–160 in 5 tiers; the magic-resist threshold for Secret Realm accessories rises about 10% per tier</td></tr>
-<tr><td>Aesthetics</td><td>The Arena offers challenge and expression, the power line offers achievement and collection; the same release of a strong ninja moves whales and free players in opposite emotional directions</td><td>A strong paid ninja swept the Arena at launch and was later nerfed</td></tr>
+<tr><th>Mode</th><th>Schedule</th><th>Rules involving power and roster</th></tr>
+<tr><td>Server power leaderboard</td><td>Always on</td><td>Shows individual ranking; the top five by power get a 30% / 20% / 10% points bonus in Peak Duel qualifiers</td></tr>
+<tr><td>Peak Duel</td><td>Every five weeks: server final on Friday, cross-server on Saturday</td><td>Players far below in power cannot challenge; 3v3 with bans before picks, used S/A/B ninjas cannot return; on a forfeit the higher-power player advances</td></tr>
+<tr><td>Fortress Siege</td><td>Saturday 20:00–20:30</td><td>Longer win streaks score more; guild points decide who holds the fortress</td></tr>
+<tr><td>Heaven &amp; Earth Battlefield</td><td>Wednesday 21:00</td><td>Requires ten members to pray that day; fighting with the random “recommended ninja” grants an attack bonus</td></tr>
+<tr><td>Guild Clash</td><td>Held in seasons</td><td>Top 16 guilds by power may enter; relay battles, each side bans three ninjas</td></tr>
+</table>
+</div>
+<div class="prose" data-r=""><p class="note">Rules are from the in-game rule pages in November 2026. Low interest in Points League is an observation from my own server and may not hold everywhere.</p></div>
+</div>
+</section>
+<section class="chapter" id="calc">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">Key numbers</h2>
+<p class="feature" data-r="">For the same S-rank tier, the two routes differ by about 25× at face value. <b>Face value, cash, time and risk have to be compared separately</b>; otherwise two different ways of paying get misread as price discrimination on one product.</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>Cost dimension</th><th>Premium Recruit</th><th>Legendary pass</th></tr>
+<tr><td>Face value</td><td>About 300 pulls × 168 gold, about ¥5,040</td><td>1,980 coupons, ¥198</td></tr>
+<tr><td>Actual cash needed</td><td>Only known after subtracting stored gold, tickets and free income; can be far below face value</td><td>Minus coupon balance; four ¥50 monthly top-ups cover it exactly</td></tr>
+<tr><td>Calendar time</td><td>Depends on how fast gold accumulates and on luck</td><td>A season of activity to reach the reward level, or buy levels with coupons</td></tr>
+<tr><td>Risk and extras</td><td>Pull count is random; other shards and materials along the way</td><td>Fixed reward, but only that season's ninja</td></tr>
+</table>
+</div>
+<ul class="rules" data-r="">
+<li><i>Full-unlock cost</i><b>“About 300 pulls” is a player estimate, not a guarantee</b>The game only publishes per-category shard rates and a guaranteed S shard every ten pulls. The cost of a full ninja needs a conditional model: starting shards, shards per pull, event top-ups and exchanges, solved for the minimum number of pulls, reported as both a median and a high percentile.</li>
+<li><i>Monthly budget</i><b>Four ¥50 top-ups pay for a season pass</b>The ¥50 tier yields 565 coupons; four months give 2,260, leaving 280 after the 1,980-coupon Legendary pass. Buying one more 1,980-coupon ninja in the same window leaves you 1,700 short.</li>
+<li><i>Spending caps</i><b>Money speeds you up, within limits</b>All VIP 12 perks are purchase counts; buying each weekly-limited power bundle once costs about ¥600. Level gates, daily purchase limits and weekly limits together set the fastest possible pace.</li>
+<li><i>Growth bottleneck</i><b>Level is enough, magic resist is 3080 short</b>My level-161 account meets the level requirement for level-160 accessories, but magic resist is 46,341 against 49,421. Each tier raises the threshold by about 10%; buying resources that are not the bottleneck does not move progress.</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="chain">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">From rules to experience</h2>
+<p class="feature" data-r="">Every conclusion is written as a chain: <b>which rule → what players do because of it → what they feel → which goal it serves</b>. The full text has 14; six are shown here. The behaviour and experience columns lack backend data and are inferred from the mechanics.</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>Mechanics (M)</th><th>Dynamics (D)</th><th>Aesthetics (A)</th><th>Goal</th></tr>
+<tr><td>Ranked duels normalise combat stats</td><td>Competitive effort goes into skill and ninja choice</td><td>Challenge: wins and losses feel like your own</td><td>Fairness</td></tr>
+<tr><td>Server power leaderboard; points bonus for the top five in Peak Duel qualifiers</td><td>Power players watch their rank and invest more near a cut-off</td><td>Achievement: being seen by the whole server</td><td>Monetisation, retention</td></tr>
+<tr><td>Guild-mode entry rules: guild level, ten members praying, time in guild</td><td>Members remind each other to pray and show up on time</td><td>Fellowship: being needed by teammates, plus attendance pressure</td><td>Retention</td></tr>
+<tr><td>Peak Duel: power sets entry, 3v3 ban and pick, used ninjas are locked</td><td>The same players prepare power, skill and roster at once</td><td>Highlights and server pride</td><td>Monetisation, retention</td></tr>
+<tr><td>Level plus magic-resist gates, +10% per tier</td><td>Level is enough but stats are not; players hunt for the bottleneck material</td><td>Challenge, or anxiety</td><td>Monetisation, pacing</td></tr>
+<tr><td>Coupon-only ninjas, time-limited and purchase-limited</td><td>Players with a clear target buy before it leaves; non-payers only meet these ninjas in matches</td><td>Exclusivity for owners, deprivation for everyone else</td><td>Monetisation (in tension with fairness)</td></tr>
 </table>
 </div>
 </div>
-</section>
-<section class="chapter" id="ab">
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="Resource loop: the competitive and power flywheels meet at the ninja" height="800" loading="lazy" src="../../img/naruto/chart-flywheel.webp" width="1600"/>
+<figcaption><b>Two flywheels meet at the ninja.</b> The competitive flywheel is driven by new ninjas, so demand comes in pulses; the power flywheel is driven by the social standing that the leaderboard and guild modes give, so investment is continuous. The Peak Duel draws on both.</figcaption>
+</figure>
+</div>
 <div class="narrow">
-<p class="kicker" data-r="">02</p>
-<h2 class="h-sec" data-r="">A/B with Yiren Zhi Xia</h2>
-<p class="feature" data-r="">Both games come from Tencent's Magic Cube studio group and are anime-IP fighting games, but <b>their monetization goes in opposite directions</b>.</p>
 <ul class="rules" data-r="">
-<li><i>What is sold</i><b>Ownership and quantity</b>Naruto sells ninjas, scrolls, summons and power; Yiren Zhi Xia publicly states that characters are free through log-in rewards and quests, and monetizes mainly through skins.</li>
-<li><i>How fairness works</i><b>Partly shielded / fully shielded</b>Naruto shields stats in some modes and uses ban slots to make a deep ninja roster valuable again; Yiren Zhi Xia shields level and gear across all of PvP.</li>
-<li><i>Risks</i><b>Opposite directions</b>Naruto risks power creep and an ever-deeper power line; Yiren Zhi Xia risks a low ceiling on cosmetic spending, and breaking its fairness promise once progression enters PvP.</li>
-<li><i>Method</i><b>One chain per conclusion</b>To keep MDA from turning into labeling, every conclusion runs from rule to player behavior to emotion, backed by in-game screenshots as evidence.</li>
+<li><i>Experience</i><b>Four motivations interwoven</b>Competitive expression, rank and growth, guild belonging and character affection. Guild modes make fellowship the strongest retention experience on the power side: Wednesday battlefield, Saturday fortress, personal growth gets an audience and teammates. The cost is attendance pressure at fixed times.</li>
+<li><i>Comparison</i><b>Yiren zhi Xia: only sourced comparisons</b>Same studio, also a fighting game; the public line is that PvP ignores level and gear, but tests showed a “constellation” upgrade that can be unlocked early with money. The comparison only covers which modes paid assets affect and does not predict its revenue mix.</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="fix">
 <div class="narrow">
-<p class="kicker" data-r="">03</p>
-<h2 class="h-sec" data-r="">Strengths, issues and proposals</h2>
-<ul class="rules three" data-r="">
-<li><i>Three strengths</i><ol><li>Each ninja serves both progression lines, so one release sells to two kinds of players, giving revenue both peaks and a stable base.</li><li>Anti-frustration rules sit in the low and middle ranks: no points lost on a defeat at low rank, and a rank floor in the middle.</li><li>Level gates advance only with time and money can only add attempts, which keeps the rate of content consumption under control.</li></ol></li>
-<li><i>Three issues</i><ol><li>Free players can never get coupon-channel ninjas, and have no chance to practice against them while they are strong.</li><li>Premium Recruit only discloses the guaranteed S-rank shard per ten-pull, not how many pulls it takes to max an S-rank ninja.</li><li>The power line already has 7 progression systems, so the catch-up cost for returning and new players rises every year.</li></ol></li>
-<li><i>Three proposals</i><ol><li>Show pity progress for Premium Recruit, consistent with the luck meter already used in Wish Treasure.</li><li>Four weeks after a paid ninja launches, add it to a “free this week” Arena rotation that grants play access only.</li><li>Borrow Yiren Zhi Xia's separate PvE and PvP skill kits, so a new ninja's Arena strength and Ranked Points strength can be tuned independently.</li></ol></li>
-</ul>
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">Problems and proposals</h2>
+<p class="feature" data-r="">Small changes that first verify whether a problem exists come before changes to resource income. <b>None of the three touches the paywall itself (coupon ninjas require payment)</b>; they only deal with the information and experience costs it creates.</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>Priority</th><th>Proposal</th><th>Problem addressed</th><th>Main risk</th></tr>
+<tr><td>①</td><td>Make Premium Recruit rules and budget information transparent</td><td>Players cannot tell category shard rates, the ten-pull guarantee and full-unlock cost apart; the same game already shows a live luck meter in Wish Treasure</td><td>Some players stop once they hit a guaranteed reward, so revenue per banner may drop</td></tr>
+<tr><td>②</td><td>Training access to paid ninjas you do not own</td><td>Without the ninja, there is no way to practise against it</td><td>Less novelty; may delay purchases</td></tr>
+<tr><td>③</td><td>Targeted catch-up for returning players</td><td>Upgrade systems keep stacking, so returning players on old servers fall far behind</td><td>Veterans may feel it is unfair; subsidies may go to unintended uses</td></tr>
+<tr><td>Monitor</td><td>Roster pressure from high-rank bans; how long the mode restrictions on specific ninjas last</td><td>Players with a thin roster may run out of usable ninjas at high ranks</td><td>—</td></tr>
+</table>
+</div>
+<div class="prose" data-r="">
+<p><strong>Proposal ① is validated in two steps.</strong> First a small usability test: can players tell category shard rates from full-unlock odds, and can they judge whether their budget covers a guaranteed reward? Only then look at live support tickets and spending by budget tier, splitting any revenue change into earlier spending, delayed spending and real change. Full-unlock progress is shown only if a hard full-unlock guarantee actually exists; player estimates are never presented as a guarantee.</p>
+<p class="note">Catch-up has to account for a moving target: time to catch up is roughly T = D ÷ (a − b), where D is the starting gap, a the player's effective daily growth and b the target's daily growth; you only catch up if a &gt; b. Subsidies go only to materials identified as bottlenecks.</p>
+</div>
 </div>
 </section>
 <section class="chapter" id="toc">
 <div class="narrow">
-<p class="kicker" data-r="">04</p>
+<p class="kicker" data-r="">06</p>
 <h2 class="h-sec" data-r="">Contents</h2>
 <ul class="toc-list" data-r="">
-<li><b>0</b>About this teardown: subject, use of MDA, why Yiren Zhi Xia</li>
-<li><b>1</b>Purpose of the systems</li>
-<li><b>2</b>Mechanics: how the systems are designed</li>
-<li><b>3</b>Dynamics: how the design achieves its purpose</li>
-<li><b>4</b>Aesthetics: what players actually feel</li>
-<li><b>5</b>A/B comparison: Naruto vs. Yiren Zhi Xia</li>
+<li><b>1</b>System purpose: core role, four design goals, player motivations</li>
+<li><b>2</b>Mechanics: entry points, growth lines, nine modules, currencies, refresh cycles, strength control</li>
+<li><b>3</b>Dynamics: MDA mapping, numbers and economy, payment touchpoints, retention, resource loops</li>
+<li><b>4</b>Aesthetics: eight kinds of experience, motivations, player journeys, a week on the calendar</li>
+<li><b>5</b>Product comparison: Yiren zhi Xia</li>
 <li><b>6</b>Strengths and weaknesses</li>
-<li><b>7</b>Proposals</li>
+<li><b>7</b>Proposals (by priority)</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="read">
 <div class="narrow">
-<p class="kicker" data-r="">05</p>
+<p class="kicker" data-r="">07</p>
 <h2 class="h-sec" data-r="">Full text</h2>
-<p class="feature" data-r="">Browse the full text below (in Chinese). When you are done, use the top bar or the buttons at the bottom to return to the saves.</p>
+<p class="feature" data-r="">45 pages with 21 in-game screenshots, 3 analysis diagrams, 36 tables and sources. Read it below (in Chinese).</p>
 </div>
 <div class="wrap">
 <div class="pdf" data-r="">
-<div class="bar"><span>naruto-mda.pdf · 36 pages · Chinese</span><span><a download="" href="../../files/naruto-mda.pdf">Download PDF</a> <a href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd">Feishu original ↗</a></span></div>
+<div class="bar"><span>naruto-mda.pdf · 45 pages · Chinese</span><span><a download="" href="../../files/naruto-mda.pdf">Download PDF</a> <a href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje">Feishu original ↗</a></span></div>
 <iframe loading="lazy" src="../../files/naruto-mda.pdf#view=FitH" title="Full text of the Naruto Mobile progression and economy teardown"></iframe>
-<div class="pdf-alt">PDFs cannot be embedded on phones. <a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">Open the PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd" style="color:var(--gold)">Feishu original</a> (opens in a new tab)</div>
+<div class="pdf-alt">PDFs cannot be embedded on phones. <a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">Open the PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje" style="color:var(--gold)">Feishu original</a> (opens in a new tab)</div>
 </div>
 </div>
 </section>

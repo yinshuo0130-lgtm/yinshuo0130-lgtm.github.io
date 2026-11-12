@@ -5,7 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>『NARUTO』モバイル 成長と経済システム分析 · 殷碩ポートフォリオ</title>
-<meta content="MDA フレームワークで『NARUTO』モバイルの成長と経済システムを分析し、『異人之下』と A/B 比較しました。" name="description"/>
+<meta content="システムの目的、メカニクス、ダイナミクス、エステティクスの順に NARUTO モバイルの成長と経済を分析。2 つの公平観がモードごとにどう共存し、戦力がどこで報われ、入手ルートがどう異なる予算を受け止めるか。" name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="殷 碩 · ゲームプランナー ポートフォリオ" property="og:site_name"/>
+<meta content="『NARUTO』モバイル 成長と経済システム分析 · 殷碩ポートフォリオ" property="og:title"/>
+<meta content="システムの目的、メカニクス、ダイナミクス、エステティクスの順に NARUTO モバイルの成長と経済を分析。2 つの公平観がモードごとにどう共存し、戦力がどこで報われ、入手ルートがどう異なる予算を受け止めるか。" property="og:description"/>
+<meta content="https://yinshuo0130-lgtm.github.io/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <meta content="#1f1a24" name="theme-color"/>
 <link href="../../img/px/favicon.png" rel="icon"/>
 <link href="../../css/shell.css" rel="stylesheet"/>
@@ -27,17 +33,17 @@
 <div class="lnav">
 <div class="wrap">
 <b>NARUTO モバイル · 成長と経済システム</b>
-<nav><a class="hide-s" href="#summary">結論</a> <a class="hide-s" href="#ab">A/B 比較</a> <a class="hide-s" href="#fix">課題と提案</a> <a href="#read">全文を読む</a></nav>
+<nav><a class="hide-s" href="#summary">要旨</a> <a class="hide-s" href="#fair">2 つの公平観</a> <a class="hide-s" href="#calc">主な試算</a> <a class="hide-s" href="#chain">MDA の対応</a> <a class="hide-s" href="#fix">改善案</a> <a href="#read">全文を読む</a></nav>
 </div>
 </div>
 <section class="c-hero">
 <div class="wrap">
-<span class="kicker">セーブ 04 · システム分析 · 36 ページ</span>
+<span class="kicker">セーブ 04 · システム分析 · 45 ページ</span>
 <h1 class="mega on-sky">『NARUTO』モバイル<br/>成長と経済システム</h1>
-<p class="feature">MDA フレームワークでシステムをメカニクス、ダイナミクス、エステティクスの 3 層に分け、すべての結論を一本の鎖として書きました：<b>どのルールか → それによってプレイヤーがどう動くか → どんな感情が生まれるか</b>。比較対象には同じスタジオ群の『異人之下』を用いています。2026 年 10 月時点の実機バージョン、V12 アカウントに基づきます。</p>
+<p class="feature">システムの目的から出発し、メカニクス・ダイナミクス・エステティクスの三層で NARUTO モバイルの成長と経済を分析。<b>2 つの公平観がモードごとにどう共存するか、戦力がどこで報われるか、8 つの募集ルートがどう異なる予算を受け止めるか</b>。ルールは 2026 年 10〜11 月の実機版に基づき、主要な主張には根拠の種類を付けています。</p>
 <div class="acts">
 <a class="px-btn" href="#read"><span class="px-ico book"></span>ここで全文を読む</a>
-<a class="px-btn paper" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd"><span class="px-ico ext"></span>Feishu の原文（中国語）</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje"><span class="px-ico ext"></span>Feishu の原文（中国語）</a>
 <button aria-label="セーブブロックを叩く" class="px-block" data-coin="naruto-1"></button>
 </div>
 <div class="c-cover" data-r=""><img alt="NARUTO モバイルのメイン画面（ニックネームは伏せています）" src="../../img/naruto/main.webp" style="object-position:30% center;max-height:520px"/></div>
@@ -46,10 +52,10 @@
 <section class="c-stats">
 <div class="wrap">
 <div class="stats">
-<div data-r=""><span>高級招募とクーポン直販の価格差</span><b>25 倍</b><span>課金額で換算</span></div>
-<div data-r="2"><span>S 忍 1 体を完成させるには</span><b>約 300</b><span>回、プレイヤー統計ベース</span></div>
-<div data-r="3"><span>戦力ラインの育成システム</span><b>7</b><span>種</span></div>
-<div data-r="4"><span>招募の入り口</span><b>8</b><span>か所、通貨は 3 層</span></div>
+<div data-r=""><span>同じ S 忍の額面差</span><b>25×</b><span>上級募集 約 5040 元、伝説版忍法帖 198 元</span></div>
+<div data-r="2"><span>戦力系コンテンツ</span><b>5</b><span>種：ランキング、頂上決戦、組織コンテンツ 3 つ</span></div>
+<div data-r="3"><span>新忍者の強さの制御</span><b>3</b><span>つ：ステータス均等化、BAN、参加制限</span></div>
+<div data-r="4"><span>自分のアカウントの魔防不足</span><b>3080</b><span>レベルは足り、能力値の条件で止まっている</span></div>
 </div>
 </div>
 </section>
@@ -58,69 +64,140 @@
 <section class="chapter" id="summary">
 <div class="narrow">
 <p class="kicker" data-r="">01</p>
-<h2 class="h-sec" data-r="">結論</h2>
-<p class="feature" data-r="">『NARUTO』モバイルは<b>忍者を唯一の主力商品</b>とし、正反対の 2 つの PvP ルールで、操作重視のプレイヤーと育成重視のプレイヤーの両方に売っています。決闘場では数値を統一し、ポイント戦は戦力で決着します。</p>
+<h2 class="h-sec" data-r="">要旨</h2>
+<p class="feature" data-r="">格闘ゲームは公平さで人を留め、基本無料ゲームは課金による優位で稼ぐ。NARUTO モバイルは全体でどちらかを選ぶのではなく、<b>2 つの公平観をモードごとに共存させています</b>。決闘場のランク戦は戦闘ステータスを均等化して操作と忍者の層で勝負させ、アカウント戦力はサーバーランキング、組織コンテンツ、頂上決戦で報われます。</p>
+<ul class="rules" data-r="">
+<li><i>戦力の見返り</i><b>見られること、必要とされること</b>個人戦力ランキングがサーバー内の順位を決め、頂上決戦予選で上位 5 名にポイント加算も与えます。要塞戦、天地戦場、組織争覇は個人の戦力を組織の成績に変えます。ポイント戦は残っていますが、戦力プレイヤーの主な目標ではなくなりました。</li>
+<li><i>2 つの遊び方</i><b>大きく重なり、陣営に分かれない</b>頂上決戦は戦力、リアルタイム操作、厚い忍者層を同時に求めます。3V3 で BAN の後にピックし、使った S/A/B 忍者は後のラウンドで使えません。深く遊ぶプレイヤーの多くは両方を遊びます。</li>
+<li><i>強さの制御</i><b>均等化と BAN に加えて参加制限</b>11 月時点で、十周年限定 S 忍「うずまきナルト・うちはサスケ」と「うずまきナルト・自来也」は 4 つの戦力系コンテンツで使えません。新しい投入の影響はまずランク戦に留まります。</li>
+<li><i>入手ルート</i><b>確実性で階層化</b>同じ S 忍でも、上級募集は額面で約 5040 元、伝説版忍法帖は 198 元に 1 シーズン分の活動が必要です。差の大半は無料で貯まる金貨と時間が吸収しており、同じ商品の価格差とは見なせません。</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="fair">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">3 本の成長ライン、5 つの報われる場</h2>
+<p class="feature" data-r="">忍者の入手、忍者の育成、アカウント戦力の 3 本のラインは「持っているか」と「どれだけ強いか」の 2 つを生みます。<b>ランク戦は所持だけを見て、ランキングと組織コンテンツは強さを見て、頂上決戦は両方を求めます。</b></p>
+</div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="成長ラインの構造：3 本の成長ラインが「所持」と「戦力」を生み、ランク戦、頂上決戦、組織コンテンツ、ランキングと PvE で報われる。ポイント戦への関心は低い" height="976" loading="lazy" src="../../img/naruto/chart-lines.webp" width="1600"/>
+<figcaption><b>忍者は最も広くつながる商品だが、唯一ではない。</b>口寄せと秘伝巻物はランク戦の戦術にも影響し、能力値の育成もあります。衣装は表現と能力値の両方を与えます。</figcaption>
+</figure>
+</div>
+<div class="narrow">
 <div class="table-scroll" data-r="">
 <table>
-<tr><th>層</th><th>やり方</th><th>主な根拠</th></tr>
-<tr><td>メカニクス</td><td>通貨 3 層、招募の入り口 8 か所、育成システム 7 種。決闘場は戦力を統一、ポイント戦は戦力で決着</td><td>高級招募の S 欠片は 11.5%、10 連で S 欠片確定。V12 特典はすべて回数系</td></tr>
-<tr><td>ダイナミクス</td><td>決闘場のプレイヤーは新忍者に合わせて波のように課金し、戦力重視のプレイヤーは毎日スタミナを買って継続的に課金。レベルで時間を、回数で産出量を制限し、課金で緩められるのは回数だけ</td><td>レイドはレベル 110〜160 の 5 段階。秘境装飾の魔法耐性の基準は 1 段階ごとに約 10% 上昇</td></tr>
-<tr><td>エステティクス</td><td>決闘場は挑戦と自己表現、戦力ラインは達成感と収集を提供。同じ強力な忍者の投入でも、重課金と無課金では感情の向きが正反対</td><td>強力な有料忍者が登場して決闘場を席巻し、その後弱体化</td></tr>
+<tr><th>コンテンツ</th><th>日程</th><th>戦力・忍者層に関わるルール</th></tr>
+<tr><td>サーバー戦力ランキング</td><td>常設</td><td>個人順位を表示。頂上決戦予選で戦力上位 5 名に 30% / 20% / 10% のポイント加算</td></tr>
+<tr><td>頂上決戦</td><td>5 週ごと。金曜にサーバー決勝、土曜にサーバー間決勝</td><td>戦力が大きく下回ると挑戦できない。3V3 で BAN の後にピック、使った S/A/B 忍者は再使用不可。棄権時は戦力の高い側が勝ち上がり</td></tr>
+<tr><td>要塞争奪戦</td><td>土曜 20:00〜20:30</td><td>連勝が多いほど高得点。組織ポイントで要塞の帰属が決まる</td></tr>
+<tr><td>天地戦場</td><td>水曜 21:00</td><td>当日の祈福が 10 人に達すると参加資格。ランダムな「おすすめ忍者」で出撃すると攻撃力アップ</td></tr>
+<tr><td>組織争覇戦</td><td>回ごとに開催</td><td>組織戦力上位 16 が参加可能。勝ち抜き戦で、双方 3 名ずつ BAN</td></tr>
+</table>
+</div>
+<div class="prose" data-r=""><p class="note">ルールは 2026 年 11 月のゲーム内説明ページから。ポイント戦への関心が低いのは筆者のサーバーでの観察で、全サーバーに当てはまるとは限りません。</p></div>
+</div>
+</section>
+<section class="chapter" id="calc">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">主要な試算</h2>
+<p class="feature" data-r="">同じ S 忍でも、2 つのルートは額面で約 25 倍の差があります。<b>額面、現金、時間、リスクを分けて比べる必要があります</b>。そうしないと、2 種類の支払い方を同じ商品の価格差別と誤読してしまいます。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>コストの観点</th><th>上級募集</th><th>伝説版忍法帖</th></tr>
+<tr><td>額面</td><td>約 300 回 × 168 金貨、約 5040 元</td><td>1980 点券、198 元</td></tr>
+<tr><td>実際に必要な現金</td><td>手持ちの金貨、募集券、無料収入を差し引くまで分からず、額面よりずっと低いこともある</td><td>点券残高を差し引く。月 50 元の課金 4 回でちょうど賄える</td></tr>
+<tr><td>カレンダー上の時間</td><td>金貨の貯まる速さと運次第</td><td>1 シーズンの活動で報酬レベルに到達するか、点券でレベルを購入</td></tr>
+<tr><td>リスクとおまけ</td><td>回数はランダム。途中で他の欠片や素材も手に入る</td><td>報酬は固定だが、そのシーズンの指定忍者のみ</td></tr>
+</table>
+</div>
+<ul class="rules" data-r="">
+<li><i>完成までのコスト</i><b>「約 300 回」は経験値で、保証ではない</b>公式が公開しているのは欠片の種類別確率と 10 連での S 欠片確定だけです。完成までのコストは条件付きモデルで見積もる必要があります。初期欠片、1 回ごとの獲得、イベント補填、交換を合計し、揃うまでの最小回数を求め、中央値と高めの分位点を併記します。</li>
+<li><i>月額の予算</i><b>50 元 × 4 回で 1 シーズンのチケット</b>50 元の段階で 565 点券、4 か月で 2260 点券。1980 点券の伝説版忍法帖を買うと 280 余ります。同時期に 1980 点券の忍者をもう 1 人買うと 1700 足りません。</li>
+<li><i>課金の上限</i><b>課金は上限の範囲で加速する</b>V12 の特権はすべて購入回数で、戦力特価の週限定品を 1 回ずつ買うと約 600 元。レベル条件、1 日の購入回数、週の購入制限が合わさって最速ペースを決めます。</li>
+<li><i>成長のボトルネック</i><b>レベルは足り、魔防が 3080 足りない</b>161 レベルのアカウントは 160 レベル装飾品のレベル条件を満たすが、魔防 46341 は 49421 に 3080 届きません。条件は 1 段ごとに約 10% 上がり、ボトルネックでない資源を買っても進みません。</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="chain">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">ルールから体験まで</h2>
+<p class="feature" data-r="">結論は 1 本の連鎖として書きます。<b>どのルールが → プレイヤーをどう動かし → どんな感情を生み → どの目的に役立つか</b>。全文で 14 本、ここでは 6 本を挙げます。行動と体験の列は運営データがないため、仕組みからの推論です。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>メカニクス M</th><th>ダイナミクス D</th><th>体験 A</th><th>目的</th></tr>
+<tr><td>ランク戦で戦闘ステータスを均等化</td><td>競技の努力は操作と忍者選びに向かう</td><td>挑戦：勝ち負けを自分の力と感じられる</td><td>公平</td></tr>
+<tr><td>サーバー戦力ランキング。頂上決戦予選で上位 5 名にポイント加算</td><td>戦力プレイヤーは順位を見張り、境目の近くで育成を追加</td><td>達成：サーバー全体に見られる</td><td>収益化、継続</td></tr>
+<tr><td>組織コンテンツの参加条件：組織レベル、祈福 10 人、在籍期間</td><td>メンバー同士で祈福を声かけし、時間通りに集まる</td><td>仲間：必要とされる喜びと、出席のプレッシャー</td><td>継続</td></tr>
+<tr><td>頂上決戦：戦力で参加資格、3V3 の BAN とピック、使った忍者はロック</td><td>同じプレイヤーが戦力、操作、忍者層を同時に準備する</td><td>見せ場とサーバーの誇り</td><td>収益化、継続</td></tr>
+<tr><td>レベル + 魔防の二重条件、1 段ごとに +10%</td><td>レベルは足りても能力値が足りず、ボトルネックの素材を探す</td><td>挑戦、あるいは焦り</td><td>収益化、ペース管理</td></tr>
+<tr><td>点券での直販、期間限定と購入制限</td><td>目当てのあるプレイヤーは販売終了前に買い、無課金のプレイヤーは対戦で向き合うしかない</td><td>所持者の独占感、非所持者の剥奪感</td><td>収益化（公平さと緊張関係）</td></tr>
 </table>
 </div>
 </div>
-</section>
-<section class="chapter" id="ab">
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="資源の循環：競技と戦力の 2 つのフライホイールが忍者で交わる" height="800" loading="lazy" src="../../img/naruto/chart-flywheel.webp" width="1600"/>
+<figcaption><b>2 つのフライホイールは忍者で交わる。</b>競技のフライホイールは新忍者で回り、需要は波のように来ます。戦力のフライホイールはランキングと組織コンテンツがもたらす立場で回り、投資は継続的です。頂上決戦は両方から力を得ます。</figcaption>
+</figure>
+</div>
 <div class="narrow">
-<p class="kicker" data-r="">02</p>
-<h2 class="h-sec" data-r="">『異人之下』との A/B</h2>
-<p class="feature" data-r="">どちらもテンセントの魔方工作室群の作品で、アニメ IP 原作の対戦格闘ゲームですが、<b>マネタイズは正反対の道を進んでいます</b>。</p>
 <ul class="rules" data-r="">
-<li><i>何を売るか</i><b>「持っているか」と「どれだけあるか」</b>NARUTO は忍者、秘巻、口寄せ、そして戦力を売ります。『異人之下』はキャラクターをログインやクエストで無料入手できると公表しており、課金は主にスキンです。</li>
-<li><i>公平性の担保</i><b>一部を遮断 / すべて遮断</b>NARUTO は一部のモードで数値を遮断し、BAN 枠で忍者の層の厚さに再び価値を持たせています。『異人之下』は PvP 全体でレベルと装備を遮断しています。</li>
-<li><i>リスク</i><b>方向が逆</b>NARUTO のリスクはインフレと戦力ラインの際限ない積み重ね。『異人之下』のリスクは見た目課金の上限の低さと、育成が PvP に入り込んだ途端に公平性の約束が崩れることです。</li>
-<li><i>方法</i><b>結論ごとに一本の鎖</b>MDA がラベル貼りで終わらないよう、どの結論もルールからプレイヤーの行動、さらに感情へとつなげ、実機スクリーンショットを根拠として示しました。</li>
+<li><i>体験</i><b>4 つの動機が絡み合う</b>競技での表現、順位と成長、組織への帰属、キャラクターへの愛着。組織コンテンツによって、仲間との体験が戦力側で最も強い継続理由になります。水曜の戦場、土曜の要塞戦で、個人の成長に観客と仲間ができます。代わりに決まった時間への出席が負担になります。</li>
+<li><i>製品比較</i><b>『異人之下』は出典のある比較のみ</b>同じスタジオの格闘ゲームで、公表方針では PvP はレベルと装備の影響を受けませんが、テストでは課金で早く解放できる「命座」が見られました。比較は課金資産がどのモードで効くかだけを扱い、収益構造は予測しません。</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="fix">
 <div class="narrow">
-<p class="kicker" data-r="">03</p>
-<h2 class="h-sec" data-r="">長所、課題、提案</h2>
-<ul class="rules three" data-r="">
-<li><i>3 つの長所</i><ol><li>忍者が 2 つの成長ラインを同時に支え、1 回の投入で 2 種類のプレイヤーに売れるため、売上にピークと底堅さの両方がある。</li><li>挫折を防ぐルールが低〜中位に集中：低位では負けてもポイントが減らず、中位には段位の下限がある。</li><li>レベルの壁は時間でしか進まず、課金で増やせるのは回数だけなので、コンテンツの消化速度を制御できる。</li></ol></li>
-<li><i>3 つの課題</i><ol><li>クーポン経路の忍者は無課金では永遠に手に入らず、強い時期に練習する機会もない。</li><li>高級招募は 10 連の S 欠片確定しか公示しておらず、S 忍 1 体の完成に何回必要かは示していない。</li><li>戦力ラインにはすでに 7 種の育成システムがあり、復帰・新規プレイヤーが追いつくコストは年々上がっている。</li></ol></li>
-<li><i>3 つの提案</i><ol><li>高級招募の天井までの進捗を表示し、祈願奪宝の幸運値と同じ方式にそろえる。</li><li>有料忍者の登場から 4 週間後、決闘場の「今週の無料」ローテーションに入れ、使用権だけを与える。</li><li>『異人之下』の PvE と PvP で別々のスキル構成を参考に、新忍者の決闘場とポイント戦での強さを分けて調整する。</li></ol></li>
-</ul>
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">課題と改善案</h2>
+<p class="feature" data-r="">変更が小さく、まず課題が本当にあるかを確かめられる案を先に、資源の産出に関わる案を後にします。<b>3 案とも「点券忍者は課金が必要」という課金の壁そのものには触れず</b>、それが生む情報と体験のコストだけを扱います。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>優先度</th><th>提案</th><th>解決する課題</th><th>主なリスク</th></tr>
+<tr><td>①</td><td>上級募集のルールと予算情報を透明にする</td><td>欠片の種類別確率、10 連の確定、完成コストを区別できない。同じゲームの祈願奪宝ではすでに幸運値をリアルタイム表示している</td><td>確定報酬を得たところで止める人が出て、1 期あたりの売上が下がる可能性</td></tr>
+<tr><td>②</td><td>未所持の課金忍者のトレーニング体験</td><td>その忍者を持っていないと、対策を練習する機会もない</td><td>新鮮さが下がり、購入が先送りされる可能性</td></tr>
+<tr><td>③</td><td>復帰プレイヤー向けの的を絞った追い上げ</td><td>育成システムが年々積み重なり、古いサーバーの復帰者との差が大きすぎる</td><td>古参が不公平と感じ、補助が想定外の用途に流れる可能性</td></tr>
+<tr><td>監視</td><td>高ランクの BAN による層の負担、特定忍者の参加制限の期間</td><td>層の薄いプレイヤーは高ランクで使える忍者がいなくなる可能性</td><td>—</td></tr>
+</table>
+</div>
+<div class="prose" data-r="">
+<p><strong>案①は 2 段階で検証します。</strong>まず小規模なユーザビリティテストで、欠片の種類別確率と完成確率を区別できるか、手持ちの予算で確定報酬に届くか判断できるかを見ます。そのあとでオンラインの問い合わせ件数と予算層別の消費変化を見て、売上の変化を前倒し、先送り、実際の増減に分けます。完成までの進捗は、ルール上ほんとうに完成保証がある場合だけ表示し、プレイヤーの経験値を保証として見せることはしません。</p>
+<p class="note">追い上げは「目標が動いている」前提で計算します。追いつくまでの時間は約 T = D ÷ (a − b)。D は初期の差、a はプレイヤーの 1 日あたりの実効成長、b は目標の 1 日あたりの成長で、a &gt; b のときだけ追いつけます。補助はボトルネックと特定した素材にだけ投じます。</p>
+</div>
 </div>
 </section>
 <section class="chapter" id="toc">
 <div class="narrow">
-<p class="kicker" data-r="">04</p>
+<p class="kicker" data-r="">06</p>
 <h2 class="h-sec" data-r="">目次</h2>
 <ul class="toc-list" data-r="">
-<li><b>0</b>分析について：対象、MDA の使い方、『異人之下』を選んだ理由</li>
-<li><b>1</b>システムの目的</li>
-<li><b>2</b>メカニクス層：システムの設計</li>
-<li><b>3</b>ダイナミクス層：設計はどう目的を達成するか</li>
-<li><b>4</b>エステティクス層：プレイヤーが実際に感じること</li>
-<li><b>5</b>A/B 比較：NARUTO と異人之下</li>
+<li><b>一</b>システムの目的：中核的な役割、4 つの設計目的、プレイヤーの動機</li>
+<li><b>二</b>メカニクス：入口、成長ライン、9 つのモジュール、通貨、更新周期、強さの制御</li>
+<li><b>三</b>ダイナミクス：MDA の対応、数値と経済、課金の接点、継続、資源の循環</li>
+<li><b>四</b>エステティクス：8 種類の体験、動機、体験の流れ、1 週間のカレンダー</li>
+<li><b>五</b>製品比較：『異人之下』</li>
 <li><b>6</b>長所と短所</li>
-<li><b>7</b>改善提案</li>
+<li><b>七</b>改善案（優先度順）</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="read">
 <div class="narrow">
-<p class="kicker" data-r="">05</p>
+<p class="kicker" data-r="">07</p>
 <h2 class="h-sec" data-r="">全文を読む</h2>
-<p class="feature" data-r="">全文（中国語）は下でそのまま読めます。読み終えたら上部バーか下のボタンでセーブ画面に戻れます。</p>
+<p class="feature" data-r="">全 45 ページ、実機スクリーンショット 21 枚、分析図 3 枚、表 36 個と出典を含みます。下でそのまま読めます（中国語）。</p>
 </div>
 <div class="wrap">
 <div class="pdf" data-r="">
-<div class="bar"><span>naruto-mda.pdf · 36 ページ · 中国語</span><span><a download="" href="../../files/naruto-mda.pdf">PDF をダウンロード</a> <a href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd">Feishu の原文 ↗</a></span></div>
+<div class="bar"><span>naruto-mda.pdf · 45 ページ · 中国語</span><span><a download="" href="../../files/naruto-mda.pdf">PDF をダウンロード</a> <a href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje">Feishu の原文 ↗</a></span></div>
 <iframe loading="lazy" src="../../files/naruto-mda.pdf#view=FitH" title="『NARUTO』モバイル 成長と経済システム分析の全文"></iframe>
-<div class="pdf-alt">スマートフォンでは PDF を埋め込み表示できません。<a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">PDF を開く</a> <a class="more ext" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd" style="color:var(--gold)">Feishu の原文</a>（新しいタブで開きます）</div>
+<div class="pdf-alt">スマートフォンでは PDF を埋め込み表示できません。<a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">PDF を開く</a> <a class="more ext" href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje" style="color:var(--gold)">Feishu の原文</a>（新しいタブで開きます）</div>
 </div>
 </div>
 </section>

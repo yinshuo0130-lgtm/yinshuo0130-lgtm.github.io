@@ -1,10 +1,10 @@
 /* 首页专用：可操作的选关舞台 + 从白天到夜晚的下半场景 */
 
 /* ================= 舞台 ================= */
-.stg{position:relative;height:max(720px,calc(100vh - 64px));max-height:900px;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.stg{position:relative;height:max(760px,calc(100vh - 64px));max-height:1040px;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:manipulation}
 .stg:focus{outline:none}
-.stg-top{position:relative;z-index:3;padding-top:24px;text-align:center}
-.stg-top .eyebrow{font-size:12px}
+.stg-top{position:relative;z-index:3;padding-top:10px;text-align:center}
+.stg-top .eyebrow{display:inline-block;text-wrap:balance;max-width:calc(100% - 32px);padding:6px 10px;font-size:12px;line-height:1.5;color:var(--ink);background:var(--paper);box-shadow:0 0 0 2px var(--ink),4px 4px 0 2px rgba(31,26,36,.3)}
 .stg-top .mega{font-size:48px;margin-top:8px}
 /* 操作说明：立在地面左侧的教学木牌，头上有个跳动的“!”，按键依次按下 */
 .stg-help{position:absolute;z-index:2;left:16px;bottom:48px;width:188px;padding-bottom:28px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;color:var(--ink)}
@@ -32,7 +32,7 @@
 .stg-sound{position:absolute;z-index:3;right:24px;top:24px}
 
 /* 广告牌：显示小人头顶那块方块对应的存档 */
-.board{position:relative;z-index:3;width:min(920px,100% - 48px);margin:20px auto 0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0;background:var(--ink);box-shadow:0 0 0 4px #000,10px 10px 0 4px rgba(31,26,36,.3)}
+.board{position:relative;z-index:3;width:min(1600px,100% - 64px,max(1000px,(clamp(760px,100vh - 64px,1040px) - 500px) * 3.3));margin:20px auto 0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0;background:var(--ink);box-shadow:0 0 0 4px #000,10px 10px 0 4px rgba(31,26,36,.3)}
 .board::after{content:"";position:absolute;left:var(--arrow,50%);bottom:-20px;width:24px;height:16px;margin-left:-12px;background:var(--ink);clip-path:polygon(0 0,100% 0,50% 100%);transition:left .25s steps(5)}
 .board-scr{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000;border:8px solid var(--ink)}
 .board-scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -42,10 +42,10 @@
 .board-scr.flick img,.board-scr.flick .phones{animation:px-flick .25s steps(3)}
 @keyframes px-flick{0%{opacity:0;transform:scaleY(.04)}60%{opacity:1;transform:scaleY(1.02)}100%{transform:none}}
 .board .badge{top:14px;left:14px}
-.board-cap{padding:20px 24px 20px 20px;color:#f3ead9;display:flex;flex-direction:column}
+.board-cap{padding:28px 32px 26px 28px;color:#f3ead9;display:flex;flex-direction:column}
 .board-cap .kicker{align-self:flex-start;background:var(--gold);color:var(--ink)}
-.board-cap h2{margin-top:12px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:24px;line-height:1.3;color:#fff}
-.board-cap p{margin-top:10px;font-size:15px;line-height:1.65;color:#d9cdb9}
+.board-cap h2{margin-top:12px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:30px;line-height:1.3;color:#fff}
+.board-cap p{margin-top:14px;font-size:17px;line-height:1.7;color:#d9cdb9}
 .board-act{margin-top:auto;padding-top:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .board-act small{font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;color:var(--gold);animation:px-blink 1.2s steps(2) infinite}
 
@@ -194,7 +194,7 @@
   .stg{height:max(680px,calc(100svh - 56px))}
   .stg-top .mega{font-size:36px}
   .stg-help{display:none}
-  .stg-top{padding-top:16px}
+  .stg-top{padding-top:10px}
   .board{margin-top:12px}
   .board-scr{border-width:4px;aspect-ratio:2/1}
   .board-cap{padding:10px 14px 12px}
@@ -218,3 +218,5 @@
   .stg-help,.stg-help *,.hero-p .say.cue{animation:none!important}
   .world::before,.tower::before{animation:none}
 }
+/* 大屏：广告牌放大后，标题和正文跟着放大 */
+@media (min-width:1600px) and (min-height:960px){.board-cap{padding:36px 40px 32px 36px}.board-cap h2{font-size:36px}.board-cap p{margin-top:18px;font-size:19px}}

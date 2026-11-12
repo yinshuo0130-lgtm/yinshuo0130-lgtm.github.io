@@ -5,7 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>Hearthstone Battlegrounds: Economy and Match Pacing Teardown · Yin Shuo Portfolio</title>
-<meta content="A teardown of the Gold curve, copy scarcity and anti-snowball mechanics in Hearthstone Battlegrounds, with an A/B test designed for the preferred improvement." name="description"/>
+<meta content="A teardown of the Battlegrounds gold economy, the search cost of the shared minion pool and investment timing under health limits, with usability-test and match-level experiment designs for the top proposal." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Yin Shuo · Game Design Portfolio" property="og:site_name"/>
+<meta content="Hearthstone Battlegrounds: Economy and Match Pacing Teardown · Yin Shuo Portfolio" property="og:title"/>
+<meta content="A teardown of the Battlegrounds gold economy, the search cost of the shared minion pool and investment timing under health limits, with usability-test and match-level experiment designs for the top proposal." property="og:description"/>
+<meta content="https://yinshuo0130-lgtm.github.io/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <meta content="#1f1a24" name="theme-color"/>
 <link href="../../img/px/favicon.png" rel="icon"/>
 <link href="../../css/shell.css" rel="stylesheet"/>
@@ -27,17 +33,17 @@
 <div class="lnav">
 <div class="wrap">
 <b>Battlegrounds · Economy &amp; Match Pacing</b>
-<nav><a class="hide-s" href="#summary">Summary</a> <a class="hide-s" href="#pay">Monetization &amp; experience</a> <a class="hide-s" href="#fix">Improvements</a> <a href="#read">Full text</a></nav>
+<nav><a class="hide-s" href="#summary">Summary</a> <a class="hide-s" href="#calc">Key estimates</a> <a class="hide-s" href="#time">Health and timing</a> <a class="hide-s" href="#fix">Proposals</a> <a href="#read">Read in full</a></nav>
 </div>
 </div>
 <section class="c-hero">
 <div class="wrap">
-<span class="kicker">Save 05 · System teardown · 20 pages</span>
+<span class="kicker">Save 05 · System teardown · 35 pp</span>
 <h1 class="mega on-sky">Hearthstone Battlegrounds<br/>Economy &amp; Match Pacing</h1>
-<p class="feature">Battlegrounds has no card collection: 8 players share one minion pool, and the result depends almost entirely on in-match resource decisions. This teardown looks only at a single match: <b>how Gold comes in and is spent, how the minion pool limits choice, and how the gap between strong and weak boards opens up and is then reined in</b>. Based on Season 14, October 2026.</p>
+<p class="feature">Battlegrounds has no card collection: eight players share one minion pool, and results depend almost entirely on resource decisions within a match. This teardown looks at a single match through mechanics, dynamics and aesthetics: <b>how gold becomes a board, how the shared pool sets the cost of finding cards, and how health limits when to invest</b>. Season 14, October 2026; I have played the mode for 501 hours, with a past-season best above 10,000 rating.</p>
 <div class="acts">
 <a class="px-btn" href="#read"><span class="px-ico book"></span>Read the full text here</a>
-<a class="px-btn paper" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e"><span class="px-ico ext"></span>Feishu original (Chinese)</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb"><span class="px-ico ext"></span>Feishu original (Chinese)</a>
 <button aria-label="Hit the save block" class="px-block" data-coin="hearthstone-1"></button>
 </div>
 <div class="c-cover" data-r=""><img alt="Battlegrounds match screen" src="../../img/hs/main.webp" style="object-position:center 42%;max-height:520px"/></div>
@@ -46,10 +52,10 @@
 <section class="c-stats">
 <div class="wrap">
 <div class="stats">
-<div data-r=""><span>Copies of a Tier 6 minion</span><b>7</b><span>scarcity set by copy count</span></div>
-<div data-r="2"><span>Taken by one triple</span><b>43%</b><span>of top-end copies</span></div>
-<div data-r="3"><span>Gold cap</span><b>10</b><span>+1 per turn, capped on turn 8</span></div>
-<div data-r="4"><span>Playtime</span><b>501h</b><span>rating 6,120</span></div>
+<div data-r=""><span>Upgrades' share of base gold, turns 1–10</span><b>46%</b><span>33 of 72 gold on the baseline route</span></div>
+<div data-r="2"><span>Hit rate per refresh after 2 target copies are taken</span><b>15→8%</b><span>Static pool example</span></div>
+<div data-r="3"><span>Earliest elimination under damage caps</span><b>Turn 5</b><span>30 health, no armour</span></div>
+<div data-r="4"><span>Hero-choice coverage with the season pass</span><b>36→60%</b><span>2 options to 4, under stated assumptions</span></div>
 </div>
 </div>
 </section>
@@ -59,72 +65,120 @@
 <div class="narrow">
 <p class="kicker" data-r="">01</p>
 <h2 class="h-sec" data-r="">Summary</h2>
-<p class="feature" data-r="">The core tension: 8 players with identical income share one minion pool, yet every match has to play out differently. <b>The gap between strong and weak has to open up, but not decide the match too early</b>.</p>
+<p class="feature" data-r="">The gap between strong and weak boards has to open up for placements to mean anything; if it opens too early, most players run out of meaningful choices. Most key decisions in a match <b>trade “cash in now” against “wait for better supply”</b>.</p>
 <ul class="rules" data-r="">
-<li><i>Finding 1</i><b>Income and prices are fixed; differences come only from spending</b>Gold rises by 1 per turn to a cap of 10 on turn 8, and every minion costs 3. Each turn comes down to levelling the Tavern or buying power, with health as the stake.</li>
-<li><i>Finding 2</i><b>Scarcity comes from copy counts, not odds tables</b>A Tier 6 card has only 7 copies in the whole lobby, and one triple takes 43% of them. The shared pool also creates a mind game around contested tribes and reading opponents.</li>
-<li><i>Finding 3</i><b>Snowballing comes from the board, and it has brakes</b>There is no interest or win-streak bonus, and there are damage caps, copy limits and Discovers only one tier up; hero strength is balanced by converting armor into health.</li>
-<li><i>Finding 4</i><b>Add one seasonal mechanic, remove one</b>Each season's new mechanic is an extra choice outside the shop. The underlying economy stays fixed, and only one or two extra systems are live at a time.</li>
+<li><i>Finding 1</i><b>Same base income, different buying power</b>Gold starts at 3, rises by 1 a turn and caps at 10 from turn 8 for everyone; economy engines like Trade Prince Gallywix, selling and discounts change what you can actually spend. No interest and no win-streak bonus cut the direct link from winning to more gold.</li>
+<li><i>Finding 2</i><b>Copy counts set search cost, not triple odds</b>A tier-6 minion has 7 copies; a triple takes 3 and leaves 4. Whether you find it depends on the size of the visible pool and the number of shop slots.</li>
+<li><i>Finding 3</i><b>The shared pool cuts both ways</b>It can stop the leader from making a second golden copy, and it can also stop players behind from copying the leader's board. It is not a reliable catch-up mechanism.</li>
+<li><i>Finding 4</i><b>Payment buys hero-choice coverage, not win rate</b>The season pass expands the starting hero choice from 2 to 4 without changing any in-match rule after you pick. I have always played free with 2 options and still reached over 10,000 in a past season.</li>
 </ul>
 </div>
 </section>
-<section class="chapter" id="pay">
+<section class="chapter" id="calc">
 <div class="narrow">
 <p class="kicker" data-r="">02</p>
-<h2 class="h-sec" data-r="">Monetization &amp; experience</h2>
-<div class="prose" data-r="">
-<p><strong>Payment only buys choice.</strong> The season pass widens the starting hero pick from 2 to 4, plus cosmetics. It sells no in-match stats, but the number of hero options still affects ranked play.</p>
-<p><strong>The experience centers on challenge and exploration</strong>, serving mainly achievers and explorers. Since only the top 4 gain rating, 5th place hurts the most and makes players most eager to queue again. Social play is this mode's weak spot.</p>
-<p>Compared with Naruto Mobile: Naruto's progression accumulates over months and years, and payment can buy progress directly; Battlegrounds compresses progression into a single match and payment barely touches in-match stats, so the system design lives in the economy curve, the scarcity of shared resources and the pace at which strong and weak boards diverge.</p>
+<h2 class="h-sec" data-r="">Key numbers</h2>
+<p class="feature" data-r="">Rules are from Season 14 patch notes and the in-game UI; <b>curves and probabilities are my own calculations under stated assumptions</b>, mathematical examples of how the variables relate, not real match statistics.</p>
 </div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="Upgrade spending per turn on the baseline route: 72 base gold in turns 1–10, 33 spent on upgrades" height="800" loading="lazy" src="../../img/hs/chart-gold.webp" width="1600"/>
+<figcaption><b>Upgrading buys future supply.</b> On a baseline of upgrading on turns 2, 4, 6, 8 and 10, 33 of the 72 base gold in turns 1–10 go to upgrades (45.8%), and none of the five upgrade turns leaves enough to buy another minion. Health is the deposit on this deal.</figcaption>
+</figure>
+<figure class="fig chart" data-r="">
+<img alt="Initial copies per tier and the share a triple takes" height="720" loading="lazy" src="../../img/hs/chart-copies.webp" width="1344"/>
+<figcaption><b>Fewer copies, bigger share per triple.</b> A tier-6 minion has 7 copies; a triple takes 42.9% but leaves 4, so a second player can still triple it.</figcaption>
+</figure>
+<figure class="fig chart" data-r="">
+<img alt="Chance of seeing at least one target per refresh under different assumed pools" height="800" loading="lazy" src="../../img/hs/chart-prob.webp" width="1600"/>
+<figcaption><b>Looking only at the denominator is misleading.</b> Hit rate per refresh is p = 1 − C(N−m, k) ÷ C(N, k). If the pool grows and the shop gains a slot, the rate can go up (15.28% → 15.84%); if someone takes two of your targets, it drops from 15.28% to 8.04%, nearly halving your search efficiency.</figcaption>
+</figure>
+</div>
+</section>
+<section class="chapter" id="time">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">Health and investment timing</h2>
+<p class="feature" data-r="">Triples drive the snowball, and four mechanisms limit it at different stages; <b>not all of them help the player who is behind</b>.</p>
+</div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="The triple-driven feedback loop and four limiting mechanisms: no interest, damage caps, triple rewards one tier up, shared pool" height="768" loading="lazy" src="../../img/hs/chart-snowball.webp" width="1600"/>
+<figcaption><b>Positive feedback runs through the board.</b> No interest, damage caps and triple rewards only one tier up all slow down how fast a lead grows; the shared pool cuts both ways.</figcaption>
+</figure>
+</div>
+<div class="narrow">
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>Health + armour</th><th>Cumulative capped damage</th><th>Earliest out</th></tr>
+<tr><td>30 + 0</td><td>5 + 5 + 5 + 10 + 10 = 35</td><td>Turn 5</td></tr>
+<tr><td>30 + 10</td><td>35 + 10 = 45</td><td>Turn 6</td></tr>
+<tr><td>30 + 20</td><td>45 + 10 = 55</td><td>Turn 7</td></tr>
+</table>
+</div>
+<ul class="rules" data-r="">
+<li><i>Health budget</i><b>Armour converts into extra turns you can wait</b>Solo damage caps are 5 on turns 1–3, 10 on turns 4–7 and 15 from turn 8, removed once you reach the top four. The cap only guarantees how fast you can be knocked out at most; it does not guarantee you survive to any particular power spike.</li>
+<li><i>Dark gifts</i><b>Waiting only pays if survival odds are high</b>3 gold each, from turn 3, at most once per turn and three times per match, with options improving each turn. If using one now is worth 100 and waiting until a target turn is worth 140, waiting needs a survival chance above 71.4%.</li>
+<li><i>Price test</i><b>What if upgrade costs were linear</b>Changing upgrade prices to 5, 7, 9, 11, 13 changes both the shape and the total (42 → 45). Taken apart, the +2 on tier 6 leaves you 1 gold short on turn 10; the claim that it would remove the tier-4-to-5 decision point does not hold, because the tier-5 base price is unchanged.</li>
+</ul>
 </div>
 </section>
 <section class="chapter" id="fix">
 <div class="narrow">
-<p class="kicker" data-r="">03</p>
-<h2 class="h-sec" data-r="">Improvements</h2>
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">Proposals</h2>
+<p class="feature" data-r="">The core economy is solid; the problems are information transparency, the learning cost of season turnover, and the link between payment and ranked play. <b>Changes that only alter what information is shown, and can first verify that the problem exists, come first.</b></p>
 <div class="table-scroll" data-r="">
 <table>
-<tr><th>Priority</th><th>Proposal</th></tr>
-<tr><td>①</td><td>A three-level hint in the shop for remaining copies, with an A/B test plan</td></tr>
-<tr><td>②</td><td>A tutorial match for each season's new mechanic at season start</td></tr>
-<tr><td>③</td><td>A uniform number of hero options in ranked</td></tr>
-<tr><td>④</td><td>Mid-game catch-up for players who fall behind</td></tr>
+<tr><th>Priority</th><th>Issue → proposal</th><th>Cost and risk</th></tr>
+<tr><td>①</td><td>Initial copy counts, information you have seen and the true pool are blurred together → explain pool rules and seen information</td><td>Low; still changes decision time and strategy, needs evaluation</td></tr>
+<tr><td>②</td><td>Season mechanics change quickly → timing practice for dark gifts and trinkets</td><td>Medium; practice content every season</td></tr>
+<tr><td>③</td><td>Paid extra hero options → same number of options in ranked</td><td>Directly weakens the season pass; needs a joint decision with monetisation</td></tr>
+<tr><td>④</td><td>Hard to come back from behind mid-game → catch-up help for trailing players</td><td>Breaks the “same base income for everyone” principle and may invite deliberate health dumping; not a priority</td></tr>
 </table>
 </div>
-<div class="prose" data-r=""><p class="note">I also modeled making Tavern upgrade costs linear and concluded it should not be changed.</p></div>
+<h3 class="h-sub" data-r="">First choice: explain pool rules and seen information</h3>
+<div class="prose" data-r="">
+<p>Showing the true remaining copies in the shop looks like a UI-only change, but it reveals information that was hidden before, so the information rules change. The first version only makes changes that reveal nothing hidden:</p>
+<ul>
+<li>Card details show the initial copy count for the current version, labelled “initial copies are not what remains”.</li>
+<li>The opponent panel keeps the most recent boards and turns you actually saw in combat, noting they may have changed.</li>
+<li>The same explanation opens from the shop, the hand and the board.</li>
+</ul>
+</div>
+<ul class="rules" data-r="">
+<li><i>Step 1</i><b>Test understanding with decision questions</b>Usability tests with new, returning and experienced players: can they tell initial copies from current stock, say which turn an opponent record is from, and weigh both copy counts and shop slots when comparing searches?</li>
+<li><i>Step 2</i><b>Randomise by whole match</b>All eight players in a match see the same feature. The primary metric is accuracy on post-match rule questions; guardrails include unfinished actions, performance and abnormal exits.</li>
+<li><i>Dropped metric</i><b>“Share of matches with a shared tribe” does not work</b>With eight players across five tribes, at least two sharing a tribe is almost certain, and sharing a tribe does not mean competing for the same pieces. Sample size is estimated after a pilot gives accuracy and response rates.</li>
+</ul>
 </div>
 </section>
 <section class="chapter" id="toc">
 <div class="narrow">
-<p class="kicker" data-r="">04</p>
+<p class="kicker" data-r="">05</p>
 <h2 class="h-sec" data-r="">Contents</h2>
 <ul class="toc-list" data-r="">
-<li><b>1</b>Game overview and scope</li>
-<li><b>2</b>Core loop: recruit and combat</li>
-<li><b>3</b>Gold economy: income curve and pricing</li>
-<li><b>4</b>Shared minion pool: where scarcity comes from</li>
-<li><b>5</b>Triples and Discover: snowballing and its brakes</li>
-<li><b>6</b>Heroes: asymmetric starts and three balance knobs</li>
-<li><b>7</b>Combat resolution and damage: controlling the pace of elimination</li>
-<li><b>8</b>Injected variables and seasonal pacing</li>
-<li><b>9</b>Ranked and monetization: selling only choice</li>
-<li><b>10</b>Aesthetics: what these mechanics make players feel</li>
-<li><b>11</b>Issues and proposals</li>
+<li><b>1</b>System purpose: core role, four design goals, player motivations</li>
+<li><b>2</b>Mechanics: turn loop, gold, upgrades, shared pool, triples, heroes, damage, season mechanics, payment, pacing beats</li>
+<li><b>3</b>Dynamics: MDA mapping, seven numeric estimates, snowball and limits, indirect competition, retention, resource loop</li>
+<li><b>4</b>Aesthetics: eight kinds of experience, Bartle, new vs. experienced players, emotional curve</li>
+<li><b>5</b>Product comparison: Naruto Mobile and Golden Spatula</li>
+<li><b>6</b>Strengths and weaknesses</li>
+<li><b>7</b>Proposals (by priority)</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="read">
 <div class="narrow">
-<p class="kicker" data-r="">05</p>
+<p class="kicker" data-r="">06</p>
 <h2 class="h-sec" data-r="">Full text</h2>
-<p class="feature" data-r="">Browse the full text below (in Chinese). When you are done, use the top bar or the buttons at the bottom to return to the saves.</p>
+<p class="feature" data-r="">35 pages with 8 in-game screenshots, 7 analysis charts, 27 tables and sources. Read it below (in Chinese).</p>
 </div>
 <div class="wrap">
 <div class="pdf" data-r="">
-<div class="bar"><span>hearthstone-bg.pdf · 20 pages · Chinese</span><span><a download="" href="../../files/hearthstone-bg.pdf">Download PDF</a> <a href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e">Feishu original ↗</a></span></div>
+<div class="bar"><span>hearthstone-bg.pdf · 35 pages · Chinese</span><span><a download="" href="../../files/hearthstone-bg.pdf">Download PDF</a> <a href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb">Feishu original ↗</a></span></div>
 <iframe loading="lazy" src="../../files/hearthstone-bg.pdf#view=FitH" title="Full text of the Battlegrounds economy and match pacing teardown"></iframe>
-<div class="pdf-alt">PDFs cannot be embedded on phones. <a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">Open the PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e" style="color:var(--gold)">Feishu original</a> (opens in a new tab)</div>
+<div class="pdf-alt">PDFs cannot be embedded on phones. <a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">Open the PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb" style="color:var(--gold)">Feishu original</a> (opens in a new tab)</div>
 </div>
 </div>
 </section>

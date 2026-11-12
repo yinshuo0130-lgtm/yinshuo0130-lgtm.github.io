@@ -258,3 +258,19 @@
   lastCols = cols();
   render(0);
 })();
+
+// 选关标签：滚到哪一关就亮哪个；过关字样拆成单字，进场时依次跳一下
+(function(){
+  var links = [].slice.call(document.querySelectorAll('.lnav nav a[href^="#"]'));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  function spy(){
+    var y = scrollY + innerHeight * .35, cur = -1;
+    secs.forEach(function(s, i){ if (s && s.offsetTop <= y) cur = i; });
+    links.forEach(function(a, i){ a.classList.toggle('on', i === cur); if (i === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+  }
+  addEventListener('scroll', spy, {passive: true}); addEventListener('resize', spy); spy();
+  var big = document.querySelector('.course-win .big');
+  if (big && !big.children.length){
+    big.getAttribute('aria-label').split('').forEach(function(ch, i){ var s = document.createElement('span'); s.style.setProperty('--i', i); s.textContent = ch === ' ' ? '\u00a0' : ch; s.setAttribute('aria-hidden', 'true'); big.appendChild(s); });
+  }
+})();

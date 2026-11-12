@@ -5,7 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>《爐石傳說》酒館戰棋 經濟與對局節奏拆解 · 殷碩作品集</title>
-<meta content="拆解酒館戰棋的鑄幣曲線、份數稀缺與防滾雪球機制，併為首選改進方案設計 AB 測試。" name="description"/>
+<meta content="拆解酒館戰棋的鑄幣經濟、共享隨從池的搜尋成本與生命約束下的投資時機，併為首選改進方案設計可用性測試與整局分流實驗。" name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="殷碩 · 遊戲策劃作品集" property="og:site_name"/>
+<meta content="《爐石傳說》酒館戰棋 經濟與對局節奏拆解 · 殷碩作品集" property="og:title"/>
+<meta content="拆解酒館戰棋的鑄幣經濟、共享隨從池的搜尋成本與生命約束下的投資時機，併為首選改進方案設計可用性測試與整局分流實驗。" property="og:description"/>
+<meta content="https://yinshuo0130-lgtm.github.io/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <meta content="#1f1a24" name="theme-color"/>
 <link href="../../img/px/favicon.png" rel="icon"/>
 <link href="../../css/shell.css" rel="stylesheet"/>
@@ -27,17 +33,17 @@
 <div class="lnav">
 <div class="wrap">
 <b>酒館戰棋 · 經濟與對局節奏</b>
-<nav><a class="hide-s" href="#summary">一頁結論</a> <a class="hide-s" href="#pay">付費與體驗</a> <a class="hide-s" href="#fix">改進方向</a> <a href="#read">閱讀全文</a></nav>
+<nav><a class="hide-s" href="#summary">摘要</a> <a class="hide-s" href="#calc">關鍵推算</a> <a class="hide-s" href="#time">生命與時機</a> <a class="hide-s" href="#fix">改進方案</a> <a href="#read">閱讀全文</a></nav>
 </div>
 </div>
 <section class="c-hero">
 <div class="wrap">
-<span class="kicker">存檔 05 · 系統拆解 · 20 頁</span>
+<span class="kicker">存檔 05 · 系統拆解 · 35 頁</span>
 <h1 class="mega on-sky">《爐石傳說》酒館戰棋<br/>經濟與對局節奏</h1>
-<p class="feature">酒館戰棋沒有卡牌收集，8 名玩家共用一個隨從池，勝負幾乎全部取決於單局內的資源決策。這份拆解只看單局：<b>鑄幣怎麼來、怎麼花，隨從池怎麼限制選擇，強弱差距怎麼拉開又怎麼被收住</b>。口徑為第 14 賽季，2026 年 10 月。</p>
+<p class="feature">酒館戰棋沒有卡牌收集，8 名玩家共用一個隨從池，勝負幾乎全部取決於單局內的資源決策。這份拆解按機制、動態、體驗三層看單局：<b>鑄幣怎樣變成陣容，共享卡池怎樣決定找牌成本，生命值怎樣約束投資時機</b>。口徑為第 14 賽季，2026 年 10 月；我在這個模式打了 501 小時，往季最高突破 10000 分。</p>
 <div class="acts">
 <a class="px-btn" href="#read"><span class="px-ico book"></span>在這裡閱讀全文</a>
-<a class="px-btn paper" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e"><span class="px-ico ext"></span>飛書原文</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb"><span class="px-ico ext"></span>飛書原文</a>
 <button aria-label="頂一下存檔方塊" class="px-block" data-coin="hearthstone-1"></button>
 </div>
 <div class="c-cover" data-r=""><img alt="酒館戰棋對局介面" src="../../img/hs/main.webp" style="object-position:center 42%;max-height:520px"/></div>
@@ -46,10 +52,10 @@
 <section class="c-stats">
 <div class="wrap">
 <div class="stats">
-<div data-r=""><span>6 星隨從全場</span><b>7 份</b><span>份數控制稀缺</span></div>
-<div data-r="2"><span>一次三連拿走</span><b>43%</b><span>頂端強度的份數</span></div>
-<div data-r="3"><span>鑄幣封頂</span><b>10</b><span>每回合 +1，第 8 回合封頂</span></div>
-<div data-r="4"><span>遊玩時長</span><b>501h</b><span>6120 分</span></div>
+<div data-r=""><span>升本佔前 10 回合基礎鑄幣</span><b>46%</b><span>72 枚裡的 33 枚，基線路線</span></div>
+<div data-r="2"><span>目標被取走 2 張後每刷命中率</span><b>15→8%</b><span>靜態池示例</span></div>
+<div data-r="3"><span>上限保護下最早出局</span><b>第 5 回合</b><span>30 點生命、無護甲</span></div>
+<div data-r="4"><span>通行證帶來的英雄候選覆蓋率</span><b>36→60%</b><span>2 選 1 到 4 選 1，假設口徑</span></div>
 </div>
 </div>
 </section>
@@ -58,73 +64,121 @@
 <section class="chapter" id="summary">
 <div class="narrow">
 <p class="kicker" data-r="">01</p>
-<h2 class="h-sec" data-r="">一頁結論</h2>
-<p class="feature" data-r="">核心矛盾：8 名玩家用完全相同的收入、共用一個隨從池，卻要打出每局都不一樣的結果；<b>強弱差距要拉得開，又不能太早定局</b>。</p>
+<h2 class="h-sec" data-r="">摘要</h2>
+<p class="feature" data-r="">強弱要拉得開，名次才有意義；可分化來得太早，大多數人在一局裡很快就沒有可玩的選擇。局內的關鍵決策，<b>大多是在“現在兌現”和“等待更好的供給”之間取捨</b>。</p>
 <ul class="rules" data-r="">
-<li><i>結論 1</i><b>收入和價格固定，差異只來自花法</b>鑄幣每回合 +1，第 8 回合封頂 10，隨從一律 3 枚。每回合的核心問題是升本還是買強度，血量是這筆賬的押金。</li>
-<li><i>結論 2</i><b>稀缺性由份數製造，不靠機率表</b>6 星單卡全場 7 份，一次三連就拿走 43%。共享池還帶來了撞種族和讀對手的博弈。</li>
-<li><i>結論 3</i><b>滾雪球靠陣容，並配了剎車</b>沒有利息和連勝獎勵，另有傷害上限、份數限制、發現只高一本；英雄強弱用護甲換算成血量來平衡。</li>
-<li><i>結論 4</i><b>賽季機制加一個就減一個</b>每季的新機制都是商店之外的額外選擇，底層經濟不動，同時在場的額外系統控制在一到兩個。</li>
+<li><i>結論 1</i><b>基礎收入相同，購買力不同</b>鑄幣從 3 枚起每回合 +1、第 8 回合起為 10，所有人一樣；貿易大王這類經濟引擎、出售變現和費用減免會改變可用金。不設利息和連勝獎勵，切斷了“贏了多拿錢”的直接反饋。</li>
+<li><i>結論 2</i><b>份數決定的是搜尋成本，不是三連機率</b>6 星單卡全場 7 份，三連佔 3 份，仍剩 4 份。能否刷到，取決於可見池大小和商店格數。</li>
+<li><i>結論 3</i><b>共享庫存是雙向的</b>它可能限制領先者做第二張同名金卡，也可能讓落後者更難複製領先陣容，不是穩定的追趕保護。</li>
+<li><i>結論 4</i><b>付費賣的是候選覆蓋率，不是勝率</b>通行證把開局英雄從 2 選 1 擴到 4 選 1，不改選定英雄之後的局內規則。我一直免費 2 選 1，往季也打到過 10000 分以上。</li>
 </ul>
 </div>
 </section>
-<section class="chapter" id="pay">
+<section class="chapter" id="calc">
 <div class="narrow">
 <p class="kicker" data-r="">02</p>
-<h2 class="h-sec" data-r="">付費與體驗</h2>
-<div class="prose" data-r="">
-<p><strong>付費只賣選擇權。</strong>賽季通行證把開局英雄從 2 選 1 變成 4 選 1，再加上外觀，不賣局內數值，但英雄選項數仍然會影響排位。</p>
-<p><strong>體驗以挑戰和探索為主</strong>，主要服務成就型和探索型玩家。前 4 名加分的規則讓第 5 名最難受，也最想再來一局。社交是這個模式的短板。</p>
-<p>和火影手遊對比：火影的成長按月、按年累計，付費可以直接買進度；酒館戰棋的成長壓縮在一局之內，付費幾乎碰不到局內數值，系統設計落在經濟曲線、共享資源的稀缺和強弱分化的節奏上。</p>
+<h2 class="h-sec" data-r="">關鍵推算</h2>
+<p class="feature" data-r="">規則取自第 14 賽季官方補丁與實機介面，<b>曲線和機率按寫明的假設自行計算</b>，是說明變數關係的數學示例，不是真實對局統計。</p>
 </div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="基線路線下每回合的升本支出：前 10 回合基礎收入 72 金，升本支付 33 金" height="800" loading="lazy" src="../../img/hs/chart-gold.webp" width="1600"/>
+<figcaption><b>升本是在購買未來供給。</b>按第 2、4、6、8、10 回合升本的基線，前 10 回合 72 枚基礎鑄幣裡 33 枚用於升本（45.8%），五個升本回合剩下的錢都不夠再買一張隨從。生命值就是這筆賬的押金。</figcaption>
+</figure>
+<figure class="fig chart" data-r="">
+<img alt="各星級隨從的初始份數與三連佔比" height="720" loading="lazy" src="../../img/hs/chart-copies.webp" width="1344"/>
+<figcaption><b>份數越少，三連佔比越高。</b>6 星單卡 7 份，三連佔 42.9%，但仍剩 4 份，第二名玩家在數量上依然可以三連。</figcaption>
+</figure>
+<figure class="fig chart" data-r="">
+<img alt="不同假設池下每次重新整理至少命中一張目標的機率" height="800" loading="lazy" src="../../img/hs/chart-prob.webp" width="1600"/>
+<figcaption><b>只看分母會算錯。</b>每刷命中率 p = 1 − C(N−m, k) ÷ C(N, k)。擴池同時加商店格數時，命中率可能不降反升（15.28% → 15.84%）；目標被別人取走 2 張，命中率從 15.28% 降到 8.04%，找牌效率幾乎減半。</figcaption>
+</figure>
+</div>
+</section>
+<section class="chapter" id="time">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">生命與投資時機</h2>
+<p class="feature" data-r="">三連推動滾雪球，四類機制分段限制放大，<b>方向並不都在幫落後者</b>。</p>
+</div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="三連推動的正反饋迴圈，以及不設利息、傷害上限、三連獎勵只高一本、共享庫存四類限制機制" height="768" loading="lazy" src="../../img/hs/chart-snowball.webp" width="1600"/>
+<figcaption><b>正反饋靠陣容推動。</b>不設利息、傷害上限和三連獎勵只高一本，都在限制優勢放大的速度；共享庫存則是雙向的。</figcaption>
+</figure>
+</div>
+<div class="narrow">
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>生命 + 護甲</th><th>累計可承受的上限傷害</th><th>最早出局</th></tr>
+<tr><td>30 + 0</td><td>5 + 5 + 5 + 10 + 10 = 35</td><td>第 5 回合</td></tr>
+<tr><td>30 + 10</td><td>35 + 10 = 45</td><td>第 6 回合</td></tr>
+<tr><td>30 + 20</td><td>45 + 10 = 55</td><td>第 7 回合</td></tr>
+</table>
+</div>
+<ul class="rules" data-r="">
+<li><i>生命預算</i><b>護甲換算成能多等的回合數</b>單人傷害上限為第 1–3 回合 5 點、第 4–7 回合 10 點、第 8 回合起 15 點，進入前 4 後取消。上限只保證“最快多久出局”，不保證活到某個成長節點。</li>
+<li><i>黑暗之賜</i><b>存活機率夠高，等待才划算</b>每次 3 金，第 3 回合起每回合最多 1 次、每局 3 次，選項隨回合增強。設立即使用的期望為 100、等到目標回合為 140，等待需要存活機率高於 71.4%。</li>
+<li><i>改價推演</i><b>線性升本價格會怎樣</b>把升本價改為 5、7、9、11、13，同時改變了形狀和總價（42 → 45）。拆開看，升 6 本加 2 讓第 10 回合缺 1 金；“抹平 4 升 5 的決策點”這個推論不成立，因為升 5 本的初始價沒變。</li>
+</ul>
 </div>
 </section>
 <section class="chapter" id="fix">
 <div class="narrow">
-<p class="kicker" data-r="">03</p>
-<h2 class="h-sec" data-r="">改進方向</h2>
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">改進方案</h2>
+<p class="feature" data-r="">底層經濟很穩，問題集中在資訊透明度、賽季更替的學習成本，以及付費與排位的關係。<b>先做只改資訊呈現、能先驗證問題是否存在的方案。</b></p>
 <div class="table-scroll" data-r="">
 <table>
-<tr><th>優先順序</th><th>方案</th></tr>
-<tr><td>①</td><td>商店顯示剩餘份數的三檔提示，附 AB 測試方案</td></tr>
-<tr><td>②</td><td>賽季初的新機制教學局</td></tr>
-<tr><td>③</td><td>排位統一英雄選項數</td></tr>
-<tr><td>④</td><td>中期落後補償</td></tr>
+<tr><th>優先順序</th><th>問題 → 方案</th><th>成本與風險</th></tr>
+<tr><td>①</td><td>初始份數、已見資訊和真實庫存混在一起 → 卡池規則與已見資訊說明</td><td>低；仍會改變決策耗時和策略，需要評估</td></tr>
+<tr><td>②</td><td>賽季機制換代快 → 黑暗之賜與飾品的時機練習</td><td>中；每季要做練習內容</td></tr>
+<tr><td>③</td><td>付費多選英雄 → 排位統一候選數</td><td>直接削弱通行證賣點，需要和商業化共同決策</td></tr>
+<tr><td>④</td><td>中期落後難翻盤 → 落後者補償</td><td>動到“基礎收入人人相同”的原則，可能誘導故意賣血；不建議優先</td></tr>
 </table>
 </div>
-<div class="prose" data-r=""><p class="note">另外推演了把升本費用改成線性，結論是不建議改。</p></div>
+<h3 class="h-sub" data-r="">首選方案：卡池規則與已見資訊說明</h3>
+<div class="prose" data-r="">
+<p>直接在商店顯示真實剩餘份數，看起來只改介面，實際上公開了此前隱藏的資訊，資訊規則已經變了。首版只做不公開隱藏資訊的改動：</p>
+<ul>
+<li>卡牌詳情顯示該版本的初始份數，並註明“初始份數不代表當前剩餘”。</li>
+<li>對手面板保留本賬號在戰鬥中實際看到過的最近陣容和回合，註明可能已經變化。</li>
+<li>商店、手牌和場上隨從都能開啟同一份說明。</li>
+</ul>
+</div>
+<ul class="rules" data-r="">
+<li><i>第一步</i><b>用決策題測理解</b>按新手、迴流和熟練玩家分組做可用性測試：能否區分初始份數與當前庫存、能否指出對手記錄來自哪一回合、比較搜尋選擇時是否同時考慮份數和格數。</li>
+<li><i>第二步</i><b>以整局為單位分流</b>同一局 8 人看到相同的功能，主指標是結算後規則理解題的正確率，護欄包括操作未完成比例、效能和異常退出率。</li>
+<li><i>不用的指標</i><b>“撞種族佔比”不可用</b>8 人分到 5 個種族，至少兩人同族幾乎必然發生，同族也不一定爭同一元件。樣本量要在預試驗拿到理解正確率和響應率後再估算。</li>
+</ul>
 </div>
 </section>
 <section class="chapter" id="toc">
 <div class="narrow">
-<p class="kicker" data-r="">04</p>
+<p class="kicker" data-r="">05</p>
 <h2 class="h-sec" data-r="">目錄</h2>
 <ul class="toc-list" data-r="">
-<li><b>一</b>遊戲概況與拆解範圍</li>
-<li><b>二</b>核心迴圈：招募與戰鬥</li>
-<li><b>三</b>鑄幣經濟：收入曲線與定價</li>
-<li><b>四</b>共享隨從池：稀缺性從哪裡來</li>
-<li><b>五</b>三連與發現：滾雪球和剎車</li>
-<li><b>六</b>英雄：起點不對稱和三個平衡旋鈕</li>
-<li><b>七</b>戰鬥結算與傷害：淘汰節奏怎麼控制</li>
-<li><b>八</b>變數注入與賽季節奏</li>
-<li><b>九</b>排位與付費：只賣選擇權</li>
-<li><b>十</b>體驗層：這些機制讓玩家感受到什麼</li>
-<li><b>十一</b>問題與改進方案</li>
+<li><b>一</b>系統目的：核心定位、四大設計目的、玩家動機</li>
+<li><b>二</b>機制層：單局迴圈、鑄幣、升本、共享池、三連、英雄、傷害、賽季機制、付費、節奏點</li>
+<li><b>三</b>動態層：MDA 對映、七項數值推算、滾雪球與限制、間接對抗、留存、資源迴圈</li>
+<li><b>四</b>體驗層：八種體驗、Bartle、新手與熟練玩家、情緒曲線</li>
+<li><b>五</b>產品對照：《火影忍者》手遊與《金剷剷之戰》</li>
+<li><b>六</b>優缺點分析</li>
+<li><b>七</b>改進方案（按優先順序）</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="read">
 <div class="narrow">
-<p class="kicker" data-r="">05</p>
+<p class="kicker" data-r="">06</p>
 <h2 class="h-sec" data-r="">閱讀全文</h2>
-<p class="feature" data-r="">全文在下面直接翻閱，看完點頂欄或底部按鈕回到存檔。</p>
+<p class="feature" data-r="">全文 35 頁，含 8 張實機截圖、7 張分析圖、27 張表和資料來源，在下面直接翻閱。</p>
 </div>
 <div class="wrap">
 <div class="pdf" data-r="">
-<div class="bar"><span>hearthstone-bg.pdf · 20 頁</span><span><a download="" href="../../files/hearthstone-bg.pdf">下載 PDF</a> <a href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e">飛書原文 ↗</a></span></div>
+<div class="bar"><span>hearthstone-bg.pdf · 35 頁</span><span><a download="" href="../../files/hearthstone-bg.pdf">下載 PDF</a> <a href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb">飛書原文 ↗</a></span></div>
 <iframe loading="lazy" src="../../files/hearthstone-bg.pdf#view=FitH" title="酒館戰棋經濟與對局節奏拆解全文"></iframe>
-<div class="pdf-alt">手機上無法內嵌 PDF。<a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">開啟 PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e" style="color:var(--gold)">飛書原文</a>（新標籤頁開啟）</div>
+<div class="pdf-alt">手機上無法內嵌 PDF。<a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">開啟 PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb" style="color:var(--gold)">飛書原文</a>（新標籤頁開啟）</div>
 </div>
 </div>
 </section>

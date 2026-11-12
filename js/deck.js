@@ -20,10 +20,18 @@
     var drag = null;
 
     function mod(a, n){ return ((a % n) + n) % n; }
-    function step(){ return Math.min(220, stage.clientWidth * 0.2); }
+    var film = root.classList.contains('film') ? Film(root, stage, all) : null;
+    function step(){ return film ? film.step() : Math.min(220, stage.clientWidth * 0.2); }
 
     function place(){
       var n = cards.length; if (!n) return;
+      if (film){
+        film.place(cards, pos);
+        var ff = mod(Math.round(pos), n);
+        if (ff !== front){ setFront(ff); }
+        if (thumb) thumb.style.left = (n > 1 ? mod(pos, n) / (n - 1) : 0) * 100 + '%';
+        return;
+      }
       var S = step(), half = n / 2;
       for (var i = 0; i < n; i++){
         var d = mod(i - pos + half, n) - half;          // 相对前牌的偏移，-n/2 ~ n/2
@@ -48,6 +56,7 @@
     function setFront(f){
       if (front >= 0 && cards[front]) cards[front].classList.remove('front');
       front = f; var c = cards[f]; c.classList.add('front');
+      if (film) film.show(c);
       tEl.textContent = c.dataset.title || '';
       sEl.textContent = c.dataset.sub || '';
       mEl.textContent = c.dataset.meta || '';
@@ -89,24 +98,25 @@
     ui.querySelector('.prev').addEventListener('click', function(){ go(-1); });
     ui.querySelector('.next').addEventListener('click', function(){ go(1); });
     root.addEventListener('keydown', function(e){
-      if (e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
-      else if (e.key === 'ArrowRight'){ e.preventDefault(); go(1); }
+      if (e.key === 'ArrowLeft' || (film && e.key === 'ArrowUp')){ e.preventDefault(); go(-1); }
+      else if (e.key === 'ArrowRight' || (film && e.key === 'ArrowDown')){ e.preventDefault(); go(1); }
     });
 
     // 拖动 / 轻扫：跟手移动，松手按速度甩出去
     stage.addEventListener('pointerdown', function(e){
       if (e.button !== 0) return;
-      drag = {x: e.clientX, p: pos, v: 0, lx: e.clientX, lt: performance.now(), moved: false, id: e.pointerId};
+      var ax = film && film.vertical() ? 'clientY' : 'clientX';
+      drag = {ax: ax, x: e[ax], p: pos, v: 0, lx: e[ax], lt: performance.now(), moved: false, id: e.pointerId};
       kick();
     });
     addEventListener('pointermove', function(e){
       if (!drag || e.pointerId !== drag.id) return;
-      var dx = e.clientX - drag.x;
+      var dx = e[drag.ax] - drag.x;
       if (!drag.moved && Math.abs(dx) > 6){ drag.moved = true; stage.setPointerCapture && stage.setPointerCapture(e.pointerId); root.classList.add('dragging'); }
       if (!drag.moved) return;
       var now = performance.now(), S = step();
-      drag.v = 0.8 * drag.v + 0.2 * ((e.clientX - drag.lx) / Math.max(1, now - drag.lt));
-      drag.lx = e.clientX; drag.lt = now;
+      drag.v = 0.8 * drag.v + 0.2 * ((e[drag.ax] - drag.lx) / Math.max(1, now - drag.lt));
+      drag.lx = e[drag.ax]; drag.lt = now;
       pos = drag.p - dx / S;
     });
     function up(e){
@@ -134,10 +144,11 @@
     // 触控板横向滑动
     var acc = 0, accT = 0;
     stage.addEventListener('wheel', function(e){
-      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      var dv = film && film.vertical() && e.target.closest && e.target.closest('.film-rail') ? e.deltaY : 0;
+      if (!dv && Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
       e.preventDefault();
       var now = performance.now(); if (now - accT > 200) acc = 0; accT = now;
-      acc += e.deltaX;
+      acc += dv || e.deltaX;
       if (Math.abs(acc) > 60){ go(acc > 0 ? 1 : -1); acc = 0; }
     }, {passive: false});
 
@@ -170,8 +181,79 @@
       });
     }
 
-    addEventListener('resize', function(){ place(); });
+    addEventListener('resize', function(){ if (film) film.resize(); place(); });
+    root._film = film; root._place = place;
     place();
+  }
+
+  /* 胶片模式（.deck.film）：放映机式布局。
+     - 右侧是一条连续的胶片（窄屏改为底部横向），整条片基和齿孔是同一个元素的背景，随 pos 一起滚动，
+       画格只是嵌在片基上的窗口，所以不会断开；作品不够铺满时，空着的格位露出黑色片基（片头）。
+     - 胶片中间有一个固定的“片门”，停在片门里的那一格就是当前作品：左侧银幕放出它的海报，
+       整个背景换成它的模糊大图，两层图片交叉淡入。
+     - 拖动方向跟着胶片走：竖排时上下拖，横排时左右拖。 */
+  function Film(root, stage, all){
+    function mod(a, n){ return ((a % n) + n) % n; }
+    function el(cls, html){ var e = document.createElement('div'); e.className = cls; if (html) e.innerHTML = html; return e; }
+    var bg = el('film-bg', '<img alt=""><img alt="">');
+    root.insertBefore(bg, root.firstChild);
+    var screen = el('film-screen', '<img alt=""><img alt="">');
+    var beam = el('film-beam');
+    var rail = el('film-rail'), reel = el('film-reel');
+    rail.appendChild(reel);
+    all.forEach(function(c){ reel.appendChild(c); });
+    stage.appendChild(beam); stage.appendChild(screen); stage.appendChild(rail);
+    var blanks = [], pitch = 112, len = 600, vert = true, lim = 4, layer = 0, shown = null;
+    var sImgs = screen.querySelectorAll('img'), bImgs = bg.querySelectorAll('img');
+
+    function build(){
+      vert = !matchMedia('(max-width:640px)').matches;
+      pitch = parseFloat(getComputedStyle(rail).getPropertyValue('--pitch')) || 112;
+      len = vert ? rail.offsetHeight : rail.offsetWidth;
+      lim = Math.ceil(len / 2 / pitch) + 1;
+      while (blanks.length < lim * 2 + 2){
+        var b = el('film-blank'); b.setAttribute('aria-hidden', 'true');
+        reel.appendChild(b); blanks.push(b);
+      }
+    }
+    function put(e, d){
+      var o = d * pitch;
+      if (Math.abs(o) > len / 2 + pitch){ e.style.visibility = 'hidden'; return false; }
+      e.style.visibility = '';
+      e.style.transform = vert ? 'translate3d(0,' + o.toFixed(1) + 'px,0)' : 'translate3d(' + o.toFixed(1) + 'px,0,0)';
+      return true;
+    }
+    build();
+    return {
+      vertical: function(){ return vert; },
+      step: function(){ return pitch; },
+      resize: build,
+      show: function(c){
+        var img = c.querySelector('img'); if (!img || img === shown) return;
+        shown = img; layer ^= 1;
+        [sImgs, bImgs].forEach(function(set){
+          set[layer].src = img.currentSrc || img.src;
+          set[layer].classList.add('on'); set[layer ^ 1].classList.remove('on');
+        });
+        screen.setAttribute('data-alt', img.alt);
+      },
+      place: function(cards, pos){
+        var n = cards.length, half = n / 2;
+        // 齿孔和片基跟着走：每格四个齿孔
+        rail.style.setProperty('--off', (-mod(pos, 1) * pitch).toFixed(1) + 'px');
+        for (var i = 0; i < n; i++){
+          var d = mod(i - pos + half, n) - half, c = cards[i];
+          if (put(c, d)) c.style.setProperty('--dim', Math.min(Math.abs(d), 3) * 0.2);
+        }
+        var base = Math.round(pos), j = 0;
+        for (var k = -lim; k <= lim; k++){
+          var t = base + k - pos;
+          if (t >= -half && t < half) continue;        // 这一格上有作品
+          if (j < blanks.length) put(blanks[j++], t);
+        }
+        for (; j < blanks.length; j++) blanks[j].style.visibility = 'hidden';
+      }
+    };
   }
 
   document.querySelectorAll('.deck').forEach(function(d){ Deck(d); });

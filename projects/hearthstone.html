@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>《炉石传说》酒馆战棋 经济与对局节奏拆解 · 殷硕作品集</title>
-<meta name="description" content="拆解酒馆战棋的铸币曲线、份数稀缺与防滚雪球机制，并为首选改进方案设计 AB 测试。">
+<meta name="description" content="拆解酒馆战棋的铸币经济、共享随从池的搜索成本与生命约束下的投资时机，并为首选改进方案设计可用性测试与整局分流实验。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="殷硕 · 游戏策划作品集">
+<meta property="og:title" content="《炉石传说》酒馆战棋 经济与对局节奏拆解 · 殷硕作品集">
+<meta property="og:description" content="拆解酒馆战棋的铸币经济、共享随从池的搜索成本与生命约束下的投资时机，并为首选改进方案设计可用性测试与整局分流实验。">
+<meta property="og:image" content="https://yinshuo0130-lgtm.github.io/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1f1a24">
 <link rel="icon" href="../img/px/favicon.png">
 <link rel="stylesheet" href="../css/shell.css">
@@ -29,9 +35,10 @@
   <div class="wrap">
     <b>酒馆战棋 · 经济与对局节奏</b>
     <nav>
-      <a class="hide-s" href="#summary">一页结论</a>
-      <a class="hide-s" href="#pay">付费与体验</a>
-      <a class="hide-s" href="#fix">改进方向</a>
+      <a class="hide-s" href="#summary">摘要</a>
+      <a class="hide-s" href="#calc">关键推算</a>
+      <a class="hide-s" href="#time">生命与时机</a>
+      <a class="hide-s" href="#fix">改进方案</a>
       <a href="#read">阅读全文</a>
     </nav>
   </div>
@@ -39,12 +46,12 @@
 
 <section class="c-hero">
   <div class="wrap">
-    <span class="kicker">存档 05 · 系统拆解 · 20 页</span>
+    <span class="kicker">存档 05 · 系统拆解 · 35 页</span>
     <h1 class="mega on-sky">《炉石传说》酒馆战棋<br>经济与对局节奏</h1>
-    <p class="feature">酒馆战棋没有卡牌收集，8 名玩家共用一个随从池，胜负几乎全部取决于单局内的资源决策。这份拆解只看单局：<b>铸币怎么来、怎么花，随从池怎么限制选择，强弱差距怎么拉开又怎么被收住</b>。口径为第 14 赛季，2026 年 10 月。</p>
+    <p class="feature">酒馆战棋没有卡牌收集，8 名玩家共用一个随从池，胜负几乎全部取决于单局内的资源决策。这份拆解按机制、动态、体验三层看单局：<b>铸币怎样变成阵容，共享卡池怎样决定找牌成本，生命值怎样约束投资时机</b>。口径为第 14 赛季，2026 年 10 月；我在这个模式打了 501 小时，往季最高突破 10000 分。</p>
     <div class="acts">
       <a class="px-btn" href="#read"><span class="px-ico book"></span>在这里阅读全文</a>
-      <a class="px-btn paper" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e"><span class="px-ico ext"></span>飞书原文</a>
+      <a class="px-btn paper" href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb"><span class="px-ico ext"></span>飞书原文</a>
       <button class="px-block" data-coin="hearthstone-1" aria-label="顶一下存档方块"></button>
     </div>
     <div class="c-cover" data-r><img src="../img/hs/main.webp" alt="酒馆战棋对局界面" style="object-position:center 42%;max-height:520px"></div>
@@ -54,10 +61,10 @@
 <section class="c-stats">
   <div class="wrap">
     <div class="stats">
-      <div data-r><span>6 星随从全场</span><b>7 份</b><span>份数控制稀缺</span></div>
-      <div data-r="2"><span>一次三连拿走</span><b>43%</b><span>顶端强度的份数</span></div>
-      <div data-r="3"><span>铸币封顶</span><b>10</b><span>每回合 +1，第 8 回合封顶</span></div>
-      <div data-r="4"><span>游玩时长</span><b>501h</b><span>6120 分</span></div>
+      <div data-r><span>升本占前 10 回合基础铸币</span><b>46%</b><span>72 枚里的 33 枚，基线路线</span></div>
+      <div data-r="2"><span>目标被取走 2 张后每刷命中率</span><b>15→8%</b><span>静态池示例</span></div>
+      <div data-r="3"><span>上限保护下最早出局</span><b>第 5 回合</b><span>30 点生命、无护甲</span></div>
+      <div data-r="4"><span>通行证带来的英雄候选覆盖率</span><b>36→60%</b><span>2 选 1 到 4 选 1，假设口径</span></div>
     </div>
   </div>
 </section>
@@ -68,77 +75,126 @@
   <section class="chapter" id="summary">
     <div class="narrow">
       <p class="kicker" data-r>01</p>
-      <h2 class="h-sec" data-r>一页结论</h2>
-      <p class="feature" data-r>核心矛盾：8 名玩家用完全相同的收入、共用一个随从池，却要打出每局都不一样的结果；<b>强弱差距要拉得开，又不能太早定局</b>。</p>
+      <h2 class="h-sec" data-r>摘要</h2>
+      <p class="feature" data-r>强弱要拉得开，名次才有意义；可分化来得太早，大多数人在一局里很快就没有可玩的选择。局内的关键决策，<b>大多是在“现在兑现”和“等待更好的供给”之间取舍</b>。</p>
       <ul class="rules" data-r>
-        <li><i>结论 1</i><b>收入和价格固定，差异只来自花法</b>铸币每回合 +1，第 8 回合封顶 10，随从一律 3 枚。每回合的核心问题是升本还是买强度，血量是这笔账的押金。</li>
-        <li><i>结论 2</i><b>稀缺性由份数制造，不靠概率表</b>6 星单卡全场 7 份，一次三连就拿走 43%。共享池还带来了撞种族和读对手的博弈。</li>
-        <li><i>结论 3</i><b>滚雪球靠阵容，并配了刹车</b>没有利息和连胜奖励，另有伤害上限、份数限制、发现只高一本；英雄强弱用护甲换算成血量来平衡。</li>
-        <li><i>结论 4</i><b>赛季机制加一个就减一个</b>每季的新机制都是商店之外的额外选择，底层经济不动，同时在场的额外系统控制在一到两个。</li>
+        <li><i>结论 1</i><b>基础收入相同，购买力不同</b>铸币从 3 枚起每回合 +1、第 8 回合起为 10，所有人一样；贸易大王这类经济引擎、出售变现和费用减免会改变可用金。不设利息和连胜奖励，切断了“赢了多拿钱”的直接反馈。</li>
+        <li><i>结论 2</i><b>份数决定的是搜索成本，不是三连概率</b>6 星单卡全场 7 份，三连占 3 份，仍剩 4 份。能否刷到，取决于可见池大小和商店格数。</li>
+        <li><i>结论 3</i><b>共享库存是双向的</b>它可能限制领先者做第二张同名金卡，也可能让落后者更难复制领先阵容，不是稳定的追赶保护。</li>
+        <li><i>结论 4</i><b>付费卖的是候选覆盖率，不是胜率</b>通行证把开局英雄从 2 选 1 扩到 4 选 1，不改选定英雄之后的局内规则。我一直免费 2 选 1，往季也打到过 10000 分以上。</li>
       </ul>
     </div>
   </section>
 
-  <section class="chapter" id="pay">
+  <section class="chapter" id="calc">
     <div class="narrow">
       <p class="kicker" data-r>02</p>
-      <h2 class="h-sec" data-r>付费与体验</h2>
-      <div class="prose" data-r>
-        <p><strong>付费只卖选择权。</strong>赛季通行证把开局英雄从 2 选 1 变成 4 选 1，再加上外观，不卖局内数值，但英雄选项数仍然会影响排位。</p>
-        <p><strong>体验以挑战和探索为主</strong>，主要服务成就型和探索型玩家。前 4 名加分的规则让第 5 名最难受，也最想再来一局。社交是这个模式的短板。</p>
-        <p>和火影手游对比：火影的成长按月、按年累计，付费可以直接买进度；酒馆战棋的成长压缩在一局之内，付费几乎碰不到局内数值，系统设计落在经济曲线、共享资源的稀缺和强弱分化的节奏上。</p>
+      <h2 class="h-sec" data-r>关键推算</h2>
+      <p class="feature" data-r>规则取自第 14 赛季官方补丁与实机界面，<b>曲线和概率按写明的假设自行计算</b>，是说明变量关系的数学示例，不是真实对局统计。</p>
+    </div>
+    <div class="wrap">
+      <figure class="fig chart" data-r>
+        <img src="../img/hs/chart-gold.webp" alt="基线路线下每回合的升本支出：前 10 回合基础收入 72 金，升本支付 33 金" loading="lazy" width="1600" height="800">
+        <figcaption><b>升本是在购买未来供给。</b>按第 2、4、6、8、10 回合升本的基线，前 10 回合 72 枚基础铸币里 33 枚用于升本（45.8%），五个升本回合剩下的钱都不够再买一张随从。生命值就是这笔账的押金。</figcaption>
+      </figure>
+      <figure class="fig chart" data-r>
+        <img src="../img/hs/chart-copies.webp" alt="各星级随从的初始份数与三连占比" loading="lazy" width="1344" height="720">
+        <figcaption><b>份数越少，三连占比越高。</b>6 星单卡 7 份，三连占 42.9%，但仍剩 4 份，第二名玩家在数量上依然可以三连。</figcaption>
+      </figure>
+      <figure class="fig chart" data-r>
+        <img src="../img/hs/chart-prob.webp" alt="不同假设池下每次刷新至少命中一张目标的概率" loading="lazy" width="1600" height="800">
+        <figcaption><b>只看分母会算错。</b>每刷命中率 p = 1 − C(N−m, k) ÷ C(N, k)。扩池同时加商店格数时，命中率可能不降反升（15.28% → 15.84%）；目标被别人取走 2 张，命中率从 15.28% 降到 8.04%，找牌效率几乎减半。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter" id="time">
+    <div class="narrow">
+      <p class="kicker" data-r>03</p>
+      <h2 class="h-sec" data-r>生命与投资时机</h2>
+      <p class="feature" data-r>三连推动滚雪球，四类机制分段限制放大，<b>方向并不都在帮落后者</b>。</p>
+    </div>
+    <div class="wrap">
+      <figure class="fig chart" data-r>
+        <img src="../img/hs/chart-snowball.webp" alt="三连推动的正反馈循环，以及不设利息、伤害上限、三连奖励只高一本、共享库存四类限制机制" loading="lazy" width="1600" height="768">
+        <figcaption><b>正反馈靠阵容推动。</b>不设利息、伤害上限和三连奖励只高一本，都在限制优势放大的速度；共享库存则是双向的。</figcaption>
+      </figure>
+    </div>
+    <div class="narrow">
+      <div class="table-scroll" data-r>
+        <table>
+          <tr><th>生命 + 护甲</th><th>累计可承受的上限伤害</th><th>最早出局</th></tr>
+          <tr><td>30 + 0</td><td>5 + 5 + 5 + 10 + 10 = 35</td><td>第 5 回合</td></tr>
+          <tr><td>30 + 10</td><td>35 + 10 = 45</td><td>第 6 回合</td></tr>
+          <tr><td>30 + 20</td><td>45 + 10 = 55</td><td>第 7 回合</td></tr>
+        </table>
       </div>
+      <ul class="rules" data-r>
+        <li><i>生命预算</i><b>护甲换算成能多等的回合数</b>单人伤害上限为第 1–3 回合 5 点、第 4–7 回合 10 点、第 8 回合起 15 点，进入前 4 后取消。上限只保证“最快多久出局”，不保证活到某个成长节点。</li>
+        <li><i>黑暗之赐</i><b>存活概率够高，等待才划算</b>每次 3 金，第 3 回合起每回合最多 1 次、每局 3 次，选项随回合增强。设立即使用的期望为 100、等到目标回合为 140，等待需要存活概率高于 71.4%。</li>
+        <li><i>改价推演</i><b>线性升本价格会怎样</b>把升本价改为 5、7、9、11、13，同时改变了形状和总价（42 → 45）。拆开看，升 6 本加 2 让第 10 回合缺 1 金；“抹平 4 升 5 的决策点”这个推论不成立，因为升 5 本的初始价没变。</li>
+      </ul>
     </div>
   </section>
 
   <section class="chapter" id="fix">
     <div class="narrow">
-      <p class="kicker" data-r>03</p>
-      <h2 class="h-sec" data-r>改进方向</h2>
+      <p class="kicker" data-r>04</p>
+      <h2 class="h-sec" data-r>改进方案</h2>
+      <p class="feature" data-r>底层经济很稳，问题集中在信息透明度、赛季更替的学习成本，以及付费与排位的关系。<b>先做只改信息呈现、能先验证问题是否存在的方案。</b></p>
       <div class="table-scroll" data-r>
         <table>
-          <tr><th>优先级</th><th>方案</th></tr>
-          <tr><td>①</td><td>商店显示剩余份数的三档提示，附 AB 测试方案</td></tr>
-          <tr><td>②</td><td>赛季初的新机制教学局</td></tr>
-          <tr><td>③</td><td>排位统一英雄选项数</td></tr>
-          <tr><td>④</td><td>中期落后补偿</td></tr>
+          <tr><th>优先级</th><th>问题 → 方案</th><th>成本与风险</th></tr>
+          <tr><td>①</td><td>初始份数、已见信息和真实库存混在一起 → 卡池规则与已见信息说明</td><td>低；仍会改变决策耗时和策略，需要评估</td></tr>
+          <tr><td>②</td><td>赛季机制换代快 → 黑暗之赐与饰品的时机练习</td><td>中；每季要做练习内容</td></tr>
+          <tr><td>③</td><td>付费多选英雄 → 排位统一候选数</td><td>直接削弱通行证卖点，需要和商业化共同决策</td></tr>
+          <tr><td>④</td><td>中期落后难翻盘 → 落后者补偿</td><td>动到“基础收入人人相同”的原则，可能诱导故意卖血；不建议优先</td></tr>
         </table>
       </div>
-      <div class="prose" data-r><p class="note">另外推演了把升本费用改成线性，结论是不建议改。</p></div>
+      <h3 class="h-sub" data-r>首选方案：卡池规则与已见信息说明</h3>
+      <div class="prose" data-r>
+        <p>直接在商店显示真实剩余份数，看起来只改界面，实际上公开了此前隐藏的信息，信息规则已经变了。首版只做不公开隐藏信息的改动：</p>
+        <ul>
+          <li>卡牌详情显示该版本的初始份数，并注明“初始份数不代表当前剩余”。</li>
+          <li>对手面板保留本账号在战斗中实际看到过的最近阵容和回合，注明可能已经变化。</li>
+          <li>商店、手牌和场上随从都能打开同一份说明。</li>
+        </ul>
+      </div>
+      <ul class="rules" data-r>
+        <li><i>第一步</i><b>用决策题测理解</b>按新手、回流和熟练玩家分组做可用性测试：能否区分初始份数与当前库存、能否指出对手记录来自哪一回合、比较搜索选择时是否同时考虑份数和格数。</li>
+        <li><i>第二步</i><b>以整局为单位分流</b>同一局 8 人看到相同的功能，主指标是结算后规则理解题的正确率，护栏包括操作未完成比例、性能和异常退出率。</li>
+        <li><i>不用的指标</i><b>“撞种族占比”不可用</b>8 人分到 5 个种族，至少两人同族几乎必然发生，同族也不一定争同一组件。样本量要在预试验拿到理解正确率和响应率后再估算。</li>
+      </ul>
     </div>
   </section>
 
   <section class="chapter" id="toc">
     <div class="narrow">
-      <p class="kicker" data-r>04</p>
+      <p class="kicker" data-r>05</p>
       <h2 class="h-sec" data-r>目录</h2>
       <ul class="toc-list" data-r>
-        <li><b>一</b>游戏概况与拆解范围</li>
-        <li><b>二</b>核心循环：招募与战斗</li>
-        <li><b>三</b>铸币经济：收入曲线与定价</li>
-        <li><b>四</b>共享随从池：稀缺性从哪里来</li>
-        <li><b>五</b>三连与发现：滚雪球和刹车</li>
-        <li><b>六</b>英雄：起点不对称和三个平衡旋钮</li>
-        <li><b>七</b>战斗结算与伤害：淘汰节奏怎么控制</li>
-        <li><b>八</b>变量注入与赛季节奏</li>
-        <li><b>九</b>排位与付费：只卖选择权</li>
-        <li><b>十</b>体验层：这些机制让玩家感受到什么</li>
-        <li><b>十一</b>问题与改进方案</li>
+        <li><b>一</b>系统目的：核心定位、四大设计目的、玩家动机</li>
+        <li><b>二</b>机制层：单局循环、铸币、升本、共享池、三连、英雄、伤害、赛季机制、付费、节奏点</li>
+        <li><b>三</b>动态层：MDA 映射、七项数值推算、滚雪球与限制、间接对抗、留存、资源循环</li>
+        <li><b>四</b>体验层：八种体验、Bartle、新手与熟练玩家、情绪曲线</li>
+        <li><b>五</b>产品对照：《火影忍者》手游与《金铲铲之战》</li>
+        <li><b>六</b>优缺点分析</li>
+        <li><b>七</b>改进方案（按优先级）</li>
       </ul>
     </div>
   </section>
 
   <section class="chapter" id="read">
     <div class="narrow">
-      <p class="kicker" data-r>05</p>
+      <p class="kicker" data-r>06</p>
       <h2 class="h-sec" data-r>阅读全文</h2>
-      <p class="feature" data-r>全文在下面直接翻阅，看完点顶栏或底部按钮回到存档。</p>
+      <p class="feature" data-r>全文 35 页，含 8 张实机截图、7 张分析图、27 张表和资料来源，在下面直接翻阅。</p>
     </div>
     <div class="wrap">
       <div class="pdf" data-r>
-        <div class="bar"><span>hearthstone-bg.pdf · 20 页</span><span><a href="../files/hearthstone-bg.pdf" download>下载 PDF</a>　<a href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e">飞书原文 ↗</a></span></div>
+        <div class="bar"><span>hearthstone-bg.pdf · 35 页</span><span><a href="../files/hearthstone-bg.pdf" download>下载 PDF</a>　<a href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb">飞书原文 ↗</a></span></div>
         <iframe src="../files/hearthstone-bg.pdf#view=FitH" title="酒馆战棋经济与对局节奏拆解全文" loading="lazy"></iframe>
-        <div class="pdf-alt">手机上无法内嵌 PDF。<a class="more" href="../files/hearthstone-bg.pdf" style="color:var(--gold)">打开 PDF</a>　<a class="more ext" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e" style="color:var(--gold)">飞书原文</a>（新标签页打开）</div>
+        <div class="pdf-alt">手机上无法内嵌 PDF。<a class="more" href="../files/hearthstone-bg.pdf" style="color:var(--gold)">打开 PDF</a>　<a class="more ext" href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb" style="color:var(--gold)">飞书原文</a>（新标签页打开）</div>
       </div>
     </div>
   </section>

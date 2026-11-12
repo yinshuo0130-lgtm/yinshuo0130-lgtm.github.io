@@ -15,10 +15,10 @@
      kicker:'存檔 02 · 可玩作品 · 策劃（兼部分程式）', title:'《發條人偶》Tidewheel', text:'甩出時間齒輪，讓周圍海面的時間停止，停住的浪變成可以踩的地形。thatgamejam #02 參賽作品，4 人團隊。', short:'Tidewheel'},
     {href:'projects/burger/index.html', tip:'首次轉生約 49 分鐘；獲得星星加成後，第二輪縮短至 23 分鐘，第三輪 11 分鐘。', img:['../img/burger/02_home.webp','../img/burger/12c_run_burst.webp','../img/burger/19_space_home.webp'], badge:'開發完成 · 軟著申請中',
      kicker:'存檔 03 · 可玩作品 · 獨立製作', title:'《宇宙漢堡》', text:'抖音豎屏增量經營小遊戲。以自編跑局模擬器調整節奏，首次轉生控制在約 49 分鐘。', short:'宇宙漢堡'},
-    {href:'projects/naruto.html', tip:'高階招募拿滿一名 S 忍約需 300 抽，按充值折算約 5040 元，是點券直售的 25 倍。', img:['../img/naruto/main.webp'], badge:'36 頁 · MDA',
-     kicker:'存檔 04 · 系統拆解', title:'《火影忍者》手遊：成長與經濟系統', text:'按 MDA 框架分層拆解，測算出高階招募與點券直售約 25 倍的價差，並與《異人之下》對比。', short:'火影拆解'},
-    {href:'projects/hearthstone.html', tip:'6 星隨從只有 7 份，一次三連即拿走 43%：頂端強度的稀缺由份數控制，而非機率表。', img:['../img/hs/main.webp'], badge:'20 頁 · 501 小時',
-     kicker:'存檔 05 · 系統拆解', title:'《爐石傳說》酒館戰棋：經濟與對局節奏', text:'拆解鑄幣曲線、份數稀缺與四項防滾雪球機制，併為首選改進方案設計 AB 測試。', short:'酒館戰棋'}
+    {href:'projects/naruto.html', tip:'段位賽遮蔽戰鬥屬性，戰力在排行榜、組織玩法和巔峰對決裡兌現。', img:['../img/naruto/main.webp'], badge:'45 頁 · MDA',
+     kicker:'存檔 04 · 系統拆解', title:'《火影忍者》手遊：成長與經濟系統', text:'按 MDA 分層拆解兩種公平：段位賽守住操作公平，戰力玩法讓投入有回報。比較 S 忍四條獲取路線的面值、現金、時間與風險，面值相差約 25 倍，並按優先順序給出 3 個改進方案。', short:'火影拆解'},
+    {href:'projects/hearthstone.html', tip:'目標隨從被別人取走 2 張，每次重新整理的命中率從 15% 降到 8%。', img:['../img/hs/main.webp'], badge:'35 頁 · 機率模型',
+     kicker:'存檔 05 · 系統拆解', title:'《爐石傳說》酒館戰棋：經濟與對局節奏', text:'推算鑄幣曲線與升本節奏，前 10 回合 46% 的基礎鑄幣用於升本；用卡池機率模型解釋份數稀缺與讀對手，首選改進方案配可用性測試和對局級實驗兩步驗證。', short:'酒館戰棋'}
   ];
   /* 页面加载后空闲时预取全部广告牌图片，切换存档时直接从缓存显示 */
   window.addEventListener('load', function(){

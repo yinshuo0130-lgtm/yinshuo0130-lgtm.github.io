@@ -243,10 +243,17 @@
   var first = false;
   try { first = !sessionStorage.getItem('ys-booted'); sessionStorage.setItem('ys-booted','1'); } catch(e){}
   if (first && !reduce){
-    run('PRESS START', '殷碩 · 遊戲策劃作品集', 1100, hide);
+    run('PRESS START', '殷碩 · 遊戲策劃作品集', 800, hide);
   }
 
-  // 站内跳转：读取页面上写好的读档提示
+  // 站内跳转：读取页面上写好的读档提示。
+  // 过场只在每个会话的前两次跳转放完整时长，之后缩短：看第三个作品的人已经看过这段动画了。
+  var NAV_MS = 620;
+  try {
+    var navs = +sessionStorage.getItem('ys-navs') || 0;
+    if (navs >= 2) NAV_MS = 320;
+    sessionStorage.setItem('ys-navs', navs + 1);
+  } catch(e){}
   function internal(a){
     if (!a || a.target === '_blank' || a.hasAttribute('download')) return false;
     var href = a.getAttribute('href') || '';
@@ -264,11 +271,11 @@
     e.preventDefault();
     var href = a.href;
     if (reduce){ location.href = href; return; }
-    run(a.getAttribute('data-slot') || '讀取存檔', a.getAttribute('data-tip') || '', 900, function(){ location.href = href; });
+    run(a.getAttribute('data-slot') || '讀取存檔', a.getAttribute('data-tip') || '', NAV_MS, function(){ location.href = href; });
   });
   window.ysLoad = function(href, slot, tip){
     if (reduce){ location.href = href; return; }
-    run(slot || '讀取存檔', tip || '', 900, function(){ location.href = href; });
+    run(slot || '讀取存檔', tip || '', NAV_MS, function(){ location.href = href; });
   };
   addEventListener('pageshow', function(e){ if (e.persisted) hide(); });
 
@@ -289,5 +296,13 @@
       if (tr === head) return;
       [].forEach.call(tr.children, function(td, i){ if (labels[i]) td.setAttribute('data-label', labels[i]); });
     });
+  });
+})();
+
+/* 拆解页图表：点一下在新标签页打开原图，手机上可以放大看 */
+(function(){
+  [].forEach.call(document.querySelectorAll('.fig.chart img'), function(im){
+    im.style.cursor = 'zoom-in';
+    im.addEventListener('click', function(){ window.open(im.currentSrc || im.src, '_blank', 'noopener'); });
   });
 })();

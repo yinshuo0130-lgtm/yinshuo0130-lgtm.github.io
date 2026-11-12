@@ -211,3 +211,64 @@
   .pg-dots button{width:10px;height:10px}
   .pg-dots button[aria-selected="true"]{width:22px}
 }
+
+/* ===== 关于我 · 关卡化界面 =====
+   顶部分页条做成选关标签（1-1 / 1-2 / 1-3，滚到哪一关就亮哪一个）；
+   玩家卡加「PLAYER 1」名牌，特征改成带图标的状态条；页面最后是过关旗杆。 */
+.lnav nav{counter-reset:w;gap:10px}
+.lnav nav a:not(.pill){counter-increment:w;display:inline-flex;align-items:center;gap:8px;padding:6px 10px 6px 6px;background:var(--paper);
+  box-shadow:0 -2px 0 0 var(--ink),0 2px 0 0 var(--ink),-2px 0 0 0 var(--ink),2px 0 0 0 var(--ink),0 5px 0 0 rgba(31,26,36,.25);transition:transform .08s steps(2)}
+.lnav nav a:not(.pill)::before{content:"1-" counter(w);padding:3px 4px;font-size:12px;line-height:1;color:var(--gold);background:var(--ink)}
+.lnav nav a:not(.pill):hover{color:var(--ink);transform:translateY(-2px)}
+.lnav nav a.on{background:var(--gold);transform:translateY(2px);box-shadow:0 -2px 0 0 var(--ink),0 2px 0 0 var(--ink),-2px 0 0 0 var(--ink),2px 0 0 0 var(--ink),inset 0 3px 0 0 var(--gold-d)}
+.lnav nav a.on::before{color:var(--paper)}
+
+.about-hero .panel{z-index:3;margin-top:28px}
+.about-hero .panel::before{content:"PLAYER 1";position:absolute;left:-8px;top:-52px;padding:8px 12px 7px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:12px;line-height:1;
+  color:#fff;background:var(--red);box-shadow:0 -4px 0 0 var(--ink),0 4px 0 0 var(--ink),-4px 0 0 0 var(--ink),4px 0 0 0 var(--ink),inset 0 -3px 0 0 var(--red-d)}
+.about-hero .pcard h1{font-size:60px}
+.about-hero .pcard .cls{font-size:12px;padding:5px 8px;display:inline-block;background:var(--paper-2);box-shadow:0 0 0 2px var(--ink-2)}
+.about-hero .traits{gap:10px}
+.about-hero .traits span{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 7px;color:var(--paper);background:var(--ink);
+  box-shadow:0 0 0 2px var(--ink),4px 4px 0 2px rgba(31,26,36,.22)}
+.about-hero .traits span::before{content:"";flex:none;width:24px;height:24px;background:url("../img/px/icons.png") 0 0/288px 24px no-repeat;image-rendering:pixelated}
+.about-hero .traits span:nth-child(1)::before{background-position:-192px 0}
+.about-hero .traits span:nth-child(2)::before{background-position:-72px 0}
+.about-hero .traits span:nth-child(3)::before{background-position:-264px 0}
+.about-hero .traits span:nth-child(4)::before{background-position:0 0}
+.about-hero .traits span:nth-child(5)::before{background-position:-168px 0}
+
+/* 过关：左边结算窗，右边旗杆，杆脚踩在页脚的地面上；滚到这里旗子降下来 */
+.sec.course{padding-bottom:0}
+.course-in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:56px;align-items:end}
+.course-win{position:relative;margin-bottom:64px;padding:30px 32px 32px;color:#f3f1ff;background:linear-gradient(180deg,#2a3a8f,#1c2766);
+  box-shadow:0 0 0 4px #fff,0 0 0 8px var(--ink),12px 14px 0 8px rgba(0,0,0,.3)}
+.course-win .big{font-family:var(--px-font);-webkit-font-smoothing:none;font-size:48px;line-height:1.1;color:var(--gold);text-shadow:4px 4px 0 var(--ink)}
+.course-win .big span{display:inline-block}
+.course-win.in .big span{animation:px-hop .5s steps(4) both;animation-delay:calc(var(--i) * 60ms)}
+.course-win p{margin-top:16px;max-width:40em;font-size:17px;color:#e6e8ff}
+.course-win .row{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px}
+.goalpole{position:relative;width:96px;height:288px;margin-right:4vw;background:url("../img/px/pole.png") 0 0/100% 100% no-repeat;image-rendering:pixelated}
+.goalpole .pennant{position:absolute;left:36px;top:30px;width:60px;height:48px;background:url("../img/px/pennant.png") 0 0/100% 100% no-repeat;image-rendering:pixelated}
+.course-win.in + .goalpole .pennant{animation:px-flagdown 1.4s steps(14) .3s both}
+@keyframes px-flagdown{to{top:198px}}
+
+@media (max-width:860px){
+  .course-in{grid-template-columns:1fr;gap:0}
+  .goalpole{justify-self:end;height:192px;width:64px;margin-right:12px}
+  .goalpole .pennant{left:24px;top:20px;width:40px;height:32px}
+  @keyframes px-flagdown{to{top:136px}}
+  .course-win{margin-bottom:28px}
+  .course-win .big{font-size:36px}
+}
+@media (max-width:640px){
+  .lnav .wrap{justify-content:center}
+  .lnav b{display:none}
+  .lnav nav{flex:1 1 auto;min-width:0;justify-content:space-between;gap:6px}
+  .lnav nav a:not(.pill){flex:1 1 0;min-width:0;justify-content:center;padding:5px 4px;gap:5px;white-space:nowrap}
+  .about-hero .pcard h1{font-size:40px}
+  .about-hero .panel::before{left:-4px;top:-48px}
+  .about-hero .traits span{font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){.course-win.in + .goalpole .pennant{animation:none;top:198px}.course-win.in .big span{animation:none}}
+@keyframes px-hop{0%{transform:translateY(0)}40%{transform:translateY(-16px)}100%{transform:translateY(0)}}

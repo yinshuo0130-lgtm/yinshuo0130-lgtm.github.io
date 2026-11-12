@@ -1,14 +1,14 @@
 # 殷硕 · 游戏策划作品集
 
-在线浏览：https://USERNAME.github.io
+在线浏览：https://yinshuo0130-lgtm.github.io
 
 | 作品 | 类型 | 角色 |
 | --- | --- | --- |
 | [《艾尔登法环 黑夜君临》大型内容扩展 Mod](projects/nightreign-mod.html) | Mod · 测试版已发布 | 独立制作：系统、关卡、演出 |
 | [《发条人偶》Tidewheel](projects/tidewheel.html) | thatgamejam #02 · [itch.io](https://shuo-yin.itch.io/tidewheel) | 策划（兼部分程序），4 人团队 |
 | [《宇宙汉堡》](projects/burger/index.html) | 抖音增量经营小游戏 | 独立制作：系统、数值、开发 |
-| [《火影忍者》手游 成长与经济系统拆解](projects/naruto.html) | 系统拆解 · 36 页 | MDA 框架，与《异人之下》对比 |
-| [《炉石传说》酒馆战棋 经济与对局节奏拆解](projects/hearthstone.html) | 系统拆解 · 20 页 | 数值推算，AB 测试设计 |
+| [《火影忍者》手游 成长与经济系统拆解](projects/naruto.html) | 系统拆解 · 45 页 | MDA 分层，获取成本与成长瓶颈，与《异人之下》对照 |
+| [《炉石传说》酒馆战棋 经济与对局节奏拆解](projects/hearthstone.html) | 系统拆解 · 35 页 | 数值推算，卡池搜索概率，可用性测试设计 |
 
 简历在站内阅读页 [resume.html](resume.html)，内嵌 `files/resume.pdf`，可以下载。
 

@@ -5,7 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>『ハースストーン』バトルグラウンド 経済と対戦テンポ分析 · 殷碩ポートフォリオ</title>
-<meta content="バトルグラウンドのゴールド曲線、枚数による希少性、独走防止の仕組みを分析し、第一候補の改善案に A/B テストを設計しました。" name="description"/>
+<meta content="バトルグラウンドのゴールド経済、共有ミニオンプールの探索コスト、体力の制約下での投資タイミングを分析し、第一の改善案にユーザビリティテストと試合単位の実験を設計。" name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="殷 碩 · ゲームプランナー ポートフォリオ" property="og:site_name"/>
+<meta content="『ハースストーン』バトルグラウンド 経済と対戦テンポ分析 · 殷碩ポートフォリオ" property="og:title"/>
+<meta content="バトルグラウンドのゴールド経済、共有ミニオンプールの探索コスト、体力の制約下での投資タイミングを分析し、第一の改善案にユーザビリティテストと試合単位の実験を設計。" property="og:description"/>
+<meta content="https://yinshuo0130-lgtm.github.io/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <meta content="#1f1a24" name="theme-color"/>
 <link href="../../img/px/favicon.png" rel="icon"/>
 <link href="../../css/shell.css" rel="stylesheet"/>
@@ -27,17 +33,17 @@
 <div class="lnav">
 <div class="wrap">
 <b>バトルグラウンド · 経済と対戦テンポ</b>
-<nav><a class="hide-s" href="#summary">結論</a> <a class="hide-s" href="#pay">課金と体験</a> <a class="hide-s" href="#fix">改善の方向</a> <a href="#read">全文を読む</a></nav>
+<nav><a class="hide-s" href="#summary">要旨</a> <a class="hide-s" href="#calc">主な試算</a> <a class="hide-s" href="#time">体力とタイミング</a> <a class="hide-s" href="#fix">改善案</a> <a href="#read">全文を読む</a></nav>
 </div>
 </div>
 <section class="c-hero">
 <div class="wrap">
-<span class="kicker">セーブ 05 · システム分析 · 20 ページ</span>
+<span class="kicker">セーブ 05 · システム分析 · 35 ページ</span>
 <h1 class="mega on-sky">『ハースストーン』バトルグラウンド<br/>経済と対戦テンポ</h1>
-<p class="feature">バトルグラウンドにはカード収集がなく、8 人のプレイヤーが 1 つのミニオンプールを共有し、勝敗はほぼ試合中の資源判断だけで決まります。この分析は 1 試合だけを見ます：<b>ゴールドをどう得てどう使うか、ミニオンプールが選択をどう制限するか、強弱の差がどう開き、どう抑えられるか</b>。シーズン 14、2026 年 10 月時点に基づきます。</p>
+<p class="feature">バトルグラウンドにはカード収集がなく、8 人が 1 つのミニオンプールを共有し、勝敗はほぼ 1 試合内の資源判断で決まります。この分析はメカニクス・ダイナミクス・エステティクスの三層で 1 試合を見ます。<b>ゴールドがどう盤面になるか、共有プールがカード探しのコストをどう決めるか、体力が投資のタイミングをどう縛るか</b>。シーズン 14、2026 年 10 月時点。このモードを 501 時間遊び、過去シーズンの最高は 10000 超えです。</p>
 <div class="acts">
 <a class="px-btn" href="#read"><span class="px-ico book"></span>ここで全文を読む</a>
-<a class="px-btn paper" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e"><span class="px-ico ext"></span>Feishu の原文（中国語）</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb"><span class="px-ico ext"></span>Feishu の原文（中国語）</a>
 <button aria-label="セーブブロックを叩く" class="px-block" data-coin="hearthstone-1"></button>
 </div>
 <div class="c-cover" data-r=""><img alt="バトルグラウンドの対戦画面" src="../../img/hs/main.webp" style="object-position:center 42%;max-height:520px"/></div>
@@ -46,10 +52,10 @@
 <section class="c-stats">
 <div class="wrap">
 <div class="stats">
-<div data-r=""><span>★6 ミニオンの総数</span><b>7 枚</b><span>枚数で希少性を管理</span></div>
-<div data-r="2"><span>1 回のトリプルで消える割合</span><b>43%</b><span>最上位カードの枚数</span></div>
-<div data-r="3"><span>ゴールド上限</span><b>10</b><span>毎ターン +1、8 ターン目で上限</span></div>
-<div data-r="4"><span>プレイ時間</span><b>501h</b><span>6,120 点</span></div>
+<div data-r=""><span>1〜10 ターンの基本ゴールドに占めるアップグレード</span><b>46%</b><span>72 枚中 33 枚、基準ルート</span></div>
+<div data-r="2"><span>狙いを 2 枚取られた後のリフレッシュ命中率</span><b>15→8%</b><span>静的プールの例</span></div>
+<div data-r="3"><span>ダメージ上限下での最速脱落</span><b>5 ターン目</b><span>体力 30、アーマーなし</span></div>
+<div data-r="4"><span>シーズンパスによるヒーロー候補のカバー率</span><b>36→60%</b><span>2 択から 4 択、仮定に基づく</span></div>
 </div>
 </div>
 </section>
@@ -58,73 +64,121 @@
 <section class="chapter" id="summary">
 <div class="narrow">
 <p class="kicker" data-r="">01</p>
-<h2 class="h-sec" data-r="">結論</h2>
-<p class="feature" data-r="">核心の矛盾：8 人がまったく同じ収入で 1 つのミニオンプールを共有しながら、毎試合違う結果にならなければならない。<b>強弱の差は開かなければならないが、早く決着しすぎてもいけない</b>。</p>
+<h2 class="h-sec" data-r="">要旨</h2>
+<p class="feature" data-r="">強弱の差が開かなければ順位に意味がなく、開くのが早すぎれば多くの人がすぐに打つ手を失います。試合中の重要な判断の多くは、<b>「今すぐ形にする」か「より良い供給を待つ」かの取捨選択</b>です。</p>
 <ul class="rules" data-r="">
-<li><i>結論 1</i><b>収入と価格は固定、差は使い方からしか生まれない</b>ゴールドは毎ターン +1、8 ターン目に 10 で上限、ミニオンはすべて 3 ゴールド。毎ターンの核心は酒場ランクを上げるか戦力を買うかで、HP はその賭け金です。</li>
-<li><i>結論 2</i><b>希少性は確率表ではなく枚数で作る</b>★6 のカードは全体で 7 枚しかなく、1 回のトリプルで 43% が消えます。共有プールは種族のかぶりや相手の読み合いという駆け引きも生みます。</li>
-<li><i>結論 3</i><b>独走は盤面で起き、ブレーキも備える</b>利息や連勝ボーナスはなく、ダメージ上限、枚数制限、1 ランク上だけの発見があります。ヒーローの強弱はアーマーを HP に換算して調整しています。</li>
-<li><i>結論 4</i><b>シーズンの仕組みは 1 つ足したら 1 つ引く</b>毎シーズンの新要素はショップ外の追加の選択肢で、基盤の経済は変えず、同時に存在する追加システムは 1〜2 つに抑えています。</li>
+<li><i>結論 1</i><b>基本収入は同じ、購買力は違う</b>ゴールドは 3 枚から毎ターン +1、8 ターン目から 10 枚で全員同じ。ただし交易王子ギャリーウィックスのような経済エンジン、売却による換金、割引で使える額は変わります。利息も連勝ボーナスもなく、「勝てばゴールドが増える」直接の循環は断たれています。</li>
+<li><i>結論 2</i><b>枚数が決めるのは探索コストで、トリプルの確率ではない</b>☆6 のミニオンは場全体で 7 枚。トリプルで 3 枚使っても 4 枚残ります。引けるかどうかは見えるプールの大きさとショップの枠数で決まります。</li>
+<li><i>結論 3</i><b>共有在庫は両方向に効く</b>先行者が同名の 2 枚目のゴールデンを作るのを妨げることもあれば、後続が先行者の盤面を真似るのを難しくすることもあります。安定した追い上げの仕組みではありません。</li>
+<li><i>結論 4</i><b>課金で買えるのは候補のカバー率で、勝率ではない</b>シーズンパスは開始時のヒーロー候補を 2 択から 4 択に広げますが、選んだ後の試合内ルールは変えません。私はずっと無課金の 2 択で、過去シーズンには 10000 を超えました。</li>
 </ul>
 </div>
 </section>
-<section class="chapter" id="pay">
+<section class="chapter" id="calc">
 <div class="narrow">
 <p class="kicker" data-r="">02</p>
-<h2 class="h-sec" data-r="">課金と体験</h2>
-<div class="prose" data-r="">
-<p><strong>課金で買えるのは選択肢だけ。</strong>シーズンパスで開始時のヒーロー選択が 2 択から 4 択になり、ほかは見た目のみ。試合中の数値は売りませんが、ヒーローの選択肢の数はランク戦に影響します。</p>
-<p><strong>体験の中心は挑戦と探索</strong>で、主に達成型と探索型のプレイヤーに向いています。上位 4 位だけがポイントを得るルールのため、5 位がいちばん悔しく、もう 1 試合やりたくなります。社交面はこのモードの弱点です。</p>
-<p>『NARUTO』モバイルとの比較：NARUTO の成長は月単位・年単位で積み上がり、課金で直接進捗を買えます。バトルグラウンドの成長は 1 試合の中に圧縮され、課金は試合中の数値にほぼ触れないため、システム設計の焦点は経済曲線、共有資源の希少性、強弱が分かれるテンポにあります。</p>
+<h2 class="h-sec" data-r="">主要な試算</h2>
+<p class="feature" data-r="">ルールはシーズン 14 の公式パッチと実機画面から。<b>曲線と確率は明記した仮定のもとでの自前の計算</b>で、変数の関係を示す数学的な例であり、実際の試合統計ではありません。</p>
 </div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="基準ルートでのターンごとのアップグレード支出：1〜10 ターンの基本ゴールド 72 枚、うち 33 枚がアップグレード" height="800" loading="lazy" src="../../img/hs/chart-gold.webp" width="1600"/>
+<figcaption><b>アップグレードは将来の供給を買うこと。</b>2・4・6・8・10 ターン目にアップグレードする基準ルートでは、1〜10 ターンの基本ゴールド 72 枚のうち 33 枚（45.8%）がアップグレードに使われ、5 回のアップグレードターンはどれもミニオンをもう 1 体買う余裕が残りません。体力がこの取引の担保です。</figcaption>
+</figure>
+<figure class="fig chart" data-r="">
+<img alt="☆ごとの初期枚数とトリプルが占める割合" height="720" loading="lazy" src="../../img/hs/chart-copies.webp" width="1344"/>
+<figcaption><b>枚数が少ないほど、トリプルが占める割合は大きい。</b>☆6 のミニオンは 7 枚で、トリプルは 42.9% を占めますが 4 枚残るので、2 人目もまだトリプルを作れます。</figcaption>
+</figure>
+<figure class="fig chart" data-r="">
+<img alt="異なる仮定のプールでの、リフレッシュ 1 回で狙いが 1 枚以上出る確率" height="800" loading="lazy" src="../../img/hs/chart-prob.webp" width="1600"/>
+<figcaption><b>分母だけを見ると誤る。</b>リフレッシュ 1 回の命中率は p = 1 − C(N−m, k) ÷ C(N, k)。プールが広がると同時にショップ枠が増えると、命中率はむしろ上がることがあります（15.28% → 15.84%）。他人に狙いを 2 枚取られると 15.28% から 8.04% に下がり、探索効率はほぼ半分です。</figcaption>
+</figure>
+</div>
+</section>
+<section class="chapter" id="time">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">体力と投資のタイミング</h2>
+<p class="feature" data-r="">トリプルが雪だるま式の拡大を生み、4 つの仕組みが段階ごとに拡大を抑えます。<b>そのすべてが遅れている側を助けるわけではありません</b>。</p>
+</div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="トリプルが生む正のフィードバックと、利息なし・ダメージ上限・トリプル報酬は 1 段上まで・共有在庫の 4 つの抑制の仕組み" height="768" loading="lazy" src="../../img/hs/chart-snowball.webp" width="1600"/>
+<figcaption><b>正のフィードバックは盤面を通じて回る。</b>利息なし、ダメージ上限、トリプル報酬が 1 段上まで、という仕組みはどれもリードが広がる速さを抑えます。共有在庫は両方向に効きます。</figcaption>
+</figure>
+</div>
+<div class="narrow">
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>体力 + アーマー</th><th>上限ダメージの累計</th><th>最速の脱落</th></tr>
+<tr><td>30 + 0</td><td>5 + 5 + 5 + 10 + 10 = 35</td><td>5 ターン目</td></tr>
+<tr><td>30 + 10</td><td>35 + 10 = 45</td><td>6 ターン目</td></tr>
+<tr><td>30 + 20</td><td>45 + 10 = 55</td><td>7 ターン目</td></tr>
+</table>
+</div>
+<ul class="rules" data-r="">
+<li><i>体力の予算</i><b>アーマーは待てるターン数に換算される</b>ソロのダメージ上限は 1〜3 ターン目が 5、4〜7 ターン目が 10、8 ターン目から 15 で、上位 4 名に入ると解除されます。上限が保証するのは「最速でいつ脱落するか」だけで、特定の強化タイミングまで生き残れることは保証しません。</li>
+<li><i>闇の贈り物</i><b>生存確率が高いときだけ待つ価値がある</b>1 回 3 ゴールド、3 ターン目から 1 ターン 1 回まで、1 試合 3 回。選択肢はターンごとに強くなります。今使う期待値を 100、目標ターンまで待つ期待値を 140 とすると、待つには生存確率 71.4% 超が必要です。</li>
+<li><i>価格の試算</i><b>アップグレード価格を線形にしたら</b>価格を 5・7・9・11・13 に変えると、形と総額（42 → 45）が同時に変わります。分けて見ると、☆6 の +2 で 10 ターン目に 1 ゴールド足りなくなります。「☆4 から ☆5 への判断ポイントが消える」という推論は成り立ちません。☆5 の初期価格は変わらないからです。</li>
+</ul>
 </div>
 </section>
 <section class="chapter" id="fix">
 <div class="narrow">
-<p class="kicker" data-r="">03</p>
-<h2 class="h-sec" data-r="">改善の方向</h2>
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">改善案</h2>
+<p class="feature" data-r="">経済の土台は安定しており、課題は情報の透明性、シーズン入れ替えの学習コスト、課金とランク戦の関係に集中しています。<b>情報の見せ方だけを変え、まず課題の存在を確かめられる案を先にします。</b></p>
 <div class="table-scroll" data-r="">
 <table>
-<tr><th>優先度</th><th>提案</th></tr>
-<tr><td>①</td><td>ショップで残り枚数を 3 段階で示すヒント、A/B テスト計画付き</td></tr>
-<tr><td>②</td><td>シーズン開始時の新要素チュートリアル戦</td></tr>
-<tr><td>③</td><td>ランク戦のヒーロー選択肢数の統一</td></tr>
-<tr><td>④</td><td>中盤で遅れたプレイヤーへの救済</td></tr>
+<tr><th>優先度</th><th>課題 → 案</th><th>コストとリスク</th></tr>
+<tr><td>①</td><td>初期枚数、見た情報、実際の在庫が混ざっている → プールのルールと既見情報の説明</td><td>低；それでも判断時間と戦略は変わるので評価が必要</td></tr>
+<tr><td>②</td><td>シーズンの仕組みの入れ替わりが速い → 闇の贈り物とトリンケットのタイミング練習</td><td>中；毎シーズン練習コンテンツが必要</td></tr>
+<tr><td>③</td><td>課金でヒーロー候補が増える → ランク戦の候補数を統一</td><td>シーズンパスの売りを直接弱めるので、収益化と一緒に決める必要</td></tr>
+<tr><td>④</td><td>中盤で遅れると挽回が難しい → 遅れている側への補償</td><td>「基本収入は全員同じ」という原則に触れ、わざと体力を減らす行為を誘う恐れ。優先しない</td></tr>
 </table>
 </div>
-<div class="prose" data-r=""><p class="note">酒場ランクの強化費用を線形にする案も試算し、変更しない方がよいと結論づけました。</p></div>
+<h3 class="h-sub" data-r="">第一案：プールのルールと既見情報の説明</h3>
+<div class="prose" data-r="">
+<p>ショップに実際の残り枚数を表示するのは画面の変更に見えますが、それまで隠れていた情報を公開するので、情報のルール自体が変わります。初版は隠れた情報を公開しない変更だけにします。</p>
+<ul>
+<li>カード詳細にそのバージョンの初期枚数を表示し、「初期枚数は現在の残りではない」と明記する。</li>
+<li>対戦相手パネルに、戦闘で実際に見た最近の盤面とターンを残し、変わっている可能性を明記する。</li>
+<li>ショップ、手札、盤面のどこからでも同じ説明を開ける。</li>
+</ul>
+</div>
+<ul class="rules" data-r="">
+<li><i>第 1 段階</i><b>判断問題で理解を測る</b>新規、復帰、熟練のグループでユーザビリティテストを行う。初期枚数と現在の在庫を区別できるか、相手の記録がどのターンのものか言えるか、探索を比べるときに枚数と枠数の両方を考えるか。</li>
+<li><i>第 2 段階</i><b>試合単位で割り付ける</b>同じ試合の 8 人は同じ機能を見ます。主指標は試合後のルール理解問題の正答率、ガードレールは未完了操作の割合、性能、異常終了率です。</li>
+<li><i>使わない指標</i><b>「種族かぶりの割合」は使えない</b>8 人が 5 種族に分かれれば、少なくとも 2 人が同じ種族になるのはほぼ確実で、同じ種族でも同じパーツを取り合うとは限りません。サンプルサイズは予備試験で正答率と回答率を得てから見積もります。</li>
+</ul>
 </div>
 </section>
 <section class="chapter" id="toc">
 <div class="narrow">
-<p class="kicker" data-r="">04</p>
+<p class="kicker" data-r="">05</p>
 <h2 class="h-sec" data-r="">目次</h2>
 <ul class="toc-list" data-r="">
-<li><b>1</b>ゲーム概要と分析範囲</li>
-<li><b>2</b>コアループ：募集と戦闘</li>
-<li><b>3</b>ゴールド経済：収入曲線と価格</li>
-<li><b>4</b>共有ミニオンプール：希少性はどこから来るか</li>
-<li><b>5</b>トリプルと発見：独走とそのブレーキ</li>
-<li><b>6</b>ヒーロー：非対称なスタートと 3 つの調整つまみ</li>
-<li><b>7</b>戦闘の決着とダメージ：脱落のテンポの制御</li>
-<li><b>8</b>変数の投入とシーズンのテンポ</li>
-<li><b>9</b>ランク戦と課金：売るのは選択肢だけ</li>
-<li><b>10</b>エステティクス層：これらの仕組みがプレイヤーに与える感覚</li>
-<li><b>11</b>課題と改善案</li>
+<li><b>一</b>システムの目的：中核的な役割、4 つの設計目的、プレイヤーの動機</li>
+<li><b>二</b>メカニクス：ターンの流れ、ゴールド、アップグレード、共有プール、トリプル、ヒーロー、ダメージ、シーズンの仕組み、課金、テンポの節目</li>
+<li><b>三</b>ダイナミクス：MDA の対応、7 つの数値試算、雪だるまと抑制、間接的な競争、継続、資源の循環</li>
+<li><b>四</b>エステティクス：8 種類の体験、Bartle、新規と熟練、感情の曲線</li>
+<li><b>五</b>製品比較：NARUTO モバイルと『金鏟鏟之戦』</li>
+<li><b>6</b>長所と短所</li>
+<li><b>七</b>改善案（優先度順）</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="read">
 <div class="narrow">
-<p class="kicker" data-r="">05</p>
+<p class="kicker" data-r="">06</p>
 <h2 class="h-sec" data-r="">全文を読む</h2>
-<p class="feature" data-r="">全文（中国語）は下でそのまま読めます。読み終えたら上部バーか下のボタンでセーブ画面に戻れます。</p>
+<p class="feature" data-r="">全 35 ページ、実機スクリーンショット 8 枚、分析図 7 枚、表 27 個と出典を含みます。下でそのまま読めます（中国語）。</p>
 </div>
 <div class="wrap">
 <div class="pdf" data-r="">
-<div class="bar"><span>hearthstone-bg.pdf · 20 ページ · 中国語</span><span><a download="" href="../../files/hearthstone-bg.pdf">PDF をダウンロード</a> <a href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e">Feishu の原文 ↗</a></span></div>
+<div class="bar"><span>hearthstone-bg.pdf · 35 ページ · 中国語</span><span><a download="" href="../../files/hearthstone-bg.pdf">PDF をダウンロード</a> <a href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb">Feishu の原文 ↗</a></span></div>
 <iframe loading="lazy" src="../../files/hearthstone-bg.pdf#view=FitH" title="バトルグラウンド 経済と対戦テンポ分析の全文"></iframe>
-<div class="pdf-alt">スマートフォンでは PDF を埋め込み表示できません。<a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">PDF を開く</a> <a class="more ext" href="https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e" style="color:var(--gold)">Feishu の原文</a>（新しいタブで開きます）</div>
+<div class="pdf-alt">スマートフォンでは PDF を埋め込み表示できません。<a class="more" href="../../files/hearthstone-bg.pdf" style="color:var(--gold)">PDF を開く</a> <a class="more ext" href="https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb" style="color:var(--gold)">Feishu の原文</a>（新しいタブで開きます）</div>
 </div>
 </div>
 </section>

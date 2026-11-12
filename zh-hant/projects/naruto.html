@@ -5,7 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>《火影忍者》手遊 成長與經濟系統拆解 · 殷碩作品集</title>
-<meta content="按 MDA 框架拆解《火影忍者》手遊的成長與經濟系統，並與《異人之下》做 A/B 對比。" name="description"/>
+<meta content="按系統目的、機制、動態、體驗拆解《火影忍者》手遊的成長與經濟系統：兩種公平觀怎樣按玩法共存，戰力在哪裡兌現，獲取渠道怎樣承接不同預算。" name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="殷碩 · 遊戲策劃作品集" property="og:site_name"/>
+<meta content="《火影忍者》手遊 成長與經濟系統拆解 · 殷碩作品集" property="og:title"/>
+<meta content="按系統目的、機制、動態、體驗拆解《火影忍者》手遊的成長與經濟系統：兩種公平觀怎樣按玩法共存，戰力在哪裡兌現，獲取渠道怎樣承接不同預算。" property="og:description"/>
+<meta content="https://yinshuo0130-lgtm.github.io/img/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <meta content="#1f1a24" name="theme-color"/>
 <link href="../../img/px/favicon.png" rel="icon"/>
 <link href="../../css/shell.css" rel="stylesheet"/>
@@ -27,17 +33,17 @@
 <div class="lnav">
 <div class="wrap">
 <b>火影手遊 · 成長與經濟系統</b>
-<nav><a class="hide-s" href="#summary">一頁結論</a> <a class="hide-s" href="#ab">A/B 對比</a> <a class="hide-s" href="#fix">問題與建議</a> <a href="#read">閱讀全文</a></nav>
+<nav><a class="hide-s" href="#summary">摘要</a> <a class="hide-s" href="#fair">兩種公平觀</a> <a class="hide-s" href="#calc">關鍵推算</a> <a class="hide-s" href="#chain">MDA 對映</a> <a class="hide-s" href="#fix">改進方案</a> <a href="#read">閱讀全文</a></nav>
 </div>
 </div>
 <section class="c-hero">
 <div class="wrap">
-<span class="kicker">存檔 04 · 系統拆解 · 36 頁</span>
+<span class="kicker">存檔 04 · 系統拆解 · 45 頁</span>
 <h1 class="mega on-sky">《火影忍者》手遊<br/>成長與經濟系統</h1>
-<p class="feature">按 MDA 框架把系統拆成機制、動態、體驗三層，每條結論都寫成一條鏈：<b>哪條規則 → 玩家因此怎麼做 → 產生什麼情緒</b>。再拿同一工作室的《異人之下》做 A/B 對比。口徑為 2026 年 10 月實機版本，賬號 V12。</p>
+<p class="feature">從系統目的出發，按機制、動態、體驗三層拆火影手遊的成長與經濟系統：<b>兩種公平觀怎樣按玩法共存，戰力在哪裡兌現，八個招募入口怎樣承接不同預算</b>。規則取自 2026 年 10–11 月實機版本，關鍵論斷標註依據型別。</p>
 <div class="acts">
 <a class="px-btn" href="#read"><span class="px-ico book"></span>在這裡閱讀全文</a>
-<a class="px-btn paper" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd"><span class="px-ico ext"></span>飛書原文</a>
+<a class="px-btn paper" href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje"><span class="px-ico ext"></span>飛書原文</a>
 <button aria-label="頂一下存檔方塊" class="px-block" data-coin="naruto-1"></button>
 </div>
 <div class="c-cover" data-r=""><img alt="火影忍者手遊主介面（暱稱已打碼）" src="../../img/naruto/main.webp" style="object-position:30% center;max-height:520px"/></div>
@@ -46,10 +52,10 @@
 <section class="c-stats">
 <div class="wrap">
 <div class="stats">
-<div data-r=""><span>高階招募與點券直售價差</span><b>25×</b><span>按充值折算</span></div>
-<div data-r="2"><span>拿滿一名 S 忍</span><b>≈300</b><span>抽，玩家統計口徑</span></div>
-<div data-r="3"><span>戰力線養成系統</span><b>7</b><span>套</span></div>
-<div data-r="4"><span>招募入口</span><b>8</b><span>個，3 層貨幣</span></div>
+<div data-r=""><span>同為 S 忍的面值差</span><b>25×</b><span>高招約 5040 元，傳說版忍法帖 198 元</span></div>
+<div data-r="2"><span>戰力玩法</span><b>5</b><span>類：排行榜、巔峰對決、三項組織玩法</span></div>
+<div data-r="3"><span>新忍者強度控制</span><b>3</b><span>種：屬性平衡、BAN、場景准入</span></div>
+<div data-r="4"><span>賬號的魔抗缺口</span><b>3080</b><span>等級已夠，卡在屬性門檻</span></div>
 </div>
 </div>
 </section>
@@ -58,69 +64,140 @@
 <section class="chapter" id="summary">
 <div class="narrow">
 <p class="kicker" data-r="">01</p>
-<h2 class="h-sec" data-r="">一頁結論</h2>
-<p class="feature" data-r="">《火影忍者》手遊把<b>忍者作為唯一核心商品</b>，用兩套相反的 PVP 規則同時賣給操作型和養成型玩家：決鬥場統一數值，積分賽按戰力結算。</p>
+<h2 class="h-sec" data-r="">摘要</h2>
+<p class="feature" data-r="">格鬥遊戲靠公平留人，免費遊戲靠付費帶來的優勢賺錢。火影沒有在全域性選邊，而是<b>讓兩種公平觀按玩法共存</b>：決鬥場段位賽遮蔽戰鬥屬性，比操作和忍者儲備；賬號戰力在個人排行榜、組織玩法和巔峰對決裡兌現。</p>
+<ul class="rules" data-r="">
+<li><i>戰力的回報</i><b>被看見、被需要</b>個人戰力榜決定本服排名，還給巔峰預選賽前 5 名加成積分；要塞戰、天地戰場、組織爭霸把個人戰力變成組織成績。積分賽仍在，但已不是戰力玩家的主要目標。</li>
+<li><i>兩類玩法</i><b>高度重疊，不是兩個陣營</b>巔峰對決同時要求戰力、實時操作和足夠深的忍者池：3V3 先 BAN 後選，用過的 S/A/B 忍者不能在後續輪次再用。投入較深的玩家大多兩邊都玩。</li>
+<li><i>強度控制</i><b>屬性平衡、BAN 之外還有場景准入</b>截至 11 月，十週年限定 S 忍「漩渦鳴人·宇智波佐助」和「漩渦鳴人·自來也」暫不可用於四個戰力玩法，新投放的衝擊先留在段位賽裡。</li>
+<li><i>獲取渠道</i><b>按確定性分層</b>同為 S 忍，高招按面值約 5040 元，傳說版忍法帖 198 元另需一季活躍。差距主要由可免費積累的金幣和時間吸收，不能看成同一商品的標價差。</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="fair">
+<div class="narrow">
+<p class="kicker" data-r="">02</p>
+<h2 class="h-sec" data-r="">三條成長線，五類兌現場景</h2>
+<p class="feature" data-r="">忍者獲取、忍者養成、賬號戰力三條線，產出“有沒有”和“有多少”兩樣東西。<b>段位賽只認“有沒有”，排行榜和組織玩法認“有多少”，巔峰對決兩樣都要。</b></p>
+</div>
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="成長線架構：三條成長線產出“擁有”和“戰力”，分別在段位賽、巔峰對決、組織玩法、排行榜與 PVE 兌現，積分賽關注度低" height="976" loading="lazy" src="../../img/naruto/chart-lines.webp" width="1600"/>
+<figcaption><b>忍者是連線面最寬的商品，但不是唯一跨界的商品。</b>通靈和秘卷既影響段位賽的戰術選擇，又有屬性養成；時裝同時提供表達和屬性。</figcaption>
+</figure>
+</div>
+<div class="narrow">
 <div class="table-scroll" data-r="">
 <table>
-<tr><th>層</th><th>做法</th><th>關鍵證據</th></tr>
-<tr><td>機制</td><td>3 層貨幣、8 個招募入口、7 套養成系統；決鬥場統一戰力，積分賽按戰力結算</td><td>高招 S 碎片 11.5%，十連必送 S 碎片；V12 特權全是次數類</td></tr>
-<tr><td>動態</td><td>決鬥場玩家跟著新忍者脈衝式付費，戰力玩家每天買體力持續付費；等級鎖時間，次數鎖產出，付費只能放寬次數</td><td>團本 110–160 級分 5 檔；秘境飾品魔抗門檻每檔漲約 10%</td></tr>
-<tr><td>體驗</td><td>決鬥場提供挑戰和表達，戰力線提供成就和收集；同一次強勢忍者投放，大 R 和零氪的情緒方向相反</td><td>強勢付費忍者上線橫掃決鬥場後被削弱</td></tr>
+<tr><th>玩法</th><th>時間</th><th>與戰力、忍者池相關的規則</th></tr>
+<tr><td>本服戰力排行榜</td><td>常駐</td><td>展示個人排名；巔峰預選賽中戰力前 5 額外獲得 30% / 20% / 10% 積分加成</td></tr>
+<tr><td>巔峰對決</td><td>每 5 週一屆，週五本服、週六跨服</td><td>戰力過低不能發起挑戰；3V3 先 BAN 後選，用過的 S/A/B 忍者不能再上；棄權時戰力高者晉級</td></tr>
+<tr><td>要塞爭奪戰</td><td>週六 20:00–20:30</td><td>連勝越多積分越高；組織積分決定要塞歸屬</td></tr>
+<tr><td>天地戰場</td><td>週三 21:00</td><td>當日祈福滿 10 人才有資格；隨機“推薦忍者”出戰獲得攻擊提升</td></tr>
+<tr><td>組織爭霸賽</td><td>按屆開賽</td><td>報名看組織戰力前 16；車輪戰，雙方各禁 3 名忍者</td></tr>
+</table>
+</div>
+<div class="prose" data-r=""><p class="note">規則取自 2026 年 11 月的遊戲內說明頁。積分賽關注度低是作者所在伺服器的觀察，不代表所有伺服器。</p></div>
+</div>
+</section>
+<section class="chapter" id="calc">
+<div class="narrow">
+<p class="kicker" data-r="">03</p>
+<h2 class="h-sec" data-r="">關鍵推算</h2>
+<p class="feature" data-r="">同為 S 忍，兩條獲取路線按面值相差約 25 倍。<b>比較時要把面值、現金、時間和風險分開看</b>，否則就會把兩種支付方式誤讀成同一商品的價格歧視。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>成本維度</th><th>高階招募</th><th>傳說版忍法帖</th></tr>
+<tr><td>面值</td><td>約 300 抽 × 168 金幣，約 5040 元</td><td>1980 點券，198 元</td></tr>
+<tr><td>實際現金缺口</td><td>扣除存量金幣、召集券和免費產出後才知道，可能遠低於面值</td><td>扣除點券餘額；靠月充積累時，四次 50 元正好覆蓋</td></tr>
+<tr><td>日曆時間</td><td>取決於金幣積累速度和抽取運氣</td><td>需要一季活躍升到獎勵等級，或用點券補級</td></tr>
+<tr><td>風險與附贈</td><td>抽數隨機；途中獲得其他碎片和材料</td><td>獎勵固定，但只能拿當季指定忍者</td></tr>
+</table>
+</div>
+<ul class="rules" data-r="">
+<li><i>整卡成本</i><b>“約 300 抽”是經驗值，不是保底</b>官方只公示類別碎片機率和十連必送 S 碎片。整卡成本要用條件模型估算：起始碎片、逐抽所得、活動補片和兌換各項相加，求湊滿所需的最小抽數，並同時報告中位數和較高分位數。</li>
+<li><i>月充預算</i><b>四次 50 元覆蓋一季門票</b>50 元檔實得 565 點券，四個月 2260 點券，買下 1980 點券的傳說版忍法帖後餘 280；同期再買一名 1980 點券忍者就缺 1700。</li>
+<li><i>付費上限</i><b>付費能在上限以內提速</b>V12 特權全是次數類，戰力特惠每項周限購各買一次合計約 600 元。等級門檻、每日購買次數和周限購共同決定最快推進速度。</li>
+<li><i>成長瓶頸</i><b>等級夠了，魔抗還差 3080</b>161 級賬號已滿足 160 級飾品的等級條件，魔抗 46341 距 49421 還差 3080。門檻每檔漲約 10%，買非瓶頸資源推不動進度。</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="chain">
+<div class="narrow">
+<p class="kicker" data-r="">04</p>
+<h2 class="h-sec" data-r="">從規則到體驗</h2>
+<p class="feature" data-r="">每條結論寫成一條鏈：<b>哪條規則 → 玩家因此怎麼做 → 產生什麼情緒 → 服務哪個目的</b>。全文共 14 條，這裡列 6 條；行為和體驗兩列缺少後臺資料，屬於機制推斷。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>機制 M</th><th>動態 D</th><th>體驗 A</th><th>目的</th></tr>
+<tr><td>段位賽戰鬥屬性平衡</td><td>競技投入集中在操作和忍者選擇上</td><td>挑戰：輸贏更多歸因於自己</td><td>公平</td></tr>
+<tr><td>本服戰力排行榜；巔峰預選前 5 積分加成</td><td>戰力玩家盯名次，臨近名次線時追加養成</td><td>成就：被全服看見</td><td>變現、留存</td></tr>
+<tr><td>組織玩法的准入：組織等級、祈福 10 人、入組織時長</td><td>成員互相提醒祈福、按時出勤</td><td>社交：被隊友需要，也有出勤壓力</td><td>留存</td></tr>
+<tr><td>巔峰對決：戰力定準入，3V3 BAN 選，用過即鎖</td><td>同一批玩家同時準備戰力、操作和忍者池</td><td>高光與伺服器榮譽</td><td>變現、留存</td></tr>
+<tr><td>等級 + 魔抗雙門檻，魔抗每檔 +10%</td><td>等級夠了卡屬性，玩家尋找瓶頸材料</td><td>挑戰，或者焦慮</td><td>變現、控速</td></tr>
+<tr><td>點券直售、限時上架與限購</td><td>目標明確的玩家在下架前購買；未付費者只能在對局裡面對它們</td><td>持有者的獨佔感，未持有者的剝奪感</td><td>變現（與公平有張力）</td></tr>
 </table>
 </div>
 </div>
-</section>
-<section class="chapter" id="ab">
+<div class="wrap">
+<figure class="fig chart" data-r="">
+<img alt="資源閉環：競技飛輪與戰力飛輪在忍者處交匯" height="800" loading="lazy" src="../../img/naruto/chart-flywheel.webp" width="1600"/>
+<figcaption><b>兩個飛輪在忍者處交匯。</b>競技飛輪靠新忍者轉動，需求是脈衝式的；戰力飛輪靠排行榜和組織玩法帶來的社會位置轉動，投入是持續的。巔峰對決同時從兩個飛輪取能量。</figcaption>
+</figure>
+</div>
 <div class="narrow">
-<p class="kicker" data-r="">02</p>
-<h2 class="h-sec" data-r="">和《異人之下》的 A/B</h2>
-<p class="feature" data-r="">兩款都出自騰訊魔方工作室群，都是動漫 IP 改編的格鬥遊戲，但<b>商業化走了相反的路</b>。</p>
 <ul class="rules" data-r="">
-<li><i>賣什麼</i><b>“有沒有”和“有多少”</b>火影賣忍者、秘卷、通靈，以及戰力；《異人之下》公開口徑是角色可以透過簽到和任務免費獲得，付費主要是皮膚。</li>
-<li><i>公平靠什麼</i><b>遮蔽一部分 / 全部遮蔽</b>火影在部分模式裡遮蔽數值，再用 BAN 位讓忍者儲備重新有價值；《異人之下》在 PVP 全面遮蔽等級和裝備。</li>
-<li><i>風險</i><b>方向相反</b>火影的風險是強度膨脹、戰力線越疊越深；《異人之下》的風險是外觀付費天花板低，以及養成一旦進入 PVP 會破壞公平承諾。</li>
-<li><i>方法</i><b>每條結論一條鏈</b>為了不讓 MDA 變成貼標籤，每條結論都從規則推到玩家行為，再推到情緒，並給出實機截圖作證據。</li>
+<li><i>體驗</i><b>四種動機交織</b>競技表達、排名與成長、組織歸屬、角色偏好。組織玩法讓社交成為戰力線最強的留存體驗：週三天地戰場、週六要塞戰，個人成長有了觀眾和隊友；代價是固定時段的出勤壓力。</li>
+<li><i>產品對照</i><b>《異人之下》只做有來源的比較</b>同一工作室、同為格鬥遊戲，公開口徑是 PVP 不受等級和裝備影響，但測試中出現了可付費提前解鎖的“命座”。對照只討論付費資產在哪些模式生效，不預測它的收入結構。</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="fix">
 <div class="narrow">
-<p class="kicker" data-r="">03</p>
-<h2 class="h-sec" data-r="">優點、問題與建議</h2>
-<ul class="rules three" data-r="">
-<li><i>三條優點</i><ol><li>忍者同時服務兩條成長線，一次投放賣給兩類玩家，收入有峰值也有基本盤。</li><li>防挫敗規則集中在低中段：低段輸了不扣分，中段有段位地板。</li><li>等級門檻只能靠時間推進，付費只能放寬次數，內容消耗速度可控。</li></ol></li>
-<li><i>三個問題</i><ol><li>點券渠道的忍者零氪永遠拿不到，強勢期內也沒有練習機會。</li><li>高階招募只公示十連必送 S 碎片，拿滿一名 S 忍要多少抽沒有說明。</li><li>戰力線已有 7 套養成系統，迴流和新玩家的追趕成本逐年上漲。</li></ol></li>
-<li><i>三條建議</i><ol><li>高階招募明示保底進度，和祈願奪寶的幸運值做法一致。</li><li>付費忍者上線滿 4 周後，進入決鬥場“本週免費”輪換，只給體驗權。</li><li>借鑑《異人之下》PVE 與 PVP 兩套技能模組，把新忍者的決鬥場強度和積分賽強度分開調。</li></ol></li>
-</ul>
+<p class="kicker" data-r="">05</p>
+<h2 class="h-sec" data-r="">問題與改進方案</h2>
+<p class="feature" data-r="">先做改動小、能先驗證問題是否存在的方案，再做影響資源產出的方案。<b>三條方案都不碰“點券忍者需要付費獲得”這條付費牆本身</b>，只處理它帶來的資訊和體驗成本。</p>
+<div class="table-scroll" data-r="">
+<table>
+<tr><th>優先順序</th><th>方案</th><th>解決的問題</th><th>主要風險</th></tr>
+<tr><td>①</td><td>高階招募的規則與預算資訊透明化</td><td>玩家分不清類別碎片機率、十連保證和整卡成本；同一遊戲裡祈願奪寶已實時顯示幸運值</td><td>部分玩家吃到確定獎勵就停，單期流水可能下降</td></tr>
+<tr><td>②</td><td>為未持有的付費忍者提供訓練體驗</td><td>沒有這個忍者，也就沒機會練習應對</td><td>降低新鮮感，可能推遲購買</td></tr>
+<tr><td>③</td><td>面向迴流玩家的定向追趕</td><td>多套養成逐年疊加，老服迴流玩家差距過大</td><td>老玩家覺得不公平，補貼可能流向非目標用途</td></tr>
+<tr><td>監測</td><td>高段 BAN 的儲備壓力；指定忍者的場景准入時長</td><td>儲備不足的玩家在高段可能無人可用</td><td>—</td></tr>
+</table>
+</div>
+<div class="prose" data-r="">
+<p><strong>方案①分兩步驗證。</strong>先做小規模可用性測試，看玩家能否區分類別碎片機率與整卡機率、能否判斷已有預算是否覆蓋某個確定獎勵；之後才看線上的諮詢量和按預算分層的消費變化，並把總流水變化拆成提前消費、延後消費和實際增減。只有規則確實存在整卡硬保底時才顯示整卡進度，不把玩家經驗值做成保證。</p>
+<p class="note">追趕方案要按“目標在移動”來算：追趕時間約為 T = D ÷ (a − b)，D 是初始差距，a 是玩家每日有效成長，b 是目標每日增長，只有 a &gt; b 才能追上。補貼只投向已識別的瓶頸材料。</p>
+</div>
 </div>
 </section>
 <section class="chapter" id="toc">
 <div class="narrow">
-<p class="kicker" data-r="">04</p>
+<p class="kicker" data-r="">06</p>
 <h2 class="h-sec" data-r="">目錄</h2>
 <ul class="toc-list" data-r="">
-<li><b>零</b>拆解說明：物件、MDA 用法、為什麼選《異人之下》</li>
-<li><b>一</b>系統目的</li>
-<li><b>二</b>機制層：系統怎麼設計</li>
-<li><b>三</b>動態層：設計如何達成目的</li>
-<li><b>四</b>體驗層：玩家實際感受到什麼</li>
-<li><b>五</b>A/B 對比：火影 vs 異人之下</li>
+<li><b>一</b>系統目的：核心定位、四大設計目的、玩家動機</li>
+<li><b>二</b>機制層：入口、成長線、九個模組、貨幣、重新整理週期、強度控制</li>
+<li><b>三</b>動態層：MDA 對映、數值與經濟、付費觸點、留存、資源迴圈</li>
+<li><b>四</b>體驗層：八種體驗、動機、體驗旅程、一週日曆</li>
+<li><b>五</b>產品對照：《異人之下》</li>
 <li><b>六</b>優缺點分析</li>
-<li><b>七</b>改進建議</li>
+<li><b>七</b>改進方案（按優先順序）</li>
 </ul>
 </div>
 </section>
 <section class="chapter" id="read">
 <div class="narrow">
-<p class="kicker" data-r="">05</p>
+<p class="kicker" data-r="">07</p>
 <h2 class="h-sec" data-r="">閱讀全文</h2>
-<p class="feature" data-r="">全文在下面直接翻閱，看完點頂欄或底部按鈕回到存檔。</p>
+<p class="feature" data-r="">全文 45 頁，含 21 張實機截圖、3 張分析圖、36 張表和資料來源，在下面直接翻閱。</p>
 </div>
 <div class="wrap">
 <div class="pdf" data-r="">
-<div class="bar"><span>naruto-mda.pdf · 36 頁</span><span><a download="" href="../../files/naruto-mda.pdf">下載 PDF</a> <a href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd">飛書原文 ↗</a></span></div>
+<div class="bar"><span>naruto-mda.pdf · 45 頁</span><span><a download="" href="../../files/naruto-mda.pdf">下載 PDF</a> <a href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje">飛書原文 ↗</a></span></div>
 <iframe loading="lazy" src="../../files/naruto-mda.pdf#view=FitH" title="《火影忍者》手遊成長與經濟系統拆解全文"></iframe>
-<div class="pdf-alt">手機上無法內嵌 PDF。<a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">開啟 PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd" style="color:var(--gold)">飛書原文</a>（新標籤頁開啟）</div>
+<div class="pdf-alt">手機上無法內嵌 PDF。<a class="more" href="../../files/naruto-mda.pdf" style="color:var(--gold)">開啟 PDF</a> <a class="more ext" href="https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje" style="color:var(--gold)">飛書原文</a>（新標籤頁開啟）</div>
 </div>
 </div>
 </section>

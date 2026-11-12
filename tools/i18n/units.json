@@ -4,6 +4,13 @@
   "kind": "html",
   "pages": [
    "index.html",
+   "about.html",
+   "resume.html",
+   "projects/nightreign-mod.html",
+   "projects/tidewheel.html",
+   "projects/naruto.html",
+   "projects/hearthstone.html",
+   "projects/burger/index.html",
    "js/site.js"
   ]
  },
@@ -93,12 +100,11 @@
    "index.html"
   ]
  },
- "a2a6a80fcb": {
-  "src": "殷硕 · 游戏策划",
+ "d94932563c": {
+  "src": "殷硕 · 游戏策划（系统方向）· 复旦大学硕士在读 · 寻找实习机会",
   "kind": "html",
   "pages": [
-   "index.html",
-   "resume.html"
+   "index.html"
   ]
  },
  "71bd6c6f9c": {
@@ -166,15 +172,15 @@
    "about.html"
   ]
  },
- "37171e7db3": {
-  "src": "职业：游戏策划",
+ "57fc0bd854": {
+  "src": "职业：游戏策划 · 系统方向",
   "kind": "html",
   "pages": [
    "index.html"
   ]
  },
- "c3620014ce": {
-  "src": "复旦大学 · 硕士在读",
+ "612d840014": {
+  "src": "复旦大学 · 硕士在读 · 2028 届",
   "kind": "html",
   "pages": [
    "index.html"
@@ -194,8 +200,8 @@
    "index.html"
   ]
  },
- "7ee4934abb": {
-  "src": "<span>白金</span><span class=\"lead\"></span><span class=\"num\" data-n=\"16\" data-suf=\" 款\">16 款</span>",
+ "670d49a3b5": {
+  "src": "<span>可玩作品</span><span class=\"lead\"></span><span class=\"num\" data-n=\"3\" data-suf=\" 个\">3 个</span>",
   "kind": "html",
   "pages": [
    "index.html"
@@ -208,8 +214,8 @@
    "index.html"
   ]
  },
- "a321d82df5": {
-  "src": "<span>系统拆解</span><span class=\"lead\"></span><span class=\"num\" data-n=\"56\" data-suf=\" 页\">56 页</span>",
+ "20a89fd806": {
+  "src": "<span>系统拆解 2 份</span><span class=\"lead\"></span><span class=\"num\" data-n=\"80\" data-suf=\" 页\">80 页</span>",
   "kind": "html",
   "pages": [
    "index.html"
@@ -295,15 +301,15 @@
    "index.html"
   ]
  },
- "7872a9051c": {
-  "src": "<i>系统拆解</i>MDA · 数值推算 · 产品对比 · 36 页",
+ "6ca325e012": {
+  "src": "<i>系统拆解</i>MDA 分层 · 获取成本 · 成长瓶颈 · 45 页",
   "kind": "html",
   "pages": [
    "index.html"
   ]
  },
- "73511c2f11": {
-  "src": "<b>25×</b>高级招募与点券直售的价差",
+ "534d5afee9": {
+  "src": "<b>25×</b>同为 S 忍的两条获取路线面值差",
   "kind": "html",
   "pages": [
    "index.html"
@@ -316,15 +322,15 @@
    "index.html"
   ]
  },
- "c13ed09413": {
-  "src": "<i>系统拆解</i>数值推算 · AB 测试设计 · 20 页 · 501 小时",
+ "c54431b3f1": {
+  "src": "<i>系统拆解</i>数值推算 · 卡池概率 · 可用性测试设计 · 35 页",
   "kind": "html",
   "pages": [
    "index.html"
   ]
  },
- "9dc3cc8e7d": {
-  "src": "<b>43%</b>6 星随从一次三连拿走的份数",
+ "e2010df631": {
+  "src": "<b>46%</b>前 10 回合基础铸币用于升本",
   "kind": "html",
   "pages": [
    "index.html"
@@ -394,11 +400,12 @@
    "index.html"
   ]
  },
- "ae62b9988a": {
-  "src": "感谢浏览。正在寻找游戏策划方向的实习与工作机会。",
+ "5c477f04a2": {
+  "src": "感谢浏览。正在寻找系统策划方向的实习机会：现居上海，每周可出勤 4 天，随时到岗。",
   "kind": "html",
   "pages": [
-   "index.html"
+   "index.html",
+   "about.html"
   ]
  },
  "05eba2e4bc": {
@@ -604,11 +611,12 @@
    "projects/naruto.html"
   ]
  },
- "c40d8f9c1f": {
-  "src": "高级招募拿满一名 S 忍约需 300 抽，是点券直售的 25 倍。",
+ "79518272bb": {
+  "src": "段位赛屏蔽战斗属性，战力在排行榜、组织玩法和巅峰对决里兑现。",
   "kind": "text",
   "pages": [
-   "index.html"
+   "index.html",
+   "js/stage.js"
   ]
  },
  "a3d40fd963": {
@@ -620,11 +628,12 @@
    "projects/burger/index.html"
   ]
  },
- "d1111c479e": {
-  "src": "6 星随从只有 7 份，一次三连即拿走 43%。",
+ "cc11d2308a": {
+  "src": "目标随从被别人取走 2 张，每次刷新的命中率从 15% 降到 8%。",
   "kind": "text",
   "pages": [
-   "index.html"
+   "index.html",
+   "js/stage.js"
   ]
  },
  "5b22e4382e": {
@@ -789,8 +798,8 @@
    "about.html"
   ]
  },
- "ca764bec6f": {
-  "src": "<span>系统拆解</span><b data-n=\"56\" data-suf=\" 页\">56 页</b>",
+ "9705fff8d0": {
+  "src": "<span>系统拆解</span><b data-n=\"80\" data-suf=\" 页\">80 页</b>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1120,13 +1129,6 @@
    "about.html"
   ]
  },
- "743b0daf7e": {
-  "src": "四个平台、35 款有记录的游戏，合计 4600 小时以上。时长最多的是两款长线手游，火影和炉石各 1000 小时，两份系统拆解都从这里来；单机以魂系动作为主，PS5 上玩过的 11 款里有 10 款白金。",
-  "kind": "html",
-  "pages": [
-   "about.html"
-  ]
- },
  "8a89e8ff29": {
   "src": "平台分布<small>按下方游戏库统计，共 4618 小时</small>",
   "kind": "html",
@@ -1169,8 +1171,8 @@
    "about.html"
   ]
  },
- "a3b3fc6375": {
-  "src": "酒馆战棋 6120 分，也是系统拆解的研究样本。",
+ "03a4efa389": {
+  "src": "酒馆战棋往季最高突破 10000 分，也是系统拆解的研究样本。",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1494,15 +1496,15 @@
    "about.html"
   ]
  },
- "1a46db742e": {
-  "src": "V12 · 写了 36 页拆解",
+ "6b50edb103": {
+  "src": "V12 · 写了 45 页拆解",
   "kind": "html",
   "pages": [
    "about.html"
   ]
  },
- "356e24cb22": {
-  "src": "酒馆战棋 · 写了 20 页拆解",
+ "10ad1862e1": {
+  "src": "酒馆战棋 · 写了 35 页拆解",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1557,15 +1559,8 @@
    "about.html"
   ]
  },
- "c66c87402f": {
-  "src": "看得最多的是日本动画和特摄，假面骑士从平成到令和全部看完。电影和剧集偏科幻和悬疑，诺兰的作品看了一个系列，也看岩井俊二这类安静的日本电影。",
-  "kind": "html",
-  "pages": [
-   "about.html"
-  ]
- },
- "44e9d6766c": {
-  "src": "片架<small>共 32 部 · 拖动、点两侧卡牌或按 ← → 切换</small>",
+ "64d9a310a0": {
+  "src": "胶片<small>共 32 部 · 拖动胶片、点画格或按方向键切换</small>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1578,15 +1573,15 @@
    "about.html"
   ]
  },
- "58f29cdf43": {
-  "src": "BGM 播放列表<small>喜欢的音乐人 · 卡面是代表专辑</small>",
+ "d750229ef3": {
+  "src": "BGM 播放列表",
   "kind": "html",
   "pages": [
    "about.html"
   ]
  },
- "3b65753a56": {
-  "src": "© 2026 殷硕",
+ "c3923efb88": {
+  "src": "全部存档",
   "kind": "html",
   "pages": [
    "about.html",
@@ -1597,8 +1592,8 @@
    "projects/burger/index.html"
   ]
  },
- "c3923efb88": {
-  "src": "全部存档",
+ "3b65753a56": {
+  "src": "© 2026 殷硕",
   "kind": "html",
   "pages": [
    "about.html",
@@ -1688,8 +1683,8 @@
    "about.html"
   ]
  },
- "dde721140a": {
-  "src": "火影手游 36 页 MDA 拆解；酒馆战棋 20 页经济拆解",
+ "cfe1243c0b": {
+  "src": "火影手游 45 页成长与经济拆解；酒馆战棋 35 页经济与节奏拆解",
   "kind": "text",
   "pages": [
    "about.html"
@@ -2068,8 +2063,8 @@
    "about.html"
   ]
  },
- "b62329edfc": {
-  "src": "片架，按左右方向键切换",
+ "5aa2a92bf6": {
+  "src": "影视胶片，按方向键切换",
   "kind": "text",
   "pages": [
    "about.html"
@@ -3273,6 +3268,13 @@
    "resume.html"
   ]
  },
+ "a2a6a80fcb": {
+  "src": "殷硕 · 游戏策划",
+  "kind": "html",
+  "pages": [
+   "resume.html"
+  ]
+ },
  "064db06789": {
   "src": "<span class=\"px-ico pdf\"></span>下载 PDF",
   "kind": "html",
@@ -4202,6 +4204,13 @@
    "projects/nightreign-mod.html"
   ]
  },
+ "89bb7b0b18": {
+  "src": "《艾尔登法环 黑夜君临》大型内容扩展 Mod：新增 7 位夜王、12 条夜律与腐败湖特异地形，重做护符成长。殷硕独立制作，测试版已公开发布。",
+  "kind": "text",
+  "pages": [
+   "projects/nightreign-mod.html"
+  ]
+ },
  "796249a337": {
   "src": "永夜之律封面：夜律卡牌",
   "kind": "text",
@@ -4882,15 +4891,15 @@
    "projects/naruto.html"
   ]
  },
- "82846d57fc": {
-  "src": "<a class=\"hide-s\" href=\"#summary\">一页结论</a> <a class=\"hide-s\" href=\"#ab\">A/B 对比</a> <a class=\"hide-s\" href=\"#fix\">问题与建议</a> <a href=\"#read\">阅读全文</a>",
+ "cb5525e4c0": {
+  "src": "<a class=\"hide-s\" href=\"#summary\">摘要</a> <a class=\"hide-s\" href=\"#fair\">两种公平观</a> <a class=\"hide-s\" href=\"#calc\">关键推算</a> <a class=\"hide-s\" href=\"#chain\">MDA 映射</a> <a class=\"hide-s\" href=\"#fix\">改进方案</a> <a href=\"#read\">阅读全文</a>",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "400b55a6f3": {
-  "src": "存档 04 · 系统拆解 · 36 页",
+ "3cdddefa3f": {
+  "src": "存档 04 · 系统拆解 · 45 页",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
@@ -4903,8 +4912,8 @@
    "projects/naruto.html"
   ]
  },
- "73ccb11a4e": {
-  "src": "按 MDA 框架把系统拆成机制、动态、体验三层，每条结论都写成一条链：<b>哪条规则 → 玩家因此怎么做 → 产生什么情绪</b>。再拿同一工作室的《异人之下》做 A/B 对比。口径为 2026 年 10 月实机版本，账号 V12。",
+ "acf50682ee": {
+  "src": "从系统目的出发，按机制、动态、体验三层拆火影手游的成长与经济系统：<b>两种公平观怎样按玩法共存，战力在哪里兑现，八个招募入口怎样承接不同预算</b>。规则取自 2026 年 10–11 月实机版本，关键论断标注依据类型。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
@@ -4926,261 +4935,746 @@
    "projects/hearthstone.html"
   ]
  },
- "0b4dbbd2af": {
-  "src": "<span>高级招募与点券直售价差</span><b>25×</b><span>按充值折算</span>",
+ "f942f43723": {
+  "src": "<span>同为 S 忍的面值差</span><b>25×</b><span>高招约 5040 元，传说版忍法帖 198 元</span>",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "d177fa0f5d": {
-  "src": "<span>拿满一名 S 忍</span><b>≈300</b><span>抽，玩家统计口径</span>",
+ "10dc9151e0": {
+  "src": "<span>战力玩法</span><b>5</b><span>类：排行榜、巅峰对决、三项组织玩法</span>",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "811a385665": {
-  "src": "<span>战力线养成系统</span><b>7</b><span>套</span>",
+ "5a3e650034": {
+  "src": "<span>新忍者强度控制</span><b>3</b><span>种：属性平衡、BAN、场景准入</span>",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "efd45857f0": {
-  "src": "<span>招募入口</span><b>8</b><span>个，3 层货币</span>",
+ "adc8734925": {
+  "src": "<span>账号的魔抗缺口</span><b>3080</b><span>等级已够，卡在属性门槛</span>",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "d5ae315f94": {
-  "src": "一页结论",
+ "46d4c1b4e4": {
+  "src": "摘要",
   "kind": "html",
   "pages": [
    "projects/naruto.html",
    "projects/hearthstone.html"
   ]
  },
- "7f0a002e69": {
-  "src": "《火影忍者》手游把<b>忍者作为唯一核心商品</b>，用两套相反的 PVP 规则同时卖给操作型和养成型玩家：决斗场统一数值，积分赛按战力结算。",
+ "8ad8b94a40": {
+  "src": "格斗游戏靠公平留人，免费游戏靠付费带来的优势赚钱。火影没有在全局选边，而是<b>让两种公平观按玩法共存</b>：决斗场段位赛屏蔽战斗属性，比操作和忍者储备；账号战力在个人排行榜、组织玩法和巅峰对决里兑现。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "7895e237ab": {
-  "src": "层",
+ "0532ef9701": {
+  "src": "<i>战力的回报</i><b>被看见、被需要</b>个人战力榜决定本服排名，还给巅峰预选赛前 5 名加成积分；要塞战、天地战场、组织争霸把个人战力变成组织成绩。积分赛仍在，但已不是战力玩家的主要目标。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "ce3e735732": {
-  "src": "做法",
+ "d2baceb89b": {
+  "src": "<i>两类玩法</i><b>高度重叠，不是两个阵营</b>巅峰对决同时要求战力、实时操作和足够深的忍者池：3V3 先 BAN 后选，用过的 S/A/B 忍者不能在后续轮次再用。投入较深的玩家大多两边都玩。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "c7dca996f8": {
-  "src": "关键证据",
+ "fe76538f0a": {
+  "src": "<i>强度控制</i><b>属性平衡、BAN 之外还有场景准入</b>截至 11 月，十周年限定 S 忍「漩涡鸣人·宇智波佐助」和「漩涡鸣人·自来也」暂不可用于四个战力玩法，新投放的冲击先留在段位赛里。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "b3b9356d68": {
-  "src": "机制",
+ "6fd94fd772": {
+  "src": "<i>获取渠道</i><b>按确定性分层</b>同为 S 忍，高招按面值约 5040 元，传说版忍法帖 198 元另需一季活跃。差距主要由可免费积累的金币和时间吸收，不能看成同一商品的标价差。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "9ffb8d7b9c": {
-  "src": "3 层货币、8 个招募入口、7 套养成系统；决斗场统一战力，积分赛按战力结算",
+ "be1593636d": {
+  "src": "三条成长线，五类兑现场景",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "aeb48bdfd8": {
-  "src": "高招 S 碎片 11.5%，十连必送 S 碎片；V12 特权全是次数类",
+ "c31e53fe81": {
+  "src": "忍者获取、忍者养成、账号战力三条线，产出“有没有”和“有多少”两样东西。<b>段位赛只认“有没有”，排行榜和组织玩法认“有多少”，巅峰对决两样都要。</b>",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "753ccc8e2e": {
-  "src": "动态",
+ "0c87eccc11": {
+  "src": "<b>忍者是连接面最宽的商品，但不是唯一跨界的商品。</b>通灵和秘卷既影响段位赛的战术选择，又有属性养成；时装同时提供表达和属性。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "8cc825856f": {
-  "src": "决斗场玩家跟着新忍者脉冲式付费，战力玩家每天买体力持续付费；等级锁时间，次数锁产出，付费只能放宽次数",
+ "801dac8dc4": {
+  "src": "玩法",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "b528901c70": {
-  "src": "团本 110–160 级分 5 档；秘境饰品魔抗门槛每档涨约 10%",
+ "89b4aa6364": {
+  "src": "时间",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "efa76d1095": {
-  "src": "体验",
+ "3f53b9f3aa": {
+  "src": "与战力、忍者池相关的规则",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "418f6b44b6": {
-  "src": "决斗场提供挑战和表达，战力线提供成就和收集；同一次强势忍者投放，大 R 和零氪的情绪方向相反",
+ "4a5f7ab0e6": {
+  "src": "本服战力排行榜",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "dee8bca14e": {
-  "src": "强势付费忍者上线横扫决斗场后被削弱",
+ "08a4dc38a4": {
+  "src": "常驻",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "5fd3910c37": {
-  "src": "和《异人之下》的 A/B",
+ "7d00cbd738": {
+  "src": "展示个人排名；巅峰预选赛中战力前 5 额外获得 30% / 20% / 10% 积分加成",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "1ffa954fb5": {
-  "src": "两款都出自腾讯魔方工作室群，都是动漫 IP 改编的格斗游戏，但<b>商业化走了相反的路</b>。",
+ "b41a68f7c6": {
+  "src": "巅峰对决",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "f35f4ff844": {
-  "src": "<i>卖什么</i><b>“有没有”和“有多少”</b>火影卖忍者、秘卷、通灵，以及战力；《异人之下》公开口径是角色可以通过签到和任务免费获得，付费主要是皮肤。",
+ "bfcdd0117f": {
+  "src": "每 5 周一届，周五本服、周六跨服",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "a441994222": {
-  "src": "<i>公平靠什么</i><b>屏蔽一部分 / 全部屏蔽</b>火影在部分模式里屏蔽数值，再用 BAN 位让忍者储备重新有价值；《异人之下》在 PVP 全面屏蔽等级和装备。",
+ "0e3322c12d": {
+  "src": "战力过低不能发起挑战；3V3 先 BAN 后选，用过的 S/A/B 忍者不能再上；弃权时战力高者晋级",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "88fc58139f": {
-  "src": "<i>风险</i><b>方向相反</b>火影的风险是强度膨胀、战力线越叠越深；《异人之下》的风险是外观付费天花板低，以及养成一旦进入 PVP 会破坏公平承诺。",
+ "d870eeacee": {
+  "src": "要塞争夺战",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "b111016eaa": {
-  "src": "<i>方法</i><b>每条结论一条链</b>为了不让 MDA 变成贴标签，每条结论都从规则推到玩家行为，再推到情绪，并给出实机截图作证据。",
+ "f262445f9f": {
+  "src": "周六 20:00–20:30",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "79d76f13e3": {
-  "src": "优点、问题与建议",
+ "2c57546550": {
+  "src": "连胜越多积分越高；组织积分决定要塞归属",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "02eb706f70": {
-  "src": "三条优点",
+ "632ba0a9da": {
+  "src": "天地战场",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "ebafcbbb0a": {
-  "src": "忍者同时服务两条成长线，一次投放卖给两类玩家，收入有峰值也有基本盘。",
+ "1930d21a4c": {
+  "src": "周三 21:00",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "f952461217": {
-  "src": "防挫败规则集中在低中段：低段输了不扣分，中段有段位地板。",
+ "a84fd38de8": {
+  "src": "当日祈福满 10 人才有资格；随机“推荐忍者”出战获得攻击提升",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "8c77cfc738": {
-  "src": "等级门槛只能靠时间推进，付费只能放宽次数，内容消耗速度可控。",
+ "06600dbb6f": {
+  "src": "组织争霸赛",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "5e6f41d8b5": {
-  "src": "三个问题",
+ "553a21e0fd": {
+  "src": "按届开赛",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "31c9e3650a": {
-  "src": "点券渠道的忍者零氪永远拿不到，强势期内也没有练习机会。",
+ "1d9d608f2c": {
+  "src": "报名看组织战力前 16；车轮战，双方各禁 3 名忍者",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "50f4a382a6": {
-  "src": "高级招募只公示十连必送 S 碎片，拿满一名 S 忍要多少抽没有说明。",
+ "143e8c5fff": {
+  "src": "规则取自 2026 年 11 月的游戏内说明页。积分赛关注度低是作者所在服务器的观察，不代表所有服务器。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "d5a0686d56": {
-  "src": "战力线已有 7 套养成系统，回流和新玩家的追赶成本逐年上涨。",
+ "bdd90b4f2b": {
+  "src": "关键推算",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "83d8781188": {
+  "src": "同为 S 忍，两条获取路线按面值相差约 25 倍。<b>比较时要把面值、现金、时间和风险分开看</b>，否则就会把两种支付方式误读成同一商品的价格歧视。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "0918d8d047": {
-  "src": "三条建议",
+ "f0fd1c9d11": {
+  "src": "成本维度",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "7e7015f0ce": {
-  "src": "高级招募明示保底进度，和祈愿夺宝的幸运值做法一致。",
+ "48376b0753": {
+  "src": "高级招募",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "de21954521": {
-  "src": "付费忍者上线满 4 周后，进入决斗场“本周免费”轮换，只给体验权。",
+ "ca55c87aea": {
+  "src": "传说版忍法帖",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "636acfefdc": {
-  "src": "借鉴《异人之下》PVE 与 PVP 两套技能模组，把新忍者的决斗场强度和积分赛强度分开调。",
+ "185a49037e": {
+  "src": "面值",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "97d7efba05": {
+  "src": "约 300 抽 × 168 金币，约 5040 元",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "407b47f46b": {
+  "src": "1980 点券，198 元",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "9b9c91c2d6": {
+  "src": "实际现金缺口",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "3007f78fd0": {
+  "src": "扣除存量金币、召集券和免费产出后才知道，可能远低于面值",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "a7ccd576d1": {
+  "src": "扣除点券余额；靠月充积累时，四次 50 元正好覆盖",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "83b4d8a119": {
+  "src": "日历时间",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "fa9e21244f": {
+  "src": "取决于金币积累速度和抽取运气",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "80337c86e5": {
+  "src": "需要一季活跃升到奖励等级，或用点券补级",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "e0f6a1c9c8": {
+  "src": "风险与附赠",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "1989f4426f": {
+  "src": "抽数随机；途中获得其他碎片和材料",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "36ad1d3e0c": {
+  "src": "奖励固定，但只能拿当季指定忍者",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "bab3529b3d": {
+  "src": "<i>整卡成本</i><b>“约 300 抽”是经验值，不是保底</b>官方只公示类别碎片概率和十连必送 S 碎片。整卡成本要用条件模型估算：起始碎片、逐抽所得、活动补片和兑换各项相加，求凑满所需的最小抽数，并同时报告中位数和较高分位数。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "fcce98495d": {
+  "src": "<i>月充预算</i><b>四次 50 元覆盖一季门票</b>50 元档实得 565 点券，四个月 2260 点券，买下 1980 点券的传说版忍法帖后余 280；同期再买一名 1980 点券忍者就缺 1700。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "7c927d4836": {
+  "src": "<i>付费上限</i><b>付费能在上限以内提速</b>V12 特权全是次数类，战力特惠每项周限购各买一次合计约 600 元。等级门槛、每日购买次数和周限购共同决定最快推进速度。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "0485ce9f80": {
+  "src": "<i>成长瓶颈</i><b>等级够了，魔抗还差 3080</b>161 级账号已满足 160 级饰品的等级条件，魔抗 46341 距 49421 还差 3080。门槛每档涨约 10%，买非瓶颈资源推不动进度。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "d5674c3c10": {
+  "src": "从规则到体验",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "150a676a38": {
+  "src": "每条结论写成一条链：<b>哪条规则 → 玩家因此怎么做 → 产生什么情绪 → 服务哪个目的</b>。全文共 14 条，这里列 6 条；行为和体验两列缺少后台数据，属于机制推断。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "06563fa503": {
+  "src": "机制 M",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "3210f13f3f": {
+  "src": "动态 D",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "8fea5daa47": {
+  "src": "体验 A",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "881d5275d9": {
+  "src": "目的",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "974962ce32": {
+  "src": "段位赛战斗属性平衡",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "4aa7e84958": {
+  "src": "竞技投入集中在操作和忍者选择上",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "d745df3420": {
+  "src": "挑战：输赢更多归因于自己",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "fbb4e755bb": {
+  "src": "公平",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "1992f59f8a": {
+  "src": "本服战力排行榜；巅峰预选前 5 积分加成",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "879ea6e7c0": {
+  "src": "战力玩家盯名次，临近名次线时追加养成",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "47ed3432b4": {
+  "src": "成就：被全服看见",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "611f238eb3": {
+  "src": "变现、留存",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "973401ca74": {
+  "src": "组织玩法的准入：组织等级、祈福 10 人、入组织时长",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "3d048c6d34": {
+  "src": "成员互相提醒祈福、按时出勤",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "07723cb32c": {
+  "src": "社交：被队友需要，也有出勤压力",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "08fa3138d4": {
+  "src": "留存",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "09f67fcfaf": {
+  "src": "巅峰对决：战力定准入，3V3 BAN 选，用过即锁",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "0d17635833": {
+  "src": "同一批玩家同时准备战力、操作和忍者池",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "09ed7c76e8": {
+  "src": "高光与服务器荣誉",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "0aafeccac1": {
+  "src": "等级 + 魔抗双门槛，魔抗每档 +10%",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "ad05fffd0c": {
+  "src": "等级够了卡属性，玩家寻找瓶颈材料",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "5da4d06207": {
+  "src": "挑战，或者焦虑",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "fecd8c621e": {
+  "src": "变现、控速",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "791db9eebd": {
+  "src": "点券直售、限时上架与限购",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "edecc8d3cc": {
+  "src": "目标明确的玩家在下架前购买；未付费者只能在对局里面对它们",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "6d7338fd0e": {
+  "src": "持有者的独占感，未持有者的剥夺感",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "8e044fa481": {
+  "src": "变现（与公平有张力）",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "6b5d7bdb3a": {
+  "src": "<b>两个飞轮在忍者处交汇。</b>竞技飞轮靠新忍者转动，需求是脉冲式的；战力飞轮靠排行榜和组织玩法带来的社会位置转动，投入是持续的。巅峰对决同时从两个飞轮取能量。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "fcfb15de91": {
+  "src": "<i>体验</i><b>四种动机交织</b>竞技表达、排名与成长、组织归属、角色偏好。组织玩法让社交成为战力线最强的留存体验：周三天地战场、周六要塞战，个人成长有了观众和队友；代价是固定时段的出勤压力。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "e3f95efa69": {
+  "src": "<i>产品对照</i><b>《异人之下》只做有来源的比较</b>同一工作室、同为格斗游戏，公开口径是 PVP 不受等级和装备影响，但测试中出现了可付费提前解锁的“命座”。对照只讨论付费资产在哪些模式生效，不预测它的收入结构。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "d60bd37f1e": {
+  "src": "问题与改进方案",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "0ab61cdc8f": {
+  "src": "先做改动小、能先验证问题是否存在的方案，再做影响资源产出的方案。<b>三条方案都不碰“点券忍者需要付费获得”这条付费墙本身</b>，只处理它带来的信息和体验成本。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "7cabe771eb": {
+  "src": "优先级",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "0fee25f074": {
+  "src": "方案",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "04ab88971d": {
+  "src": "解决的问题",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "902afd68a8": {
+  "src": "主要风险",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "ffea099dbc": {
+  "src": "高级招募的规则与预算信息透明化",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "35a2c28f66": {
+  "src": "玩家分不清类别碎片概率、十连保证和整卡成本；同一游戏里祈愿夺宝已实时显示幸运值",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "47b91dec14": {
+  "src": "部分玩家吃到确定奖励就停，单期流水可能下降",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "49078730cd": {
+  "src": "为未持有的付费忍者提供训练体验",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "674bd8f2d9": {
+  "src": "没有这个忍者，也就没机会练习应对",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "eff828c363": {
+  "src": "降低新鲜感，可能推迟购买",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "367dc07cec": {
+  "src": "面向回流玩家的定向追赶",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "273e30653d": {
+  "src": "多套养成逐年叠加，老服回流玩家差距过大",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "098e58a938": {
+  "src": "老玩家觉得不公平，补贴可能流向非目标用途",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "6ed9ea33f3": {
+  "src": "监测",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "9e42420646": {
+  "src": "高段 BAN 的储备压力；指定忍者的场景准入时长",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "24d9351b47": {
+  "src": "储备不足的玩家在高段可能无人可用",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "1b93795b97": {
+  "src": "—",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "ff99bc5625": {
+  "src": "<strong>方案①分两步验证。</strong>先做小规模可用性测试，看玩家能否区分类别碎片概率与整卡概率、能否判断已有预算是否覆盖某个确定奖励；之后才看线上的咨询量和按预算分层的消费变化，并把总流水变化拆成提前消费、延后消费和实际增减。只有规则确实存在整卡硬保底时才显示整卡进度，不把玩家经验值做成保证。",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "df845283de": {
+  "src": "追赶方案要按“目标在移动”来算：追赶时间约为 T = D ÷ (a − b)，D 是初始差距，a 是玩家每日有效成长，b 是目标每日增长，只有 a > b 才能追上。补贴只投向已识别的瓶颈材料。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
@@ -5194,43 +5688,37 @@
    "projects/hearthstone.html"
   ]
  },
- "6328c9b0ff": {
-  "src": "<b>零</b>拆解说明：对象、MDA 用法、为什么选《异人之下》",
+ "aadef73753": {
+  "src": "<b>一</b>系统目的：核心定位、四大设计目的、玩家动机",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html",
+   "projects/hearthstone.html"
+  ]
+ },
+ "97c153696f": {
+  "src": "<b>二</b>机制层：入口、成长线、九个模块、货币、刷新周期、强度控制",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "30c457f11a": {
-  "src": "<b>一</b>系统目的",
+ "7464e6f080": {
+  "src": "<b>三</b>动态层：MDA 映射、数值与经济、付费触点、留存、资源循环",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "4a30fc1e1f": {
-  "src": "<b>二</b>机制层：系统怎么设计",
+ "784af2dafa": {
+  "src": "<b>四</b>体验层：八种体验、动机、体验旅程、一周日历",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "d6bb85d52f": {
-  "src": "<b>三</b>动态层：设计如何达成目的",
-  "kind": "html",
-  "pages": [
-   "projects/naruto.html"
-  ]
- },
- "94aa4dfbe5": {
-  "src": "<b>四</b>体验层：玩家实际感受到什么",
-  "kind": "html",
-  "pages": [
-   "projects/naruto.html"
-  ]
- },
- "cadc31b5b1": {
-  "src": "<b>五</b>A/B 对比：火影 vs 异人之下",
+ "95346206e5": {
+  "src": "<b>五</b>产品对照：《异人之下》",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
@@ -5240,14 +5728,16 @@
   "src": "<b>六</b>优缺点分析",
   "kind": "html",
   "pages": [
-   "projects/naruto.html"
+   "projects/naruto.html",
+   "projects/hearthstone.html"
   ]
  },
- "78482337cb": {
-  "src": "<b>七</b>改进建议",
+ "f8e453c8e5": {
+  "src": "<b>七</b>改进方案（按优先级）",
   "kind": "html",
   "pages": [
-   "projects/naruto.html"
+   "projects/naruto.html",
+   "projects/hearthstone.html"
   ]
  },
  "41442bf802": {
@@ -5258,23 +5748,22 @@
    "projects/hearthstone.html"
   ]
  },
- "71ab66881e": {
-  "src": "全文在下面直接翻阅，看完点顶栏或底部按钮回到存档。",
-  "kind": "html",
-  "pages": [
-   "projects/naruto.html",
-   "projects/hearthstone.html"
-  ]
- },
- "7788ac4506": {
-  "src": "<span>naruto-mda.pdf · 36 页</span><span><a download=\"\" href=\"../files/naruto-mda.pdf\">下载 PDF</a> <a href=\"https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd\">飞书原文 ↗</a></span>",
+ "a654adc128": {
+  "src": "全文 45 页，含 21 张实机截图、3 张分析图、36 张表和资料来源，在下面直接翻阅。",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
   ]
  },
- "417ec638a6": {
-  "src": "手机上无法内嵌 PDF。<a class=\"more\" href=\"../files/naruto-mda.pdf\" style=\"color:var(--gold)\">打开 PDF</a> <a class=\"more ext\" href=\"https://my.feishu.cn/wiki/AvJpwwqTYiGd0Gk09ZHcytbGnrd\" style=\"color:var(--gold)\">飞书原文</a>（新标签页打开）",
+ "492f330cba": {
+  "src": "<span>naruto-mda.pdf · 45 页</span><span><a download=\"\" href=\"../files/naruto-mda.pdf\">下载 PDF</a> <a href=\"https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje\">飞书原文 ↗</a></span>",
+  "kind": "html",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "01eef0beea": {
+  "src": "手机上无法内嵌 PDF。<a class=\"more\" href=\"../files/naruto-mda.pdf\" style=\"color:var(--gold)\">打开 PDF</a> <a class=\"more ext\" href=\"https://my.feishu.cn/wiki/FfDXwo5DjiFIALk3kOScpVPVnje\" style=\"color:var(--gold)\">飞书原文</a>（新标签页打开）",
   "kind": "html",
   "pages": [
    "projects/naruto.html"
@@ -5294,8 +5783,8 @@
    "projects/naruto.html"
   ]
  },
- "77ab3a4776": {
-  "src": "按 MDA 框架拆解《火影忍者》手游的成长与经济系统，并与《异人之下》做 A/B 对比。",
+ "ed697fe206": {
+  "src": "按系统目的、机制、动态、体验拆解《火影忍者》手游的成长与经济系统：两种公平观怎样按玩法共存，战力在哪里兑现，获取渠道怎样承接不同预算。",
   "kind": "text",
   "pages": [
    "projects/naruto.html"
@@ -5303,6 +5792,20 @@
  },
  "30ab997895": {
   "src": "火影忍者手游主界面（昵称已打码）",
+  "kind": "text",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "b2faadf562": {
+  "src": "成长线架构：三条成长线产出“拥有”和“战力”，分别在段位赛、巅峰对决、组织玩法、排行榜与 PVE 兑现，积分赛关注度低",
+  "kind": "text",
+  "pages": [
+   "projects/naruto.html"
+  ]
+ },
+ "3901ae9bfd": {
+  "src": "资源闭环：竞技飞轮与战力飞轮在忍者处交汇",
   "kind": "text",
   "pages": [
    "projects/naruto.html"
@@ -5329,15 +5832,15 @@
    "projects/hearthstone.html"
   ]
  },
- "6006cb313c": {
-  "src": "<a class=\"hide-s\" href=\"#summary\">一页结论</a> <a class=\"hide-s\" href=\"#pay\">付费与体验</a> <a class=\"hide-s\" href=\"#fix\">改进方向</a> <a href=\"#read\">阅读全文</a>",
+ "83479a0587": {
+  "src": "<a class=\"hide-s\" href=\"#summary\">摘要</a> <a class=\"hide-s\" href=\"#calc\">关键推算</a> <a class=\"hide-s\" href=\"#time\">生命与时机</a> <a class=\"hide-s\" href=\"#fix\">改进方案</a> <a href=\"#read\">阅读全文</a>",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "5de70c85be": {
-  "src": "存档 05 · 系统拆解 · 20 页",
+ "d68f0919b0": {
+  "src": "存档 05 · 系统拆解 · 35 页",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
@@ -5350,246 +5853,372 @@
    "projects/hearthstone.html"
   ]
  },
- "ad331deb3b": {
-  "src": "酒馆战棋没有卡牌收集，8 名玩家共用一个随从池，胜负几乎全部取决于单局内的资源决策。这份拆解只看单局：<b>铸币怎么来、怎么花，随从池怎么限制选择，强弱差距怎么拉开又怎么被收住</b>。口径为第 14 赛季，2026 年 10 月。",
+ "5fd086fbf6": {
+  "src": "酒馆战棋没有卡牌收集，8 名玩家共用一个随从池，胜负几乎全部取决于单局内的资源决策。这份拆解按机制、动态、体验三层看单局：<b>铸币怎样变成阵容，共享卡池怎样决定找牌成本，生命值怎样约束投资时机</b>。口径为第 14 赛季，2026 年 10 月；我在这个模式打了 501 小时，往季最高突破 10000 分。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "463808d376": {
-  "src": "<span>6 星随从全场</span><b>7 份</b><span>份数控制稀缺</span>",
+ "88fffdf2ed": {
+  "src": "<span>升本占前 10 回合基础铸币</span><b>46%</b><span>72 枚里的 33 枚，基线路线</span>",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "d3e06db9ad": {
-  "src": "<span>一次三连拿走</span><b>43%</b><span>顶端强度的份数</span>",
+ "bed3add98b": {
+  "src": "<span>目标被取走 2 张后每刷命中率</span><b>15→8%</b><span>静态池示例</span>",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "4bb80568f2": {
-  "src": "<span>铸币封顶</span><b>10</b><span>每回合 +1，第 8 回合封顶</span>",
+ "0ad88768cf": {
+  "src": "<span>上限保护下最早出局</span><b>第 5 回合</b><span>30 点生命、无护甲</span>",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "63834a090e": {
-  "src": "<span>游玩时长</span><b>501h</b><span>6120 分</span>",
+ "a9fae6da3a": {
+  "src": "<span>通行证带来的英雄候选覆盖率</span><b>36→60%</b><span>2 选 1 到 4 选 1，假设口径</span>",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "d2d665aace": {
-  "src": "核心矛盾：8 名玩家用完全相同的收入、共用一个随从池，却要打出每局都不一样的结果；<b>强弱差距要拉得开，又不能太早定局</b>。",
+ "c0f014c307": {
+  "src": "强弱要拉得开，名次才有意义；可分化来得太早，大多数人在一局里很快就没有可玩的选择。局内的关键决策，<b>大多是在“现在兑现”和“等待更好的供给”之间取舍</b>。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "88b5e77f83": {
-  "src": "<i>结论 1</i><b>收入和价格固定，差异只来自花法</b>铸币每回合 +1，第 8 回合封顶 10，随从一律 3 枚。每回合的核心问题是升本还是买强度，血量是这笔账的押金。",
+ "92e8318f4b": {
+  "src": "<i>结论 1</i><b>基础收入相同，购买力不同</b>铸币从 3 枚起每回合 +1、第 8 回合起为 10，所有人一样；贸易大王这类经济引擎、出售变现和费用减免会改变可用金。不设利息和连胜奖励，切断了“赢了多拿钱”的直接反馈。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "d5d6fc976e": {
-  "src": "<i>结论 2</i><b>稀缺性由份数制造，不靠概率表</b>6 星单卡全场 7 份，一次三连就拿走 43%。共享池还带来了撞种族和读对手的博弈。",
+ "18abcd00bb": {
+  "src": "<i>结论 2</i><b>份数决定的是搜索成本，不是三连概率</b>6 星单卡全场 7 份，三连占 3 份，仍剩 4 份。能否刷到，取决于可见池大小和商店格数。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "3599b5900c": {
-  "src": "<i>结论 3</i><b>滚雪球靠阵容，并配了刹车</b>没有利息和连胜奖励，另有伤害上限、份数限制、发现只高一本；英雄强弱用护甲换算成血量来平衡。",
+ "c3ee111f7a": {
+  "src": "<i>结论 3</i><b>共享库存是双向的</b>它可能限制领先者做第二张同名金卡，也可能让落后者更难复制领先阵容，不是稳定的追赶保护。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "3bba18de54": {
-  "src": "<i>结论 4</i><b>赛季机制加一个就减一个</b>每季的新机制都是商店之外的额外选择，底层经济不动，同时在场的额外系统控制在一到两个。",
+ "96d052b034": {
+  "src": "<i>结论 4</i><b>付费卖的是候选覆盖率，不是胜率</b>通行证把开局英雄从 2 选 1 扩到 4 选 1，不改选定英雄之后的局内规则。我一直免费 2 选 1，往季也打到过 10000 分以上。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "2707575374": {
-  "src": "付费与体验",
+ "18234213af": {
+  "src": "规则取自第 14 赛季官方补丁与实机界面，<b>曲线和概率按写明的假设自行计算</b>，是说明变量关系的数学示例，不是真实对局统计。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "666f63853f": {
-  "src": "<strong>付费只卖选择权。</strong>赛季通行证把开局英雄从 2 选 1 变成 4 选 1，再加上外观，不卖局内数值，但英雄选项数仍然会影响排位。",
+ "1c86bfb3ab": {
+  "src": "<b>升本是在购买未来供给。</b>按第 2、4、6、8、10 回合升本的基线，前 10 回合 72 枚基础铸币里 33 枚用于升本（45.8%），五个升本回合剩下的钱都不够再买一张随从。生命值就是这笔账的押金。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "962b137d11": {
-  "src": "<strong>体验以挑战和探索为主</strong>，主要服务成就型和探索型玩家。前 4 名加分的规则让第 5 名最难受，也最想再来一局。社交是这个模式的短板。",
+ "fa31b957a7": {
+  "src": "<b>份数越少，三连占比越高。</b>6 星单卡 7 份，三连占 42.9%，但仍剩 4 份，第二名玩家在数量上依然可以三连。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "8c04dffce2": {
-  "src": "和火影手游对比：火影的成长按月、按年累计，付费可以直接买进度；酒馆战棋的成长压缩在一局之内，付费几乎碰不到局内数值，系统设计落在经济曲线、共享资源的稀缺和强弱分化的节奏上。",
+ "0f4010b1fe": {
+  "src": "<b>只看分母会算错。</b>每刷命中率 p = 1 − C(N−m, k) ÷ C(N, k)。扩池同时加商店格数时，命中率可能不降反升（15.28% → 15.84%）；目标被别人取走 2 张，命中率从 15.28% 降到 8.04%，找牌效率几乎减半。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "a3ccb79733": {
-  "src": "改进方向",
+ "1d5155aadc": {
+  "src": "生命与投资时机",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "7cabe771eb": {
-  "src": "优先级",
+ "4a62c230a9": {
+  "src": "三连推动滚雪球，四类机制分段限制放大，<b>方向并不都在帮落后者</b>。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "0fee25f074": {
-  "src": "方案",
+ "ac327d4a01": {
+  "src": "<b>正反馈靠阵容推动。</b>不设利息、伤害上限和三连奖励只高一本，都在限制优势放大的速度；共享库存则是双向的。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "a5b3b8ad1b": {
-  "src": "商店显示剩余份数的三档提示，附 AB 测试方案",
+ "c36ebe9c72": {
+  "src": "生命 + 护甲",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "75a0ee46ad": {
-  "src": "赛季初的新机制教学局",
+ "91ba6292e9": {
+  "src": "累计可承受的上限伤害",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "a8dfa2f329": {
-  "src": "排位统一英雄选项数",
+ "d35b7d5c7b": {
+  "src": "最早出局",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "4cbcac148d": {
-  "src": "中期落后补偿",
+ "99c18caef6": {
+  "src": "第 5 回合",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "4f1acb85ba": {
-  "src": "另外推演了把升本费用改成线性，结论是不建议改。",
+ "31264f953e": {
+  "src": "第 6 回合",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "28f7fcddca": {
-  "src": "<b>一</b>游戏概况与拆解范围",
+ "4e333c5388": {
+  "src": "第 7 回合",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "42a0be2e62": {
-  "src": "<b>二</b>核心循环：招募与战斗",
+ "58666d2439": {
+  "src": "<i>生命预算</i><b>护甲换算成能多等的回合数</b>单人伤害上限为第 1–3 回合 5 点、第 4–7 回合 10 点、第 8 回合起 15 点，进入前 4 后取消。上限只保证“最快多久出局”，不保证活到某个成长节点。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "be395c6d39": {
-  "src": "<b>三</b>铸币经济：收入曲线与定价",
+ "f690d9cf09": {
+  "src": "<i>黑暗之赐</i><b>存活概率够高，等待才划算</b>每次 3 金，第 3 回合起每回合最多 1 次、每局 3 次，选项随回合增强。设立即使用的期望为 100、等到目标回合为 140，等待需要存活概率高于 71.4%。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "635637cc52": {
-  "src": "<b>四</b>共享随从池：稀缺性从哪里来",
+ "1f0e53ae48": {
+  "src": "<i>改价推演</i><b>线性升本价格会怎样</b>把升本价改为 5、7、9、11、13，同时改变了形状和总价（42 → 45）。拆开看，升 6 本加 2 让第 10 回合缺 1 金；“抹平 4 升 5 的决策点”这个推论不成立，因为升 5 本的初始价没变。",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "71776d2302": {
-  "src": "<b>五</b>三连与发现：滚雪球和刹车",
+ "75314a28ad": {
+  "src": "改进方案",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "54bfa246e5": {
-  "src": "<b>六</b>英雄：起点不对称和三个平衡旋钮",
+ "80711f5476": {
+  "src": "底层经济很稳，问题集中在信息透明度、赛季更替的学习成本，以及付费与排位的关系。<b>先做只改信息呈现、能先验证问题是否存在的方案。</b>",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "42f5df0d46": {
-  "src": "<b>七</b>战斗结算与伤害：淘汰节奏怎么控制",
+ "dc879318cb": {
+  "src": "问题 → 方案",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "5f88969c89": {
-  "src": "<b>八</b>变量注入与赛季节奏",
+ "3d7c6f6112": {
+  "src": "成本与风险",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "49dd4cd9df": {
-  "src": "<b>九</b>排位与付费：只卖选择权",
+ "df2c1d8215": {
+  "src": "初始份数、已见信息和真实库存混在一起 → 卡池规则与已见信息说明",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "503b958be7": {
-  "src": "<b>十</b>体验层：这些机制让玩家感受到什么",
+ "3b245336e9": {
+  "src": "低；仍会改变决策耗时和策略，需要评估",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "97df72048f": {
-  "src": "<b>十一</b>问题与改进方案",
+ "1aef791603": {
+  "src": "赛季机制换代快 → 黑暗之赐与饰品的时机练习",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "7d8fc979ef": {
-  "src": "<span>hearthstone-bg.pdf · 20 页</span><span><a download=\"\" href=\"../files/hearthstone-bg.pdf\">下载 PDF</a> <a href=\"https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e\">飞书原文 ↗</a></span>",
+ "7f1faacbe8": {
+  "src": "中；每季要做练习内容",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
   ]
  },
- "7fc2f785cc": {
-  "src": "手机上无法内嵌 PDF。<a class=\"more\" href=\"../files/hearthstone-bg.pdf\" style=\"color:var(--gold)\">打开 PDF</a> <a class=\"more ext\" href=\"https://my.feishu.cn/wiki/JqamwX2fBiRQ8ukToWUcWfBin2e\" style=\"color:var(--gold)\">飞书原文</a>（新标签页打开）",
+ "f1da797106": {
+  "src": "付费多选英雄 → 排位统一候选数",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "b2a8504907": {
+  "src": "直接削弱通行证卖点，需要和商业化共同决策",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "05b636feef": {
+  "src": "中期落后难翻盘 → 落后者补偿",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "d2f6e98461": {
+  "src": "动到“基础收入人人相同”的原则，可能诱导故意卖血；不建议优先",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "01d3856da4": {
+  "src": "首选方案：卡池规则与已见信息说明",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "c6a4bbd389": {
+  "src": "直接在商店显示真实剩余份数，看起来只改界面，实际上公开了此前隐藏的信息，信息规则已经变了。首版只做不公开隐藏信息的改动：",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "4770fa45ae": {
+  "src": "卡牌详情显示该版本的初始份数，并注明“初始份数不代表当前剩余”。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "653495ac38": {
+  "src": "对手面板保留本账号在战斗中实际看到过的最近阵容和回合，注明可能已经变化。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "0d3e2a9886": {
+  "src": "商店、手牌和场上随从都能打开同一份说明。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "66570427eb": {
+  "src": "<i>第一步</i><b>用决策题测理解</b>按新手、回流和熟练玩家分组做可用性测试：能否区分初始份数与当前库存、能否指出对手记录来自哪一回合、比较搜索选择时是否同时考虑份数和格数。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "531fdd0a73": {
+  "src": "<i>第二步</i><b>以整局为单位分流</b>同一局 8 人看到相同的功能，主指标是结算后规则理解题的正确率，护栏包括操作未完成比例、性能和异常退出率。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "fcc63b3d4b": {
+  "src": "<i>不用的指标</i><b>“撞种族占比”不可用</b>8 人分到 5 个种族，至少两人同族几乎必然发生，同族也不一定争同一组件。样本量要在预试验拿到理解正确率和响应率后再估算。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "8d294a0acf": {
+  "src": "<b>二</b>机制层：单局循环、铸币、升本、共享池、三连、英雄、伤害、赛季机制、付费、节奏点",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "03866cb015": {
+  "src": "<b>三</b>动态层：MDA 映射、七项数值推算、滚雪球与限制、间接对抗、留存、资源循环",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "6624ad41ab": {
+  "src": "<b>四</b>体验层：八种体验、Bartle、新手与熟练玩家、情绪曲线",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "9c477037a8": {
+  "src": "<b>五</b>产品对照：《火影忍者》手游与《金铲铲之战》",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "9002f8f8ed": {
+  "src": "全文 35 页，含 8 张实机截图、7 张分析图、27 张表和资料来源，在下面直接翻阅。",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "9c2fc4ad77": {
+  "src": "<span>hearthstone-bg.pdf · 35 页</span><span><a download=\"\" href=\"../files/hearthstone-bg.pdf\">下载 PDF</a> <a href=\"https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb\">飞书原文 ↗</a></span>",
+  "kind": "html",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "0a1bce273a": {
+  "src": "手机上无法内嵌 PDF。<a class=\"more\" href=\"../files/hearthstone-bg.pdf\" style=\"color:var(--gold)\">打开 PDF</a> <a class=\"more ext\" href=\"https://my.feishu.cn/wiki/XOc8wBigJiBB2KkglrLcytJVndb\" style=\"color:var(--gold)\">飞书原文</a>（新标签页打开）",
   "kind": "html",
   "pages": [
    "projects/hearthstone.html"
@@ -5602,8 +6231,8 @@
    "projects/hearthstone.html"
   ]
  },
- "5e51f2068e": {
-  "src": "拆解酒馆战棋的铸币曲线、份数稀缺与防滚雪球机制，并为首选改进方案设计 AB 测试。",
+ "2973646a02": {
+  "src": "拆解酒馆战棋的铸币经济、共享随从池的搜索成本与生命约束下的投资时机，并为首选改进方案设计可用性测试与整局分流实验。",
   "kind": "text",
   "pages": [
    "projects/hearthstone.html"
@@ -5611,6 +6240,34 @@
  },
  "675a600a26": {
   "src": "酒馆战棋对局界面",
+  "kind": "text",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "6d5ee0b3e8": {
+  "src": "基线路线下每回合的升本支出：前 10 回合基础收入 72 金，升本支付 33 金",
+  "kind": "text",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "72e5c3758e": {
+  "src": "各星级随从的初始份数与三连占比",
+  "kind": "text",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "829a07a1cb": {
+  "src": "不同假设池下每次刷新至少命中一张目标的概率",
+  "kind": "text",
+  "pages": [
+   "projects/hearthstone.html"
+  ]
+ },
+ "4165a3e2b5": {
+  "src": "三连推动的正反馈循环，以及不设利息、伤害上限、三连奖励只高一本、共享库存四类限制机制",
   "kind": "text",
   "pages": [
    "projects/hearthstone.html"
@@ -6967,15 +7624,8 @@
    "js/stage.js"
   ]
  },
- "8d79c5fbec": {
-  "src": "高级招募拿满一名 S 忍约需 300 抽，按充值折算约 5040 元，是点券直售的 25 倍。",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "74d2547eee": {
-  "src": "36 页 · MDA",
+ "4bcf2153cb": {
+  "src": "45 页 · MDA",
   "kind": "js",
   "pages": [
    "js/stage.js"
@@ -6995,8 +7645,8 @@
    "js/stage.js"
   ]
  },
- "19769e711c": {
-  "src": "按 MDA 框架分层拆解，测算出高级招募与点券直售约 25 倍的价差，并与《异人之下》对比。",
+ "62fdaf04b6": {
+  "src": "按 MDA 分层拆解两种公平：段位赛守住操作公平，战力玩法让投入有回报。比较 S 忍四条获取路线的面值、现金、时间与风险，面值相差约 25 倍，并按优先级给出 3 个改进方案。",
   "kind": "js",
   "pages": [
    "js/stage.js"
@@ -7009,15 +7659,8 @@
    "js/stage.js"
   ]
  },
- "e45a3aa009": {
-  "src": "6 星随从只有 7 份，一次三连即拿走 43%：顶端强度的稀缺由份数控制，而非概率表。",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "567d55112c": {
-  "src": "20 页 · 501 小时",
+ "99a2a4035d": {
+  "src": "35 页 · 概率模型",
   "kind": "js",
   "pages": [
    "js/stage.js"
@@ -7037,8 +7680,8 @@
    "js/stage.js"
   ]
  },
- "1a468cb34d": {
-  "src": "拆解铸币曲线、份数稀缺与四项防滚雪球机制，并为首选改进方案设计 AB 测试。",
+ "7b5421e7af": {
+  "src": "推算铸币曲线与升本节奏，前 10 回合 46% 的基础铸币用于升本；用卡池概率模型解释份数稀缺与读对手，首选改进方案配可用性测试和对局级实验两步验证。",
   "kind": "js",
   "pages": [
    "js/stage.js"

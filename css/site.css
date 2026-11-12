@@ -193,6 +193,12 @@ button{font:inherit;color:inherit}
 .fig img{width:100%;box-shadow:0 0 0 4px var(--ink),8px 8px 0 4px rgba(31,26,36,.22)}
 .fig figcaption{margin-top:16px;font-size:14px;line-height:1.5;color:var(--mute)}
 .fig figcaption::before{content:"▲ ";color:var(--dirt-d)}
+/* 拆解页的图表：白底原图，限制最大宽度，图注首句加粗作结论 */
+.fig.chart{max-width:1040px;margin:32px auto}
+.fig.chart img{height:auto;background:#fff}
+.fig.chart figcaption{font-size:15px;line-height:1.65;color:var(--ink-2)}
+.fig.chart figcaption b{color:var(--ink)}
+.h-sub{margin:48px 0 16px;font-family:var(--px-font);-webkit-font-smoothing:none;font-size:24px;line-height:1.25}
 .cards{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
 .cards img{box-shadow:0 0 0 4px var(--ink);transition:transform .1s steps(2)}
 .cards img:hover{transform:translateY(-6px)}
@@ -487,3 +493,124 @@ td:first-child{font-weight:700;color:var(--ink);width:24%;min-width:6em}
   table.stack td:first-child::before{color:var(--gold)}
   .table-scroll{overflow:visible;padding:0}
 }
+
+/* ===== 影视片架：放映机布局（js/deck.js 的 Film） =====
+   背景是当前作品的模糊大图，左侧银幕放海报，右侧一条连续胶片穿过片门。 */
+.deck.film{padding:0;background:#16121a}
+.deck.film::before{z-index:1;background:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1.2px) 0 0/12px 12px}
+.film-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.film-bg img{position:absolute;inset:-8%;width:116%;height:116%;max-width:none;object-fit:cover;filter:blur(12px) saturate(1.2) brightness(.78);opacity:0;transition:opacity .6s ease}
+.film-bg img.on{opacity:1}
+.film-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,14,22,.78) 0,rgba(18,14,22,.25) 55%,rgba(18,14,22,.55) 100%),linear-gradient(0deg,rgba(18,14,22,.6) 0,transparent 28%)}
+.deck.film .deck-stage{z-index:2;height:520px;perspective:1100px;perspective-origin:80% 50%;overflow:hidden;cursor:default}
+.deck.film .deck-stage::after{display:none}
+/* 银幕：海报 */
+.film-screen{position:absolute;left:44px;top:50%;width:280px;aspect-ratio:2/3;margin-top:-210px;background:#0c0a0e;box-shadow:0 0 0 4px var(--ink),0 0 0 8px rgba(255,255,255,.08),0 30px 60px rgba(0,0,0,.55)}
+.film-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
+.film-screen img.on{opacity:1}
+/* 光束：从片门照向银幕 */
+.film-beam{position:absolute;left:324px;right:250px;top:50%;height:420px;margin-top:-210px;background:linear-gradient(270deg,rgba(255,236,200,.16),rgba(255,236,200,.03));clip-path:polygon(0 0,100% 44%,100% 56%,0 100%);pointer-events:none;mix-blend-mode:screen}
+/* 胶片：片基和齿孔都是 .film-rail 自己的背景，--off 让它跟着滚动 */
+.film-rail{--pitch:128;position:absolute;right:112px;top:-70px;bottom:-70px;width:190px;background:
+  linear-gradient(180deg,rgba(240,232,220,.9) 0 16px,transparent 16px) 9px var(--off,0)/11px 32px repeat-y,
+  linear-gradient(180deg,rgba(240,232,220,.9) 0 16px,transparent 16px) calc(100% - 9px) var(--off,0)/11px 32px repeat-y,
+  #141117;box-shadow:0 0 0 3px #0a080c,-14px 0 40px rgba(0,0,0,.45);transform:rotateY(-20deg) rotateZ(4deg);transform-origin:50% 50%;
+  -webkit-mask:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);mask:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);cursor:grab;touch-action:none}
+.deck.film.dragging .film-rail{cursor:grabbing}
+.film-reel{position:absolute;inset:0}
+.film-rail::after{content:"";position:absolute;left:22px;right:22px;top:50%;height:120px;margin-top:-60px;box-shadow:0 0 0 3px var(--gold),0 0 24px rgba(255,200,90,.35);pointer-events:none}
+.deck.film .dcard,.film-blank{position:absolute;left:50%;top:50%;width:146px;height:112px;margin:-56px 0 0 -73px;transform-origin:50% 50%;will-change:transform}
+.deck.film .dcard img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:50% 30%;box-shadow:none;background:#0c0a0e}
+.deck.film .dcard::after{inset:0;background:#0c0a0e;opacity:var(--dim,0)}
+.deck.film .dcard.front img{box-shadow:none}
+.film-blank{background:linear-gradient(160deg,#2a2530,#1b171f);box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+/* 文字：银幕和胶片之间 */
+.deck.film .deck-ui{position:absolute;z-index:3;left:368px;right:340px;top:96px;margin:0;display:grid;grid-template-columns:auto auto 1fr;grid-template-rows:auto auto;gap:22px 10px;align-items:center}
+.deck.film .deck-info{grid-column:1/-1;grid-row:1;text-align:left}
+.deck.film .deck-info .t{font-size:30px;line-height:1.25;white-space:normal;color:#fff;text-shadow:3px 3px 0 rgba(0,0,0,.45)}
+.deck.film .deck-info .s{margin-top:10px;font-size:15px;color:#e6dcef}
+.deck.film .deck-info .m{margin-top:6px;color:var(--gold)}
+.deck.film .deck-ui .prev{grid-column:1;grid-row:2}
+.deck.film .deck-ui .next{grid-column:2;grid-row:2}
+.deck.film .deck-ui .n{grid-column:3;grid-row:2;color:#cfc5d8;font-size:14px;white-space:nowrap}
+.deck.film .deck-ui .prev,.deck.film .deck-ui .next{font-size:0}
+.deck.film .deck-ui .prev::before{content:"▲";font-size:14px}
+.deck.film .deck-ui .next::before{content:"▼";font-size:14px}
+.deck.film .deck-scrub{position:absolute;z-index:3;left:368px;right:340px;top:452px;margin:0;background:rgba(255,255,255,.18)}
+.deck.film .deck-list{z-index:3;margin:0 16px 16px;background:rgba(18,14,22,.72)}
+@media (max-width:900px) and (min-width:641px){
+  .film-screen{width:220px;margin-top:-165px;left:28px}
+  .film-beam{left:248px;height:330px;margin-top:-165px}
+  .deck.film .deck-ui,.deck.film .deck-scrub{left:276px;right:250px}
+  .film-rail{right:36px}
+  .deck.film .deck-info .t{font-size:22px}
+}
+/* 窄屏：海报和文字在上，胶片横着跑在下方 */
+@media (max-width:640px){
+  .deck.film{padding:0}
+  .deck.film .deck-stage{height:430px;perspective:none;touch-action:pan-y}
+  .film-screen{left:16px;top:20px;width:140px;margin-top:0}
+  .film-beam{display:none}
+  .film-rail{--pitch:78;left:-40px;right:-40px;top:auto;bottom:26px;width:auto;height:132px;background:
+    linear-gradient(90deg,rgba(240,232,220,.9) 0 10px,transparent 10px) var(--off,0) 7px/19.5px 8px repeat-x,
+    linear-gradient(90deg,rgba(240,232,220,.9) 0 10px,transparent 10px) var(--off,0) calc(100% - 7px)/19.5px 8px repeat-x,
+    #141117;transform:rotate(-3deg);touch-action:pan-y;
+    -webkit-mask:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%)}
+  .film-rail::after{left:50%;right:auto;top:18px;bottom:18px;height:auto;width:74px;margin:0 0 0 -37px}
+  .deck.film .dcard,.film-blank{width:68px;height:96px;margin:-48px 0 0 -34px}
+  .deck.film .deck-ui{left:172px;right:14px;top:22px;gap:14px 8px}
+  .deck.film .deck-info .t{font-size:16px;line-height:1.5}
+  .deck.film .deck-info .s{font-size:13px;margin-top:6px}
+  .deck.film .deck-info .m{font-size:12px}
+  .deck.film .deck-ui .n{display:block;font-size:12px}
+  .deck.film .deck-ui .prev::before{content:"◀"}
+  .deck.film .deck-ui .next::before{content:"▶"}
+  .deck.film .deck-scrub{left:172px;right:14px;bottom:auto;top:210px}
+}
+@media (prefers-reduced-motion:reduce){.film-bg img,.film-screen img{transition:none}.deck.film .dcard,.film-blank{will-change:auto}}
+
+/* ===== 阅读区：像素砖墙 + 游戏菜单式标题（覆盖上面的通用样式） =====
+   底纹是 tools/make_tile.py 生成的砖墙，2 倍像素平铺；
+   区块标题做成深色铭牌（右上角阶梯切角），图标放进金色道具格，前面标 STAGE 编号；
+   区块导语做成 RPG 对话框，右下角闪烁 ▼；小标题和筛选按钮做成背包分页的样子。 */
+.zone,.white{background:var(--paper) url("../img/px/wall.png") 0 0/128px 128px;image-rendering:auto}
+.light{background:var(--paper-2) url("../img/px/wall-2.png") 0 0/128px 128px}
+.zone{counter-reset:stage}
+.zone .sec{counter-increment:stage}
+
+.sec-head{gap:0;align-items:center;flex-wrap:nowrap}
+.sec-head > .px-ico{position:relative;z-index:1;margin:12px 20px 12px 12px;background-color:var(--gold);box-shadow:0 0 0 8px var(--gold),0 0 0 12px var(--ink),inset 0 0 0 0 transparent,6px 6px 0 12px rgba(31,26,36,.22)}
+.sec-head .h-sec,.chapter .h-sec{position:relative;flex:none;max-width:100%;padding:12px 70px 12px 22px;color:var(--paper);background:var(--ink);
+  clip-path:polygon(0 0,calc(100% - 16px) 0,calc(100% - 16px) 8px,calc(100% - 8px) 8px,calc(100% - 8px) 16px,100% 16px,100% 100%,0 100%)}
+.sec-head .h-sec::before{content:"WORLD 1-" counter(stage);display:block;margin-bottom:6px;font-size:12px;line-height:1;color:var(--gold)}
+.sec-head .h-sec::after,.chapter .h-sec::after{content:"";position:absolute;right:22px;bottom:12px;width:8px;height:8px;background:var(--gold);box-shadow:-12px 0 0 var(--red),-24px 0 0 var(--grass)}
+.sec-head::after{content:"";flex:1;order:2;height:4px;margin:0 16px;background:linear-gradient(90deg,var(--ink) 0 12px,transparent 12px 16px) 0 0/16px 4px repeat-x}
+.sec-head .px-block{order:3;flex:none}
+.chapter .h-sec{display:inline-block}
+
+/* 导语：RPG 对话框 */
+.sec-lede{position:relative;margin:28px 0 0;max-width:46em;padding:18px 24px 22px;color:var(--ink);background:var(--paper);
+  box-shadow:0 -4px 0 0 var(--ink),0 4px 0 0 var(--ink),-4px 0 0 0 var(--ink),4px 0 0 0 var(--ink),inset 0 0 0 4px var(--paper-2),10px 12px 0 0 rgba(31,26,36,.18)}
+.sec-lede::after{content:"";position:absolute;right:16px;bottom:10px;width:12px;height:8px;background:var(--red);clip-path:polygon(0 0,100% 0,100% 2px,83% 2px,83% 4px,67% 4px,67% 6px,33% 6px,33% 4px,17% 4px,17% 2px,0 2px);animation:px-blink 1s steps(1) infinite}
+
+/* 小标题：背包分页 */
+.sub{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin:56px 0 18px}
+.sub::before{content:"";flex:none;width:12px;height:12px;background:var(--gold);box-shadow:0 0 0 3px var(--ink),3px 3px 0 3px var(--gold-d)}
+.sub small{margin-left:0;padding:5px 8px;font-size:12px;line-height:1;color:var(--ink-2);background:var(--paper-2);box-shadow:0 -2px 0 0 var(--ink-2),0 2px 0 0 var(--ink-2),-2px 0 0 0 var(--ink-2),2px 0 0 0 var(--ink-2)}
+
+/* 筛选：道具栏按钮，选中的那颗按下去 */
+.chip{position:relative;padding:9px 10px 9px 12px;background:var(--paper);box-shadow:0 -3px 0 0 var(--ink),0 3px 0 0 var(--ink),-3px 0 0 0 var(--ink),3px 0 0 0 var(--ink),inset 0 -4px 0 0 var(--paper-3),0 7px 0 0 rgba(31,26,36,.25);margin:4px 4px 8px;transition:transform .08s steps(2)}
+.chip b{display:inline-block;margin-left:8px;padding:3px 4px;font-size:11px;color:var(--paper);background:var(--ink)}
+.chip:hover{transform:translateY(-2px)}
+.chip[aria-pressed="true"]{background:var(--gold);transform:translateY(3px);box-shadow:0 -3px 0 0 var(--ink),0 3px 0 0 var(--ink),-3px 0 0 0 var(--ink),3px 0 0 0 var(--ink),inset 0 4px 0 0 var(--gold-d)}
+.chip[aria-pressed="true"] b{color:var(--gold)}
+.sorter .chip[aria-pressed="true"]{background:var(--ink);color:var(--gold);box-shadow:0 -3px 0 0 var(--ink),0 3px 0 0 var(--ink),-3px 0 0 0 var(--ink),3px 0 0 0 var(--ink)}
+
+@media (max-width:640px){
+  .sec-head > .px-ico{margin:10px 14px 10px 10px;box-shadow:0 0 0 6px var(--gold),0 0 0 9px var(--ink)}
+  .sec-head .h-sec,.chapter .h-sec{padding:10px 30px 10px 14px}
+  .sec-head .h-sec::after,.chapter .h-sec::after{display:none}
+  .sec-head::after{margin:0 10px}
+  .sec-lede{padding:14px 16px 20px}
+}
+@media (prefers-reduced-motion:reduce){.sec-lede::after{animation:none}}
