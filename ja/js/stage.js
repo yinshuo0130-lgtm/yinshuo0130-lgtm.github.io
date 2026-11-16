@@ -1,31 +1,22 @@
 /* 首页选关舞台：小人可以左右跑、跳起来顶方块，顶到哪块就读取哪个存档。
    键盘：← → 或 A D 移动，空格 / ↑ / W 跳，Enter 直接读取当前存档。
    鼠标 / 触屏：点方块直接读取，点门直接进入；触屏另有左右和跳跃按钮。
-   没人操作时，小人会在方块之间来回走，广告牌跟着轮播。 */
+   没人操作时，小人会在方块之间来回走。方块上方的牌子写明作品类型和名字，不再放大幅海报。
+   宽屏按 4 倍、5 倍像素放大小人、小猫和方块（CSS 变量 --k），物理参数跟着同比缩放。 */
 (function(){
   var stg = document.getElementById('stg');
   if (!stg) return;
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var sfx = window.ysSfx || function(){};
 
+  // tip 用在读档过场里；cat / name 写在方块上方的牌子上
   var SLOTS = [
-    {href:'projects/nightreign-mod.html', tip:'同じ夜の王への 2 回の挑戦でも、最初の 2 日間に出会う敵は変わりえます。', img:['../img/mod/cover-cards.webp'], badge:'テスト版公開済み',
-     kicker:'セーブ 01 · プレイ可能 · 個人制作', title:'『エルデンリング ナイトレイン』大型コンテンツ拡張 Mod', text:'夜の王 7 体、夜の掟 12 種、二層構造の「腐れ湖」地形を追加し、タリスマン 30 種の成長とドロップを作り直しました。テスト版公開から 8 日で bilibili 再生数 約 6,000、2 つのプラットフォームで共有 331 回。', short:'ナイトレイン'},
-    {href:'projects/tidewheel.html', tip:'回収バウンドの受付時間を約 0.5 秒から約 1.6 秒に広げました。数値はプレイヤー操作を再現するスクリプトで計測。', img:['../img/tidewheel/cover.webp'], badge:'itch.io で遊べます',
-     kicker:'セーブ 02 · プレイ可能 · プランナー（一部プログラム兼任）', title:'『ゼンマイ人形』Tidewheel', text:'時のゼンマイを投げると周囲の海の時間が止まり、止まった波が足場になる。thatgamejam #02 参加作品、4 人チーム。', short:'Tidewheel'},
-    {href:'projects/burger/index.html', tip:'初回転生は約 49 分。星ボーナスを得ると 2 周目は 23 分、3 周目は 11 分まで短縮。', img:['../img/burger/02_home.webp','../img/burger/12c_run_burst.webp','../img/burger/19_space_home.webp'], badge:'開発完了 · ソフトウェア著作権 登録申請中',
-     kicker:'セーブ 03 · プレイ可能 · 個人制作', title:'『宇宙バーガー』', text:'Douyin 向けの縦画面放置系経営ミニゲーム。自作のプレイシミュレーターでテンポを調整し、初回転生を約 49 分に収めました。', short:'宇宙バーガー'},
-    {href:'projects/naruto.html', tip:'ランク戦は戦闘ステータスを均等化し、戦力はランキング、組織コンテンツ、頂上決戦で生きる。', img:['../img/naruto/main.webp'], badge:'45 ページ · MDA',
-     kicker:'セーブ 04 · システム分析', title:'『NARUTO』モバイル：成長と経済システム', text:'MDA の層ごとに 2 種類の公平性を分析。ランク戦は操作の公平を守り、戦力系の遊びは投資に見返りを与える。S 忍の入手経路 4 つを額面・現金・時間・リスクで比較し（額面差は約 25 倍）、優先度順に 3 つの改善案を提示。', short:'NARUTO'},
-    {href:'projects/hearthstone.html', tip:'狙いのミニオンを他人に 2 枚取られると、リフレッシュ 1 回あたりの命中率は 15% から 8% に下がる。', img:['../img/hs/main.webp'], badge:'35 ページ · 確率モデル',
-     kicker:'セーブ 05 · システム分析', title:'『ハースストーン』バトルグラウンド：経済と対戦テンポ', text:'ゴールド曲線と酒場アップグレードのテンポを試算。最初の 10 ターンで基本ゴールドの 46% がアップグレードに使われる。プールの確率モデルで枚数の希少性と相手読みを説明し、第一案はユーザビリティテストと対局単位の実験の 2 段階で検証する。', short:'バトルグラウンド'}
+    {href:'projects/nightreign-mod.html', tip:'同じ夜の王への 2 回の挑戦でも、最初の 2 日間に出会う敵は変わりえます。', title:'『エルデンリング ナイトレイン』大型コンテンツ拡張 Mod', cat:'遊べる大型 Mod', name:'ナイトレイン'},
+    {href:'projects/tidewheel.html', tip:'回収バウンドの受付時間を約 0.5 秒から約 1.6 秒に広げました。数値はプレイヤー操作を再現するスクリプトで計測。', title:'『ゼンマイ人形』Tidewheel', cat:'ゲームジャム作品', name:'Tidewheel'},
+    {href:'projects/burger/index.html', tip:'初回転生は約 49 分。星ボーナスを得ると 2 周目は 23 分、3 周目は 11 分まで短縮。', title:'『宇宙バーガー』', cat:'抖音ミニゲーム', name:'宇宙バーガー'},
+    {href:'projects/naruto.html', tip:'ランク戦は戦闘ステータスを均等化し、戦力はランキング、組織コンテンツ、頂上決戦で生きる。', title:'『NARUTO』モバイル：成長と経済システム', cat:'システム分析', name:'NARUTO -ナルト-'},
+    {href:'projects/hearthstone.html', tip:'狙いのミニオンを他人に 2 枚取られると、リフレッシュ 1 回あたりの命中率は 15% から 8% に下がる。', title:'『ハースストーン』バトルグラウンド：経済と対戦テンポ', cat:'システム分析', name:'バトルグラウンド'}
   ];
-  /* 页面加载后空闲时预取全部广告牌图片，切换存档时直接从缓存显示 */
-  window.addEventListener('load', function(){
-    (window.requestIdleCallback || function(f){ setTimeout(f, 300); })(function(){
-      SLOTS.forEach(function(s){ s.img.forEach(function(src){ var im = new Image(); im.decoding = 'async'; im.src = src; }); });
-    });
-  });
   var DOOR = {href:'about.html', tip:'ゲーム歴、映像・音楽、経歴とスキル。'};
 
   /* ---------- 搭场景 ---------- */
@@ -34,7 +25,7 @@
     var b = document.createElement('button');
     b.className = 'sblock'; b.type = 'button';
     b.setAttribute('aria-label', 'セーブ 0' + (i + 1) + ' をロード：' + s.title);
-    b.innerHTML = '<span class="lbl"><b>0' + (i + 1) + '</b><span>' + s.short + '</span></span>';
+    b.innerHTML = '<span class="lbl"><small>' + s.cat + '</small><b>' + s.name + '</b></span>';
     row.appendChild(b);
     return b;
   });
@@ -44,61 +35,35 @@
   cat.className = 'hero-cat px-cat'; cat.setAttribute('aria-hidden', 'true');
   stg.appendChild(cat);
   var say = hero.querySelector('.say');
-  var board = stg.querySelector('.board');
-  var scr = board.querySelector('.board-scr');
-  var bdKicker = board.querySelector('.kicker'), bdTitle = board.querySelector('h2'), bdText = board.querySelector('p'), bdBadge = board.querySelector('.badge');
-
-  var W = 0, H = 0, G = 0, slotX = [], doorX = 0, BLOCK_BOTTOM = 216, BW = 48, narrow = false;
+  var W = 0, H = 0, G = 0, slotX = [], doorX = 0, BLOCK_BOTTOM = 216, BW = 48, narrow = false, K = 1;
   function layout(){
-    // 手机屏幕偏矮时，广告牌会压住方块：按广告牌实际高度撑高舞台，方块离地高度不变，仍能跳着顶到
-    stg.style.minHeight = '';
-    var need = board.offsetTop + board.offsetHeight + 20 + 44 + 48 + BLOCK_BOTTOM;
-    if (need > stg.clientHeight) stg.style.minHeight = need + 'px';
+    K = parseFloat(getComputedStyle(stg).getPropertyValue('--k')) || 1;
+    BW = 48 * K; BLOCK_BOTTOM = 48 + 168 * K; HEIGHT = 64 * K; HALF = 16 * K;
+    JUMP = 840 * Math.sqrt(K); SPEED = 300 * Math.sqrt(K);
     W = stg.clientWidth; H = stg.clientHeight; G = H - 48;
     narrow = W < 640;
-    // 宽屏时左侧留出操作说明木牌的位置
-    var left = narrow ? 0.1 : Math.max(0.14, 260 / W), right = 0.74;
+    // 宽屏时左侧留出操作说明木牌的位置，右侧留给门
+    var left = narrow ? 0.1 : Math.max(0.16, 270 / W), right = narrow ? 0.82 : 0.8;
     slotX = SLOTS.map(function(_, i){ return Math.round(W * (left + (right - left) * i / (SLOTS.length - 1))); });
-    doorX = Math.round(W * (narrow ? 0.9 : 0.88));
+    doorX = Math.round(W * (narrow ? 0.93 : 0.92));
     blocks.forEach(function(b, i){ b.style.left = slotX[i] + 'px'; });
     door.style.left = doorX + 'px';
-    if (P.x === null) P.x = slotX[0] + 40;
+    if (P.x === null) P.x = slotX[0] + 40 * K;
     P.x = Math.min(Math.max(P.x, 18), W - 18);
-    if (C.x === null) C.x = Math.max(36, P.x - 64);
-    C.x = Math.max(36, Math.min(W - 36, C.x));
+    if (C.x === null) C.x = Math.max(36 * K, P.x - 64 * K);
+    C.x = Math.max(36 * K, Math.min(W - 36 * K, C.x));
     trail = []; catTime = 0;
     if (P.ground) P.y = G;
-    pointArrow();
   }
 
-  /* ---------- 广告牌 ---------- */
+  /* ---------- 当前选中的方块 ---------- */
   var shown = -1;
   function showSlot(i){
     if (i === shown) return;
     shown = i;
     var s = SLOTS[i];
     blocks.forEach(function(b, k){ b.classList.toggle('on', k === i); });
-    scr.querySelectorAll('img,.phones').forEach(function(n){ n.remove(); });
-    var media;
-    if (s.img.length > 1){
-      media = document.createElement('div'); media.className = 'phones';
-      s.img.forEach(function(src){ var im = new Image(); im.src = src; im.alt = ''; media.appendChild(im); });
-    } else {
-      media = new Image(); media.src = s.img[0]; media.alt = s.title;
-    }
-    scr.insertBefore(media, scr.firstChild);
-    scr.classList.remove('flick'); void scr.offsetWidth; scr.classList.add('flick');
-    bdKicker.textContent = s.kicker; bdTitle.textContent = s.title; bdText.textContent = s.text; bdBadge.textContent = s.badge;
-    pointArrow();
   }
-  function pointArrow(){
-    if (shown < 0 || !W) return;
-    var br = board.getBoundingClientRect(), sr = stg.getBoundingClientRect();
-    var x = slotX[shown] + sr.left - br.left;
-    x = Math.max(16, Math.min(br.width - 16, x));
-    board.style.setProperty('--arrow', x + 'px');
-  }
-  board.querySelector('.go').addEventListener('click', function(){ userAct(); goTo(shown); });
   var coarse = matchMedia('(hover: none) and (pointer: coarse)').matches;
   var HINT = coarse ? 'ブロックをタップで入る' : '← → で歩く、Space でジャンプ！', DOOR_SAY = coarse ? 'ドアをタップで入る' : '↓ 入る';
 
@@ -173,7 +138,7 @@
     btn.addEventListener('pointerleave', off); btn.addEventListener('pointercancel', off);
   });
 
-  function nearDoor(){ return Math.abs(P.x - doorX) < 30 && P.ground; }
+  function nearDoor(){ return Math.abs(P.x - doorX) < 30 * K && P.ground; }
 
   /* ---------- 物理 ---------- */
   function step(dt){
@@ -182,9 +147,9 @@
     if (keys.r) want += 1;
     var doJump = false;
     if (attract){
-      var tx = slotX[attractIdx] + 40;
+      var tx = slotX[attractIdx] + 40 * K;
       var ddx = tx - P.x;
-      if (Math.abs(ddx) > 6){ want = ddx > 0 ? 0.6 : -0.6; }
+      if (Math.abs(ddx) > 6 * K){ want = ddx > 0 ? 0.6 : -0.6; }
       else {
         attractWait += dt;
         if (attractWait > 3.2){ attractWait = 0; attractIdx = (attractIdx + 1) % SLOTS.length; }
@@ -211,7 +176,7 @@
       if (P.vy < 0 && head0 >= bBot && head < bBot){
         for (var i = 0; i < slotX.length; i++){
           if (Math.abs(P.x - slotX[i]) < BW / 2 + HALF - 4){
-            P.y = bBot + HEIGHT; P.vy = 60; sfx('bump');
+            P.y = bBot + HEIGHT; P.vy = 60 * K; sfx('bump');
             if (!locked) hit(i);
             break;
           }
@@ -241,12 +206,12 @@
     if (!P.ground) frame = 6;
     else if (Math.abs(P.vx) > 1) frame = Math.floor(P.dist / 22) % 6;
     else frame = 7;
-    hero.style.backgroundPosition = (-frame * 72) + 'px 0';
-    hero.style.transform = 'translate(' + Math.round(P.x - 36) + 'px,' + Math.round(P.y - 72) + 'px) scaleX(' + P.face + ')';
+    hero.style.backgroundPosition = (-frame * 72 * K) + 'px 0';
+    hero.style.transform = 'translate(' + Math.round(P.x - 36 * K) + 'px,' + Math.round(P.y - 72 * K) + 'px) scaleX(' + P.face + ')';
     hero.style.setProperty('--flip', P.face);
     var cf = reduce ? 4 : !P.ground ? 4 : C.moving ? Math.floor(C.dist / 16) % 4 : 4 + Math.floor(catTime / .6) % 2;
-    cat.style.backgroundPosition = (-cf * 72) + 'px 0';
-    cat.style.transform = 'translate(' + Math.round(C.x - 36) + 'px,' + (G - 48) + 'px) scaleX(' + C.face + ')';
+    cat.style.backgroundPosition = (-cf * 72 * K) + 'px 0';
+    cat.style.transform = 'translate(' + Math.round(C.x - 36 * K) + 'px,' + Math.round(G - 48 * K) + 'px) scaleX(' + C.face + ')';
   }
 
   // 记录主角的地面位置，约 0.3 秒后跟随；跳跃时留在地面抬头。
@@ -257,10 +222,10 @@
     while (trail.length > 1 && trail[1].t <= catTime - .3) trail.shift();
     C.moving = false;
     if (!P.ground || !trail.length || trail[0].t > catTime - .3) return;
-    var past = trail[0], target = Math.max(36, Math.min(W - 36, past.x - past.face * 64));
+    var past = trail[0], target = Math.max(36 * K, Math.min(W - 36 * K, past.x - past.face * 64 * K));
     var dx = target - C.x;
     if (Math.abs(dx) > 2){
-      var move = Math.sign(dx) * Math.min(Math.abs(dx), 420 * dt);
+      var move = Math.sign(dx) * Math.min(Math.abs(dx), 420 * K * dt);
       C.x += move; C.dist += Math.abs(move); C.moving = true;
       C.face = dx > 0 ? 1 : -1;
     } else { C.x = target; C.face = past.face; }

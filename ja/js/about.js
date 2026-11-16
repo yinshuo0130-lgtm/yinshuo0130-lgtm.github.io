@@ -96,7 +96,7 @@
       img: c.querySelector('.cover').getAttribute('src'),
       title: c.querySelector('h4').textContent,
       plat: tags[0],
-      stat: tags.indexOf('プラチナ') >= 0 ? '<span class="px-ico trophy"></span>プラチナ' : tags.indexOf('クリア') >= 0 ? 'メインストーリー クリア' : '',
+      stat: tags.indexOf('全実績') >= 0 ? '<span class="px-ico trophy"></span>全実績' : tags.indexOf('クリア') >= 0 ? 'メインストーリー クリア' : '',
       hrsText: c.querySelector('.hrs').textContent, h: h,
       note: note ? note.textContent : '',
       color: c.style.getPropertyValue('--c')

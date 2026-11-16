@@ -96,7 +96,7 @@
       img: c.querySelector('.cover').getAttribute('src'),
       title: c.querySelector('h4').textContent,
       plat: tags[0],
-      stat: tags.indexOf('白金') >= 0 ? '<span class="px-ico trophy"></span>白金' : tags.indexOf('通关') >= 0 ? '主线通关' : '',
+      stat: tags.indexOf('全成就') >= 0 ? '<span class="px-ico trophy"></span>全成就' : tags.indexOf('通关') >= 0 ? '主线通关' : '',
       hrsText: c.querySelector('.hrs').textContent, h: h,
       note: note ? note.textContent : '',
       color: c.style.getPropertyValue('--c')

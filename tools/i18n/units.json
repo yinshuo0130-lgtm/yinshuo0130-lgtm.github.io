@@ -121,16 +121,8 @@
    "projects/burger/index.html"
   ]
  },
- "c05c55b810": {
-  "src": "读取存档",
-  "kind": "html",
-  "pages": [
-   "index.html",
-   "js/site.js"
-  ]
- },
- "c6fff934e8": {
-  "src": "跳起来顶方块也能进入",
+ "5c5b4b7e98": {
+  "src": "5 个作品：3 个可玩作品 + 2 份系统拆解。<br/>跳起来顶方块，或直接点方块进入。",
   "kind": "html",
   "pages": [
    "index.html"
@@ -145,6 +137,13 @@
  },
  "e320bccf3e": {
   "src": "<span class=\"say\">↓ 进门</span>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "0577719344": {
+  "src": "▼ 往下看：作品详情 · 玩家档案",
   "kind": "html",
   "pages": [
    "index.html"
@@ -221,6 +220,14 @@
    "index.html"
   ]
  },
+ "c05c55b810": {
+  "src": "读取存档",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "js/site.js"
+  ]
+ },
  "5e09134b17": {
   "src": "<span>选择一个存档继续</span><span>已用存档位 5 / 6</span>",
   "kind": "html",
@@ -244,6 +251,13 @@
  },
  "6766861933": {
   "src": "<b>7</b>新增夜王，每位 2 套前两夜组合",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "9d104ea7c1": {
+  "src": "进入 ▶",
   "kind": "html",
   "pages": [
    "index.html"
@@ -644,8 +658,8 @@
    "projects/naruto.html"
   ]
  },
- "391321be3a": {
-  "src": "4600 小时以上的游戏时长，35 款游戏，16 款白金。",
+ "cba1da62b3": {
+  "src": "4600 小时以上的游戏时长，35 款游戏，16 款全成就。",
   "kind": "text",
   "pages": [
    "index.html"
@@ -693,8 +707,8 @@
    "about.html"
   ]
  },
- "50a7ac1242": {
-  "src": "<span>游戏时长 4600h+</span> <span>白金 16 款</span> <span>三年 GIS 与遥感数据分析</span> <span>AI 工具：Claude Code · Codex</span>",
+ "7c2f57f8bb": {
+  "src": "<span>游戏时长 4600h+</span> <span>全成就 16 款</span> <span>三年 GIS 与遥感数据分析</span> <span>AI 工具：Claude Code · Codex</span>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -721,8 +735,8 @@
    "about.html"
   ]
  },
- "9e4b22574f": {
-  "src": "白金收集者 ×16",
+ "a042a4bc7a": {
+  "src": "全成就收集者 ×16",
   "kind": "html",
   "pages": [
    "about.html"
@@ -784,8 +798,8 @@
    "about.html"
   ]
  },
- "d705676419": {
-  "src": "<span>白金</span><b data-n=\"16\" data-suf=\" 款\">16 款</b>",
+ "a43721920b": {
+  "src": "<span>全成就</span><b data-n=\"16\" data-suf=\" 款\">16 款</b>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1129,8 +1143,8 @@
    "about.html"
   ]
  },
- "8a89e8ff29": {
-  "src": "平台分布<small>按下方游戏库统计，共 4618 小时</small>",
+ "9b84317a70": {
+  "src": "平台分布<small>按下方「玩过的游戏」统计，共 4618 小时</small>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1186,8 +1200,8 @@
    "js/stage.js"
   ]
  },
- "008c48af1f": {
-  "src": "白金，深夜模式 9999 分，为其制作大型 Mod。",
+ "d4fe77c272": {
+  "src": "全成就，深夜模式 9999 分，为其制作大型 Mod。",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1200,15 +1214,15 @@
    "about.html"
   ]
  },
- "97a3eb4468": {
-  "src": "白金。由此深入魂系，后来开始做 Mod。",
+ "ddd78954ab": {
+  "src": "全成就。由此深入魂系，后来开始做 Mod。",
   "kind": "html",
   "pages": [
    "about.html"
   ]
  },
- "9992f94dae": {
-  "src": "游戏库<small id=\"g-count\"></small>",
+ "a97e6cc205": {
+  "src": "玩过的游戏<small id=\"g-count\"></small>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1237,8 +1251,8 @@
    "about.html"
   ]
  },
- "6b69c6bab2": {
-  "src": "白金优先",
+ "30e65ac7ba": {
+  "src": "全成就优先",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1272,8 +1286,8 @@
    "about.html"
   ]
  },
- "32f598d9ea": {
-  "src": "Steam · <span class=\"plat\"><span class=\"px-ico trophy\"></span>白金</span>",
+ "12dff85a4a": {
+  "src": "Steam · <span class=\"plat\"><span class=\"px-ico trophy\"></span>全成就</span>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1405,8 +1419,8 @@
    "about.html"
   ]
  },
- "bd05fac230": {
-  "src": "PS5 · <span class=\"plat\"><span class=\"px-ico trophy\"></span>白金</span>",
+ "d26c1138b6": {
+  "src": "PS5 · <span class=\"plat\"><span class=\"px-ico trophy\"></span>全成就</span>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -1781,8 +1795,8 @@
    "about.html"
   ]
  },
- "e506cf878f": {
-  "src": "白金",
+ "b72560206c": {
+  "src": "全成就",
   "kind": "text",
   "pages": [
    "about.html",
@@ -2074,7 +2088,8 @@
   "src": "火影忍者",
   "kind": "text",
   "pages": [
-   "about.html"
+   "about.html",
+   "js/stage.js"
   ]
  },
  "0afa4ac58f": {
@@ -2457,125 +2472,6 @@
  },
  "f858eef223": {
   "src": "平成到令和全部看完",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "1dd561ffed": {
-  "src": "平成 · 2000–2019 · 20 部",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "7212490f10": {
-  "src": "空我 Kuuga",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "4c3dd15da8": {
-  "src": "亚极陀 Agito",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "1fa8a6ad23": {
-  "src": "龙骑 Ryuki",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "32fd307ffb": {
-  "src": "剑 Blade",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "56ab40e7da": {
-  "src": "响鬼 Hibiki",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "2db4dd043b": {
-  "src": "甲斗 Kabuto",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "32e1d88d68": {
-  "src": "电王 Den-O",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "b783345f6f": {
-  "src": "月骑 Kiva",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "b5d9b14108": {
-  "src": "帝骑 Decade",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "d52fe7bab1": {
-  "src": "铠武 Gaim",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "0abec04f9c": {
-  "src": "时王 Zi-O",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "61bc69e09a": {
-  "src": "令和 · 2019 至今 · 7 部",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "b810af03f8": {
-  "src": "零一 Zero-One",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "0374879a93": {
-  "src": "圣刃 Saber",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "0d44be92c1": {
-  "src": "利维斯 Revice",
-  "kind": "text",
-  "pages": [
-   "about.html"
-  ]
- },
- "85e04c595a": {
-  "src": "极狐 Geats",
   "kind": "text",
   "pages": [
    "about.html"
@@ -3289,15 +3185,8 @@
    "resume.html"
   ]
  },
- "6bbc11df9a": {
-  "src": "<span>resume.pdf · 1 页</span><span><a download=\"殷硕-游戏策划-简历.pdf\" href=\"files/resume.pdf\">下载 PDF</a></span>",
-  "kind": "html",
-  "pages": [
-   "resume.html"
-  ]
- },
- "52ab12ba12": {
-  "src": "手机上无法内嵌 PDF。<a class=\"more\" href=\"files/resume.pdf\" rel=\"noopener\" style=\"color:var(--gold)\" target=\"_blank\">在新标签页打开 PDF</a>，看完关掉那个标签页就回到这里。",
+ "f8b6283777": {
+  "src": "<span>简历 · 1 页</span><span><a href=\"files/resume.pdf\" rel=\"noopener\" target=\"_blank\">打开 PDF</a> · <a download=\"殷硕-游戏策划-简历.pdf\" href=\"files/resume.pdf\">下载 PDF</a></span>",
   "kind": "html",
   "pages": [
    "resume.html"
@@ -3332,8 +3221,8 @@
    "resume.html"
   ]
  },
- "b80ba76eba": {
-  "src": "殷硕的简历",
+ "1830ff603d": {
+  "src": "殷硕的简历：教育经历、游戏项目经历、游戏拆解、实习经历、游戏经历、技能与荣誉",
   "kind": "text",
   "pages": [
    "resume.html"
@@ -3374,8 +3263,7 @@
   "src": "存档 01 · 可玩作品 · 独立制作",
   "kind": "html",
   "pages": [
-   "projects/nightreign-mod.html",
-   "js/stage.js"
+   "projects/nightreign-mod.html"
   ]
  },
  "48039bd23b": {
@@ -7561,13 +7449,6 @@
    "js/site.js"
   ]
  },
- "22ce59ece6": {
-  "src": "测试版已发布",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
  "764c20a7d1": {
   "src": "《艾尔登法环 黑夜君临》大型内容扩展 Mod",
   "kind": "js",
@@ -7575,8 +7456,8 @@
    "js/stage.js"
   ]
  },
- "9b0692246f": {
-  "src": "新增 7 位夜王、12 条夜律与腐败湖双层地形，重做 30 个护符的成长与掉落。测试版发布 8 天，B 站播放近 6000，双平台转发 331 次。",
+ "c26dcfc11c": {
+  "src": "可玩大型扩展 Mod",
   "kind": "js",
   "pages": [
    "js/stage.js"
@@ -7589,22 +7470,8 @@
    "js/stage.js"
   ]
  },
- "e323051d43": {
-  "src": "itch.io 可试玩",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "cb9e9f2476": {
-  "src": "存档 02 · 可玩作品 · 策划（兼部分程序）",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "7a74d2f657": {
-  "src": "甩出时间齿轮，让周围海面的时间停止，停住的浪变成可以踩的地形。thatgamejam #02 参赛作品，4 人团队。",
+ "b395e5e155": {
+  "src": "Game Jam 作品",
   "kind": "js",
   "pages": [
    "js/stage.js"
@@ -7617,36 +7484,8 @@
    "js/stage.js"
   ]
  },
- "03e22e90c6": {
-  "src": "开发完成 · 软著申请中",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "1c5b3cce38": {
-  "src": "存档 03 · 可玩作品 · 独立制作",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "9f73e01c98": {
-  "src": "抖音竖屏增量经营小游戏。以自编跑局模拟器调整节奏，首次转生控制在约 49 分钟。",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "4bcf2153cb": {
-  "src": "45 页 · MDA",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "e616e8c286": {
-  "src": "存档 04 · 系统拆解",
+ "e71bf5a450": {
+  "src": "抖音小游戏",
   "kind": "js",
   "pages": [
    "js/stage.js"
@@ -7659,29 +7498,8 @@
    "js/stage.js"
   ]
  },
- "62fdaf04b6": {
-  "src": "按 MDA 分层拆解两种公平：段位赛守住操作公平，战力玩法让投入有回报。比较 S 忍四条获取路线的面值、现金、时间与风险，面值相差约 25 倍，并按优先级给出 3 个改进方案。",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "a4999c423e": {
-  "src": "火影拆解",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "99a2a4035d": {
-  "src": "35 页 · 概率模型",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "9d99f43cfa": {
-  "src": "存档 05 · 系统拆解",
+ "d69855701a": {
+  "src": "系统拆解案",
   "kind": "js",
   "pages": [
    "js/stage.js"
@@ -7689,13 +7507,6 @@
  },
  "a375bea083": {
   "src": "《炉石传说》酒馆战棋：经济与对局节奏",
-  "kind": "js",
-  "pages": [
-   "js/stage.js"
-  ]
- },
- "7b5421e7af": {
-  "src": "推算铸币曲线与升本节奏，前 10 回合 46% 的基础铸币用于升本；用卡池概率模型解释份数稀缺与读对手，首选改进方案配可用性测试和对局级实验两步验证。",
   "kind": "js",
   "pages": [
    "js/stage.js"
@@ -7757,8 +7568,8 @@
    "js/about.js"
   ]
  },
- "f375b06377": {
-  "src": "<span class=\"px-ico trophy\"></span>白金",
+ "bd1a083878": {
+  "src": "<span class=\"px-ico trophy\"></span>全成就",
   "kind": "js",
   "pages": [
    "js/about.js"

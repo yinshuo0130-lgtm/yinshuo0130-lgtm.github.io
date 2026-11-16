@@ -327,6 +327,7 @@ td:first-child{font-weight:700;color:var(--ink);width:24%;min-width:6em}
 .pdf .bar a{color:#e9dfcf;text-decoration:none}
 .pdf iframe{display:block;width:100%;height:min(86vh,1100px);border:0;background:#fff}
 .pdf-alt{display:none;padding:24px;color:#e9dfcf;font-size:15px}
+.pdf .sheet{display:block;width:100%;max-width:1000px;height:auto;margin:0 auto;background:#fff}
 @media (max-width:1068px){.rules.three{grid-template-columns:1fr}}
 @media (max-width:734px){
   .toc-list{grid-template-columns:1fr}

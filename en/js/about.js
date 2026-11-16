@@ -96,7 +96,7 @@
       img: c.querySelector('.cover').getAttribute('src'),
       title: c.querySelector('h4').textContent,
       plat: tags[0],
-      stat: tags.indexOf('Platinum') >= 0 ? '<span class="px-ico trophy"></span>Platinum' : tags.indexOf('Cleared') >= 0 ? 'Main story cleared' : '',
+      stat: tags.indexOf('100%') >= 0 ? '<span class="px-ico trophy"></span>100%' : tags.indexOf('Cleared') >= 0 ? 'Main story cleared' : '',
       hrsText: c.querySelector('.hrs').textContent, h: h,
       note: note ? note.textContent : '',
       color: c.style.getPropertyValue('--c')
