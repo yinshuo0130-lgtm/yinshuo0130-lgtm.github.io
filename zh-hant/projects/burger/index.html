@@ -153,7 +153,7 @@
 <li><strong>開業酬賓</strong>：前 3 輪收入 ×3，第一次升級幾乎馬上就能買</li>
 <li><strong>第 4 輪必出金肉餅</strong>：早點給一次驚喜</li>
 <li><strong>新玩法第一次出現時彈一條提示</strong>，不做長教程</li>
-<li><strong>只用激勵廣告</strong>：看廣告加時、收入翻倍、免費升級，不做內購</li>
+<li><strong>變現計劃只用激勵廣告</strong>：看廣告加時、收入翻倍、免費升級，不做內購；廣告位已經設計好，上線時接入</li>
 <li><strong>埋點 8 個關鍵事件</strong>：營業結束、搬店、發射、成就等，上線後用來找玩家在哪一步流失</li>
 </ul>
 </li>
@@ -221,7 +221,7 @@
     GameConfig.cs   <span class="c">所有數值和升級項</span>
     GameLogic.cs    <span class="c">屬性推導、關卡目標、結算</span>
     Run.cs          <span class="c">一輪營業：肉餅、火苗、小貓、道具</span>
-  Platform/  <span class="c">抖音 SDK、廣告、存檔、音效、震動</span>
+  Platform/  <span class="c">抖音 SDK 封裝：存檔、埋點、音效、震動；廣告介面預留</span>
   UI/        <span class="c">主頁、營業畫面、培訓中心、彈窗</span>
 Editor/
   PacingSim.cs      <span class="c">節奏模擬器</span>
@@ -238,7 +238,7 @@ Editor/
 </li>
 <li><i>平臺</i><b>抖音平臺接入</b>
 <ul>
-<li>激勵廣告、本地存檔（帶備份）、資料埋點、震動、側邊欄復訪獎勵</li>
+<li>本地存檔（帶備份）、資料埋點、震動、側邊欄復訪獎勵；激勵廣告留好介面，拿到軟著上線時接入</li>
 <li>讀取膠囊按鈕位置做安全區適配，電腦上用引數模擬膠囊</li>
 <li>切到後臺時靜音、存檔、自動暫停</li>
 <li>存檔只往末尾加升級項，改數值量級時帶遷移，老玩家進度不丟</li>

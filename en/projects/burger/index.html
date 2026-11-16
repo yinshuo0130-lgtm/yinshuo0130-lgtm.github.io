@@ -153,7 +153,7 @@
 <li><strong>Grand opening</strong>: ×3 income for the first 3 rounds, so the first upgrade is affordable almost immediately</li>
 <li><strong>Guaranteed golden patty in round 4</strong>: an early surprise</li>
 <li><strong>A one-line tip the first time a mechanic appears</strong>, instead of a long tutorial</li>
-<li><strong>Rewarded ads only</strong>: watch an ad for extra time, double income or a free upgrade; no in-app purchases</li>
+<li><strong>Monetisation plan: rewarded ads only</strong>: watch an ad for extra time, double income or a free upgrade, no in-app purchases; the ad slots are designed and will be wired up at launch</li>
 <li><strong>8 tracked key events</strong>: end of business, shop move, launch, achievements and more, to find where players drop off after release</li>
 </ul>
 </li>
@@ -221,7 +221,7 @@
     GameConfig.cs   <span class="c">all numbers and upgrades</span>
     GameLogic.cs    <span class="c">stat derivation, level targets, results</span>
     Run.cs          <span class="c">one round: patties, flames, cat, items</span>
-  Platform/  <span class="c">Douyin SDK, ads, saves, audio, haptics</span>
+  Platform/  <span class="c">Douyin SDK wrapper: saves, analytics, audio, haptics; ad hooks reserved</span>
   UI/        <span class="c">home, business screen, Training Center, pop-ups</span>
 Editor/
   PacingSim.cs      <span class="c">pacing simulator</span>
@@ -238,7 +238,7 @@ Editor/
 </li>
 <li><i>Platform</i><b>Douyin platform integration</b>
 <ul>
-<li>Rewarded ads, local saves (with backup), analytics events, haptics, sidebar return rewards</li>
+<li>Local saves (with backup), analytics events, haptics, sidebar return reward; rewarded-ad hooks are in place and will be connected once the copyright registration clears and the game launches</li>
 <li>Safe-area layout from the capsule button position, simulated by parameters on PC</li>
 <li>Mute, save and auto-pause when the app goes to the background</li>
 <li>Saves only append new upgrades at the end, and changes in number scale come with migrations, so existing players keep their progress</li>

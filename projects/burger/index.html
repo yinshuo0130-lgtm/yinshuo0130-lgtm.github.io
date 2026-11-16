@@ -167,7 +167,7 @@
             <li><strong>开业酬宾</strong>：前 3 轮收入 ×3，第一次升级几乎马上就能买</li>
             <li><strong>第 4 轮必出金肉饼</strong>：早点给一次惊喜</li>
             <li><strong>新玩法第一次出现时弹一条提示</strong>，不做长教程</li>
-            <li><strong>只用激励广告</strong>：看广告加时、收入翻倍、免费升级，不做内购</li>
+            <li><strong>变现计划只用激励广告</strong>：看广告加时、收入翻倍、免费升级，不做内购；广告位已经设计好，上线时接入</li>
             <li><strong>埋点 8 个关键事件</strong>：营业结束、搬店、发射、成就等，上线后用来找玩家在哪一步流失</li>
           </ul>
         </li>
@@ -244,7 +244,7 @@
     GameConfig.cs   <span class="c">所有数值和升级项</span>
     GameLogic.cs    <span class="c">属性推导、关卡目标、结算</span>
     Run.cs          <span class="c">一轮营业：肉饼、火苗、小猫、道具</span>
-  Platform/  <span class="c">抖音 SDK、广告、存档、音效、震动</span>
+  Platform/  <span class="c">抖音 SDK 封装：存档、埋点、音效、震动；广告接口预留</span>
   UI/        <span class="c">主页、营业画面、培训中心、弹窗</span>
 Editor/
   PacingSim.cs      <span class="c">节奏模拟器</span>
@@ -261,7 +261,7 @@ Editor/
         </li>
         <li><i>平台</i><b>抖音平台接入</b>
           <ul>
-            <li>激励广告、本地存档（带备份）、数据埋点、震动、侧边栏复访奖励</li>
+            <li>本地存档（带备份）、数据埋点、震动、侧边栏复访奖励；激励广告留好接口，拿到软著上线时接入</li>
             <li>读取胶囊按钮位置做安全区适配，电脑上用参数模拟胶囊</li>
             <li>切到后台时静音、存档、自动暂停</li>
             <li>存档只往末尾加升级项，改数值量级时带迁移，老玩家进度不丢</li>

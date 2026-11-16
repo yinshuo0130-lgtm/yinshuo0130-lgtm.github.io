@@ -242,8 +242,8 @@
    "index.html"
   ]
  },
- "95f482308d": {
-  "src": "<i>可玩作品</i>独立制作：系统、关卡、演出 · 2026.08 至今 · 测试版已发布，B 站播放近 6000",
+ "7f9a3bf62c": {
+  "src": "<i>可玩作品</i>独立制作：系统、关卡、演出 · 2026.08 至今 · 测试版已发布，B 站播放超 7000",
   "kind": "html",
   "pages": [
    "index.html"
@@ -826,8 +826,8 @@
    "about.html"
   ]
  },
- "0d51e9ffa4": {
-  "src": "<span>Mod B 站播放</span><b data-n=\"5965\" data-suf=\"\">5965</b>",
+ "90e5a91252": {
+  "src": "<span>Mod B 站播放</span><b data-n=\"7179\" data-suf=\"\">7179</b>",
   "kind": "html",
   "pages": [
    "about.html"
@@ -917,8 +917,8 @@
    "about.html"
   ]
  },
- "3bb16cb26c": {
-  "src": "2026.08 – 今 · 测试版已发布，B 站播放近 6000",
+ "5f6bbf0636": {
+  "src": "2026.08 – 今 · 测试版已发布，B 站播放超 7000",
   "kind": "html",
   "pages": [
    "about.html"
@@ -3301,29 +3301,29 @@
    "projects/nightreign-mod.html"
   ]
  },
- "c60c796fd5": {
-  "src": "<span>B 站播放</span><b>5,965</b><span>发布 8 天，接近 6000</span>",
+ "100fc4df88": {
+  "src": "<span>B 站播放</span><b>7,179</b><span>截至 11 月 16 日</span>",
   "kind": "html",
   "pages": [
    "projects/nightreign-mod.html"
   ]
  },
- "26565a9526": {
-  "src": "<span>双平台点赞</span><b>292</b><span>B 站 172 · 抖音 120</span>",
+ "5496d69e8c": {
+  "src": "<span>双平台点赞</span><b>298</b><span>B 站 178 · 抖音 120</span>",
   "kind": "html",
   "pages": [
    "projects/nightreign-mod.html"
   ]
  },
- "da3cf1aee1": {
-  "src": "<span>双平台收藏</span><b>176</b><span>B 站 164 · 抖音 12</span>",
+ "d289e3de47": {
+  "src": "<span>双平台收藏</span><b>190</b><span>B 站 178 · 抖音 12</span>",
   "kind": "html",
   "pages": [
    "projects/nightreign-mod.html"
   ]
  },
- "e222e9952e": {
-  "src": "<span>双平台转发</span><b>331</b><span>B 站 213 · 抖音 118</span>",
+ "f95927097b": {
+  "src": "<span>双平台转发</span><b>348</b><span>B 站 230 · 抖音 118</span>",
   "kind": "html",
   "pages": [
    "projects/nightreign-mod.html"
@@ -4071,8 +4071,8 @@
    "projects/nightreign-mod.html"
   ]
  },
- "0e85b46f40": {
-  "src": "B 站播放 5,965、投币 51、评论 34；双平台点赞 292、收藏 176、转发 331（截至 2026.11.09）",
+ "c85fcfbc93": {
+  "src": "B 站播放 7,179、点赞 178、投币 51、收藏 178、转发 230、评论 38（截至 2026.11.16）；抖音点赞 120、收藏 12、转发 118（截至 2026.11.09）",
   "kind": "html",
   "pages": [
    "projects/nightreign-mod.html"
@@ -6728,8 +6728,8 @@
    "projects/burger/index.html"
   ]
  },
- "105697c1be": {
-  "src": "<strong>只用激励广告</strong>：看广告加时、收入翻倍、免费升级，不做内购",
+ "74215d4a22": {
+  "src": "<strong>变现计划只用激励广告</strong>：看广告加时、收入翻倍、免费升级，不做内购；广告位已经设计好，上线时接入",
   "kind": "html",
   "pages": [
    "projects/burger/index.html"
@@ -7022,8 +7022,8 @@
    "projects/burger/index.html"
   ]
  },
- "151aa79ce8": {
-  "src": "Scripts/\n  Core/      <span class=\"c\">纯逻辑：配置、存档数据、公式、一轮的模拟</span>\n    GameConfig.cs   <span class=\"c\">所有数值和升级项</span>\n    GameLogic.cs    <span class=\"c\">属性推导、关卡目标、结算</span>\n    Run.cs          <span class=\"c\">一轮营业：肉饼、火苗、小猫、道具</span>\n  Platform/  <span class=\"c\">抖音 SDK、广告、存档、音效、震动</span>\n  UI/        <span class=\"c\">主页、营业画面、培训中心、弹窗</span>\nEditor/\n  PacingSim.cs      <span class=\"c\">节奏模拟器</span>\n  BuildTools.cs     <span class=\"c\">命令行编译</span>",
+ "a620261d1c": {
+  "src": "Scripts/\n  Core/      <span class=\"c\">纯逻辑：配置、存档数据、公式、一轮的模拟</span>\n    GameConfig.cs   <span class=\"c\">所有数值和升级项</span>\n    GameLogic.cs    <span class=\"c\">属性推导、关卡目标、结算</span>\n    Run.cs          <span class=\"c\">一轮营业：肉饼、火苗、小猫、道具</span>\n  Platform/  <span class=\"c\">抖音 SDK 封装：存档、埋点、音效、震动；广告接口预留</span>\n  UI/        <span class=\"c\">主页、营业画面、培训中心、弹窗</span>\nEditor/\n  PacingSim.cs      <span class=\"c\">节奏模拟器</span>\n  BuildTools.cs     <span class=\"c\">命令行编译</span>",
   "kind": "html",
   "pages": [
    "projects/burger/index.html"
@@ -7085,8 +7085,8 @@
    "projects/burger/index.html"
   ]
  },
- "67d3eab602": {
-  "src": "激励广告、本地存档（带备份）、数据埋点、震动、侧边栏复访奖励",
+ "d6ae513036": {
+  "src": "本地存档（带备份）、数据埋点、震动、侧边栏复访奖励；激励广告留好接口，拿到软著上线时接入",
   "kind": "html",
   "pages": [
    "projects/burger/index.html"

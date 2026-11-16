@@ -1,0 +1,13 @@
+{
+"7f9a3bf62c": "<i>プレイ可能</i>個人制作：システム・レベル・演出 · 2026.08 – 現在 · テスト版公開済み、bilibili 再生数 7,000 超",
+"90e5a91252": "<span>Mod bilibili 再生数</span><b data-n=\"7179\" data-suf=\"\">7179</b>",
+"5f6bbf0636": "2026.08 – 現在 · テスト版公開済み、bilibili 再生数 7,000 超",
+"100fc4df88": "<span>bilibili 再生数</span><b>7,179</b><span>11 月 16 日時点</span>",
+"5496d69e8c": "<span>いいね（2 サイト合計）</span><b>298</b><span>bilibili 178 · Douyin 120</span>",
+"d289e3de47": "<span>お気に入り（2 サイト合計）</span><b>190</b><span>bilibili 178 · Douyin 12</span>",
+"f95927097b": "<span>共有（2 サイト合計）</span><b>348</b><span>bilibili 230 · Douyin 118</span>",
+"c85fcfbc93": "bilibili：再生 7,179、いいね 178、投げ銭 51、お気に入り 178、共有 230、コメント 38（2026.11.16 時点）。Douyin：いいね 120、お気に入り 12、共有 118（2026.11.09 時点）",
+"74215d4a22": "<strong>収益化はリワード広告のみの予定</strong>：広告を見て時間延長・収入 2 倍・無料強化。アプリ内課金はなし。広告枠は設計済みで、公開時に組み込みます",
+"a620261d1c": "Scripts/\n  Core/      <span class=\"c\">純粋なロジック：設定、セーブデータ、計算式、1 回分のシミュレーション</span>\n    GameConfig.cs   <span class=\"c\">すべての数値と強化項目</span>\n    GameLogic.cs    <span class=\"c\">能力値の算出、ステージ目標、結果</span>\n    Run.cs          <span class=\"c\">1 回の営業：パティ、炎、猫、アイテム</span>\n  Platform/  <span class=\"c\">Douyin SDK ラッパー：セーブ、分析イベント、効果音、振動。広告用のインターフェースは用意済み</span>\n  UI/        <span class=\"c\">ホーム、営業画面、研修センター、ポップアップ</span>\nEditor/\n  PacingSim.cs      <span class=\"c\">テンポシミュレーター</span>\n  BuildTools.cs     <span class=\"c\">コマンドラインビルド</span>",
+"d6ae513036": "ローカルセーブ（バックアップ付き）、分析イベント、振動、サイドバー再訪ボーナス。リワード広告はインターフェースを用意済みで、ソフトウェア著作権の登録後、公開時に接続します"
+}

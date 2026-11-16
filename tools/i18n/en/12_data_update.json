@@ -1,0 +1,13 @@
+{
+"7f9a3bf62c": "<i>Playable</i>Solo project: systems, levels, presentation · 2026.08 – now · Beta released, 7,000+ views on Bilibili",
+"90e5a91252": "<span>Mod views (Bilibili)</span><b data-n=\"7179\" data-suf=\"\">7179</b>",
+"5f6bbf0636": "2026.08 – now · beta released, 7,000+ views on Bilibili",
+"100fc4df88": "<span>Bilibili views</span><b>7,179</b><span>as of 16 November</span>",
+"5496d69e8c": "<span>Likes, both platforms</span><b>298</b><span>Bilibili 178 · Douyin 120</span>",
+"d289e3de47": "<span>Saves, both platforms</span><b>190</b><span>Bilibili 178 · Douyin 12</span>",
+"f95927097b": "<span>Shares, both platforms</span><b>348</b><span>Bilibili 230 · Douyin 118</span>",
+"c85fcfbc93": "Bilibili: 7,179 views, 178 likes, 51 coins, 178 saves, 230 shares, 38 comments (as of 2026.11.16); Douyin: 120 likes, 12 saves, 118 shares (as of 2026.11.09)",
+"74215d4a22": "<strong>Monetisation plan: rewarded ads only</strong>: watch an ad for extra time, double income or a free upgrade, no in-app purchases; the ad slots are designed and will be wired up at launch",
+"a620261d1c": "Scripts/\n  Core/      <span class=\"c\">pure logic: config, save data, formulas, round simulation</span>\n    GameConfig.cs   <span class=\"c\">all numbers and upgrades</span>\n    GameLogic.cs    <span class=\"c\">stat derivation, level targets, results</span>\n    Run.cs          <span class=\"c\">one round: patties, flames, cat, items</span>\n  Platform/  <span class=\"c\">Douyin SDK wrapper: saves, analytics, audio, haptics; ad hooks reserved</span>\n  UI/        <span class=\"c\">home, business screen, Training Center, pop-ups</span>\nEditor/\n  PacingSim.cs      <span class=\"c\">pacing simulator</span>\n  BuildTools.cs     <span class=\"c\">command-line builds</span>",
+"d6ae513036": "Local saves (with backup), analytics events, haptics, sidebar return reward; rewarded-ad hooks are in place and will be connected once the copyright registration clears and the game launches"
+}
